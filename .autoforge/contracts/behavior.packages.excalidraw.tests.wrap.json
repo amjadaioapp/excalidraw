@@ -1,0 +1,642 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.wrap",
+  "revision": 1,
+  "title": "wrap (w): behavior verified by packages/excalidraw/tests/wrap.test.tsx",
+  "description": "Existing behavior covered by 20 asserting test(s) in packages/excalidraw/tests/wrap.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/types.ts, packages/excalidraw/actions/actionFrame.ts, packages/excalidraw/actions/actionProperties.tsx and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/wrap.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/actions/actionFrame.ts",
+      "packages/excalidraw/actions/actionProperties.tsx",
+      "packages/excalidraw/index.tsx",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawTextElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawArrowElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "NonDeleted"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionProperties.tsx",
+        "name": "actionChangeFontSize"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionProperties.tsx",
+        "name": "actionChangeStrokeColor"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionFrame.ts",
+        "name": "actionWrapSelectionInFrame"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "wrap-w-binds-a-text-to-the-selected-container",
+      "text": "wrap (w) > binds a text to the selected container",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > binds a text to the selected container",
+          "startLine": 86,
+          "endLine": 96,
+          "contentHash": "sha256:a1efa4b0ad609a9d60bfbaa59bf4ee1d5f298c7f7e09ad11bbf225fd1d60c761"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-binds-a-text-to-the-selected-arrow-selecting-the",
+      "text": "wrap (w) > binds a text to the selected arrow, selecting the arrow to edit",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > binds a text to the selected arrow, selecting the arrow to edit",
+          "startLine": 98,
+          "endLine": 108,
+          "contentHash": "sha256:22bab7a3dd83305dea1fecb00aa71dd193208823cdaeac4672dead207dd760ca"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-wraps-a-text-in-a-default-rectangle-of-the-text-s",
+      "text": "wrap (w) > wraps a text in a default rectangle of the text's color",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > wraps a text in a default rectangle of the text's color",
+          "startLine": 110,
+          "endLine": 134,
+          "contentHash": "sha256:53ab9696df7c1ef6f74b501ff0784fbe6f228f0da7c0f29d76c95c3bec78600c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-wraps-texts-keeping-labeled-containers-selected-t",
+      "text": "wrap (w) > wraps texts, keeping labeled containers selected to unwrap next",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > wraps texts, keeping labeled containers selected to unwrap next",
+          "startLine": 136,
+          "endLine": 157,
+          "contentHash": "sha256:cc7c035af1754a2fa78931ddff636f2d79d71d11a2de8f2cadceea74829b595f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-unwraps-a-text-as-it-rendered-at-a-fixed-width",
+      "text": "wrap (w) > unwraps a text as it rendered, at a fixed width",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > unwraps a text as it rendered, at a fixed width",
+          "startLine": 159,
+          "endLine": 195,
+          "contentHash": "sha256:04f66ea2293d8778b808e3840e5ee3264483a3f7f31cb57ce81d86122c6ab9e2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-brings-back-the-unwrapped-containers-arrows-inclu",
+      "text": "wrap (w) > brings back the unwrapped containers, arrows included",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > brings back the unwrapped containers, arrows included",
+          "startLine": 197,
+          "endLine": 243,
+          "contentHash": "sha256:68eb526afd589c7ebce18b4a1b11805a6a88e2b33647989906625249c1d7f6b9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-brings-back-an-unwrapped-arrow",
+      "text": "wrap (w) > brings back an unwrapped arrow",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > brings back an unwrapped arrow",
+          "startLine": 245,
+          "endLine": 262,
+          "contentHash": "sha256:6f58162ee3c060b874b7878d62dbca6c4b1ab2e26d5ff87356cb556a4e684b3e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-drops-the-point-editor-of-an-unwrapped-arrow",
+      "text": "wrap (w) > drops the point editor of an unwrapped arrow",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > drops the point editor of an unwrapped arrow",
+          "startLine": 264,
+          "endLine": 283,
+          "contentHash": "sha256:89ac1fc2a71c31fa4d3b1e385e4b9d228bcb28e5edaaad3af30c30165b51cfbe"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-brings-a-note-back-with-the-label-s-font-size-and",
+      "text": "wrap (w) > brings a note back with the label's font size and color",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > brings a note back with the label's font size and color",
+          "startLine": 285,
+          "endLine": 314,
+          "contentHash": "sha256:a1dfbd66f34ad7c27a798d5be79ec58e12c7c23f4b95411bfb3310b729571829"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionProperties.tsx",
+          "symbol": "actionChangeFontSize",
+          "startLine": 1007,
+          "endLine": 1101,
+          "excerpt": "const actionChangeFontSize"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionProperties.tsx",
+          "symbol": "actionChangeStrokeColor",
+          "startLine": 366,
+          "endLine": 443,
+          "excerpt": "const actionChangeStrokeColor"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-wraps-in-a-new-container-once-the-selection-chang",
+      "text": "wrap (w) > wraps in a new container once the selection changed",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > wraps in a new container once the selection changed",
+          "startLine": 316,
+          "endLine": 331,
+          "contentHash": "sha256:8769b33e7d3c4596882c71633c11640f39ccb8f3087cf2c72d662e0deb04811e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-brings-the-container-back-where-its-text-was-move",
+      "text": "wrap (w) > brings the container back where its text was moved",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > brings the container back where its text was moved",
+          "startLine": 333,
+          "endLine": 350,
+          "contentHash": "sha256:28f859bed316a7c1969eec73f3bac909b16ecdffe36aee33d0720bac910f339e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-doesn-t-count-resizing-the-text-as-moving-it",
+      "text": "wrap (w) > doesn't count resizing the text as moving it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > doesn't count resizing the text as moving it",
+          "startLine": 352,
+          "endLine": 366,
+          "contentHash": "sha256:8da7c28bc1e776c9fe502e66365d659425d8c70183282630292ce4f8e3057241"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionProperties.tsx",
+          "symbol": "actionChangeFontSize",
+          "startLine": 1007,
+          "endLine": 1101,
+          "excerpt": "const actionChangeFontSize"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-brings-the-container-back-into-the-frame-its-text",
+      "text": "wrap (w) > brings the container back into the frame its text was moved to",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > brings the container back into the frame its text was moved to",
+          "startLine": 368,
+          "endLine": 389,
+          "contentHash": "sha256:21bce95c67982f71b40fd19c9470c2833aa28269de6ad52ddc453e5bf5239a00"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-leaves-an-arrow-connecting-elements-in-place",
+      "text": "wrap (w) > leaves an arrow connecting elements in place",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > leaves an arrow connecting elements in place",
+          "startLine": 391,
+          "endLine": 432,
+          "contentHash": "sha256:55d6b1a943f1bce5ea562058a80a75f2e6a18f0ef703ee9f3761247739b7d290"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-frames-removes-a-selected-frame-along-with-its-ch",
+      "text": "wrap (w) > frames > removes a selected frame along with its children",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > frames > removes a selected frame along with its children",
+          "startLine": 455,
+          "endLine": 467,
+          "contentHash": "sha256:e52e1253d1e77528445435abaf9d652cb6fd81c9f197dee2aa8560896964148e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-frames-removes-the-frame-when-all-its-children-ar",
+      "text": "wrap (w) > frames > removes the frame when all its children are selected",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > frames > removes the frame when all its children are selected",
+          "startLine": 469,
+          "endLine": 478,
+          "contentHash": "sha256:906a638143dad40b1182139346e32eeb5951cd5a7a22d8485933f97b1d981174"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionFrame.ts",
+          "symbol": "actionWrapSelectionInFrame",
+          "startLine": 273,
+          "endLine": 303,
+          "excerpt": "const actionWrapSelectionInFrame"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-frames-moves-some-of-a-frame-s-children-into-a-ne",
+      "text": "wrap (w) > frames > moves some of a frame's children into a new frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > frames > moves some of a frame's children into a new frame",
+          "startLine": 480,
+          "endLine": 491,
+          "contentHash": "sha256:456e1f23f0c77628883e7779dfb2269a99b94b222e89e658255156f63dfd3f6f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-frames-drops-the-point-editor-of-an-arrow-it-fram",
+      "text": "wrap (w) > frames > drops the point editor of an arrow it frames",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > frames > drops the point editor of an arrow it frames",
+          "startLine": 493,
+          "endLine": 510,
+          "contentHash": "sha256:83779ca685edcf9b1cd82707e80a2a3366a579dd65d4ddc9599e68beb78f6876"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-frames-leaves-several-frames-be",
+      "text": "wrap (w) > frames > leaves several frames be",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > frames > leaves several frames be",
+          "startLine": 512,
+          "endLine": 524,
+          "contentHash": "sha256:32a26dc617c3960383feb656bde59f6776b50d409106628444d484da9a1d5b09"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "wrap-w-frames-wraps-shapes-with-padding-and-an-image-edg",
+      "text": "wrap (w) > frames > wraps shapes with padding, and an image edge to edge",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/wrap.test.tsx",
+          "testTitle": "wrap (w) > frames > wraps shapes with padding, and an image edge to edge",
+          "startLine": 526,
+          "endLine": 567,
+          "contentHash": "sha256:725e15ba446d70cdbded2ad7ef4a5fecf0062ab2cdb337002be1f3ebd437391b"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/wrap.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/wrap.test.tsx",
+  "generator": "tests",
+  "notes": "Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:0811c4a3d2c807c97466516512a46c99c49a542743816ce2d980433385c36bbe"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:0811c4a3d2c807c97466516512a46c99c49a542743816ce2d980433385c36bbe"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:0811c4a3d2c807c97466516512a46c99c49a542743816ce2d980433385c36bbe"
+    }
+  ]
+}

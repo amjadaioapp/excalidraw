@@ -1,0 +1,780 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.tests.text-element",
+  "revision": 1,
+  "title": "Behavior verified by packages/element/tests/textElement.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/element/tests/textElement.test.ts, exercising packages/common/src/index.ts, packages/element/src/textElement.ts, packages/element/src/textMeasurements.ts, packages/element/src/types.ts.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/tests/textElement.test.ts",
+      "packages/common/src/index.ts",
+      "packages/element/src/textElement.ts",
+      "packages/element/src/textMeasurements.ts",
+      "packages/element/src/types.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/textElement.ts",
+        "name": "getContainerCoords"
+      },
+      {
+        "path": "packages/element/src/textElement.ts",
+        "name": "computeContainerDimensionForBoundText"
+      },
+      {
+        "path": "packages/element/src/textElement.ts",
+        "name": "getBoundTextMaxWidth"
+      },
+      {
+        "path": "packages/element/src/textElement.ts",
+        "name": "getBoundTextMaxHeight"
+      },
+      {
+        "path": "packages/element/src/textMeasurements.ts",
+        "name": "detectLineHeight"
+      },
+      {
+        "path": "packages/element/src/textMeasurements.ts",
+        "name": "getLineHeightInPx"
+      },
+      {
+        "path": "packages/element/src/textElement.ts",
+        "name": "computeBoundTextPosition"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "test-measure-text-test-get-container-coords-should-compu",
+      "text": "Test measureText > Test getContainerCoords > should compute coords correctly when ellipse",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getContainerCoords > should compute coords correctly when ellipse",
+          "startLine": 21,
+          "endLine": 30,
+          "contentHash": "sha256:4995e532fb7470ff5afe4b629a230b5b5345ff3f485d144aac2cb9c24f6730c0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getContainerCoords",
+          "startLine": 411,
+          "endLine": 432,
+          "excerpt": "const getContainerCoords(container: ExcalidrawElement)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-get-container-coords-should-compu-2",
+      "text": "Test measureText > Test getContainerCoords > should compute coords correctly when rectangle",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getContainerCoords > should compute coords correctly when rectangle",
+          "startLine": 32,
+          "endLine": 41,
+          "contentHash": "sha256:8fd64986f417019425f5c9e5889aa58c01f5ae90b702d790e58601f81dae328b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getContainerCoords",
+          "startLine": 411,
+          "endLine": 432,
+          "excerpt": "const getContainerCoords(container: ExcalidrawElement)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-get-container-coords-should-compu-3",
+      "text": "Test measureText > Test getContainerCoords > should compute coords correctly when diamond",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getContainerCoords > should compute coords correctly when diamond",
+          "startLine": 43,
+          "endLine": 52,
+          "contentHash": "sha256:9f7aff082268dddf2b6bd38ced22a7dea0383abc07b727d20333ca59f3eff865"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getContainerCoords",
+          "startLine": 411,
+          "endLine": 432,
+          "excerpt": "const getContainerCoords(container: ExcalidrawElement)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-compute-container-dimension-for-b",
+      "text": "Test measureText > Test computeContainerDimensionForBoundText > should compute container height correctly for rectangle",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test computeContainerDimensionForBoundText > should compute container height correctly for rectangle",
+          "startLine": 61,
+          "endLine": 69,
+          "contentHash": "sha256:2954ef9f49848d363eefb435f87930b09f312c1e874fc454059a7980e4c7c267"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "computeContainerDimensionForBoundText",
+          "startLine": 536,
+          "endLine": 553,
+          "excerpt": "const computeContainerDimensionForBoundText(dimension: number, containerType: ExtractSetType<typeof VALID_CONTAINER_TYPES>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-compute-container-dimension-for-b-2",
+      "text": "Test measureText > Test computeContainerDimensionForBoundText > should compute container height correctly for ellipse",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test computeContainerDimensionForBoundText > should compute container height correctly for ellipse",
+          "startLine": 71,
+          "endLine": 79,
+          "contentHash": "sha256:a2993fe3826ca239787aff5d52bb8189b1ac6afa5f4bcd7f0b4c90e6a9a8a3ea"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "computeContainerDimensionForBoundText",
+          "startLine": 536,
+          "endLine": 553,
+          "excerpt": "const computeContainerDimensionForBoundText(dimension: number, containerType: ExtractSetType<typeof VALID_CONTAINER_TYPES>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-compute-container-dimension-for-b-3",
+      "text": "Test measureText > Test computeContainerDimensionForBoundText > should compute container height correctly for diamond",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test computeContainerDimensionForBoundText > should compute container height correctly for diamond",
+          "startLine": 81,
+          "endLine": 89,
+          "contentHash": "sha256:a9ffb11d62b1b4fd2bdcd7e05afde10787483dbe16be09faef2707a67f2fe90d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "computeContainerDimensionForBoundText",
+          "startLine": 536,
+          "endLine": 553,
+          "excerpt": "const computeContainerDimensionForBoundText(dimension: number, containerType: ExtractSetType<typeof VALID_CONTAINER_TYPES>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-get-bound-text-max-width-should-r",
+      "text": "Test measureText > Test getBoundTextMaxWidth > should return max width when container is rectangle",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getBoundTextMaxWidth > should return max width when container is rectangle",
+          "startLine": 98,
+          "endLine": 101,
+          "contentHash": "sha256:d6d7310c18628fb4c2f0b74cdfdf77cf8e4d90c18282ec6583274604292366e0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getBoundTextMaxWidth",
+          "startLine": 555,
+          "endLine": 584,
+          "excerpt": "const getBoundTextMaxWidth(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElement | null)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-get-bound-text-max-width-should-r-2",
+      "text": "Test measureText > Test getBoundTextMaxWidth > should return max width when container is ellipse",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getBoundTextMaxWidth > should return max width when container is ellipse",
+          "startLine": 103,
+          "endLine": 106,
+          "contentHash": "sha256:7cdcc170ed712242900c4a907ba73c0368aeb3fd54ce508f76cab84a8d45c55d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getBoundTextMaxWidth",
+          "startLine": 555,
+          "endLine": 584,
+          "excerpt": "const getBoundTextMaxWidth(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElement | null)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-get-bound-text-max-width-should-r-3",
+      "text": "Test measureText > Test getBoundTextMaxWidth > should return max width when container is diamond",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getBoundTextMaxWidth > should return max width when container is diamond",
+          "startLine": 108,
+          "endLine": 111,
+          "contentHash": "sha256:876bd0dca736dc4a9a282aca0f5c86307d95b153d83d32d3f43240d8460d5a52"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getBoundTextMaxWidth",
+          "startLine": 555,
+          "endLine": 584,
+          "excerpt": "const getBoundTextMaxWidth(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElement | null)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-get-bound-text-max-height-should",
+      "text": "Test measureText > Test getBoundTextMaxHeight > should return max height when container is rectangle",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getBoundTextMaxHeight > should return max height when container is rectangle",
+          "startLine": 136,
+          "endLine": 139,
+          "contentHash": "sha256:6d3f3b75549b5b15c8630bcfdc93a28ff9afc2c999d23cd9a928e17f493d08f7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getBoundTextMaxHeight",
+          "startLine": 586,
+          "endLine": 614,
+          "excerpt": "const getBoundTextMaxHeight(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-get-bound-text-max-height-should-2",
+      "text": "Test measureText > Test getBoundTextMaxHeight > should return max height when container is ellipse",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getBoundTextMaxHeight > should return max height when container is ellipse",
+          "startLine": 141,
+          "endLine": 144,
+          "contentHash": "sha256:a6a812c1eb9399c4e0374835b95ce5dee7906f24d6928f033fa0e4fe91819c07"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getBoundTextMaxHeight",
+          "startLine": 586,
+          "endLine": 614,
+          "excerpt": "const getBoundTextMaxHeight(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-get-bound-text-max-height-should-3",
+      "text": "Test measureText > Test getBoundTextMaxHeight > should return max height when container is diamond",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getBoundTextMaxHeight > should return max height when container is diamond",
+          "startLine": 146,
+          "endLine": 149,
+          "contentHash": "sha256:519de6c270da2af6efd074b10b61423b5827047e6d04e1fdb3c582d82b42947d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getBoundTextMaxHeight",
+          "startLine": 586,
+          "endLine": 614,
+          "excerpt": "const getBoundTextMaxHeight(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-get-bound-text-max-height-should-4",
+      "text": "Test measureText > Test getBoundTextMaxHeight > should return max height when container is arrow",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getBoundTextMaxHeight > should return max height when container is arrow",
+          "startLine": 151,
+          "endLine": 157,
+          "contentHash": "sha256:91a5187913833490fbdd6d07e024239fd0385de2bf3c79f0f7ad205f7d7d0f1e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getBoundTextMaxHeight",
+          "startLine": 586,
+          "endLine": 614,
+          "excerpt": "const getBoundTextMaxHeight(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-measure-text-test-get-bound-text-max-height-should-5",
+      "text": "Test measureText > Test getBoundTextMaxHeight > should return max height when container is arrow and height is less than threshold",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test measureText > Test getBoundTextMaxHeight > should return max height when container is arrow and height is less than threshold",
+          "startLine": 159,
+          "endLine": 170,
+          "contentHash": "sha256:82e5f6a30e91899b09e91cd711d7f90fcd0e5058d36c0f36408c56872a4aa33a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "getBoundTextMaxHeight",
+          "startLine": 586,
+          "endLine": 614,
+          "excerpt": "const getBoundTextMaxHeight(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-detect-line-height-should-return-correct-line-heigh",
+      "text": "Test detectLineHeight > should return correct line height",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test detectLineHeight > should return correct line height",
+          "startLine": 183,
+          "endLine": 185,
+          "contentHash": "sha256:d3c68ae3d2a6d282f8ff2ded332043c8dffbacf7e9672303f750270438948ca2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textMeasurements.ts",
+          "symbol": "detectLineHeight",
+          "startLine": 88,
+          "endLine": 93,
+          "excerpt": "const detectLineHeight(textElement: ExcalidrawTextElement)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-get-line-height-in-px-should-return-correct-line-he",
+      "text": "Test getLineHeightInPx > should return correct line height",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test getLineHeightInPx > should return correct line height",
+          "startLine": 189,
+          "endLine": 193,
+          "contentHash": "sha256:01daeb0a7edd0b81de5c5ddbef277086b3baab71ecc71a2e0a191018dbabae5e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textMeasurements.ts",
+          "symbol": "getLineHeightInPx",
+          "startLine": 99,
+          "endLine": 104,
+          "excerpt": "const getLineHeightInPx(fontSize: ExcalidrawTextElement[\"fontSize\"], lineHeight: ExcalidrawTextElement[\"lineHeight\"])"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-get-default-line-height-should-return-line-height-u",
+      "text": "Test getDefaultLineHeight > should return line height using default font family when not passed",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test getDefaultLineHeight > should return line height using default font family when not passed",
+          "startLine": 197,
+          "endLine": 200,
+          "contentHash": "sha256:4e93c91b21d4ab21c1dd740f10e355a3654e4e7fd94e60b3edb4409603d0363d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-get-default-line-height-should-return-line-height-u-2",
+      "text": "Test getDefaultLineHeight > should return line height using default font family for unknown font",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test getDefaultLineHeight > should return line height using default font family for unknown font",
+          "startLine": 202,
+          "endLine": 205,
+          "contentHash": "sha256:32efd726a40791b25014d91d0fa12e7b03e644b96502428890a157c107a7655b"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-get-default-line-height-should-return-correct-line",
+      "text": "Test getDefaultLineHeight > should return correct line height",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test getDefaultLineHeight > should return correct line height",
+          "startLine": 207,
+          "endLine": 209,
+          "contentHash": "sha256:be1453c6bffca2e191403e5adab5e8387fc8ecf75876cce23381a72a28a9da3c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-compute-bound-text-position-90-degree-rotation-with",
+      "text": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with LEFT + TOP alignment at 90-degree rotation",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with LEFT + TOP alignment at 90-degree rotation",
+          "startLine": 247,
+          "endLine": 259,
+          "contentHash": "sha256:aa0af770be472d9fd71798ac41a536fed6f429947acc29382dce98e14b7610a7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "computeBoundTextPosition",
+          "startLine": 264,
+          "endLine": 339,
+          "excerpt": "const computeBoundTextPosition(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-compute-bound-text-position-90-degree-rotation-with-2",
+      "text": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with LEFT + MIDDLE alignment at 90-degree rotation",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with LEFT + MIDDLE alignment at 90-degree rotation",
+          "startLine": 261,
+          "endLine": 273,
+          "contentHash": "sha256:afe77ddca488a2bf650297f022a7923961af3a55ef844d0766866878aa43a490"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "computeBoundTextPosition",
+          "startLine": 264,
+          "endLine": 339,
+          "excerpt": "const computeBoundTextPosition(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-compute-bound-text-position-90-degree-rotation-with-3",
+      "text": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with LEFT + BOTTOM alignment at 90-degree rotation",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with LEFT + BOTTOM alignment at 90-degree rotation",
+          "startLine": 275,
+          "endLine": 287,
+          "contentHash": "sha256:332d7407c263998b070026d99c498107240b4a3f2670d3bf1073adfe2a267fbe"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "computeBoundTextPosition",
+          "startLine": 264,
+          "endLine": 339,
+          "excerpt": "const computeBoundTextPosition(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-compute-bound-text-position-90-degree-rotation-with-4",
+      "text": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with CENTER + TOP alignment at 90-degree rotation",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with CENTER + TOP alignment at 90-degree rotation",
+          "startLine": 289,
+          "endLine": 301,
+          "contentHash": "sha256:b05652a980d78bacb2a25c7331eed7e78a62870d74d252174ba41c4b4ed906ae"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "computeBoundTextPosition",
+          "startLine": 264,
+          "endLine": 339,
+          "excerpt": "const computeBoundTextPosition(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-compute-bound-text-position-90-degree-rotation-with-5",
+      "text": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with CENTER + MIDDLE alignment at 90-degree rotation",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with CENTER + MIDDLE alignment at 90-degree rotation",
+          "startLine": 303,
+          "endLine": 318,
+          "contentHash": "sha256:42b8a4865e34c3dbba45be46a5fb34887b1c72193ebae8e415fd1212708b8487"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "computeBoundTextPosition",
+          "startLine": 264,
+          "endLine": 339,
+          "excerpt": "const computeBoundTextPosition(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-compute-bound-text-position-90-degree-rotation-with-6",
+      "text": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with CENTER + BOTTOM alignment at 90-degree rotation",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textElement.test.ts",
+          "testTitle": "Test computeBoundTextPosition > 90-degree rotation with all alignment combinations > should position text with CENTER + BOTTOM alignment at 90-degree rotation",
+          "startLine": 320,
+          "endLine": 335,
+          "contentHash": "sha256:c9f5b8b24abea4d7ae9b4280608300e6dbd58d733c48c0e7ddf51abe5a9fe640"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "computeBoundTextPosition",
+          "startLine": 264,
+          "endLine": 339,
+          "excerpt": "const computeBoundTextPosition(container: ExcalidrawElement, boundTextElement: ExcalidrawTextElementWithContainer, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textElement.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/tests/textElement.test.ts",
+  "generator": "tests",
+  "notes": "3 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:ba6cda1c1933d4c643cffb8482435c64f9f09406aeb894a247814ffefadfd442"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:ba6cda1c1933d4c643cffb8482435c64f9f09406aeb894a247814ffefadfd442"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:ba6cda1c1933d4c643cffb8482435c64f9f09406aeb894a247814ffefadfd442"
+    }
+  ]
+}

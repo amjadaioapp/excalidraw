@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.regression-tests",
+  "revision": 1,
+  "title": "regression tests: behavior verified by packages/excalidraw/tests/regressionTests.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/regressionTests.test.tsx, exercising packages/common/src/index.ts, packages/element/src/types.ts, packages/excalidraw/index.tsx, packages/excalidraw/renderer/staticScene.ts.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/regressionTests.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/renderer/staticScene.ts"
+    ],
+    "symbols": []
+  },
+  "statements": [
+    {
+      "id": "regression-tests-draw-every-type-of-shape",
+      "text": "regression tests > draw every type of shape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > draw every type of shape",
+          "startLine": 77,
+          "endLine": 124,
+          "contentHash": "sha256:b728b09545ffef199e68bb48c99cdbea24db439e19b8113f8b2e79d30c0dd0bf"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-click-to-select-a-shape",
+      "text": "regression tests > click to select a shape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > click to select a shape",
+          "startLine": 126,
+          "endLine": 142,
+          "contentHash": "sha256:f74aef659a70f8fe87b33364dc840c1decf46f7f722dbc68e03a7f7f2666b5e2"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-key-key-selects-shape-tool",
+      "text": "regression tests > key ${key} selects ${shape} tool",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > key ${key} selects ${shape} tool",
+          "startLine": 153,
+          "endLine": 164,
+          "contentHash": "sha256:016fab7cbfd2ca112da5aadb79c2ddfad28b331e16797de94de9ca46178aa8d4"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-change-the-properties-of-a-shape",
+      "text": "regression tests > change the properties of a shape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > change the properties of a shape",
+          "startLine": 167,
+          "endLine": 180,
+          "contentHash": "sha256:82cd60bb51a63321a7530faaf6e465f0e971576643fb6d9b8356c188ee9ff177"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-click-on-an-element-and-drag-it",
+      "text": "regression tests > click on an element and drag it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > click on an element and drag it",
+          "startLine": 182,
+          "endLine": 203,
+          "contentHash": "sha256:372de5d17730fdd4372321fcc3bff28a76b24c1d6610c310de347097f73eae4e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-alt-drag-duplicates-an-element",
+      "text": "regression tests > alt-drag duplicates an element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > alt-drag duplicates an element",
+          "startLine": 205,
+          "endLine": 221,
+          "contentHash": "sha256:7143f64dd59d429bcf767ceaceebd1d98d9980c343ebb751c2548e9a27eec68c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-click-drag-to-select-a-group",
+      "text": "regression tests > click-drag to select a group",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > click-drag to select a group",
+          "startLine": 223,
+          "endLine": 247,
+          "contentHash": "sha256:986daf3789c6e1204d47ffc1f861b0767dd875695560890663bacfeabb87465f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-shift-click-to-multiselect-then-drag",
+      "text": "regression tests > shift-click to multiselect, then drag",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > shift-click to multiselect, then drag",
+          "startLine": 249,
+          "endLine": 277,
+          "contentHash": "sha256:6f5a35284912d01eb4babe85e5225fc8af9c139d6726879eee944eac158e0309"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-pinch-to-zoom-works",
+      "text": "regression tests > pinch-to-zoom works",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > pinch-to-zoom works",
+          "startLine": 279,
+          "endLine": 289,
+          "contentHash": "sha256:ee7b682d9a3d3898eb42be4e3a84033a24bc95c526ffc4aa7d4d97210f847ef2"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-two-finger-scroll-works",
+      "text": "regression tests > two-finger scroll works",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > two-finger scroll works",
+          "startLine": 291,
+          "endLine": 326,
+          "contentHash": "sha256:5ef39a4383ac598857efb07558c826a7b764c5ece144ac35a50d9b9409c90254"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-spacebar-drag-scrolls-the-canvas",
+      "text": "regression tests > spacebar + drag scrolls the canvas",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > spacebar + drag scrolls the canvas",
+          "startLine": 328,
+          "endLine": 337,
+          "contentHash": "sha256:c3aa45ba1b7cda193be6995fbaef8c215fd551c2922838fc65278ad5fa2fd494"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-arrow-keys",
+      "text": "regression tests > arrow keys",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > arrow keys",
+          "startLine": 339,
+          "endLine": 351,
+          "contentHash": "sha256:95d63d690b85d727765ce151abec8e21cc80a4603f4870ea288207a591df2bf5"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-undo-redo-drawing-an-element",
+      "text": "regression tests > undo/redo drawing an element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > undo/redo drawing an element",
+          "startLine": 353,
+          "endLine": 382,
+          "contentHash": "sha256:01489606919be0c1f29d9af1b9338dba0fbabf75e5f8ff04389362d3972cfe7e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-noop-interaction-after-undo-shouldn-t-c",
+      "text": "regression tests > noop interaction after undo shouldn't create history entry",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > noop interaction after undo shouldn't create history entry",
+          "startLine": 384,
+          "endLine": 430,
+          "contentHash": "sha256:4e118fda178ed3cb6025c2d35e1768213a4176bbfc8d09ee1d338022a200968c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-zoom-hotkeys",
+      "text": "regression tests > zoom hotkeys",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > zoom hotkeys",
+          "startLine": 432,
+          "endLine": 452,
+          "contentHash": "sha256:a1de14269ee7bb249a9571e7abddf3274cb70da2986d3f78ce6b248d9a47e4ae"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-make-a-group-and-duplicate-it",
+      "text": "regression tests > make a group and duplicate it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > make a group and duplicate it",
+          "startLine": 454,
+          "endLine": 503,
+          "contentHash": "sha256:1cf728db2b23a0fd8fc145e959ca9246a72079d13a744bdc8b2325a18eb1afca"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-should-group-elements-and-ungroup-them",
+      "text": "regression tests > should group elements and ungroup them",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > should group elements and ungroup them",
+          "startLine": 505,
+          "endLine": 550,
+          "contentHash": "sha256:227b924ffd10a38648d2ddf8f77ac9a4088a292b2e07f73e7bcf53a36c7e03a6"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-double-click-to-edit-a-group",
+      "text": "regression tests > double click to edit a group",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > double click to edit a group",
+          "startLine": 552,
+          "endLine": 575,
+          "contentHash": "sha256:f13723858174a9bc961a06427def05bac342bbcb5245ee056a1a1d1ac8224b9f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-adjusts-z-order-when-grouping",
+      "text": "regression tests > adjusts z order when grouping",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > adjusts z order when grouping",
+          "startLine": 577,
+          "endLine": 612,
+          "contentHash": "sha256:14fb91d45988ff5816236cb2ea195e666875a19237ed24292a466fd01002a0a7"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-supports-nested-groups",
+      "text": "regression tests > supports nested groups",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > supports nested groups",
+          "startLine": 614,
+          "endLine": 656,
+          "contentHash": "sha256:2685bf6347e9fdb149778a2801083ed0365f1582822595fb07dd232de055737f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-updates-font-size-font-family-app-state",
+      "text": "regression tests > updates fontSize & fontFamily appState",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > updates fontSize & fontFamily appState",
+          "startLine": 658,
+          "endLine": 663,
+          "contentHash": "sha256:fda1440cbcfc6af14a588d87d543ff6d13aeb578e7b5d0ac0f277f4a2f43b747"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-deselects-selected-element-on-pointer-u",
+      "text": "regression tests > deselects selected element, on pointer up, when click hits element bounding box but doesn't hit the element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > deselects selected element, on pointer up, when click hits element bounding box but doesn't hit the element",
+          "startLine": 665,
+          "endLine": 676,
+          "contentHash": "sha256:20eb0880ffa53e87a58e48a96a4dc805b03176539a4343ad407f65646941b0d6"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-switches-selected-element-on-pointer-do",
+      "text": "regression tests > switches selected element on pointer down",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > switches selected element on pointer down",
+          "startLine": 678,
+          "endLine": 694,
+          "contentHash": "sha256:7230143538b4a3c439004f989b51e51abe5e557e51e1d2fa1f6b7a3bec763dbf"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-can-drag-element-that-covers-another-el",
+      "text": "regression tests > can drag element that covers another element, while another elem is selected",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > can drag element that covers another element, while another elem is selected",
+          "startLine": 696,
+          "endLine": 719,
+          "contentHash": "sha256:787777c11302acdd975ea2fbc7d0c049325f4cd38ddf70bd71ef3aa4cdca25bb"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "regression-tests-deselects-selected-element-on-pointer-d",
+      "text": "regression tests > deselects selected element on pointer down when pointer doesn't hit any element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/regressionTests.test.tsx",
+          "testTitle": "regression tests > deselects selected element on pointer down when pointer doesn't hit any element",
+          "startLine": 721,
+          "endLine": 732,
+          "contentHash": "sha256:51e4603ffa2d4765c0716f8e392587c1db55dc80fe5698819e2a64a4066250e9"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/regressionTests.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/regressionTests.test.tsx",
+  "generator": "tests",
+  "notes": "1 skipped, todo, or non-asserting test(s) were not turned into statements. 14 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:60bc5f8cc5d4e5dafa7b7c4f0f2b70f3e06079d393a41bb2324d249a4c83550c"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:60bc5f8cc5d4e5dafa7b7c4f0f2b70f3e06079d393a41bb2324d249a4c83550c"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:60bc5f8cc5d4e5dafa7b7c4f0f2b70f3e06079d393a41bb2324d249a4c83550c"
+    }
+  ]
+}

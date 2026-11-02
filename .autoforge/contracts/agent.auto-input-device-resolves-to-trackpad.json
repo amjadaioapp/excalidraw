@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "agent.auto-input-device-resolves-to-trackpad",
+  "revision": 1,
+  "title": "Auto input device resolves to trackpad",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "agent",
+  "confidence": "medium",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/appState.ts"
+    ],
+    "symbols": []
+  },
+  "statements": [
+    {
+      "id": "resolve-input-device-maps-auto-to-trackpad-and-returns-a",
+      "text": "resolveInputDevice maps 'auto' to 'trackpad' and returns any other value unchanged, until detection is implemented",
+      "basis": "observed",
+      "evidence": [
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/appState.ts",
+          "symbol": "resolveInputDevice",
+          "startLine": 358,
+          "endLine": 361,
+          "excerpt": "const resolveInputDevice(inputDevice: InputDevice): Exclude<InputDevice, \"auto\">"
+        }
+      ],
+      "verification": {
+        "method": "manual"
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "agent:auto-input-device-resolves-to-trackpad",
+  "generator": "agent-import",
+  "notes": "Imported from coding-agent output on 2026-11-02; citations verified by Autoforge. Rationale: This keeps the wheel and scroll mappings users have always had.",
+  "createdAt": "2026-11-02T17:10:00.997Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:34ce3dd4b3b35cbe8e18a79a61e840bac159b8db7b60d3834e29dcc5c272f732"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:10:00.997Z",
+      "by": "autoforge import (agent-assisted)",
+      "contentHash": "sha256:34ce3dd4b3b35cbe8e18a79a61e840bac159b8db7b60d3834e29dcc5c272f732"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:34ce3dd4b3b35cbe8e18a79a61e840bac159b8db7b60d3834e29dcc5c272f732"
+    }
+  ]
+}

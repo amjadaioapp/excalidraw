@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "analysis": {
+    "include": [],
+    "exclude": [
+      "dist/**",
+      "build/**",
+      "out/**",
+      "coverage/**",
+      ".next/**",
+      ".nuxt/**",
+      ".turbo/**",
+      ".cache/**",
+      "vendor/**",
+      "target/**",
+      ".venv/**",
+      "venv/**",
+      "**/__pycache__/**",
+      "**/*.min.js",
+      "**/*.map"
+    ],
+    "maxFileBytes": 1048576,
+    "maxFiles": 50000,
+    "maxDepth": 64
+  },
+  "checks": [
+    {
+      "id": "test",
+      "kind": "test",
+      "description": "Runs the package.json \"test\" script (yarn test:app)",
+      "command": [
+        "yarn",
+        "test"
+      ],
+      "appendFiles": false,
+      "timeoutSeconds": 600
+    }
+  ],
+  "policy": {
+    "failOn": "potential"
+  },
+  "generation": {
+    "maxDrafts": 40,
+    "maxStatementsPerContract": 25
+  },
+  "context": {
+    "maxContracts": 8,
+    "maxChars": 12000
+  },
+  "project": {
+    "name": "excalidraw-monorepo"
+  }
+}

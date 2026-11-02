@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "agent.exported-scenes-keep-canvas-defining-app-state",
+  "revision": 1,
+  "title": "Exported scenes keep canvas-defining appState",
+  "category": "api-compatibility",
+  "status": "approved",
+  "source": "agent",
+  "confidence": "medium",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/appState.ts"
+    ],
+    "symbols": []
+  },
+  "statements": [
+    {
+      "id": "view-background-color-grid-size-grid-step-grid-mode-enab",
+      "text": "viewBackgroundColor, gridSize, gridStep, gridModeEnabled and lockedMultiSelections are kept for browser, export and server storage",
+      "basis": "observed",
+      "evidence": [
+        {
+          "kind": "file-range",
+          "path": "packages/excalidraw/appState.ts",
+          "startLine": 279,
+          "endLine": 279,
+          "excerpt": "viewBackgroundColor: { browser: true, export: true, server: true },"
+        },
+        {
+          "kind": "file-range",
+          "path": "packages/excalidraw/appState.ts",
+          "startLine": 227,
+          "endLine": 229,
+          "excerpt": "gridSize: { browser: true, export: true, server: true },\n  gridStep: { browser: true, export: true, server: true },\n  gridModeEnabled: { browser: true, export: true, server: true },"
+        },
+        {
+          "kind": "file-range",
+          "path": "packages/excalidraw/appState.ts",
+          "startLine": 292,
+          "endLine": 292,
+          "excerpt": "lockedMultiSelections: { browser: true, export: true, server: true },"
+        }
+      ],
+      "verification": {
+        "method": "manual"
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "agent:exported-scenes-keep-canvas-defining-app-state",
+  "generator": "agent-import",
+  "notes": "Imported from coding-agent output on 2026-11-02; citations verified by Autoforge. Rationale: Removing these from export would silently change how saved .excalidraw files and share links look when reopened.",
+  "createdAt": "2026-11-02T17:10:00.997Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:2eaa1244beaa92423aad24fe211f4e3ac2719c2dc7497de0c048af668444c55c"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:10:00.997Z",
+      "by": "autoforge import (agent-assisted)",
+      "contentHash": "sha256:2eaa1244beaa92423aad24fe211f4e3ac2719c2dc7497de0c048af668444c55c"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:2eaa1244beaa92423aad24fe211f4e3ac2719c2dc7497de0c048af668444c55c"
+    }
+  ]
+}

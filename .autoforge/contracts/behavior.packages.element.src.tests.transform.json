@@ -1,0 +1,1004 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.src.tests.transform",
+  "revision": 1,
+  "title": "Test Transform: behavior verified by packages/element/src/__tests__/transform.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/element/src/__tests__/transform.test.ts, exercising packages/common/src/index.ts, packages/element/src/binding.ts, packages/element/src/bounds.ts, packages/element/src/linearElementEditor.ts, packages/element/src/newElement.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/src/__tests__/transform.test.ts",
+      "packages/common/src/index.ts",
+      "packages/element/src/binding.ts",
+      "packages/element/src/bounds.ts",
+      "packages/element/src/linearElementEditor.ts",
+      "packages/element/src/newElement.ts",
+      "packages/element/src/renderEnvironment.ts",
+      "packages/element/src/textElement.ts",
+      "packages/element/src/textMeasurements.ts",
+      "packages/element/src/textWrapping.ts",
+      "packages/element/src/transform.ts",
+      "packages/element/src/types.ts",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/transform.ts",
+        "name": "convertToExcalidrawElements"
+      },
+      {
+        "path": "packages/element/src/transform.ts",
+        "name": "ExcalidrawElementSkeleton"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawArrowElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawStickyNoteElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawTextElement"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "test-transform-should-generate-id-unless-opts-regenerate",
+      "text": "Test Transform > should generate id unless opts.regenerateIds is set to false explicitly",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > should generate id unless opts.regenerateIds is set to false explicitly",
+          "startLine": 44,
+          "endLine": 64,
+          "contentHash": "sha256:5db4f5701f8131df25320879ee1bc36815bd3d23d1b7ac16b197b61173efa2f3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-should-transform-regular-shapes",
+      "text": "Test Transform > should transform regular shapes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > should transform regular shapes",
+          "startLine": 66,
+          "endLine": 127,
+          "contentHash": "sha256:bbdcc5fd62d0766320d46f16010db4084fab6236909362e63352a51d79291586"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-should-transform-text-element",
+      "text": "Test Transform > should transform text element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > should transform text element",
+          "startLine": 129,
+          "endLine": 156,
+          "contentHash": "sha256:a3d448d7d83141b90a262927bf3534c0437cbf2b552facf3a1bf24c13546e678"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-should-transform-linear-elements",
+      "text": "Test Transform > should transform linear elements",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > should transform linear elements",
+          "startLine": 158,
+          "endLine": 202,
+          "contentHash": "sha256:59a7074dfa59fbf24b5c943f52690b594fb3da47e9478ddaa31a11369429e474"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-should-transform-to-text-containers-when",
+      "text": "Test Transform > should transform to text containers when label provided",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > should transform to text containers when label provided",
+          "startLine": 204,
+          "endLine": 285,
+          "contentHash": "sha256:9043f891565fa9dfb6acc849d1bf979e20108d57b241136d937e1dd9ca0f853d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-should-transform-to-labelled-arrows-when",
+      "text": "Test Transform > should transform to labelled arrows when label provided for arrows",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > should transform to labelled arrows when label provided for arrows",
+          "startLine": 287,
+          "endLine": 343,
+          "contentHash": "sha256:c84d6cc166aab10b33e9d20ea2523646c5c3e5d1651da3412e269206c2254341"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-test-frames-should-transform-frames-and-u",
+      "text": "Test Transform > Test Frames > should transform frames and update frame ids when regenerated",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > Test Frames > should transform frames and update frame ids when regenerated",
+          "startLine": 369,
+          "endLine": 391,
+          "contentHash": "sha256:80f80085be4fd9c744f5c75e5cb425635e11165c6d10968855032418259bf0db"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-test-frames-should-consider-user-defined",
+      "text": "Test Transform > Test Frames > should consider user defined frame dimensions over calculated when provided",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > Test Frames > should consider user defined frame dimensions over calculated when provided",
+          "startLine": 393,
+          "endLine": 411,
+          "contentHash": "sha256:93f2fb4415bd170be12a9fc4b14d217c0b56d95c2f420d3782d74a1ff737c721"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-test-frames-should-consider-user-defined-2",
+      "text": "Test Transform > Test Frames > should consider user defined frame coordinates calculated when provided",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > Test Frames > should consider user defined frame coordinates calculated when provided",
+          "startLine": 413,
+          "endLine": 431,
+          "contentHash": "sha256:5e7c0319cebab26c4d65d516f1596dde194dc0d85ab823a681fe3e0fe22aabfa"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-test-arrow-bindings-should-bind-arrows-to",
+      "text": "Test Transform > Test arrow bindings > should bind arrows to shapes when start / end provided without ids",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > Test arrow bindings > should bind arrows to shapes when start / end provided without ids",
+          "startLine": 435,
+          "endLine": 513,
+          "contentHash": "sha256:0f8d492118e819717a15315d937eff4e7b3148cb0c9e50348c27988265b20220"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-test-arrow-bindings-should-bind-arrows-to-2",
+      "text": "Test Transform > Test arrow bindings > should bind arrows to text when start / end provided without ids",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > Test arrow bindings > should bind arrows to text when start / end provided without ids",
+          "startLine": 515,
+          "endLine": 597,
+          "contentHash": "sha256:e1c12d09dd976057fd0e5aa044ccd989353f35c90e7eaae827591e5c36026b39"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-test-arrow-bindings-should-bind-arrows-to-3",
+      "text": "Test Transform > Test arrow bindings > should bind arrows to existing shapes when start / end provided with ids",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > Test arrow bindings > should bind arrows to existing shapes when start / end provided with ids",
+          "startLine": 599,
+          "endLine": 664,
+          "contentHash": "sha256:e0540f5f8a4532647df886a2225133cbc15cc45df784b9a6a4c4205cfe79d45f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-test-arrow-bindings-should-bind-arrows-to-4",
+      "text": "Test Transform > Test arrow bindings > should bind arrows to existing text elements when start / end provided with ids",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > Test arrow bindings > should bind arrows to existing text elements when start / end provided with ids",
+          "startLine": 666,
+          "endLine": 715,
+          "contentHash": "sha256:f5002be00e9dd75d72a40b4a241bc88df980836765575fbbf8e9f5f143e59608"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-test-arrow-bindings-should-bind-arrows-to-5",
+      "text": "Test Transform > Test arrow bindings > should bind arrows to existing elements if ids are correct",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > Test arrow bindings > should bind arrows to existing elements if ids are correct",
+          "startLine": 717,
+          "endLine": 784,
+          "contentHash": "sha256:7fe71c3d68774c26580726b4f1075f6489d467af06282c4b9edba17384777296"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-test-arrow-bindings-should-bind-when-ids",
+      "text": "Test Transform > Test arrow bindings > should bind when ids referenced before the element data",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > Test arrow bindings > should bind when ids referenced before the element data",
+          "startLine": 786,
+          "endLine": 824,
+          "contentHash": "sha256:317c8c6845880d6aa1ab3c2cda76e0cbe4b717d30ce829599d8c01b66fda6761"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-should-not-allow-duplicate-ids",
+      "text": "Test Transform > should not allow duplicate ids",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > should not allow duplicate ids",
+          "startLine": 827,
+          "endLine": 863,
+          "contentHash": "sha256:77098988b32e554241fbb5ffed3eb33616d22390360a47964cf29db15ce4cd4a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-should-contains-custom-data-if-provided",
+      "text": "Test Transform > should contains customData if provided",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > should contains customData if provided",
+          "startLine": 865,
+          "endLine": 881,
+          "contentHash": "sha256:41dd135fd25b9ca95efa1694e176cc02fb8b7f667d1b373b306f63e1bed8f2e7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-should-transform-the-elements-correctly-w",
+      "text": "Test Transform > should transform the elements correctly when linear elements have single point",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > should transform the elements correctly when linear elements have single point",
+          "startLine": 883,
+          "endLine": 1004,
+          "contentHash": "sha256:dc467be05bb3bd068a1f714b639a1f465721cdb013b69e89e772db2a14aadd77"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-creation-timestamps-assigns-fresh-timesta",
+      "text": "Test Transform > creation timestamps > assigns fresh timestamps when regenerating IDs without mutating the input",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > creation timestamps > assigns fresh timestamps when regenerating IDs without mutating the input",
+          "startLine": 1022,
+          "endLine": 1035,
+          "contentHash": "sha256:bc08ad6ef524efa560686a3f2577713bcf49aa8ccdcc7e945494ec9d8217cb8b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-creation-timestamps-preserves-an-explicit",
+      "text": "Test Transform > creation timestamps > preserves an explicit timestamp of %s when retaining IDs",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > creation timestamps > preserves an explicit timestamp of %s when retaining IDs",
+          "startLine": 1037,
+          "endLine": 1051,
+          "contentHash": "sha256:dde7826d15c221e75b3f2ae281b59b1421cd0e6a000bcebe7a1d77a1bdaf1ceb"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-creation-timestamps-defaults-missing-time",
+      "text": "Test Transform > creation timestamps > defaults missing timestamps when retaining IDs, as every type goes through a constructor",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > creation timestamps > defaults missing timestamps when retaining IDs, as every type goes through a constructor",
+          "startLine": 1053,
+          "endLine": 1066,
+          "contentHash": "sha256:9389bacbd2300b663d30ad6476a9cacb816030bb09413f8ad5c43dc0c0c07e73"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-creation-timestamps-assigns-fresh-timesta-2",
+      "text": "Test Transform > creation timestamps > assigns fresh timestamps to generated labels and binding endpoints",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > creation timestamps > assigns fresh timestamps to generated labels and binding endpoints",
+          "startLine": 1068,
+          "endLine": 1087,
+          "contentHash": "sha256:77d8d2c126f3d0352c733a3d89da8b81c96252b9e9cbbedbbc69bf46684e1ecf"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "ExcalidrawElementSkeleton",
+          "startLine": 246,
+          "endLine": 281,
+          "excerpt": "type ExcalidrawElementSkeleton = | Extract< Exclude<ExcalidrawElement, ExcalidrawSelectionElement>, ExcalidrawIframeLikeElement | ExcalidrawFreeDrawElement > | ({ type: Extract<ExcalidrawLinearElement[\"type\"], \"line\">; x: number; y:…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-sticky-notes-creates-a-finalized-note-wit",
+      "text": "Test Transform > sticky notes > creates a finalized note with the sticky defaults",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > sticky notes > creates a finalized note with the sticky defaults",
+          "startLine": 1098,
+          "endLine": 1111,
+          "contentHash": "sha256:6ee4ed9fbf65621a722b65fb4c6a62a8d406083dad323aff9634468553104db5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-sticky-notes-enforces-the-note-invariants",
+      "text": "Test Transform > sticky notes > enforces the note invariants on the given properties",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > sticky notes > enforces the note invariants on the given properties",
+          "startLine": 1113,
+          "endLine": 1137,
+          "contentHash": "sha256:a27fa0c45bc6ee7052b79393349e0ce841eabbeaa900cf1954ec17d8e5006990"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-transform-sticky-notes-gives-the-note-the-color-of",
+      "text": "Test Transform > sticky notes > gives the note the color of a label that sets its own",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/transform.test.ts",
+          "testTitle": "Test Transform > sticky notes > gives the note the color of a label that sets its own",
+          "startLine": 1139,
+          "endLine": 1157,
+          "contentHash": "sha256:eaeaad5ca7eae81cf7ab7497424f1bc99ade50933a6cfc7a136ab241ab20796e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transform.ts",
+          "symbol": "convertToExcalidrawElements",
+          "startLine": 680,
+          "endLine": 1220,
+          "excerpt": "const convertToExcalidrawElements(elementsSkeleton: ExcalidrawElementSkeleton[] | null, opts?: { regenerateIds?: boolean; renderEnvironment?: RenderEnvironment })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/transform.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/src/__tests__/transform.test.ts",
+  "generator": "tests",
+  "notes": "21 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:321a8d518b64d941a8f7dc3441be1634b75729a8e74bec86df9ca6cd3c80db10"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:321a8d518b64d941a8f7dc3441be1634b75729a8e74bec86df9ca6cd3c80db10"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:321a8d518b64d941a8f7dc3441be1634b75729a8e74bec86df9ca6cd3c80db10"
+    }
+  ]
+}

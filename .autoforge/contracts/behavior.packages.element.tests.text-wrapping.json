@@ -1,0 +1,782 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.tests.text-wrapping",
+  "revision": 1,
+  "title": "Test wrapText: behavior verified by packages/element/tests/textWrapping.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/element/tests/textWrapping.test.ts, exercising packages/element/src/textWrapping.ts, packages/element/src/types.ts.",
+  "category": "security",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/tests/textWrapping.test.ts",
+      "packages/element/src/textWrapping.ts",
+      "packages/element/src/types.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/textWrapping.ts",
+        "name": "wrapText"
+      },
+      {
+        "path": "packages/element/src/textWrapping.ts",
+        "name": "getWrappedTextLines"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "test-wrap-text-should-wrap-the-text-correctly-when-word",
+      "text": "Test wrapText > should wrap the text correctly when word length is exactly equal to max width",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should wrap the text correctly when word length is exactly equal to max width",
+          "startLine": 15,
+          "endLine": 20,
+          "contentHash": "sha256:e81eade549cd58df85ff423b4c7ac510377abb458e11c84770b535bf549886cc"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-return-the-text-as-is-if-max-width",
+      "text": "Test wrapText > should return the text as is if max width is invalid",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should return the text as is if max width is invalid",
+          "startLine": 22,
+          "endLine": 27,
+          "contentHash": "sha256:00aede8bc56306e734b6d127e11415970b2a47658d0eba44a2fd20f25e42770a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-show-the-text-correctly-when-max-w",
+      "text": "Test wrapText > should show the text correctly when max width reached",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should show the text correctly when max width reached",
+          "startLine": 29,
+          "endLine": 34,
+          "contentHash": "sha256:6d15fd3615b07fd36f6bdab2a71c1c9d98955d6f14bf929331d6161ac6504374"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-not-wrap-number-when-wrapping-line",
+      "text": "Test wrapText > should not wrap number when wrapping line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should not wrap number when wrapping line",
+          "startLine": 36,
+          "endLine": 41,
+          "contentHash": "sha256:62570d76a75d6568c7e8d24a62e640011a1095ed25d4d1a8b0079f5c63c8cc55"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-trim-all-trailing-whitespaces",
+      "text": "Test wrapText > should trim all trailing whitespaces",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should trim all trailing whitespaces",
+          "startLine": 43,
+          "endLine": 48,
+          "contentHash": "sha256:3131627c7912b8c21d5523739a352614dbd2d0e862bc7f6057f61b78958be076"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-trim-all-but-one-trailing-whitespa",
+      "text": "Test wrapText > should trim all but one trailing whitespaces",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should trim all but one trailing whitespaces",
+          "startLine": 50,
+          "endLine": 55,
+          "contentHash": "sha256:1b1553efaea61dbf12ab0a8c1fbd15348ebc68fe68d79db0a7b0295dece37186"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-keep-preceding-whitespaces-and-tri",
+      "text": "Test wrapText > should keep preceding whitespaces and trim all trailing whitespaces",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should keep preceding whitespaces and trim all trailing whitespaces",
+          "startLine": 57,
+          "endLine": 62,
+          "contentHash": "sha256:e55640728de178ecf3e6bf91d4c7817950848eea576a21040254e397c713f753"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-keep-some-preceding-whitespaces-tr",
+      "text": "Test wrapText > should keep some preceding whitespaces, trim trailing whitespaces, but kep those that fit in the trailing line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should keep some preceding whitespaces, trim trailing whitespaces, but kep those that fit in the trailing line",
+          "startLine": 64,
+          "endLine": 69,
+          "contentHash": "sha256:fd506cd3eb0e94402ab7039d8ed880287907c8d265e967d2692317aa0e02b4e5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-trim-keep-those-whitespace-that-fi",
+      "text": "Test wrapText > should trim keep those whitespace that fit in the trailing line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should trim keep those whitespace that fit in the trailing line",
+          "startLine": 71,
+          "endLine": 76,
+          "contentHash": "sha256:3fbeb24c833d8966c84b18fc505e2f7aa1bd610cf800772409d77f9d86c4f790"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-support-multiple-multi-codepoint-e",
+      "text": "Test wrapText > should support multiple (multi-codepoint) emojis",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should support multiple (multi-codepoint) emojis",
+          "startLine": 78,
+          "endLine": 83,
+          "contentHash": "sha256:2bed13277fe0d8028dc96bf8db0034c9fa0d98abcc001262019a70c163685fe4"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-wrap-the-text-correctly-when-text",
+      "text": "Test wrapText > should wrap the text correctly when text contains hyphen",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should wrap the text correctly when text contains hyphen",
+          "startLine": 85,
+          "endLine": 95,
+          "contentHash": "sha256:863f972e89472aba5f502a35474491455d0881042d9d13bfa7ef1c53f5a016db"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-support-wrapping-nested-lists",
+      "text": "Test wrapText > should support wrapping nested lists",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should support wrapping nested lists",
+          "startLine": 97,
+          "endLine": 107,
+          "contentHash": "sha256:c4eb892d312073721efae1cedb484130f21000dc7ad5b427af36baf2963bc952"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-retain-original-text-offsets-for-w",
+      "text": "Test wrapText > should retain original text offsets for wrapped lines",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should retain original text offsets for wrapped lines",
+          "startLine": 109,
+          "endLine": 122,
+          "contentHash": "sha256:85858d48ea23415934d0c6662789edac8433a5b62a7b88049bf746bc9eb5ae39"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "getWrappedTextLines",
+          "startLine": 448,
+          "endLine": 481,
+          "excerpt": "const getWrappedTextLines(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): WrappedTextLine[]"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-exclude-whitespace-trimmed-away-at",
+      "text": "Test wrapText > should exclude whitespace trimmed away at soft-wrap boundaries from line offsets",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should exclude whitespace trimmed away at soft-wrap boundaries from line offsets",
+          "startLine": 124,
+          "endLine": 137,
+          "contentHash": "sha256:5d59426d83d891312ae20e2ad44fd9035af7881e09bf433e79de95ce011d4dc4"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "getWrappedTextLines",
+          "startLine": 448,
+          "endLine": 481,
+          "excerpt": "const getWrappedTextLines(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): WrappedTextLine[]"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-retain-offsets-when-wrapping-a-sin",
+      "text": "Test wrapText > should retain offsets when wrapping a single long token",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should retain offsets when wrapping a single long token",
+          "startLine": 139,
+          "endLine": 152,
+          "contentHash": "sha256:5654a994388f3d3ab43691ba4932e2b4d2971112fd9fdae8d2734151c984552a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "getWrappedTextLines",
+          "startLine": 448,
+          "endLine": 481,
+          "excerpt": "const getWrappedTextLines(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): WrappedTextLine[]"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-should-preserve-empty-hard-lines-in-metad",
+      "text": "Test wrapText > should preserve empty hard lines in metadata",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > should preserve empty hard lines in metadata",
+          "startLine": 154,
+          "endLine": 172,
+          "contentHash": "sha256:9bbaff846a1e6badd371c66bf9e94a6563743702bc44e7e41fec4d97d42745d2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "getWrappedTextLines",
+          "startLine": 448,
+          "endLine": 481,
+          "excerpt": "const getWrappedTextLines(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): WrappedTextLine[]"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-when-text-is-cjk-should-break-each-cjk-ch",
+      "text": "Test wrapText > When text is CJK > should break each CJK character when width is very small",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > When text is CJK > should break each CJK character when width is very small",
+          "startLine": 175,
+          "endLine": 183,
+          "contentHash": "sha256:6756940f0f8fd7ce5c121df68e40d2285ec49c2621a913c76598b729254fd251"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-when-text-is-cjk-should-break-cjk-text-in",
+      "text": "Test wrapText > When text is CJK > should break CJK text into longer segments when width is larger",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > When text is CJK > should break CJK text into longer segments when width is larger",
+          "startLine": 185,
+          "endLine": 193,
+          "contentHash": "sha256:9fe5863e16db37eb9139f5afb9ac2362d6c4e623e50827b6980a27a0a6404509"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-when-text-is-cjk-should-handle-a-combinat",
+      "text": "Test wrapText > When text is CJK > should handle a combination of CJK, latin, emojis and whitespaces",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > When text is CJK > should handle a combination of CJK, latin, emojis and whitespaces",
+          "startLine": 195,
+          "endLine": 209,
+          "contentHash": "sha256:8451164692b7eb6a9e8761dc314c44aa478180b86f750c5c7a403a2340d1ffbc"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-when-text-is-cjk-should-break-before-and",
+      "text": "Test wrapText > When text is CJK > should break before and after a regular CJK character",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > When text is CJK > should break before and after a regular CJK character",
+          "startLine": 211,
+          "endLine": 220,
+          "contentHash": "sha256:8fee3f07bf03fe414a7bcc1a7d6d085164bca65f3d245c28be697e07ecb91f2a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-when-text-is-cjk-should-break-before-and-2",
+      "text": "Test wrapText > When text is CJK > should break before and after certain CJK symbols",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > When text is CJK > should break before and after certain CJK symbols",
+          "startLine": 222,
+          "endLine": 231,
+          "contentHash": "sha256:86b684a587f900ee4360e1e0057f8c3d6cbf585c247ccda3f6c6e3ba72a3ab78"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-when-text-is-cjk-should-break-after-not-b",
+      "text": "Test wrapText > When text is CJK > should break after, not before for certain CJK pairs",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > When text is CJK > should break after, not before for certain CJK pairs",
+          "startLine": 233,
+          "endLine": 238,
+          "contentHash": "sha256:f371750ae1d6f35b3577a4a53559200f768fb3efa735f3a618761ae80c9a7963"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-when-text-is-cjk-should-break-before-not",
+      "text": "Test wrapText > When text is CJK > should break before, not after for certain CJK pairs",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > When text is CJK > should break before, not after for certain CJK pairs",
+          "startLine": 240,
+          "endLine": 245,
+          "contentHash": "sha256:7bf02f640d3012b80a94022256863f2475654c6b89f686a6a433f2278f9b7c4f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-when-text-is-cjk-should-break-after-not-b-2",
+      "text": "Test wrapText > When text is CJK > should break after, not before for certain CJK character pairs",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > When text is CJK > should break after, not before for certain CJK character pairs",
+          "startLine": 247,
+          "endLine": 252,
+          "contentHash": "sha256:38c62f296db96092c67f325cba36e5de366bd84c13d7ccef7829aaaaeb19b38a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "test-wrap-text-when-text-is-cjk-should-break-chinese-sen",
+      "text": "Test wrapText > When text is CJK > should break Chinese sentences",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/textWrapping.test.ts",
+          "testTitle": "Test wrapText > When text is CJK > should break Chinese sentences",
+          "startLine": 254,
+          "endLine": 270,
+          "contentHash": "sha256:2971b7e95d8dcb0e7df088ef31a50ced634832065d62b3e820641c73312be289"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textWrapping.ts",
+          "symbol": "wrapText",
+          "startLine": 398,
+          "endLine": 407,
+          "excerpt": "const wrapText(text: string, font: FontString, maxWidth: number, env?: RenderEnvironment): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/textWrapping.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/tests/textWrapping.test.ts",
+  "generator": "tests",
+  "notes": "18 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:8f47fbbe2eea1bd320e9dce10b27f92dbaff37ca29f907ab7bfea8aa0e5bedcf"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:8f47fbbe2eea1bd320e9dce10b27f92dbaff37ca29f907ab7bfea8aa0e5bedcf"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:8f47fbbe2eea1bd320e9dce10b27f92dbaff37ca29f907ab7bfea8aa0e5bedcf"
+    }
+  ]
+}

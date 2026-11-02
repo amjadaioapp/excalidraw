@@ -1,0 +1,658 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.wysiwyg.text-wysiwyg",
+  "revision": 1,
+  "title": "textWysiwyg: behavior verified by packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/wysiwyg/textWysiwyg.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/types.ts, packages/excalidraw/actions/actionTextAutoResize.ts, packages/excalidraw/actions/index.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/actions/actionTextAutoResize.ts",
+      "packages/excalidraw/actions/index.ts",
+      "packages/excalidraw/data/index.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/textAutoResizeHandle.ts",
+      "packages/excalidraw/wysiwyg/textWysiwyg.tsx",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawTextElement"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "text-wysiwyg-start-text-editing-should-prefer-editing-se",
+      "text": "textWysiwyg > start text editing > should prefer editing selected text element (non-bindable container present)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should prefer editing selected text element (non-bindable container present)",
+          "startLine": 93,
+          "endLine": 119,
+          "contentHash": "sha256:9af7fe087b6c7c6a9f9e4bcc33c6dc1eb20ca0932c6e03d8a2ffb0110a717a69"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-prefer-editing-se-2",
+      "text": "textWysiwyg > start text editing > should prefer editing selected text element (bindable container present)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should prefer editing selected text element (bindable container present)",
+          "startLine": 121,
+          "endLine": 160,
+          "contentHash": "sha256:ba3e3bd6a4d53d2a9ebfd379e0289bf1a3e7dc1e3e59f0930181083884be9238"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-not-create-bound",
+      "text": "textWysiwyg > start text editing > should not create bound text on ENTER if text exists at container center",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should not create bound text on ENTER if text exists at container center",
+          "startLine": 162,
+          "endLine": 188,
+          "contentHash": "sha256:e21d46446b0280bec7d4142f28f942c094ae38d3f68750866dbdef59db9d8803"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-edit-existing-bou",
+      "text": "textWysiwyg > start text editing > should edit existing bound text on ENTER even if higher z-index unbound text exists at container center",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should edit existing bound text on ENTER even if higher z-index unbound text exists at container center",
+          "startLine": 190,
+          "endLine": 229,
+          "contentHash": "sha256:f65af5af5e7e5803de9c6f922d908ec638b87894c5a43bf228d175935eb355d6"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-edit-text-under-c",
+      "text": "textWysiwyg > start text editing > should edit text under cursor when clicked with text tool",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should edit text under cursor when clicked with text tool",
+          "startLine": 231,
+          "endLine": 251,
+          "contentHash": "sha256:8bc347977458203799867195a11a15496d6544a53a529b089d2af520e2a6bdd4"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-vertically-center",
+      "text": "textWysiwyg > start text editing > should vertically center newly created text on the cursor when clicked with text tool",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should vertically center newly created text on the cursor when clicked with text tool",
+          "startLine": 253,
+          "endLine": 268,
+          "contentHash": "sha256:12be700a54364cfba27f5e2c497c33fb077b4f631b008532892540882c39b464"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-snap-newly-create",
+      "text": "textWysiwyg > start text editing > should snap newly created text top-left to the current grid cell when clicked with text tool in grid mode",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should snap newly created text top-left to the current grid cell when clicked with text tool in grid mode",
+          "startLine": 270,
+          "endLine": 287,
+          "contentHash": "sha256:dabdae91be98dfa92ee2751f7a6a4f526e4890ed36dd41c073335c48baf86b88"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-set-a-fixed-text",
+      "text": "textWysiwyg > start text editing > should set a fixed text width when dragging inside a $type from $fromX to $toX",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should set a fixed text width when dragging inside a $type from $fromX to $toX",
+          "startLine": 289,
+          "endLine": 335,
+          "contentHash": "sha256:3e81007043efd44e42233157497cc3ca9c598e39297a9743c03cbd30eb3a7ff3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-bind-text-on-a-ce",
+      "text": "textWysiwyg > start text editing > should bind text on a center click with %s pixels of pointer movement",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should bind text on a center click with %s pixels of pointer movement",
+          "startLine": 337,
+          "endLine": 373,
+          "contentHash": "sha256:578ea7061b8ac08b4064784a1461676083881dec0096c6c80d2308d714a1e149"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-not-resize-a-smal",
+      "text": "textWysiwyg > start text editing > should not resize a small shape when dragging text from its center",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should not resize a small shape when dragging text from its center",
+          "startLine": 375,
+          "endLine": 402,
+          "contentHash": "sha256:dfbc08ef4a2271f4241ea8d64f54838f57ca023d8debdde2c99d222a41b43e3b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-cancel-a-pending",
+      "text": "textWysiwyg > start text editing > should cancel a pending center click when switching tools",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should cancel a pending center click when switching tools",
+          "startLine": 404,
+          "endLine": 416,
+          "contentHash": "sha256:cc3fb309326a87c12c260cd9e75ccfe4b094adb43da559b5cdada5bc48c95469"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-clear-binding-hig",
+      "text": "textWysiwyg > start text editing > should clear binding highlights when a locked text tool starts a center drag",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should clear binding highlights when a locked text tool starts a center drag",
+          "startLine": 418,
+          "endLine": 451,
+          "contentHash": "sha256:81a85da95c25ed543d2e6db72c29d1212087ab6d362c3289854f660c468e164b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-set-a-fixed-text-2",
+      "text": "textWysiwyg > start text editing > should set a fixed text width when ctrl/cmd-dragging at a shape's center",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should set a fixed text width when ctrl/cmd-dragging at a shape's center",
+          "startLine": 453,
+          "endLine": 485,
+          "contentHash": "sha256:a42fe4daf987a4438c3d5592ebfce3284e8d70b5fb4aa7844b8d74e4d2347ddf"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-redraw-dashed-tex",
+      "text": "textWysiwyg > start text editing > should redraw dashed text bounds while dragging from $location (tool locked: $locked)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should redraw dashed text bounds while dragging from $location (tool locked: $locked)",
+          "startLine": 487,
+          "endLine": 540,
+          "contentHash": "sha256:46bbd9a49746b30d430608929cd81cdd5c5457d38ecb3e6a18324cb23fb2d362"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-edit-text-under-c-2",
+      "text": "textWysiwyg > start text editing > should edit text under cursor when double-clicked with selection tool",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should edit text under cursor when double-clicked with selection tool",
+          "startLine": 542,
+          "endLine": 562,
+          "contentHash": "sha256:4b232d4c3be6d3dd8f0ec891d609df7c2e2bb8401210572decf334d542555625"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-reselect-text-aft",
+      "text": "textWysiwyg > start text editing > should reselect text after exiting wysiwyg with escape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should reselect text after exiting wysiwyg with escape",
+          "startLine": 564,
+          "endLine": 589,
+          "contentHash": "sha256:d422459a3380622cdc5aaa9b3277ed2c98ab237790486fc37e4685765e7d41e2"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-edit-selected-bou",
+      "text": "textWysiwyg > start text editing > should edit selected bound text on single click",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should edit selected bound text on single click",
+          "startLine": 591,
+          "endLine": 620,
+          "contentHash": "sha256:3b4d27fc4dc888053eb41919775eeb9451a8390451e498483b12205dcaea87d2"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-start-text-editing-should-not-edit-selected",
+      "text": "textWysiwyg > start text editing > should not edit selected bound text container when only the container was single-clicked",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > start text editing > should not edit selected bound text container when only the container was single-clicked",
+          "startLine": 622,
+          "endLine": 650,
+          "contentHash": "sha256:309b6a21d1dcd928b717325529ccb1438eb182d34efe52786d2e994b9dab6037"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-test-text-wrapping-should-keep-width-when-e",
+      "text": "textWysiwyg > Test text wrapping > should keep width when editing a wrapped text",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > Test text wrapping > should keep width when editing a wrapped text",
+          "startLine": 687,
+          "endLine": 731,
+          "contentHash": "sha256:8fb321fdb7e2d808f286eed62c09db31609bfc8c82c2e0172c7e5183c7b0fac6"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-test-text-wrapping-should-restore-original",
+      "text": "textWysiwyg > Test text wrapping > should restore original text after unwrapping a wrapped text",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > Test text wrapping > should restore original text after unwrapping a wrapped text",
+          "startLine": 733,
+          "endLine": 768,
+          "contentHash": "sha256:d8982fb8e180e0cb37b73cfad2871c9c3c9c7a5c44409450ff466606dcba1bc8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-test-container-unbound-text-should-add-a-ta",
+      "text": "textWysiwyg > Test container-unbound text > should add a tab at the start of the first line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > Test container-unbound text > should add a tab at the start of the first line",
+          "startLine": 820,
+          "endLine": 831,
+          "contentHash": "sha256:ef1d901e4bd70a1884e717077d6c7191dc5aaef574c742843d2f73180d4e9258"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-test-container-unbound-text-should-add-a-ta-2",
+      "text": "textWysiwyg > Test container-unbound text > should add a tab at the start of the second line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > Test container-unbound text > should add a tab at the start of the second line",
+          "startLine": 833,
+          "endLine": 846,
+          "contentHash": "sha256:6ff164cc505da7361d8595e1b15db077dd470b66c04ad51c97b2ec245eaeba27"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-test-container-unbound-text-should-add-a-ta-3",
+      "text": "textWysiwyg > Test container-unbound text > should add a tab at the start of the first and second line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > Test container-unbound text > should add a tab at the start of the first and second line",
+          "startLine": 848,
+          "endLine": 861,
+          "contentHash": "sha256:167a27c0ef4af2fbbd5bf74adc112e5baffdb467d043c6db80f508fc06e56937"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-test-container-unbound-text-should-remove-a",
+      "text": "textWysiwyg > Test container-unbound text > should remove a tab at the start of the first line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > Test container-unbound text > should remove a tab at the start of the first line",
+          "startLine": 863,
+          "endLine": 879,
+          "contentHash": "sha256:4f430dc7af08b87e9e37abea3784a8ece958d530c78f09332af1a1a4434a4516"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-wysiwyg-test-container-unbound-text-should-remove-a-2",
+      "text": "textWysiwyg > Test container-unbound text > should remove a tab at the start of the second line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+          "testTitle": "textWysiwyg > Test container-unbound text > should remove a tab at the start of the second line",
+          "startLine": 881,
+          "endLine": 896,
+          "contentHash": "sha256:97abe5fda351f1e5ddccd7aba29b29565300f100e40047461b518b0853349b1d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/wysiwyg/textWysiwyg.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/wysiwyg/textWysiwyg.test.tsx",
+  "generator": "tests",
+  "notes": "1 skipped, todo, or non-asserting test(s) were not turned into statements. 94 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:80d63a9e88f4dcff91e7c259aa7236f82299b341cbe769faf364263d43103eab"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:80d63a9e88f4dcff91e7c259aa7236f82299b341cbe769faf364263d43103eab"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:80d63a9e88f4dcff91e7c259aa7236f82299b341cbe769faf364263d43103eab"
+    }
+  ]
+}

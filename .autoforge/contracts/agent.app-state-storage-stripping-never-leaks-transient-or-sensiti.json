@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "agent.app-state-storage-stripping-never-leaks-transient-or-sensiti",
+  "revision": 1,
+  "title": "AppState storage stripping never leaks transient or sensitive state to server/export",
+  "category": "data-integrity",
+  "status": "approved",
+  "source": "agent",
+  "confidence": "medium",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/appState.ts"
+    ],
+    "symbols": []
+  },
+  "statements": [
+    {
+      "id": "clear-app-state-for-database-and-clean-app-state-for-exp",
+      "text": "clearAppStateForDatabase and cleanAppStateForExport keep only keys whose APP_STATE_STORAGE_CONF entry is true for that storage type; collaborators, fileHandle, selection and scroll state must not be persisted to server or export",
+      "basis": "observed",
+      "evidence": [
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/appState.ts",
+          "symbol": "_clearAppStateForStorage",
+          "startLine": 299,
+          "endLine": 321,
+          "excerpt": "const _clearAppStateForStorage<ExportType extends \"export\" | \"browser\" | \"server\">(appState: Partial<AppState>, exportType: ExportType)"
+        },
+        {
+          "kind": "file-range",
+          "path": "packages/excalidraw/appState.ts",
+          "startLine": 173,
+          "endLine": 173,
+          "excerpt": "collaborators: { browser: false, export: false, server: false },"
+        },
+        {
+          "kind": "file-range",
+          "path": "packages/excalidraw/appState.ts",
+          "startLine": 226,
+          "endLine": 226,
+          "excerpt": "fileHandle: { browser: false, export: false, server: false },"
+        }
+      ],
+      "verification": {
+        "method": "manual"
+      }
+    },
+    {
+      "id": "keys-not-present-in-app-state-storage-conf-are-dropped-f",
+      "text": "Keys not present in APP_STATE_STORAGE_CONF are dropped for every storage type",
+      "basis": "observed",
+      "evidence": [
+        {
+          "kind": "file-range",
+          "path": "packages/excalidraw/appState.ts",
+          "startLine": 312,
+          "endLine": 313,
+          "excerpt": "const propConfig = APP_STATE_STORAGE_CONF[key];\n    if (propConfig?.[exportType]) {"
+        }
+      ],
+      "verification": {
+        "method": "manual"
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "agent:app-state-storage-stripping-never-leaks-transient-or-sensitive-state-to-server-e",
+  "generator": "agent-import",
+  "notes": "Imported from coding-agent output on 2026-11-02; citations verified by Autoforge. Rationale: Leaking collaborator lists, file handles, or UI state into shared links or exported files would corrupt scenes and expose private data.",
+  "createdAt": "2026-11-02T17:10:00.997Z",
+  "updatedAt": "2026-11-02T17:16:06.163Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:16:06.163Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:14b055306d78cb4351305b98e58679edca3ccf9d1b724f064fc3e9b0f39c5eda"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:10:00.997Z",
+      "by": "autoforge import (agent-assisted)",
+      "contentHash": "sha256:14b055306d78cb4351305b98e58679edca3ccf9d1b724f064fc3e9b0f39c5eda"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:16:06.163Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:14b055306d78cb4351305b98e58679edca3ccf9d1b724f064fc3e9b0f39c5eda"
+    }
+  ]
+}

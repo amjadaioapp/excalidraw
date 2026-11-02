@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "agent.hash-elements-version-is-an-order-sensitive-unsigned-32-bit",
+  "revision": 1,
+  "title": "hashElementsVersion is an order-sensitive unsigned 32-bit djb2 over versionNonce",
+  "category": "api-compatibility",
+  "status": "approved",
+  "source": "agent",
+  "confidence": "medium",
+  "scope": {
+    "paths": [
+      "packages/element/src/index.ts"
+    ],
+    "symbols": []
+  },
+  "statements": [
+    {
+      "id": "hash-elements-version-starts-at-5381-folds-each-element",
+      "text": "hashElementsVersion starts at 5381, folds each element's versionNonce in iteration order, and returns an unsigned 32-bit integer",
+      "basis": "observed",
+      "evidence": [
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/index.ts",
+          "symbol": "hashElementsVersion",
+          "startLine": 21,
+          "endLine": 27,
+          "excerpt": "const hashElementsVersion(elements: ElementsMapOrArray): number"
+        }
+      ],
+      "verification": {
+        "method": "manual"
+      }
+    },
+    {
+      "id": "hash-string-hashes-utf-16-code-units-with-djb2-and-retur",
+      "text": "hashString hashes UTF-16 code units with djb2 and returns an unsigned 32-bit integer; it is not to be used for security",
+      "basis": "observed",
+      "evidence": [
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/index.ts",
+          "symbol": "hashString",
+          "startLine": 34,
+          "endLine": 41,
+          "excerpt": "const hashString(s: string): number"
+        }
+      ],
+      "verification": {
+        "method": "manual"
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "agent:hash-elements-version-is-an-order-sensitive-unsigned-32-bit-djb2-over-version-no",
+  "generator": "agent-import",
+  "notes": "Imported from coding-agent output on 2026-11-02; citations verified by Autoforge. Rationale: These are public API re-exports from @excalidraw/excalidraw that hosts use to detect scene changes, so changing the algorithm would break their change detection.",
+  "createdAt": "2026-11-02T17:10:00.997Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:67b4d7ed7dd7f7c702df6e1228fc085ff9cf89b88897b4286e48416250440f7a"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:10:00.997Z",
+      "by": "autoforge import (agent-assisted)",
+      "contentHash": "sha256:67b4d7ed7dd7f7c702df6e1228fc085ff9cf89b88897b4286e48416250440f7a"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:67b4d7ed7dd7f7c702df6e1228fc085ff9cf89b88897b4286e48416250440f7a"
+    }
+  ]
+}

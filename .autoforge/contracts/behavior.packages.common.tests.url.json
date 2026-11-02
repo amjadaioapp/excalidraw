@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.common.tests.url",
+  "revision": 1,
+  "title": "normalizeLink: behavior verified by packages/common/tests/url.test.tsx",
+  "description": "Existing behavior covered by 1 asserting test(s) in packages/common/tests/url.test.tsx, exercising packages/common/src/url.ts.",
+  "category": "security",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/common/tests/url.test.tsx",
+      "packages/common/src/url.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/common/src/url.ts",
+        "name": "normalizeLink"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "normalize-link-should-sanitize-links",
+      "text": "normalizeLink > should sanitize links",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/tests/url.test.tsx",
+          "testTitle": "normalizeLink > should sanitize links",
+          "startLine": 6,
+          "endLine": 30,
+          "contentHash": "sha256:3389bf1466e57bd224d7e97029cfe93100f1174bb6e34fd3728272479388b6b0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/common/src/url.ts",
+          "symbol": "normalizeLink",
+          "startLine": 5,
+          "endLine": 11,
+          "excerpt": "const normalizeLink(link: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/tests/url.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/common/tests/url.test.tsx",
+  "generator": "tests",
+  "notes": "Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:2c30d5c842cb74be85312358fd41168bbea47539092e847ad4603e359f36a755"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:2c30d5c842cb74be85312358fd41168bbea47539092e847ad4603e359f36a755"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:2c30d5c842cb74be85312358fd41168bbea47539092e847ad4603e359f36a755"
+    }
+  ]
+}

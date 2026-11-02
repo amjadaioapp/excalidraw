@@ -1,0 +1,661 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.components.ttddialog.utils.ttdstream-fetch",
+  "revision": 1,
+  "title": "TTDStreamFetch: behavior verified by packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+  "description": "Existing behavior covered by 21 asserting test(s) in packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts, exercising packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+      "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+        "name": "TTDStreamFetch"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "ttdstream-fetch-successful-streaming-should-stream-data",
+      "text": "TTDStreamFetch > successful streaming > should stream data chunks and return full response",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > successful streaming > should stream data chunks and return full response",
+          "startLine": 51,
+          "endLine": 74,
+          "contentHash": "sha256:c0f7d79a83b518cdb7ed1e0048e728b3a0c60b8c83938041fd97b2334e7af674"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-successful-streaming-should-handle-multi",
+      "text": "TTDStreamFetch > successful streaming > should handle multi-line chunks",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > successful streaming > should handle multi-line chunks",
+          "startLine": 76,
+          "endLine": 95,
+          "contentHash": "sha256:7d92e75e3d91f34af754ec4a62117a06fdb6be343aae335b1b2f4d4510551ded"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-successful-streaming-should-call-on-stre",
+      "text": "TTDStreamFetch > successful streaming > should call onStreamCreated callback",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > successful streaming > should call onStreamCreated callback",
+          "startLine": 97,
+          "endLine": 114,
+          "contentHash": "sha256:2affc628e9f967ca38622a28ea7b218d13c3e24cc8e1f485f79448da4bbc43d6"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-successful-streaming-should-handle-empty",
+      "text": "TTDStreamFetch > successful streaming > should handle empty chunks gracefully",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > successful streaming > should handle empty chunks gracefully",
+          "startLine": 116,
+          "endLine": 135,
+          "contentHash": "sha256:5013f4d0f3e7ed8f69ccb9aed6abf8f461d1bda643ed701dd4c87768e9a81ad2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-successful-streaming-should-handle-null",
+      "text": "TTDStreamFetch > successful streaming > should handle null chunk as stream termination",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > successful streaming > should handle null chunk as stream termination",
+          "startLine": 137,
+          "endLine": 156,
+          "contentHash": "sha256:56dae169b8ef2ba12fb8245d25179286bbc70ad15b3960371894285257cab140"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-rate-limit-handling-should-extract-rate",
+      "text": "TTDStreamFetch > rate limit handling > should extract rate limit headers when enabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > rate limit handling > should extract rate limit headers when enabled",
+          "startLine": 160,
+          "endLine": 181,
+          "contentHash": "sha256:05f5b9d3bff6c8239aa006a04c3b5de53f069c1622cd8adbbe488cfc7421b0c5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-rate-limit-handling-should-not-extract-r",
+      "text": "TTDStreamFetch > rate limit handling > should not extract rate limits when disabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > rate limit handling > should not extract rate limits when disabled",
+          "startLine": 183,
+          "endLine": 204,
+          "contentHash": "sha256:56c6f20cdbde51af662532eefc7081e02b9c13ac0423852eac37f4c5c39de152"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-rate-limit-handling-should-handle-missin",
+      "text": "TTDStreamFetch > rate limit handling > should handle missing rate limit headers",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > rate limit handling > should handle missing rate limit headers",
+          "startLine": 206,
+          "endLine": 223,
+          "contentHash": "sha256:e54ea913838e4497bb656e39073b6e06dcd6472ad07006bb18d86e21d1dd2631"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-rate-limit-handling-should-return-specif",
+      "text": "TTDStreamFetch > rate limit handling > should return specific error for 429 rate limit",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > rate limit handling > should return specific error for 429 rate limit",
+          "startLine": 225,
+          "endLine": 245,
+          "contentHash": "sha256:05d976132f8ba348db5724130b4d9c3762c4dec8a259fd35558e547078acf5cd"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-error-handling-should-handle-non-ok-resp",
+      "text": "TTDStreamFetch > error handling > should handle non-ok response with text",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > error handling > should handle non-ok response with text",
+          "startLine": 249,
+          "endLine": 264,
+          "contentHash": "sha256:6ecf835662fe706ee5c071c3ffce5209a3364cc666cb5d4f0bacceccf5826470"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-error-handling-should-handle-non-ok-resp-2",
+      "text": "TTDStreamFetch > error handling > should handle non-ok response without text",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > error handling > should handle non-ok response without text",
+          "startLine": 266,
+          "endLine": 281,
+          "contentHash": "sha256:75907e02d3901b84faf8e3c5383841fb4e0982ac703079d8c2d6e9afdceab71e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-error-handling-should-handle-missing-res",
+      "text": "TTDStreamFetch > error handling > should handle missing response body",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > error handling > should handle missing response body",
+          "startLine": 283,
+          "endLine": 299,
+          "contentHash": "sha256:8c797a6319890713df5b5f1ae65e9156578b08eb8e00def624b5794d4af694b0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-error-handling-should-handle-empty-respo",
+      "text": "TTDStreamFetch > error handling > should handle empty response",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > error handling > should handle empty response",
+          "startLine": 301,
+          "endLine": 317,
+          "contentHash": "sha256:81a353c190f4b5fe6260e9b85dda94b32d2e44e21c07e8d69ae9769c0b08e1ab"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-error-handling-should-handle-network-err",
+      "text": "TTDStreamFetch > error handling > should handle network errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > error handling > should handle network errors",
+          "startLine": 319,
+          "endLine": 331,
+          "contentHash": "sha256:c9a8b58ecc8995cd3c24b4b6c601341eca1024f8872e3d965ecb6eb8d89c7b29"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-error-handling-should-handle-invalid-jso",
+      "text": "TTDStreamFetch > error handling > should handle invalid JSON in stream",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > error handling > should handle invalid JSON in stream",
+          "startLine": 333,
+          "endLine": 359,
+          "contentHash": "sha256:1e9340f6654fbc934f2276d9d1fbf699bba4ae6f9e8a6a51f0578812aca53df1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-abort-handling-should-handle-abort-signa",
+      "text": "TTDStreamFetch > abort handling > should handle abort signal during fetch",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > abort handling > should handle abort signal during fetch",
+          "startLine": 363,
+          "endLine": 381,
+          "contentHash": "sha256:09dfe6f5f00c8375e37f358886ad909629c2decdc6986ee3cb362796d8509694"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-abort-handling-should-handle-abort-error",
+      "text": "TTDStreamFetch > abort handling > should handle abort error thrown during streaming",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > abort handling > should handle abort error thrown during streaming",
+          "startLine": 383,
+          "endLine": 406,
+          "contentHash": "sha256:e0350664a4b9376a373b59cdee4ee33f12878f936f446910eed323d63b00a229"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-sse-parsing-should-handle-lines-without",
+      "text": "TTDStreamFetch > SSE parsing > should handle lines without data prefix",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > SSE parsing > should handle lines without data prefix",
+          "startLine": 410,
+          "endLine": 429,
+          "contentHash": "sha256:978d0d851ee06865a77a4a4dd6b2d989f251918728722586def027b7ada8efde"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-sse-parsing-should-handle-empty-lines-in",
+      "text": "TTDStreamFetch > SSE parsing > should handle empty lines in stream",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > SSE parsing > should handle empty lines in stream",
+          "startLine": 431,
+          "endLine": 451,
+          "contentHash": "sha256:1f76fc155484c68e7b2c0b76914564617d6ebcdb5c41d6589d04bae8b138bfaa"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-sse-parsing-should-handle-partial-chunks",
+      "text": "TTDStreamFetch > SSE parsing > should handle partial chunks across reads",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > SSE parsing > should handle partial chunks across reads",
+          "startLine": 453,
+          "endLine": 474,
+          "contentHash": "sha256:c2e61d963fc71dce4a252f916264bd200ccbd1d870e89e1553e86628c2ced9d1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "ttdstream-fetch-sse-parsing-should-handle-done-marker-to",
+      "text": "TTDStreamFetch > SSE parsing > should handle [DONE] marker to terminate stream",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+          "testTitle": "TTDStreamFetch > SSE parsing > should handle [DONE] marker to terminate stream",
+          "startLine": 476,
+          "endLine": 495,
+          "contentHash": "sha256:28d67710b4e6a41fd47fe187dc5ee53904a624993abfd9fd436f62e5a42574cf"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts",
+          "symbol": "TTDStreamFetch",
+          "startLine": 84,
+          "endLine": 225,
+          "excerpt": "async function TTDStreamFetch(options: StreamingOptions): Promise<TTTDDialog.OnTextSubmitRetValue>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts",
+  "generator": "tests",
+  "notes": "Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:eeac90d6afe54e3fde245626ce7b9d86167d80f8290b85a4205cbd556f4bc49f"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:eeac90d6afe54e3fde245626ce7b9d86167d80f8290b85a4205cbd556f4bc49f"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:eeac90d6afe54e3fde245626ce7b9d86167d80f8290b85a4205cbd556f4bc49f"
+    }
+  ]
+}

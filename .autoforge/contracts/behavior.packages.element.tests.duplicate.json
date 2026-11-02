@@ -1,0 +1,644 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.tests.duplicate",
+  "revision": 1,
+  "title": "Behavior verified by packages/element/tests/duplicate.test.tsx",
+  "description": "Existing behavior covered by 21 asserting test(s) in packages/element/tests/duplicate.test.tsx, exercising packages/common/src/index.ts, packages/element/src/duplicate.ts, packages/element/src/typeChecks.ts, packages/element/src/types.ts, packages/excalidraw/actions/index.ts and more.",
+  "category": "data-integrity",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/tests/duplicate.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/duplicate.ts",
+      "packages/element/src/typeChecks.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/actions/index.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/duplicate.ts",
+        "name": "deepCopyElement"
+      },
+      {
+        "path": "packages/element/src/duplicate.ts",
+        "name": "duplicateElement"
+      },
+      {
+        "path": "packages/excalidraw/index.tsx",
+        "name": "mutateElement"
+      },
+      {
+        "path": "packages/element/src/duplicate.ts",
+        "name": "duplicateElements"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawLinearElement"
+      },
+      {
+        "path": "packages/excalidraw/actions/index.ts",
+        "name": "actionDuplicateSelection"
+      },
+      {
+        "path": "packages/element/src/typeChecks.ts",
+        "name": "isBoundToContainer"
+      },
+      {
+        "path": "packages/element/src/typeChecks.ts",
+        "name": "isTextElement"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "duplicating-single-elements-preserves-created-s-on-a-dee",
+      "text": "duplicating single elements > preserves created=%s on a deep copy and resets it for a new instance",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating single elements > preserves created=%s on a deep copy and resets it for a new instance",
+          "startLine": 63,
+          "endLine": 79,
+          "contentHash": "sha256:e53570a5bba0c1456038da4ab98a9fe22060fc73fb60b4d4708d5315ca245012"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/duplicate.ts",
+          "symbol": "deepCopyElement",
+          "startLine": 689,
+          "endLine": 693,
+          "excerpt": "const deepCopyElement<T extends ExcalidrawElement>(val: T): Mutable<T>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/duplicate.ts",
+          "symbol": "duplicateElement",
+          "startLine": 103,
+          "endLine": 134,
+          "excerpt": "const duplicateElement<TElement extends ExcalidrawElement>(editingGroupId: AppState[\"editingGroupId\"], groupIdMapForOperation: Map<GroupId, GroupId>, element: TElement, randomizeSeed?: boolean): Readonly<TElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-single-elements-clones-arrow-element",
+      "text": "duplicating single elements > clones arrow element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating single elements > clones arrow element",
+          "startLine": 81,
+          "endLine": 125,
+          "contentHash": "sha256:e736805d299e40eee0d160f6d3bb827e3433da0aa95e02b95ced547d9bb00300"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "mutateElement",
+          "startLine": 457,
+          "endLine": 461
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/duplicate.ts",
+          "symbol": "duplicateElement",
+          "startLine": 103,
+          "endLine": 134,
+          "excerpt": "const duplicateElement<TElement extends ExcalidrawElement>(editingGroupId: AppState[\"editingGroupId\"], groupIdMapForOperation: Map<GroupId, GroupId>, element: TElement, randomizeSeed?: boolean): Readonly<TElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-single-elements-clones-text-element",
+      "text": "duplicating single elements > clones text element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating single elements > clones text element",
+          "startLine": 127,
+          "endLine": 156,
+          "contentHash": "sha256:071a559573bdb6fdace784477843578a8559689ee69560fe87b40483823617b3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/duplicate.ts",
+          "symbol": "duplicateElement",
+          "startLine": 103,
+          "endLine": 134,
+          "excerpt": "const duplicateElement<TElement extends ExcalidrawElement>(editingGroupId: AppState[\"editingGroupId\"], groupIdMapForOperation: Map<GroupId, GroupId>, element: TElement, randomizeSeed?: boolean): Readonly<TElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-multiple-elements-duplicate-elements-should",
+      "text": "duplicating multiple elements > duplicateElements should clone bindings",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating multiple elements > duplicateElements should clone bindings",
+          "startLine": 160,
+          "endLine": 291,
+          "contentHash": "sha256:0807d2a13d3698824bf4854d3e36f4b128a4ed438663665c75c05ee041258e35"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/duplicate.ts",
+          "symbol": "duplicateElements",
+          "startLine": 136,
+          "endLine": 479,
+          "excerpt": "const duplicateElements(opts: { elements: readonly ExcalidrawElement[]; randomizeSeed?: boolean; overrides?: (data: { duplicateElement: ExcalidrawElement; origElement: ExcalidrawElement; origIdToDuplicateId: Map< ExcalidrawElemen…)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-multiple-elements-should-remove-id-reference",
+      "text": "duplicating multiple elements > should remove id references of elements that aren't found",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating multiple elements > should remove id references of elements that aren't found",
+          "startLine": 293,
+          "endLine": 385,
+          "contentHash": "sha256:5c5ade2a66717d1de4f20fe38ece2856183b0386a64851effa6b216409250adc"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/duplicate.ts",
+          "symbol": "duplicateElements",
+          "startLine": 136,
+          "endLine": 479,
+          "excerpt": "const duplicateElements(opts: { elements: readonly ExcalidrawElement[]; randomizeSeed?: boolean; overrides?: (data: { duplicateElement: ExcalidrawElement; origElement: ExcalidrawElement; origIdToDuplicateId: Map< ExcalidrawElemen…)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-multiple-elements-should-duplicate-all-group",
+      "text": "duplicating multiple elements > should duplicate all group ids > should regenerate all group ids and keep them consistent across elements",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating multiple elements > should duplicate all group ids > should regenerate all group ids and keep them consistent across elements",
+          "startLine": 388,
+          "endLine": 417,
+          "contentHash": "sha256:cfd5e8def22d6bd31d8fcf6df73e7e187ee158cfe03d97ae3d63003df5b12423"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/duplicate.ts",
+          "symbol": "duplicateElements",
+          "startLine": 136,
+          "endLine": 479,
+          "excerpt": "const duplicateElements(opts: { elements: readonly ExcalidrawElement[]; randomizeSeed?: boolean; overrides?: (data: { duplicateElement: ExcalidrawElement; origElement: ExcalidrawElement; origIdToDuplicateId: Map< ExcalidrawElemen…)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-multiple-elements-should-duplicate-all-group-2",
+      "text": "duplicating multiple elements > should duplicate all group ids > should keep and regenerate ids of groups even if invalid",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating multiple elements > should duplicate all group ids > should keep and regenerate ids of groups even if invalid",
+          "startLine": 419,
+          "endLine": 433,
+          "contentHash": "sha256:b14a6900c1d53dfe528a9a52ff01d36c6d6dd1fbcad65b9bff38c019c6bcaab8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/duplicate.ts",
+          "symbol": "duplicateElements",
+          "startLine": 136,
+          "endLine": 479,
+          "excerpt": "const duplicateElements(opts: { elements: readonly ExcalidrawElement[]; randomizeSeed?: boolean; overrides?: (data: { duplicateElement: ExcalidrawElement; origElement: ExcalidrawElement; origIdToDuplicateId: Map< ExcalidrawElemen…)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "group-related-duplication-action-duplicating-within-grou",
+      "text": "group-related duplication > action-duplicating within group",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "group-related duplication > action-duplicating within group",
+          "startLine": 442,
+          "endLine": 469,
+          "contentHash": "sha256:e899cce2b1cc5e55082beb25ebcb7ee9a004bc4e764a7fbe28a9dc6f90b4887b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/index.ts",
+          "symbol": "actionDuplicateSelection",
+          "startLine": 9,
+          "endLine": 9
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "group-related-duplication-alt-duplicating-within-group",
+      "text": "group-related duplication > alt-duplicating within group",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "group-related duplication > alt-duplicating within group",
+          "startLine": 471,
+          "endLine": 499,
+          "contentHash": "sha256:2dd785567c0c974b568b2331c174ed4128d4559b9ce625d4036e051e444ed56f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "group-related-duplication-alt-duplicating-within-group-a",
+      "text": "group-related duplication > alt-duplicating within group away outside frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "group-related duplication > alt-duplicating within group away outside frame",
+          "startLine": 501,
+          "endLine": 543,
+          "contentHash": "sha256:cb80d5dea4be919aa0e637588d490ab67bbd6b1519eac3d0a14e8ab92934ca74"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplication-z-order-alt-duplicating-labeled-arrows-in-or",
+      "text": "duplication z-order > alt-duplicating labeled arrows (in-order)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplication z-order > alt-duplicating labeled arrows (in-order)",
+          "startLine": 794,
+          "endLine": 817,
+          "contentHash": "sha256:cbc2b8485b8248c1f79484098ec8c0b4fd9bdf08e08613b11237d4d7c5194e04"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplication-z-order-alt-duplicating-bindable-element-wit",
+      "text": "duplication z-order > alt-duplicating bindable element with bound arrow should keep the arrow on the duplicate",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplication z-order > alt-duplicating bindable element with bound arrow should keep the arrow on the duplicate",
+          "startLine": 841,
+          "endLine": 876,
+          "contentHash": "sha256:496eef5714ff91a99ed1578f830378a7925c545c11bae45e1b29476ca358030c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-list-items-advances-the-marker-of-j",
+      "text": "duplicating list items > advances the marker of %j",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating list items > advances the marker of %j",
+          "startLine": 906,
+          "endLine": 945,
+          "contentHash": "sha256:83559a42c0e9fe28e190fd46185bd2744606a5532245f1e11f0af0a772bd3a8a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-list-items-continues-the-list-from-the-highe",
+      "text": "duplicating list items > continues the list from the highest of the duplicated items",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating list items > continues the list from the highest of the duplicated items",
+          "startLine": 947,
+          "endLine": 956,
+          "contentHash": "sha256:bc9f8c55a256c66476a54f2cb4d072bbfaf0ddc8af4be1f77a2bd890cdbb7135"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-list-items-duplicating-s",
+      "text": "duplicating list items > duplicating %s",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating list items > duplicating %s",
+          "startLine": 958,
+          "endLine": 1021,
+          "contentHash": "sha256:bc5b0d8c853fe5723dc10747e350d2115248581675a59a587f2eed7ed0481dd8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/typeChecks.ts",
+          "symbol": "isBoundToContainer",
+          "startLine": 307,
+          "endLine": 316,
+          "excerpt": "const isBoundToContainer<T extends ExcalidrawElement>(element: T | null): element is T & ExcalidrawTextElementWithContainer"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/index.ts",
+          "symbol": "actionDuplicateSelection",
+          "startLine": 9,
+          "endLine": 9
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/typeChecks.ts",
+          "symbol": "isTextElement",
+          "startLine": 67,
+          "endLine": 71,
+          "excerpt": "const isTextElement<T extends ExcalidrawElement>(element: T | null): element is T & ExcalidrawTextElement"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-list-items-stops-letters-at-i-the-switch-to",
+      "text": "duplicating list items > stops letters at `i` (the switch to roman numerals)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating list items > stops letters at `i` (the switch to roman numerals)",
+          "startLine": 1023,
+          "endLine": 1025,
+          "contentHash": "sha256:6ae9acdbcdc2a1b45772014c8a7f09a6f717cbc00f07de302a5e7bb98c501818"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-list-items-alt-drag-advances-the-markers-fro",
+      "text": "duplicating list items > alt-drag advances the markers from the start of the drag, undoably",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating list items > alt-drag advances the markers from the start of the drag, undoably",
+          "startLine": 1084,
+          "endLine": 1133,
+          "contentHash": "sha256:33a02f9409c9b3d21e7b2cf59c9691d567ee8e32a9c599e2d0fe7cc73dbf98ba"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-list-items-alt-drag-doesn-t-edit-a-list-item",
+      "text": "duplicating list items > alt-drag doesn't edit a list item without text",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating list items > alt-drag doesn't edit a list item without text",
+          "startLine": 1135,
+          "endLine": 1147,
+          "contentHash": "sha256:c4eb642de1c7f34864cd9e2b801a5bd97bb3e5969e90e62c8ee0b578b3929617"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "duplicating-list-items-alt-drag-doesn-t-edit-the-list-it",
+      "text": "duplicating list items > alt-drag doesn't edit the list item when the drag gets interrupted",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "duplicating list items > alt-drag doesn't edit the list item when the drag gets interrupted",
+          "startLine": 1149,
+          "endLine": 1164,
+          "contentHash": "sha256:faff0a3dd09895d40df47fdf3924965642195405bdc9ae2d3c44fb3cbcf31ec3"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "alt-dragging-the-text-being-edited-duplicates-j-editing",
+      "text": "alt-dragging the text being edited > duplicates %j, editing the duplicate %j with %j selected",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "alt-dragging the text being edited > duplicates %j, editing the duplicate %j with %j selected",
+          "startLine": 1212,
+          "endLine": 1243,
+          "contentHash": "sha256:7210a78692134c4f8dd52b7a7b169a4b331c541db9ccf7ad251da1d9b2ab7aa7"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "alt-dragging-the-text-being-edited-duplicates-a-labeled",
+      "text": "alt-dragging the text being edited > duplicates a labeled arrow when pressed on its label",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/duplicate.test.tsx",
+          "testTitle": "alt-dragging the text being edited > duplicates a labeled arrow when pressed on its label",
+          "startLine": 1271,
+          "endLine": 1296,
+          "contentHash": "sha256:ae42e646a80e665673f90ef1f80d50e5e8f43a79a80884ed8ffd67341188d388"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/duplicate.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/tests/duplicate.test.tsx",
+  "generator": "tests",
+  "notes": "13 skipped, todo, or non-asserting test(s) were not turned into statements. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:955cfcf54924b360cbf5d5960da5504c86c821420d17ae275735c386a7646d24"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:955cfcf54924b360cbf5d5960da5504c86c821420d17ae275735c386a7646d24"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:955cfcf54924b360cbf5d5960da5504c86c821420d17ae275735c386a7646d24"
+    }
+  ]
+}

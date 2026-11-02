@@ -1,0 +1,884 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.history",
+  "revision": 1,
+  "title": "history: behavior verified by packages/excalidraw/tests/history.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/history.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/types.ts, packages/excalidraw/actions/actionHistory.tsx, packages/excalidraw/actions/actionToggleViewMode.tsx and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/history.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/actions/actionHistory.tsx",
+      "packages/excalidraw/actions/actionToggleViewMode.tsx",
+      "packages/excalidraw/actions/index.ts",
+      "packages/excalidraw/appState.ts",
+      "packages/excalidraw/clipboard.ts",
+      "packages/excalidraw/data/blob.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/renderer/staticScene.ts",
+      "packages/excalidraw/types.ts",
+      "packages/math/src/index.ts",
+      "packages/utils/src/test-utils.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/index.tsx",
+        "name": "Excalidraw"
+      },
+      {
+        "path": "packages/excalidraw/appState.ts",
+        "name": "getDefaultAppState"
+      },
+      {
+        "path": "packages/excalidraw/types.ts",
+        "name": "AppState"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionHistory.tsx",
+        "name": "createUndoAction"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionHistory.tsx",
+        "name": "createRedoAction"
+      },
+      {
+        "path": "packages/excalidraw/clipboard.ts",
+        "name": "createPasteEvent"
+      },
+      {
+        "path": "packages/excalidraw/actions/index.ts",
+        "name": "actionSendBackward"
+      },
+      {
+        "path": "packages/excalidraw/actions/index.ts",
+        "name": "actionBringForward"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionToggleViewMode.tsx",
+        "name": "actionToggleViewMode"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "history-singleplayer-undo-redo-should-not-collapse-when",
+      "text": "history > singleplayer undo/redo > should not collapse when applying corrupted history entry",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should not collapse when applying corrupted history entry",
+          "startLine": 147,
+          "endLine": 203,
+          "contentHash": "sha256:be4de1d8310667336b77cccbb7c08b184499e937b294d0300008c99d23cfad1f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/appState.ts",
+          "symbol": "getDefaultAppState",
+          "startLine": 30,
+          "endLine": 153,
+          "excerpt": "const getDefaultAppState(): Omit< AppState, \"offsetTop\" | \"offsetLeft\" | \"width\" | \"height\" >"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "AppState",
+          "startLine": 330,
+          "endLine": 591,
+          "excerpt": "interface AppState { contextMenu: { items: ContextMenuItems; top: number; left: number; } | null; showWelcomeScreen: boolean; isLoading: boolean; errorMessage: React.ReactNode; activeEmbeddable: { element: NonDeletedExcalidrawElement; state: \"hover\" | \"active\"; } | null; newElement: NonDeleted<ExcalidrawNonSelectionElement> | null; resizingElement: NonDeletedExcalidrawElement | null; multiElement…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-not-end-up-with-hi",
+      "text": "history > singleplayer undo/redo > should not end up with history entry when there are no appstate changes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should not end up with history entry when there are no appstate changes",
+          "startLine": 205,
+          "endLine": 222,
+          "contentHash": "sha256:88b916c867cb4e7a93bdd42cf83aa946b550a0fa7ea5b9a0894f503f1d508df1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-not-end-up-with-hi-2",
+      "text": "history > singleplayer undo/redo > should not end up with history entry when there are no elements changes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should not end up with history entry when there are no elements changes",
+          "startLine": 224,
+          "endLine": 252,
+          "contentHash": "sha256:9e96f28bae2a66adbb5c68f9cc826f65003e6dd6bf107bbe9e48e9eb1ccdce97"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-not-modify-anythin",
+      "text": "history > singleplayer undo/redo > should not modify anything on unrelated appstate change",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should not modify anything on unrelated appstate change",
+          "startLine": 254,
+          "endLine": 283,
+          "contentHash": "sha256:fdc07e6ae4136ff9f5984fec4f88c0fdb648fb5a03fe519538915591fe2e3b5c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-not-clear-the-redo",
+      "text": "history > singleplayer undo/redo > should not clear the redo stack on standalone appstate change",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should not clear the redo stack on standalone appstate change",
+          "startLine": 285,
+          "endLine": 337,
+          "contentHash": "sha256:d4206f27810a25592f2dff57a30f912ec2012ebf1e0633d691b08cd5ca8f2930"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-not-override-appst",
+      "text": "history > singleplayer undo/redo > should not override appstate changes when redo stack is not cleared",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should not override appstate changes when redo stack is not cleared",
+          "startLine": 339,
+          "endLine": 417,
+          "contentHash": "sha256:5d861141e8ac8049064c18b81943699e9e1662cd2edef97241bc5206a485298c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-clear-the-redo-sta",
+      "text": "history > singleplayer undo/redo > should clear the redo stack on elements change",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should clear the redo stack on elements change",
+          "startLine": 419,
+          "endLine": 452,
+          "contentHash": "sha256:a7b8190edff3eaf063a9f1127349d97235b2120fecaa64e35a21fe33efe91482"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-iterate-through-th",
+      "text": "history > singleplayer undo/redo > should iterate through the history when selection changes do not produce visible change",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should iterate through the history when selection changes do not produce visible change",
+          "startLine": 454,
+          "endLine": 501,
+          "contentHash": "sha256:8a0ecd603c7dbc641e73a56ecd5cdfc909105f4c96fb83bff3bc7e1fa9efd00d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-end-up-with-no-his",
+      "text": "history > singleplayer undo/redo > should end up with no history entry after initializing scene",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should end up with no history entry after initializing scene",
+          "startLine": 503,
+          "endLine": 553,
+          "contentHash": "sha256:85808b04c2db1ecf1e3097cfdbc1607f3bfeaa8ddebc41a03a2da0e8f01c827e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionHistory.tsx",
+          "symbol": "createUndoAction",
+          "startLine": 69,
+          "endLine": 110,
+          "excerpt": "const createUndoAction(history)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionHistory.tsx",
+          "symbol": "createRedoAction",
+          "startLine": 112,
+          "endLine": 154,
+          "excerpt": "const createRedoAction(history)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-create-new-history",
+      "text": "history > singleplayer undo/redo > should create new history entry on scene import via drag&drop",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should create new history entry on scene import via drag&drop",
+          "startLine": 555,
+          "endLine": 625,
+          "contentHash": "sha256:be966af9c1ea22a9cbe67ffa692c61ffbcf84ec0a2b307730a7c9149729cd26c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/appState.ts",
+          "symbol": "getDefaultAppState",
+          "startLine": 30,
+          "endLine": 153,
+          "excerpt": "const getDefaultAppState(): Omit< AppState, \"offsetTop\" | \"offsetLeft\" | \"width\" | \"height\" >"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionHistory.tsx",
+          "symbol": "createUndoAction",
+          "startLine": 69,
+          "endLine": 110,
+          "excerpt": "const createUndoAction(history)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-create-new-history-2",
+      "text": "history > singleplayer undo/redo > should create new history entry on embeddable link drag&drop",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should create new history entry on embeddable link drag&drop",
+          "startLine": 627,
+          "endLine": 671,
+          "contentHash": "sha256:f3acad29adc06b7602c468fe26c9510f2f2d8c253b78a5021c7275d67bf3773d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-create-new-history-3",
+      "text": "history > singleplayer undo/redo > should create new history entry on embeddable link paste",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should create new history entry on embeddable link paste",
+          "startLine": 764,
+          "endLine": 811,
+          "contentHash": "sha256:3af3f9abc4be8fccc66f573f7f8e878cb0e3d0124c002f6b359dc26965d10880"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/clipboard.ts",
+          "symbol": "createPasteEvent",
+          "startLine": 90,
+          "endLine": 141,
+          "excerpt": "const createPasteEvent({ types, files, }: { types?: { [key in AllowedPasteMimeTypes]?: string | File }; files?: File[]; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-support-appstate-n",
+      "text": "history > singleplayer undo/redo > should support appstate name or viewBackgroundColor change",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should support appstate name or viewBackgroundColor change",
+          "startLine": 813,
+          "endLine": 887,
+          "contentHash": "sha256:1d052eb4ba939df0ed5b4f84a07ef4907751534c266a763ae04bc0290bbe8b3c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-support-element-cr",
+      "text": "history > singleplayer undo/redo > should support element creation, deletion and appstate element selection change",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should support element creation, deletion and appstate element selection change",
+          "startLine": 889,
+          "endLine": 998,
+          "contentHash": "sha256:9b0c52c93503dedf83cf89374240ea97c065f37686585645c5d0c84f62fc0fcc"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-support-linear-ele",
+      "text": "history > singleplayer undo/redo > should support linear element creation and points manipulation through the editor",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should support linear element creation and points manipulation through the editor",
+          "startLine": 1000,
+          "endLine": 1247,
+          "contentHash": "sha256:0c2f2ac22b90ace175a119b17a9070bb81ac67e11aced0e6da5d4ecc8355a8e3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-create-entry-when",
+      "text": "history > singleplayer undo/redo > should create entry when selecting freedraw",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should create entry when selecting freedraw",
+          "startLine": 1249,
+          "endLine": 1311,
+          "contentHash": "sha256:46611420681ff30d6388982f486250eb7614fc7d5689d3b65e7be99915f93bbb"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-support-duplicatio",
+      "text": "history > singleplayer undo/redo > should support duplication of groups, appstate group selection and editing group",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should support duplication of groups, appstate group selection and editing group",
+          "startLine": 1313,
+          "endLine": 1460,
+          "contentHash": "sha256:ab83df5eebae0bad66a97d5910e259f241b4c8005a86382ae3114233622a34ac"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-support-changes-in",
+      "text": "history > singleplayer undo/redo > should support changes in elements' order",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should support changes in elements' order",
+          "startLine": 1462,
+          "endLine": 1525,
+          "contentHash": "sha256:0d7660c76bee4308c3604fbac5cc88b901b7732d60ab328c30c4b0642d72d94a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/index.ts",
+          "symbol": "actionSendBackward",
+          "startLine": 2,
+          "endLine": 7
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/index.ts",
+          "symbol": "actionBringForward",
+          "startLine": 2,
+          "endLine": 7
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-support-bidirectio",
+      "text": "history > singleplayer undo/redo > should support bidirectional bindings > should unbind arrow from non deleted bindable elements on undo and rebind on redo",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should support bidirectional bindings > should unbind arrow from non deleted bindable elements on undo and rebind on redo",
+          "startLine": 1611,
+          "endLine": 1663,
+          "contentHash": "sha256:aac159b29e103ce82ed810ad5585730b93449be41d93cf0fc3e931a77c6c0abe"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-support-bidirectio-2",
+      "text": "history > singleplayer undo/redo > should support bidirectional bindings > should unbind arrow from non deleted bindable elements on deletion and rebind on undo",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should support bidirectional bindings > should unbind arrow from non deleted bindable elements on deletion and rebind on undo",
+          "startLine": 1665,
+          "endLine": 1717,
+          "contentHash": "sha256:eae53a86fe37ac4fb33e7ca3e7f33b76cfe5616173ffe756d4b12c2127aed0a0"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-support-bidirectio-3",
+      "text": "history > singleplayer undo/redo > should support bidirectional bindings > should unbind everything from non deleted elements when iterating through the whole undo stack and vice versa rebind everything on redo",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should support bidirectional bindings > should unbind everything from non deleted elements when iterating through the whole undo stack and vice versa rebind everything on redo",
+          "startLine": 1719,
+          "endLine": 1818,
+          "contentHash": "sha256:91358367295d07cc8f3e08c8f9daea176303fc7a6821871547f48a8d61bc551f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-support-bidirectio-4",
+      "text": "history > singleplayer undo/redo > should support bidirectional bindings > should unbind rectangle from arrow on deletion and rebind on undo",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should support bidirectional bindings > should unbind rectangle from arrow on deletion and rebind on undo",
+          "startLine": 1820,
+          "endLine": 1906,
+          "contentHash": "sha256:408d52e31969f53a27e9b5ee1b9bd8cf29e3a37d88338fa96ece8d5843741f2c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-support-bidirectio-5",
+      "text": "history > singleplayer undo/redo > should support bidirectional bindings > should unbind rectangles from arrow on deletion and rebind on undo",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should support bidirectional bindings > should unbind rectangles from arrow on deletion and rebind on undo",
+          "startLine": 1908,
+          "endLine": 1985,
+          "contentHash": "sha256:af043ef71088666490f78d39b8841f5e6ae142bde90cc7ff1f31ad56b4a49771"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-should-disable-undo-redo",
+      "text": "history > singleplayer undo/redo > should disable undo/redo buttons when stacks empty",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > should disable undo/redo buttons when stacks empty",
+          "startLine": 1988,
+          "endLine": 2036,
+          "contentHash": "sha256:1122c8b4fca9607c811c470cc361f06fee70b9d175ea78fbe64a809049b61e23"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionHistory.tsx",
+          "symbol": "createUndoAction",
+          "startLine": 69,
+          "endLine": 110,
+          "excerpt": "const createUndoAction(history)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionHistory.tsx",
+          "symbol": "createRedoAction",
+          "startLine": 112,
+          "endLine": 154,
+          "excerpt": "const createRedoAction(history)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "history-singleplayer-undo-redo-remounting-undo-redo-butt",
+      "text": "history > singleplayer undo/redo > remounting undo/redo buttons should initialize undo/redo state correctly",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/history.test.tsx",
+          "testTitle": "history > singleplayer undo/redo > remounting undo/redo buttons should initialize undo/redo state correctly",
+          "startLine": 2038,
+          "endLine": 2109,
+          "contentHash": "sha256:bd5b3b420c33bf4d2af0b9000afbe91ea2e7ed5024e857eaff32f154b88179a8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionHistory.tsx",
+          "symbol": "createUndoAction",
+          "startLine": 69,
+          "endLine": 110,
+          "excerpt": "const createUndoAction(history)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionToggleViewMode.tsx",
+          "symbol": "actionToggleViewMode",
+          "startLine": 9,
+          "endLine": 36,
+          "excerpt": "const actionToggleViewMode"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/history.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/history.test.tsx",
+  "generator": "tests",
+  "notes": "4 skipped, todo, or non-asserting test(s) were not turned into statements. 35 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:111140680e0919eb79cf0417d6cec03d76f44e0c15854a6b1f85c92062b9f4d4"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:111140680e0919eb79cf0417d6cec03d76f44e0c15854a6b1f85c92062b9f4d4"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:111140680e0919eb79cf0417d6cec03d76f44e0c15854a6b1f85c92062b9f4d4"
+    }
+  ]
+}

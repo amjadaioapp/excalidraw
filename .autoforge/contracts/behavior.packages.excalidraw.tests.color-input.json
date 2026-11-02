@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.color-input",
+  "revision": 1,
+  "title": "Behavior verified by packages/excalidraw/tests/colorInput.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/colorInput.test.tsx, exercising packages/common/src/index.ts, packages/excalidraw/index.tsx.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/colorInput.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/excalidraw/index.tsx"
+    ],
+    "symbols": []
+  },
+  "statements": [
+    {
+      "id": "normalize-input-color-hex-colors-returns-hex-color-with",
+      "text": "normalizeInputColor > hex colors > returns hex color with hash as-is",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > hex colors > returns hex color with hash as-is",
+          "startLine": 9,
+          "endLine": 14,
+          "contentHash": "sha256:be26ec29394a60af40e19738cc5e1ad2e4ef4ee87fa11fb92f395a25a9784faa"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-hex-colors-adds-hash-to-hex-color",
+      "text": "normalizeInputColor > hex colors > adds hash to hex color without hash",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > hex colors > adds hash to hex color without hash",
+          "startLine": 16,
+          "endLine": 21,
+          "contentHash": "sha256:022aedcfeda070d8ef7db0c07829a2a0cb1812ae0d461b66e0eadabb97dd3daf"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-hex-colors-handles-8-digit-hex-hex",
+      "text": "normalizeInputColor > hex colors > handles 8-digit hex (hexa) with alpha",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > hex colors > handles 8-digit hex (hexa) with alpha",
+          "startLine": 23,
+          "endLine": 26,
+          "contentHash": "sha256:68be28f2eef3a3f38e48316be25e5372f97a28382d37abeea0224af741afa008"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-hex-colors-does-not-add-hash-to-he",
+      "text": "normalizeInputColor > hex colors > does NOT add hash to hexa without hash (tinycolor detects as hex8, not hex)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > hex colors > does NOT add hash to hexa without hash (tinycolor detects as hex8, not hex)",
+          "startLine": 28,
+          "endLine": 31,
+          "contentHash": "sha256:66434bed5d8be9547a525c2ad0af1ad44741ea19f7ed3bbf71e6dc973cf87dec"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-named-colors-returns-named-colors",
+      "text": "normalizeInputColor > named colors > returns named colors as-is",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > named colors > returns named colors as-is",
+          "startLine": 35,
+          "endLine": 42,
+          "contentHash": "sha256:405b897ddcad8e49888e03d51c8b847f4d0b843a4bda96927f945a554bae09a4"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-named-colors-handles-case-variatio",
+      "text": "normalizeInputColor > named colors > handles case variations of named colors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > named colors > handles case variations of named colors",
+          "startLine": 44,
+          "endLine": 47,
+          "contentHash": "sha256:ad7d68bf1600c0e18d7d85b24f57cc8d172dc90e813a9f3b539970a9d83eff49"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-rgb-rgba-colors-returns-rgb-colors",
+      "text": "normalizeInputColor > rgb/rgba colors > returns rgb colors as-is",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > rgb/rgba colors > returns rgb colors as-is",
+          "startLine": 51,
+          "endLine": 54,
+          "contentHash": "sha256:362653135e48d59ad7004f6e87240e2b035345732d68e5276bf4d8e0e9a8a88d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-rgb-rgba-colors-tinycolor-consider",
+      "text": "normalizeInputColor > rgb/rgba colors > tinycolor considers out-of-range rgb values as valid (clamped)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > rgb/rgba colors > tinycolor considers out-of-range rgb values as valid (clamped)",
+          "startLine": 57,
+          "endLine": 59,
+          "contentHash": "sha256:607d828bd46dbcd8330520729395b038c01ade8e9a5af3daab24ca5da7697675"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-rgb-rgba-colors-returns-rgba-color",
+      "text": "normalizeInputColor > rgb/rgba colors > returns rgba colors as-is",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > rgb/rgba colors > returns rgba colors as-is",
+          "startLine": 61,
+          "endLine": 66,
+          "contentHash": "sha256:d5593bc9d6c5fa7da14b1cbd3c987961876380461fbe029f66753dae46032282"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-hsl-hsla-colors-returns-hsl-colors",
+      "text": "normalizeInputColor > hsl/hsla colors > returns hsl colors as-is",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > hsl/hsla colors > returns hsl colors as-is",
+          "startLine": 70,
+          "endLine": 74,
+          "contentHash": "sha256:cc948f92f54077615ca135e6654e657db91448f2d5b84c7a39f15449e0c40890"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-hsl-hsla-colors-returns-hsla-color",
+      "text": "normalizeInputColor > hsl/hsla colors > returns hsla colors as-is",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > hsl/hsla colors > returns hsla colors as-is",
+          "startLine": 76,
+          "endLine": 80,
+          "contentHash": "sha256:80340fa8c7627826f83c0941d465ccf7bc78731deb9f2fd06bf4a18dc1b9668d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-whitespace-handling-trims-leading",
+      "text": "normalizeInputColor > whitespace handling > trims leading whitespace",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > whitespace handling > trims leading whitespace",
+          "startLine": 84,
+          "endLine": 87,
+          "contentHash": "sha256:4244700c2cf2154ff4dafb52e16e74916f135b515a14d489d01ce0c4e13ef285"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-whitespace-handling-trims-trailing",
+      "text": "normalizeInputColor > whitespace handling > trims trailing whitespace",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > whitespace handling > trims trailing whitespace",
+          "startLine": 89,
+          "endLine": 92,
+          "contentHash": "sha256:ac750e4170a94b2e1eef26df117f7dd1283981d8e6dc463aa8b03b9b5382274e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-whitespace-handling-trims-both-lea",
+      "text": "normalizeInputColor > whitespace handling > trims both leading and trailing whitespace",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > whitespace handling > trims both leading and trailing whitespace",
+          "startLine": 94,
+          "endLine": 97,
+          "contentHash": "sha256:f635e9c4a420c89ec7a847a5fd886744623d11af4227af4817f0db40e6a8d152"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-whitespace-handling-adds-hash-to-t",
+      "text": "normalizeInputColor > whitespace handling > adds hash to trimmed hex without hash",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > whitespace handling > adds hash to trimmed hex without hash",
+          "startLine": 99,
+          "endLine": 101,
+          "contentHash": "sha256:a20b6fc6ba222a971b0f8c09687a38c4beb71ed2d82d08459bae337acf0b35e7"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-invalid-colors-returns-null-for-in",
+      "text": "normalizeInputColor > invalid colors > returns null for invalid color strings",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > invalid colors > returns null for invalid color strings",
+          "startLine": 105,
+          "endLine": 111,
+          "contentHash": "sha256:55c7da4d4721138344ef2a5f00191f6b4d7e9f362e1d8329062eae8eeaa50b73"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "normalize-input-color-invalid-colors-returns-null-for-pa",
+      "text": "normalizeInputColor > invalid colors > returns null for partial/malformed colors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "normalizeInputColor > invalid colors > returns null for partial/malformed colors",
+          "startLine": 113,
+          "endLine": 116,
+          "contentHash": "sha256:19817d8be7f48d0b8dfa05932c5aed63fd6078148022a4c52d5a22aada1499d1"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "color-input-error-handling-shows-error-for-invalid-hex-l",
+      "text": "ColorInput error handling > shows error for invalid hex length (too short)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "ColorInput error handling > shows error for invalid hex length (too short)",
+          "startLine": 157,
+          "endLine": 173,
+          "contentHash": "sha256:53539e5fdf97c6bd79f95a43a8134a1e4a17b7e509a373409d76c89a165ef507"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "color-input-error-handling-shows-error-for-invalid-hex-l-2",
+      "text": "ColorInput error handling > shows error for invalid hex length (too long)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "ColorInput error handling > shows error for invalid hex length (too long)",
+          "startLine": 175,
+          "endLine": 191,
+          "contentHash": "sha256:dbd055596d065b3edd4a88ac7d02089179736530a3470f263ff6983c3f1b75ac"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "color-input-error-handling-shows-generic-error-for-non-h",
+      "text": "ColorInput error handling > shows generic error for non-hex-shaped invalid input",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "ColorInput error handling > shows generic error for non-hex-shaped invalid input",
+          "startLine": 193,
+          "endLine": 207,
+          "contentHash": "sha256:32a5b04fd2709752f99027f4a4d8cf76962594a1d220d4c39e9f481516d479dd"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "color-input-error-handling-shows-generic-error-for-unrec",
+      "text": "ColorInput error handling > shows generic error for unrecognized color names",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "ColorInput error handling > shows generic error for unrecognized color names",
+          "startLine": 209,
+          "endLine": 223,
+          "contentHash": "sha256:e95e99d8a92eca5d1b4563aa12d31ef6ff6c7185886acf04946e562c99b4f9e0"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "color-input-error-handling-does-not-show-an-error-for-a",
+      "text": "ColorInput error handling > does not show an error for a complete named color",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "ColorInput error handling > does not show an error for a complete named color",
+          "startLine": 225,
+          "endLine": 236,
+          "contentHash": "sha256:f29a9577f48e7356d7fef811815f4cfbd105841ad7d720b1ed7f7d84d066e87d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "color-input-error-handling-does-not-show-an-error-for-va",
+      "text": "ColorInput error handling > does not show an error for valid rgb() input",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "ColorInput error handling > does not show an error for valid rgb() input",
+          "startLine": 238,
+          "endLine": 248,
+          "contentHash": "sha256:771eedd775abe06dfd717dca9ee95bcc0272ceb824fb0d90e4601acb8d15026c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "color-input-error-handling-does-not-show-error-for-valid",
+      "text": "ColorInput error handling > does not show error for valid hex codes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "ColorInput error handling > does not show error for valid hex codes",
+          "startLine": 250,
+          "endLine": 263,
+          "contentHash": "sha256:c45e17f9f6c782cc6655154fd23fb5f7454a93b3f5ab453a8e116d38bc86d41c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "color-input-error-handling-clears-error-when-input-is-cl",
+      "text": "ColorInput error handling > clears error when input is cleared",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/colorInput.test.tsx",
+          "testTitle": "ColorInput error handling > clears error when input is cleared",
+          "startLine": 265,
+          "endLine": 289,
+          "contentHash": "sha256:96e55be3aca9e28a0b9964a858d49c7562bc7605fcfc03bc2ee77caa18a15516"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/colorInput.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/colorInput.test.tsx",
+  "generator": "tests",
+  "notes": "5 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:66f0be6938a70270c059c5ac4a6d09a261640b2b551f2234d84008e20250f65e"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:66f0be6938a70270c059c5ac4a6d09a261640b2b551f2234d84008e20250f65e"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:66f0be6938a70270c059c5ac4a6d09a261640b2b551f2234d84008e20250f65e"
+    }
+  ]
+}

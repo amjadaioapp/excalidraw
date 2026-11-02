@@ -1,0 +1,733 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.render-overrides",
+  "revision": 1,
+  "title": "Behavior verified by packages/excalidraw/tests/renderOverrides.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/renderOverrides.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/types.ts, packages/excalidraw/appState.ts, packages/excalidraw/index.tsx and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/renderOverrides.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/appState.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/renderOverrides.ts",
+      "packages/excalidraw/renderer/staticScene.ts",
+      "packages/excalidraw/scene/Renderer.ts",
+      "packages/excalidraw/scene/export.ts",
+      "packages/excalidraw/scene/index.ts",
+      "packages/excalidraw/scene/types.ts",
+      "packages/excalidraw/types.ts",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/index.ts",
+        "name": "*"
+      },
+      {
+        "path": "packages/excalidraw/types.ts",
+        "name": "ElementRenderOverride"
+      },
+      {
+        "path": "packages/excalidraw/scene/export.ts",
+        "name": "exportScene"
+      },
+      {
+        "path": "packages/excalidraw/scene/index.ts",
+        "name": "getNormalizedZoom"
+      },
+      {
+        "path": "packages/excalidraw/renderOverrides.ts",
+        "name": "getElementRenderOffsets"
+      },
+      {
+        "path": "packages/excalidraw/types.ts",
+        "name": "ElementRenderOverrides"
+      },
+      {
+        "path": "packages/excalidraw/types.ts",
+        "name": "ElementRenderOffsets"
+      },
+      {
+        "path": "packages/excalidraw/types.ts",
+        "name": "AppState"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "set-element-render-overrides-copies-and-replaces-the-com",
+      "text": "setElementRenderOverrides > copies and replaces the complete snapshot, including omitted fields",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > copies and replaces the complete snapshot, including omitted fields",
+          "startLine": 69,
+          "endLine": 96,
+          "contentHash": "sha256:201d5bbe295492dd7b1b651bf0887b6c188be6a00e702149f2ada49197c08f45"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/index.ts",
+          "symbol": "*",
+          "startLine": 59,
+          "endLine": 59
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-rejects-an-invalid-snapshot",
+      "text": "setElementRenderOverrides > rejects an invalid snapshot atomically and clamps finite opacity",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > rejects an invalid snapshot atomically and clamps finite opacity",
+          "startLine": 98,
+          "endLine": 116,
+          "contentHash": "sha256:f45419ff2f80c2aced2be7c76f26e616d187b1983c4304f7c57d8f64985d7bce"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-drops-empty-entries-and-rej",
+      "text": "setElementRenderOverrides > drops empty entries and rejects null offsets without replacing the snapshot",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > drops empty entries and rejects null offsets without replacing the snapshot",
+          "startLine": 118,
+          "endLine": 131,
+          "contentHash": "sha256:5db027be2655ae30e4428186dd29b219302eb9f8bad90df49497ed02645a29c4"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "ElementRenderOverride",
+          "startLine": 824,
+          "endLine": 829,
+          "excerpt": "type ElementRenderOverride = Readonly<{ /** Absolute render opacity (0–100, clamped). Omitted: use element.opacity. */ opacity?: number; /** Translation in scene units. Bound labels inherit their container's offset and ignore th…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-skips-empty-submissions-and",
+      "text": "setElementRenderOverrides > skips empty submissions and repeated clears, but repaints the first clear",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > skips empty submissions and repeated clears, but repaints the first clear",
+          "startLine": 133,
+          "endLine": 154,
+          "contentHash": "sha256:3329eb343aebab01f68323d42cf137cc64cfc0458c8552eb1f1086fef5b38c19"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-detects-caller-mutations-an",
+      "text": "setElementRenderOverrides > detects caller mutations and complete replacements in a reused map",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > detects caller mutations and complete replacements in a reused map",
+          "startLine": 156,
+          "endLine": 185,
+          "contentHash": "sha256:c7069264ad19aac7c0f637bb8b589a0af1d175ac937725378f0b6dd62f7d47c0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "ElementRenderOverride",
+          "startLine": 824,
+          "endLine": 829,
+          "excerpt": "type ElementRenderOverride = Readonly<{ /** Absolute render opacity (0–100, clamped). Omitted: use element.opacity. */ opacity?: number; /** Translation in scene units. Bound labels inherit their container's offset and ignore th…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-preserves-a-pending-visual",
+      "text": "setElementRenderOverrides > preserves a pending visual update when followed by an equivalent snapshot",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > preserves a pending visual update when followed by an equivalent snapshot",
+          "startLine": 187,
+          "endLine": 201,
+          "contentHash": "sha256:5bb8ed25a08d2007ea133579a46209c201b309f8c8da35a1765c0ea78560cc56"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-does-not-repaint-for-unrela",
+      "text": "setElementRenderOverrides > does not repaint for unrelated updates with a %s snapshot",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > does not repaint for unrelated updates with a %s snapshot",
+          "startLine": 203,
+          "endLine": 226,
+          "contentHash": "sha256:851d51517c0948f5c3e15c940885e7c5b59eb61be876a7a4d65cfe03f52e3e9b"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-repaints-without-changing-e",
+      "text": "setElementRenderOverrides > repaints without changing elements, history, store or onChange",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > repaints without changing elements, history, store or onChange",
+          "startLine": 228,
+          "endLine": 252,
+          "contentHash": "sha256:9577288b97aff828419d6fefd1440fee68ceaeef077cc46a073090c8e5e88bc7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/index.ts",
+          "symbol": "*",
+          "startLine": 59,
+          "endLine": 59
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-still-commits-document-chan",
+      "text": "setElementRenderOverrides > still commits document changes batched with visual updates",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > still commits document changes batched with visual updates",
+          "startLine": 254,
+          "endLine": 264,
+          "contentHash": "sha256:7c67138ec8cb8317412c6e8b1d9c56c63fea7a126839acba68e6b175382c93e0"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-does-not-skip-ordinary-forc",
+      "text": "setElementRenderOverrides > does not skip ordinary forceUpdate calls after a visual-only commit",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > does not skip ordinary forceUpdate calls after a visual-only commit",
+          "startLine": 266,
+          "endLine": 273,
+          "contentHash": "sha256:de84aee1844ed48ef3c72fce0c07890d8055307bdc66d4571253c1cba5158793"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-leaves-exported-geometry-an",
+      "text": "setElementRenderOverrides > leaves exported geometry and opacity unchanged",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > leaves exported geometry and opacity unchanged",
+          "startLine": 275,
+          "endLine": 293,
+          "contentHash": "sha256:e0a81c2884d786e995a3987e056c9a1d45859e2243409eef83f280f589f965e7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-clears-on-reset-and-ignores",
+      "text": "setElementRenderOverrides > clears on reset and ignores submissions after unmount",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > clears on reset and ignores submissions after unmount",
+          "startLine": 295,
+          "endLine": 309,
+          "contentHash": "sha256:78bbda30d344ff99f385d4c583643e1e97de16fdb1a5d52d78d022ff758a7a99"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-keeps-frame-name-editing-on",
+      "text": "setElementRenderOverrides > keeps frame-name editing on document geometry while the frame is translated",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > keeps frame-name editing on document geometry while the frame is translated",
+          "startLine": 311,
+          "endLine": 350,
+          "contentHash": "sha256:9ef5e830437b9962c90449976abcbae10f2a03fef23399a6c700da1f6ce5755e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-keeps-type-title-hit-bounds",
+      "text": "setElementRenderOverrides > keeps $type title hit bounds in document coordinates at zoom $zoom (editing: $editing)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > keeps $type title hit bounds in document coordinates at zoom $zoom (editing: $editing)",
+          "startLine": 352,
+          "endLine": 449,
+          "contentHash": "sha256:937cd58eab14733e7dd3dc01dbbe83cb06b7994ebe6875afad08ed8b02df5e3f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-keeps-the-offsets-map-ident",
+      "text": "setElementRenderOverrides > keeps the offsets map identity while only opacities change",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > keeps the offsets map identity while only opacities change",
+          "startLine": 451,
+          "endLine": 483,
+          "contentHash": "sha256:e75cd110495a7e09f0d1136fa1cf772b721dd60744a3d4566bc8f373102b1f30"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/renderOverrides.ts",
+          "symbol": "getElementRenderOffsets",
+          "startLine": 41,
+          "endLine": 70,
+          "excerpt": "const getElementRenderOffsets(overrides: ElementRenderOverrides, previous: ElementRenderOffsets): ElementRenderOffsets"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-does-not-populate-a-replace",
+      "text": "setElementRenderOverrides > does not populate a replacement offsets map during a fade",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > does not populate a replacement offsets map during a fade",
+          "startLine": 485,
+          "endLine": 503,
+          "contentHash": "sha256:717e973626e795ea92f25733cd0883be06bf37383e3e2a611d6e1a81f1d3e15c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "ElementRenderOverrides",
+          "startLine": 832,
+          "endLine": 835,
+          "excerpt": "type ElementRenderOverrides = ReadonlyMap< ExcalidrawElement[\"id\"], ElementRenderOverride >"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/renderOverrides.ts",
+          "symbol": "getElementRenderOffsets",
+          "startLine": 41,
+          "endLine": 70,
+          "excerpt": "const getElementRenderOffsets(overrides: ElementRenderOverrides, previous: ElementRenderOffsets): ElementRenderOffsets"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-element-render-overrides-replaces-the-offsets-map-wh",
+      "text": "setElementRenderOverrides > replaces the offsets map when %s",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "setElementRenderOverrides > replaces the offsets map when %s",
+          "startLine": 505,
+          "endLine": 544,
+          "contentHash": "sha256:7dc826b4aa17bffabf47f4f7c6b1ad14f290c4b1f877392aafd3e7adac9656f0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "ElementRenderOffsets",
+          "startLine": 838,
+          "endLine": 841,
+          "excerpt": "type ElementRenderOffsets = ReadonlyMap< ExcalidrawElement[\"id\"], NonNullable<ElementRenderOverride[\"offset\"]> >"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/renderOverrides.ts",
+          "symbol": "getElementRenderOffsets",
+          "startLine": 41,
+          "endLine": 70,
+          "excerpt": "const getElementRenderOffsets(overrides: ElementRenderOverrides, previous: ElementRenderOffsets): ElementRenderOffsets"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "render-override-geometry-culls-at-visual-coordinates-whi",
+      "text": "render override geometry > culls at visual coordinates while preserving interaction geometry",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "render override geometry > culls at visual coordinates while preserving interaction geometry",
+          "startLine": 639,
+          "endLine": 655,
+          "contentHash": "sha256:5f2b13ddd54730549aa393b9e8af077c284932739f0dbaf8c2779a99e6dd9524"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "render-override-geometry-updates-cached-visibility-for-n",
+      "text": "render override geometry > updates cached visibility for new overrides, viewport bounds and scene elements",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "render override geometry > updates cached visibility for new overrides, viewport bounds and scene elements",
+          "startLine": 657,
+          "endLine": 696,
+          "contentHash": "sha256:a125f35dc3df6f4590c84fc6e40cd2c929d575fc053821eb1fc774de23130dd1"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "render-override-geometry-reuses-the-document-visible-set",
+      "text": "render override geometry > reuses the document-visible set for opacity-only snapshots without viewport geometry",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "render override geometry > reuses the document-visible set for opacity-only snapshots without viewport geometry",
+          "startLine": 698,
+          "endLine": 737,
+          "contentHash": "sha256:0868c25b8428e98bed6e594f37d9588cd903bead3d1232b801651ea4dd64af4e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/index.ts",
+          "symbol": "*",
+          "startLine": 59,
+          "endLine": 59
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "render-override-geometry-keeps-frame-drag-ordering-respo",
+      "text": "render override geometry > keeps frame-drag ordering responsive to selection and drag-state changes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "render override geometry > keeps frame-drag ordering responsive to selection and drag-state changes",
+          "startLine": 739,
+          "endLine": 778,
+          "contentHash": "sha256:3821c9eb911bced72f5c2f34116c8b418cbeb8d9da19d8f298a26a44e7ed0f04"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "AppState",
+          "startLine": 330,
+          "endLine": 591,
+          "excerpt": "interface AppState { contextMenu: { items: ContextMenuItems; top: number; left: number; } | null; showWelcomeScreen: boolean; isLoading: boolean; errorMessage: React.ReactNode; activeEmbeddable: { element: NonDeletedExcalidrawElement; state: \"hover\" | \"active\"; } | null; newElement: NonDeleted<ExcalidrawNonSelectionElement> | null; resizingElement: NonDeletedExcalidrawElement | null; multiElement…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "render-override-geometry-drops-the-frame-drag-reordering",
+      "text": "render override geometry > drops the frame-drag reordering when the anchoring frame is translated away",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "render override geometry > drops the frame-drag reordering when the anchoring frame is translated away",
+          "startLine": 780,
+          "endLine": 812,
+          "contentHash": "sha256:8daed3a7bb884fd6179218d3205ec9be4b791e9acca99226031bb62828f23654"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "AppState",
+          "startLine": 330,
+          "endLine": 591,
+          "excerpt": "interface AppState { contextMenu: { items: ContextMenuItems; top: number; left: number; } | null; showWelcomeScreen: boolean; isLoading: boolean; errorMessage: React.ReactNode; activeEmbeddable: { element: NonDeletedExcalidrawElement; state: \"hover\" | \"active\"; } | null; newElement: NonDeleted<ExcalidrawNonSelectionElement> | null; resizingElement: NonDeletedExcalidrawElement | null; multiElement…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "ElementRenderOverrides",
+          "startLine": 832,
+          "endLine": 835,
+          "excerpt": "type ElementRenderOverrides = ReadonlyMap< ExcalidrawElement[\"id\"], ElementRenderOverride >"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "render-override-geometry-preserves-scene-order-as-s-is-t",
+      "text": "render override geometry > preserves scene order as %s is translated into and out of view",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "render override geometry > preserves scene order as %s is translated into and out of view",
+          "startLine": 814,
+          "endLine": 837,
+          "contentHash": "sha256:997866b824c817f2af69ac2f7acc35b5480fe2bba256bd40b958492f784fa8f2"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "render-override-geometry-preserves-scene-order-when-elem",
+      "text": "render override geometry > preserves scene order when elements enter and leave in the same update",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "render override geometry > preserves scene order when elements enter and leave in the same update",
+          "startLine": 839,
+          "endLine": 855,
+          "contentHash": "sha256:41bde921d4f5350ebaf4aeeb9f66600ea3b5407d67aca64738aacdb10b837c25"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "render-override-geometry-does-not-rebuild-the-visible-se",
+      "text": "render override geometry > does not rebuild the visible set for a translated arrow whose label is off-screen",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/renderOverrides.test.tsx",
+          "testTitle": "render override geometry > does not rebuild the visible set for a translated arrow whose label is off-screen",
+          "startLine": 857,
+          "endLine": 892,
+          "contentHash": "sha256:983d6cd46b2868c5742130babad05803fc4ca17bed72c4ba95c23ed0d44ecb65"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/renderOverrides.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/renderOverrides.test.tsx",
+  "generator": "tests",
+  "notes": "10 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:7b25302aa7673a10b97a682d1dd7b42d8e99888cde25b0fd5086e9b3588f4fdc"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:7b25302aa7673a10b97a682d1dd7b42d8e99888cde25b0fd5086e9b3588f4fdc"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:7b25302aa7673a10b97a682d1dd7b42d8e99888cde25b0fd5086e9b3588f4fdc"
+    }
+  ]
+}

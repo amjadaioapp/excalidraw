@@ -1,0 +1,768 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.data.restore",
+  "revision": 1,
+  "title": "Behavior verified by packages/excalidraw/tests/data/restore.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/data/restore.test.ts, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/types.ts, packages/excalidraw/appState.ts, packages/excalidraw/data/json.ts and more.",
+  "category": "security",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/data/restore.test.ts",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/appState.ts",
+      "packages/excalidraw/data/json.ts",
+      "packages/excalidraw/data/restore.ts",
+      "packages/excalidraw/data/types.ts",
+      "packages/excalidraw/types.ts",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "FractionalIndex"
+      },
+      {
+        "path": "packages/excalidraw/data/types.ts",
+        "name": "ImportedDataState"
+      },
+      {
+        "path": "packages/excalidraw/data/json.ts",
+        "name": "serializeAsJSON"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawElement"
+      },
+      {
+        "path": "packages/element/src/index.ts",
+        "name": "*"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawTextElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawStickyNoteElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawFreeDrawElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawLinearElement"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "restore-elements-basic-restore-elements",
+      "text": "restoreElements > basic restoreElements",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > basic restoreElements",
+          "startLine": 53,
+          "endLine": 60,
+          "contentHash": "sha256:b33cd7220831c33b1e28f83be5f3baf7162967041542eace9fd599cff90ee61d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-restores-created-s-without-substituting",
+      "text": "restoreElements > restores created=%s without substituting load or last-update time",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > restores created=%s without substituting load or last-update time",
+          "startLine": 62,
+          "endLine": 93,
+          "contentHash": "sha256:5001cf3826635c528866009e818653a7c3ffecf52bbf7debeb93ea68f182855d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "FractionalIndex",
+          "startLine": 33,
+          "endLine": 33,
+          "excerpt": "type FractionalIndex = string & { _brand: \"franctionalIndex\" }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/data/types.ts",
+          "symbol": "ImportedDataState",
+          "startLine": 35,
+          "endLine": 50,
+          "excerpt": "interface ImportedDataState { type?: string; version?: number; source?: string; elements?: readonly ExcalidrawElement[] | null; appState?: Readonly< Partial< AppState & { [T in keyof LegacyAppState]: LegacyAppState[T][0]; } > > | null; scrollToContent?: boolean; libraryItems?: LibraryItems_anyVersion; files?: BinaryFiles }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/data/json.ts",
+          "symbol": "serializeAsJSON",
+          "startLine": 52,
+          "endLine": 75,
+          "excerpt": "const serializeAsJSON(elements: readonly ExcalidrawElement[], appState: Partial<AppState>, files: BinaryFiles, type: \"local\" | \"database\"): string"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-preserves-creation-metadata-when-repair",
+      "text": "restoreElements > preserves creation metadata when repairing duplicate element IDs",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > preserves creation metadata when repairing duplicate element IDs",
+          "startLine": 95,
+          "endLine": 104,
+          "contentHash": "sha256:cc451c5dd2e8488451e29abfa436f03362ce249a11a023666d3e525ef2015b93"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-restore-transparent-sticky-note",
+      "text": "restoreElements > should restore transparent sticky note stroke as black",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should restore transparent sticky note stroke as black",
+          "startLine": 106,
+          "endLine": 115,
+          "contentHash": "sha256:1b327d8d8fc4f84c1b02e55092b2fce9ce9e16d5e9b980836f5fdccdbbf51966"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-when-imported-data-state-is-null-it-sho",
+      "text": "restoreElements > when imported data state is null it should return an empty array of elements",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > when imported data state is null it should return an empty array of elements",
+          "startLine": 117,
+          "endLine": 120,
+          "contentHash": "sha256:8349e4eb963f503d70df641f3d969b1939f533e1e430deae53d0831cd67b9720"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-return-empty-array-when-element",
+      "text": "restoreElements > should return empty array when element is null",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should return empty array when element is null",
+          "startLine": 122,
+          "endLine": 124,
+          "contentHash": "sha256:2e24f31dd3f13c532c83ff916bdf9e2bbf6d7f497a6f81bfd6e4139fc683616c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-not-call-is-invisibly-small-elem",
+      "text": "restoreElements > should not call isInvisiblySmallElement when element is a selection element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should not call isInvisiblySmallElement when element is a selection element",
+          "startLine": 126,
+          "endLine": 131,
+          "contentHash": "sha256:c0835c3d5b185fd5b062b5f21ad09f791baaaa17a8587a3bef0baac9033a90db"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawElement",
+          "startLine": 223,
+          "endLine": 234,
+          "excerpt": "type ExcalidrawElement = | ExcalidrawGenericElement | ExcalidrawStickyNoteElement | ExcalidrawTextElement | ExcalidrawLinearElement | ExcalidrawArrowElement | ExcalidrawFreeDrawElement | ExcalidrawImageElement | ExcalidrawFr…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/index.ts",
+          "symbol": "*",
+          "startLine": 59,
+          "endLine": 59
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-return-empty-array-when-input-ty",
+      "text": "restoreElements > should return empty array when input type is not supported",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should return empty array when input type is not supported",
+          "startLine": 133,
+          "endLine": 142,
+          "contentHash": "sha256:3e97552cfce93acf3974347a7bb60948edce915d6f197ccd7183141e6e533dd5"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-return-empty-array-when-is-invis",
+      "text": "restoreElements > should return empty array when isInvisiblySmallElement is true",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should return empty array when isInvisiblySmallElement is true",
+          "startLine": 144,
+          "endLine": 153,
+          "contentHash": "sha256:819e0c23343c76d9010aac8e08fd9e26c2e9d57b9b05f8c4198b38ce2139ea02"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-restore-text-element-correctly-p",
+      "text": "restoreElements > should restore text element correctly passing value for each attribute",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should restore text element correctly passing value for each attribute",
+          "startLine": 155,
+          "endLine": 175,
+          "contentHash": "sha256:33eb2253653f90f7f41fb70864bfbfe830daa98b8f42dd18f60dc4f1261c360e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-not-delete-empty-text-element-wh",
+      "text": "restoreElements > should not delete empty text element when opts.deleteInvisibleElements is not defined",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should not delete empty text element when opts.deleteInvisibleElements is not defined",
+          "startLine": 177,
+          "endLine": 192,
+          "contentHash": "sha256:f5a03bbf14728d472612fa19f3aa2f65919b693e8d1c7b9a71601790d288d825"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-restore-text-element-correctly-w",
+      "text": "restoreElements > should restore text element correctly with unknown font family, null text and undefined alignment",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should restore text element correctly with unknown font family, null text and undefined alignment",
+          "startLine": 194,
+          "endLine": 214,
+          "contentHash": "sha256:b4e63f3a87a9a16d1977d627a05e3e8f42e75aa4b2fd0e6d98f719f232eed536"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-detect-the-line-height-of-a-text",
+      "text": "restoreElements > should detect the line height of a text element that only has the legacy font prop",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should detect the line height of a text element that only has the legacy font prop",
+          "startLine": 216,
+          "endLine": 239,
+          "contentHash": "sha256:d703ece92a536820f36f36f97e733c84bc634ea6f4594dd8b1bda2d31b536a98"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-fall-back-to-the-font-line-heigh",
+      "text": "restoreElements > should fall back to the font line height when it can't be detected",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should fall back to the font line height when it can't be detected",
+          "startLine": 241,
+          "endLine": 257,
+          "contentHash": "sha256:d2bdd9b456d820a4e234147895206ad61a9a765a73b18291fd379dbd34b8f433"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-sanitize-non-finite-font-sizes-o",
+      "text": "restoreElements > should sanitize non-finite font sizes on text elements",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should sanitize non-finite font sizes on text elements",
+          "startLine": 259,
+          "endLine": 274,
+          "contentHash": "sha256:d234588e842164083514e0cb15236af3b649517ca330845067b261df67932d2d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-clamp-restored-font-ceilings-to",
+      "text": "restoreElements > should clamp restored font ceilings to the sticky note maximum",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should clamp restored font ceilings to the sticky note maximum",
+          "startLine": 276,
+          "endLine": 289,
+          "contentHash": "sha256:c9b0452cffb1bce9f911e1b0440c621359ee0a764634c5a265c27e574ade9049"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-clear-a-font-ceiling-on-text-tha",
+      "text": "restoreElements > should clear a font ceiling on text that is not bound to a sticky note",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should clear a font ceiling on text that is not bound to a sticky note",
+          "startLine": 291,
+          "endLine": 306,
+          "contentHash": "sha256:3c3832ee93cdb1cdc5254c34953ae7326788b620e092f9c9defada0e81dc70b2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-seed-the-font-ceiling-and-a-visi",
+      "text": "restoreElements > should seed the font ceiling and a visible stroke on a sticky note label",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should seed the font ceiling and a visible stroke on a sticky note label",
+          "startLine": 308,
+          "endLine": 335,
+          "contentHash": "sha256:b40c4ba4e965a02dc0c2c74c6af6bcab39a56d56c661791703d487e19d7eaafd"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-give-a-note-its-label-s-color-wh",
+      "text": "restoreElements > should give a note its label's color when the two drifted apart",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should give a note its label's color when the two drifted apart",
+          "startLine": 337,
+          "endLine": 363,
+          "contentHash": "sha256:1990e1902bb1ef842ea91641b68346eea27a08c8a3317ac38c72ac8d7c3c5686"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-restore-the-sticky-note-defaults",
+      "text": "restoreElements > should restore the sticky note defaults and top-pick slots",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should restore the sticky note defaults and top-pick slots",
+          "startLine": 365,
+          "endLine": 384,
+          "contentHash": "sha256:c1306981cf198a1fbbf4f26c6e178b518eb2ca76b3b90b8180f397df348fda9f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-refit-a-sticky-note-together-wit",
+      "text": "restoreElements > should refit a sticky note together with its label when refreshing dimensions",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should refit a sticky note together with its label when refreshing dimensions",
+          "startLine": 386,
+          "endLine": 423,
+          "contentHash": "sha256:f0add8e90cf78aec93587e18337c50d8538312e13cb8be3329e4437d31a9384a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-restore-freedraw-element-correct",
+      "text": "restoreElements > should restore freedraw element correctly",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should restore freedraw element correctly",
+          "startLine": 425,
+          "endLine": 441,
+          "contentHash": "sha256:7863e9836fdb7a18d81c2075b6e1e47280b5868a0ae2107cb72b9af317da7d39"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawFreeDrawElement",
+          "startLine": 430,
+          "endLine": 437,
+          "excerpt": "type ExcalidrawFreeDrawElement = _ExcalidrawElementBase & Readonly<{ type: \"freedraw\"; points: readonly LocalPoint[]; pressures: readonly number[]; simulatePressure: boolean; strokeOptions: StrokeOptions; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-restore-only-valid-freedraw-poin",
+      "text": "restoreElements > should restore only valid freedraw points and keep pressures aligned",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should restore only valid freedraw points and keep pressures aligned",
+          "startLine": 443,
+          "endLine": 474,
+          "contentHash": "sha256:52296c861f3d7244fc3f09678ba88484ac4b00f6cee0b146f7759772775578ba"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawFreeDrawElement",
+          "startLine": 430,
+          "endLine": 437,
+          "excerpt": "type ExcalidrawFreeDrawElement = _ExcalidrawElementBase & Readonly<{ type: \"freedraw\"; points: readonly LocalPoint[]; pressures: readonly number[]; simulatePressure: boolean; strokeOptions: StrokeOptions; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-restore-freedraw-stroke-variabil",
+      "text": "restoreElements > should restore freedraw stroke variability",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should restore freedraw stroke variability",
+          "startLine": 476,
+          "endLine": 521,
+          "contentHash": "sha256:3c840a72d1313e55f6504d086b89233a9ca9465095af77834772cfe293f8f8c1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawFreeDrawElement",
+          "startLine": 430,
+          "endLine": 437,
+          "excerpt": "type ExcalidrawFreeDrawElement = _ExcalidrawElementBase & Readonly<{ type: \"freedraw\"; points: readonly LocalPoint[]; pressures: readonly number[]; simulatePressure: boolean; strokeOptions: StrokeOptions; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "restore-elements-should-restore-line-and-draw-elements-c",
+      "text": "restoreElements > should restore line and draw elements correctly",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/data/restore.test.ts",
+          "testTitle": "restoreElements > should restore line and draw elements correctly",
+          "startLine": 523,
+          "endLine": 548,
+          "contentHash": "sha256:b37e86585b604916fcbcfd8b6a3feeaadec6419a4b75c167c4440f2b04d14e70"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/data/restore.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/data/restore.test.ts",
+  "generator": "tests",
+  "notes": "40 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:e7fb7178741268349d82cc9182cf7754054c31b3dc0209b954f6395ca671c5f2"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:e7fb7178741268349d82cc9182cf7754054c31b3dc0209b954f6395ca671c5f2"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:e7fb7178741268349d82cc9182cf7754054c31b3dc0209b954f6395ca671c5f2"
+    }
+  ]
+}

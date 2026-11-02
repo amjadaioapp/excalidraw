@@ -1,0 +1,998 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.components.ttddialog.utils.chat",
+  "revision": 1,
+  "title": "chat utils: behavior verified by packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/components/TTDDialog/utils/chat.test.ts, exercising packages/excalidraw/components/TTDDialog/types.ts, packages/excalidraw/components/TTDDialog/utils/chat.ts.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+      "packages/excalidraw/components/TTDDialog/types.ts",
+      "packages/excalidraw/components/TTDDialog/utils/chat.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/components/TTDDialog/types.ts",
+        "name": "TChat"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+        "name": "updateAssistantContent"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+        "name": "getLastAssistantMessage"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+        "name": "addMessages"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+        "name": "removeLastAssistantMessage"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+        "name": "getMessagesForLLM"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "chat-utils-update-assistant-content-should-update-the-la",
+      "text": "chat utils > updateAssistantContent > should update the last assistant message with new payload",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > updateAssistantContent > should update the last assistant message with new payload",
+          "startLine": 13,
+          "endLine": 39,
+          "contentHash": "sha256:df78560aa27a9a407b9b4040d29a5db226cdc58626d904d08b3d8e7343acc7b9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "updateAssistantContent",
+          "startLine": 5,
+          "endLine": 33,
+          "excerpt": "const updateAssistantContent(chatHistory: TChat.ChatHistory, payload: Partial<TChat.ChatMessage>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-update-assistant-content-should-update-only-t",
+      "text": "chat utils > updateAssistantContent > should update only the last assistant message when multiple exist",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > updateAssistantContent > should update only the last assistant message when multiple exist",
+          "startLine": 41,
+          "endLine": 73,
+          "contentHash": "sha256:8788d4b12874d44e9b048bb36535fe7b9578b5fce02ff78b325e548362804b33"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "updateAssistantContent",
+          "startLine": 5,
+          "endLine": 33,
+          "excerpt": "const updateAssistantContent(chatHistory: TChat.ChatHistory, payload: Partial<TChat.ChatMessage>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-update-assistant-content-should-update-is-gen",
+      "text": "chat utils > updateAssistantContent > should update isGenerating flag",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > updateAssistantContent > should update isGenerating flag",
+          "startLine": 75,
+          "endLine": 95,
+          "contentHash": "sha256:f0270f86308794d5cc853ce96fe2d703d0a90f9002e9ac7ec1eac793dd22dc10"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "updateAssistantContent",
+          "startLine": 5,
+          "endLine": 33,
+          "excerpt": "const updateAssistantContent(chatHistory: TChat.ChatHistory, payload: Partial<TChat.ChatMessage>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-update-assistant-content-should-update-error",
+      "text": "chat utils > updateAssistantContent > should update error information",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > updateAssistantContent > should update error information",
+          "startLine": 97,
+          "endLine": 118,
+          "contentHash": "sha256:42bcc3281cbfe229ffe955763b3ba0c50ee467553ca34ddcc92c20065172cbb9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "updateAssistantContent",
+          "startLine": 5,
+          "endLine": 33,
+          "excerpt": "const updateAssistantContent(chatHistory: TChat.ChatHistory, payload: Partial<TChat.ChatMessage>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-update-assistant-content-should-return-unchan",
+      "text": "chat utils > updateAssistantContent > should return unchanged chatHistory if no assistant message exists",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > updateAssistantContent > should return unchanged chatHistory if no assistant message exists",
+          "startLine": 120,
+          "endLine": 139,
+          "contentHash": "sha256:aedeb64b19b6eb9ec6bb9462b1fb75b18f0c28c24ede6f031e76f7affdc209c1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "updateAssistantContent",
+          "startLine": 5,
+          "endLine": 33,
+          "excerpt": "const updateAssistantContent(chatHistory: TChat.ChatHistory, payload: Partial<TChat.ChatMessage>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-update-assistant-content-should-not-mutate-or",
+      "text": "chat utils > updateAssistantContent > should not mutate original chatHistory",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > updateAssistantContent > should not mutate original chatHistory",
+          "startLine": 141,
+          "endLine": 161,
+          "contentHash": "sha256:6da9537221e97f2cbe4d42f2150211b9c589db9f26105ea484c979942a7fe236"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "updateAssistantContent",
+          "startLine": 5,
+          "endLine": 33,
+          "excerpt": "const updateAssistantContent(chatHistory: TChat.ChatHistory, payload: Partial<TChat.ChatMessage>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-get-last-assistant-message-should-return-the",
+      "text": "chat utils > getLastAssistantMessage > should return the last assistant message",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > getLastAssistantMessage > should return the last assistant message",
+          "startLine": 165,
+          "endLine": 193,
+          "contentHash": "sha256:c33de4ddeb95389b6a247b9bba967d1f3c3bfdbf878def762309a8b1f543ddbc"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "getLastAssistantMessage",
+          "startLine": 35,
+          "endLine": 44,
+          "excerpt": "const getLastAssistantMessage(chatHistory: TChat.ChatHistory)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-get-last-assistant-message-should-return-the-2",
+      "text": "chat utils > getLastAssistantMessage > should return the last assistant message when multiple exist",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > getLastAssistantMessage > should return the last assistant message when multiple exist",
+          "startLine": 195,
+          "endLine": 225,
+          "contentHash": "sha256:016993f9f8b1c8f5c3d8607f0aa771c76a807411ab94307e448eb8f25c417766"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "getLastAssistantMessage",
+          "startLine": 35,
+          "endLine": 44,
+          "excerpt": "const getLastAssistantMessage(chatHistory: TChat.ChatHistory)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-get-last-assistant-message-should-return-unde",
+      "text": "chat utils > getLastAssistantMessage > should return undefined if no assistant message exists",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > getLastAssistantMessage > should return undefined if no assistant message exists",
+          "startLine": 227,
+          "endLine": 244,
+          "contentHash": "sha256:084ee3fa472b385981ceed113d15082e90b90fe45217045e408bdb620a7a0874"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "getLastAssistantMessage",
+          "startLine": 35,
+          "endLine": 44,
+          "excerpt": "const getLastAssistantMessage(chatHistory: TChat.ChatHistory)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-get-last-assistant-message-should-return-unde-2",
+      "text": "chat utils > getLastAssistantMessage > should return undefined for empty messages array",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > getLastAssistantMessage > should return undefined for empty messages array",
+          "startLine": 246,
+          "endLine": 256,
+          "contentHash": "sha256:9b5dd1892a0c61330986ee55299ce5e928ae1421174f71d51651aeb31ac0ee3c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "getLastAssistantMessage",
+          "startLine": 35,
+          "endLine": 44,
+          "excerpt": "const getLastAssistantMessage(chatHistory: TChat.ChatHistory)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-add-messages-should-add-a-single-message-with",
+      "text": "chat utils > addMessages > should add a single message with id and timestamp",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > addMessages > should add a single message with id and timestamp",
+          "startLine": 260,
+          "endLine": 281,
+          "contentHash": "sha256:09201db8b8d687ce523f7630ee4de8e375a71c5ca3865389b46cca5338ccdc71"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "addMessages",
+          "startLine": 46,
+          "endLine": 60,
+          "excerpt": "const addMessages(chatHistory: TChat.ChatHistory, messages: Array<Omit<TChat.ChatMessage, \"id\" | \"timestamp\">>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-add-messages-should-add-multiple-messages",
+      "text": "chat utils > addMessages > should add multiple messages",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > addMessages > should add multiple messages",
+          "startLine": 283,
+          "endLine": 304,
+          "contentHash": "sha256:6bb060bcc4a710b99e7fc9b01ee773ce05394bf282c96d09b092a2221cdfd401"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "addMessages",
+          "startLine": 46,
+          "endLine": 60,
+          "excerpt": "const addMessages(chatHistory: TChat.ChatHistory, messages: Array<Omit<TChat.ChatMessage, \"id\" | \"timestamp\">>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-add-messages-should-append-to-existing-messag",
+      "text": "chat utils > addMessages > should append to existing messages",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > addMessages > should append to existing messages",
+          "startLine": 306,
+          "endLine": 330,
+          "contentHash": "sha256:24dd51bad3ee6ec61f25dd39265c23c3d3459a51f9e390b054a61e0ff65f545a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "addMessages",
+          "startLine": 46,
+          "endLine": 60,
+          "excerpt": "const addMessages(chatHistory: TChat.ChatHistory, messages: Array<Omit<TChat.ChatMessage, \"id\" | \"timestamp\">>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-add-messages-should-add-warning-messages",
+      "text": "chat utils > addMessages > should add warning messages",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > addMessages > should add warning messages",
+          "startLine": 332,
+          "endLine": 347,
+          "contentHash": "sha256:a4a175472378f3f4d92b8dd8fdc09e518450c2e1b9bcc9f034900364548a96dd"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "addMessages",
+          "startLine": 46,
+          "endLine": 60,
+          "excerpt": "const addMessages(chatHistory: TChat.ChatHistory, messages: Array<Omit<TChat.ChatMessage, \"id\" | \"timestamp\">>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-add-messages-should-preserve-additional-messa",
+      "text": "chat utils > addMessages > should preserve additional message properties",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > addMessages > should preserve additional message properties",
+          "startLine": 349,
+          "endLine": 369,
+          "contentHash": "sha256:aac4a4f16fe027229721e6e1324bf5b92e58516d90524a64b36fa9176b4ace44"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "addMessages",
+          "startLine": 46,
+          "endLine": 60,
+          "excerpt": "const addMessages(chatHistory: TChat.ChatHistory, messages: Array<Omit<TChat.ChatMessage, \"id\" | \"timestamp\">>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-add-messages-should-not-mutate-original-chat",
+      "text": "chat utils > addMessages > should not mutate original chatHistory",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > addMessages > should not mutate original chatHistory",
+          "startLine": 371,
+          "endLine": 387,
+          "contentHash": "sha256:80e9585531e591977194814e7a326fd26af6125d279ee30145f2abac0156672a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "addMessages",
+          "startLine": 46,
+          "endLine": 60,
+          "excerpt": "const addMessages(chatHistory: TChat.ChatHistory, messages: Array<Omit<TChat.ChatMessage, \"id\" | \"timestamp\">>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-add-messages-should-generate-unique-ids-for-e",
+      "text": "chat utils > addMessages > should generate unique IDs for each message",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > addMessages > should generate unique IDs for each message",
+          "startLine": 389,
+          "endLine": 408,
+          "contentHash": "sha256:134e69817b66d1543c5c8e30cb79e61b24be27aca4b9e3c07ee747919ca57c3f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "addMessages",
+          "startLine": 46,
+          "endLine": 60,
+          "excerpt": "const addMessages(chatHistory: TChat.ChatHistory, messages: Array<Omit<TChat.ChatMessage, \"id\" | \"timestamp\">>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-remove-last-assistant-message-should-remove-t",
+      "text": "chat utils > removeLastAssistantMessage > should remove the last assistant message",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > removeLastAssistantMessage > should remove the last assistant message",
+          "startLine": 412,
+          "endLine": 443,
+          "contentHash": "sha256:28dd670fbc610efdeceaf6c131b7ae9f5a463b16f0420049c1ad1994d9dca88c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "removeLastAssistantMessage",
+          "startLine": 62,
+          "endLine": 75,
+          "excerpt": "const removeLastAssistantMessage(chatHistory: TChat.ChatHistory)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-remove-last-assistant-message-should-remove-o",
+      "text": "chat utils > removeLastAssistantMessage > should remove only the last assistant message when multiple exist",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > removeLastAssistantMessage > should remove only the last assistant message when multiple exist",
+          "startLine": 445,
+          "endLine": 476,
+          "contentHash": "sha256:004585ee990faf9dff166b35c27ff0b197a08b25a1a68cd94a55758b98806946"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "removeLastAssistantMessage",
+          "startLine": 62,
+          "endLine": 75,
+          "excerpt": "const removeLastAssistantMessage(chatHistory: TChat.ChatHistory)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-remove-last-assistant-message-should-return-u",
+      "text": "chat utils > removeLastAssistantMessage > should return unchanged chatHistory if no assistant message exists",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > removeLastAssistantMessage > should return unchanged chatHistory if no assistant message exists",
+          "startLine": 478,
+          "endLine": 495,
+          "contentHash": "sha256:1adcdc036a52a88a6fbc42bb175bb42f142426f73696caaaf49da6ecb3b787dd"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "removeLastAssistantMessage",
+          "startLine": 62,
+          "endLine": 75,
+          "excerpt": "const removeLastAssistantMessage(chatHistory: TChat.ChatHistory)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-remove-last-assistant-message-should-handle-e",
+      "text": "chat utils > removeLastAssistantMessage > should handle empty messages array",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > removeLastAssistantMessage > should handle empty messages array",
+          "startLine": 497,
+          "endLine": 507,
+          "contentHash": "sha256:fc8bd9a01f528d4433007f4ead5ef015f70faa1cbffcd1eea203f6df82b9787a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "removeLastAssistantMessage",
+          "startLine": 62,
+          "endLine": 75,
+          "excerpt": "const removeLastAssistantMessage(chatHistory: TChat.ChatHistory)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-remove-last-assistant-message-should-not-muta",
+      "text": "chat utils > removeLastAssistantMessage > should not mutate original chatHistory",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > removeLastAssistantMessage > should not mutate original chatHistory",
+          "startLine": 509,
+          "endLine": 527,
+          "contentHash": "sha256:5b30d3f11646a1c0e2f771126a1df50ba75fe82fec6ed096d3c970e884e07155"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "removeLastAssistantMessage",
+          "startLine": 62,
+          "endLine": 75,
+          "excerpt": "const removeLastAssistantMessage(chatHistory: TChat.ChatHistory)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-get-messages-for-api-should-filter-out-messag",
+      "text": "chat utils > getMessagesForApi > should filter out messages with empty content",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > getMessagesForApi > should filter out messages with empty content",
+          "startLine": 531,
+          "endLine": 568,
+          "contentHash": "sha256:43f2b8ea368ffd21ae7b837709c506d7f6b1609805b41b0bc530f5ae92c917d5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "getMessagesForLLM",
+          "startLine": 77,
+          "endLine": 92,
+          "excerpt": "const getMessagesForLLM(chatHistory: TChat.ChatHistory): LLMMessage[]"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-get-messages-for-api-should-return-only-user",
+      "text": "chat utils > getMessagesForApi > should return only user message if no assistant messages",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > getMessagesForApi > should return only user message if no assistant messages",
+          "startLine": 570,
+          "endLine": 591,
+          "contentHash": "sha256:c9ce0ddb009af57615dc030943f0927f65d41b47f12c52cf1be2516c346baec8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "getMessagesForLLM",
+          "startLine": 77,
+          "endLine": 92,
+          "excerpt": "const getMessagesForLLM(chatHistory: TChat.ChatHistory): LLMMessage[]"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "chat-utils-get-messages-for-api-should-return-only-assis",
+      "text": "chat utils > getMessagesForApi > should return only assistant messages if no user message",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+          "testTitle": "chat utils > getMessagesForApi > should return only assistant messages if no user message",
+          "startLine": 593,
+          "endLine": 614,
+          "contentHash": "sha256:cf53357211b6ec26b79227ad494a05f57ce2ecc63fe5cd2f9073f364ab47bb0b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/types.ts",
+          "symbol": "TChat",
+          "startLine": 26,
+          "endLine": 52,
+          "excerpt": "namespace TChat"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/chat.ts",
+          "symbol": "getMessagesForLLM",
+          "startLine": 77,
+          "endLine": 92,
+          "excerpt": "const getMessagesForLLM(chatHistory: TChat.ChatHistory): LLMMessage[]"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/chat.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/components/TTDDialog/utils/chat.test.ts",
+  "generator": "tests",
+  "notes": "2 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:1de8b4a4c465ff80b77511f2303abc6c11ea1f4309f1804865577a0a8dce48e5"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:1de8b4a4c465ff80b77511f2303abc6c11ea1f4309f1804865577a0a8dce48e5"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:1de8b4a4c465ff80b77511f2303abc6c11ea1f4309f1804865577a0a8dce48e5"
+    }
+  ]
+}

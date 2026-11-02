@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "id": "agent.non-deleted-and-visible-element-filters",
+  "revision": 1,
+  "title": "Non-deleted and visible element filters",
+  "category": "data-integrity",
+  "status": "approved",
+  "source": "agent",
+  "confidence": "medium",
+  "scope": {
+    "paths": [
+      "packages/element/src/index.ts"
+    ],
+    "symbols": []
+  },
+  "statements": [
+    {
+      "id": "get-non-deleted-elements-returns-exactly-the-elements-wi",
+      "text": "getNonDeletedElements returns exactly the elements with isDeleted falsy, preserving order; getVisibleElements additionally excludes invisibly small elements",
+      "basis": "observed",
+      "evidence": [
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/index.ts",
+          "symbol": "getNonDeletedElements",
+          "startLine": 55,
+          "endLine": 57,
+          "excerpt": "const getNonDeletedElements<T extends ExcalidrawElement>(elements: readonly T[]): readonly NonDeleted<T>[]"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/index.ts",
+          "symbol": "getVisibleElements",
+          "startLine": 47,
+          "endLine": 53,
+          "excerpt": "const getVisibleElements(elements: readonly ExcalidrawElement[]): readonly NonDeletedExcalidrawElement[]"
+        }
+      ],
+      "verification": {
+        "method": "manual"
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "agent:non-deleted-and-visible-element-filters",
+  "generator": "agent-import",
+  "notes": "Imported from coding-agent output on 2026-11-02; citations verified by Autoforge. Rationale: Deleted elements are kept as tombstones for collaboration and undo, so if they leaked into rendering or selection, removed content would reappear.",
+  "createdAt": "2026-11-02T17:10:00.997Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:77896deca2960e0a77558646f4a84eb8908e917ab0dfc3017e691de28f166ce2"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:10:00.997Z",
+      "by": "autoforge import (agent-assisted)",
+      "contentHash": "sha256:77896deca2960e0a77558646f4a84eb8908e917ab0dfc3017e691de28f166ce2"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:77896deca2960e0a77558646f4a84eb8908e917ab0dfc3017e691de28f166ce2"
+    }
+  ]
+}

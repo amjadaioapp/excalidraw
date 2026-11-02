@@ -1,0 +1,1003 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.charts",
+  "revision": 1,
+  "title": "charts: behavior verified by packages/excalidraw/charts.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/charts.test.ts, exercising packages/common/src/index.ts, packages/element/src/types.ts, packages/excalidraw/charts/index.ts.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/charts.test.ts",
+      "packages/common/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/charts/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/charts/index.ts",
+        "name": "tryParseNumber"
+      },
+      {
+        "path": "packages/excalidraw/charts/index.ts",
+        "name": "tryParseCells"
+      },
+      {
+        "path": "packages/excalidraw/charts/index.ts",
+        "name": "Spreadsheet"
+      },
+      {
+        "path": "packages/excalidraw/charts/index.ts",
+        "name": "isSpreadsheetValidForChartType"
+      },
+      {
+        "path": "packages/excalidraw/charts/index.ts",
+        "name": "renderSpreadsheet"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "NonDeleted"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "charts-try-parse-number-should-correctly-identify-s-as-n",
+      "text": "charts > tryParseNumber > should correctly identify %s as numbers",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseNumber > should correctly identify %s as numbers",
+          "startLine": 40,
+          "endLine": 54,
+          "contentHash": "sha256:c2e26a35de92e88085e19d077b1b157e137da41961bb80128e38b67f481fc436"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseNumber",
+          "startLine": 24,
+          "endLine": 24
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-try-parse-number-should-correctly-identify-s-as-n-2",
+      "text": "charts > tryParseNumber > should correctly identify %s as not a number",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseNumber > should correctly identify %s as not a number",
+          "startLine": 56,
+          "endLine": 61,
+          "contentHash": "sha256:7e9baabb7118de90591b77516cde2a511ac1ff7e7d2d6343b689206befc81bc1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseNumber",
+          "startLine": 24,
+          "endLine": 24
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-try-parse-cells-successfully-parses-a-spreadsheet",
+      "text": "charts > tryParseCells > Successfully parses a spreadsheet",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseCells > Successfully parses a spreadsheet",
+          "startLine": 65,
+          "endLine": 96,
+          "contentHash": "sha256:d8939d2b8d4921788d46b61b6462f0fc35e1a11d30297bfebdbcd640a9636c03"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseCells",
+          "startLine": 24,
+          "endLine": 24
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-try-parse-cells-uses-the-second-column-as-the-lab",
+      "text": "charts > tryParseCells > Uses the second column as the label if it is not a number",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseCells > Uses the second column as the label if it is not a number",
+          "startLine": 98,
+          "endLine": 129,
+          "contentHash": "sha256:df2dc0d8d71c9190a36ea3504d681bbecefac6293f58a5c531577214c29f7d1a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseCells",
+          "startLine": 24,
+          "endLine": 24
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-try-parse-cells-treats-the-first-column-as-labels",
+      "text": "charts > tryParseCells > treats the first column as labels if both columns are numbers",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseCells > treats the first column as labels if both columns are numbers",
+          "startLine": 131,
+          "endLine": 155,
+          "contentHash": "sha256:f63efb45fb6c233394b80cc44bce101f330f97c2b44e3a4089afac3a6e74b693"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseCells",
+          "startLine": 24,
+          "endLine": 24
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-try-parse-cells-parses-multi-series-cells-for-rad",
+      "text": "charts > tryParseCells > parses multi-series cells for radar charts",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseCells > parses multi-series cells for radar charts",
+          "startLine": 157,
+          "endLine": 186,
+          "contentHash": "sha256:83b20d784909be0d3bca481ce089dd95d5a51e4aa07d7393debf765cfc0bf4d9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseCells",
+          "startLine": 24,
+          "endLine": 24
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-try-parse-cells-treats-first-row-as-title-series",
+      "text": "charts > tryParseCells > treats first row as title+series headers only when all cells are non-numeric",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseCells > treats first row as title+series headers only when all cells are non-numeric",
+          "startLine": 188,
+          "endLine": 205,
+          "contentHash": "sha256:83032e42fa2ceb691da8c4fe45461d24f36e381ab31190a8824bcb067a27bed8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseCells",
+          "startLine": 24,
+          "endLine": 24
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-try-parse-cells-supports-header-row-with-series-l",
+      "text": "charts > tryParseCells > supports header row with series labels but no chart title",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseCells > supports header row with series labels but no chart title",
+          "startLine": 207,
+          "endLine": 230,
+          "contentHash": "sha256:69cedfe33423bf61ae9f20594dd8d5ebbde30f3dd192a3557ae037ad8cab8958"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseCells",
+          "startLine": 24,
+          "endLine": 24
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-try-parse-cells-parses-2-row-multi-series-data-wi",
+      "text": "charts > tryParseCells > parses 2-row multi-series data with header row",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseCells > parses 2-row multi-series data with header row",
+          "startLine": 232,
+          "endLine": 253,
+          "contentHash": "sha256:779e2d67b1805f97a2bff91277ff0228c2e23d82132b17fbf26cf5ed0399788b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseCells",
+          "startLine": 24,
+          "endLine": 24
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-try-parse-cells-parses-2-row-multi-series-data-wi-2",
+      "text": "charts > tryParseCells > parses 2-row multi-series data without header and keeps first column as labels",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseCells > parses 2-row multi-series data without header and keeps first column as labels",
+          "startLine": 255,
+          "endLine": 275,
+          "contentHash": "sha256:77cfb6ee2e81da42e15c0313ead3eef7e9724d7781d9a0e9f0daa2aff4fa5ef8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseCells",
+          "startLine": 24,
+          "endLine": 24
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-try-parse-cells-always-interprets-2-column-data-a",
+      "text": "charts > tryParseCells > always interprets 2-column data as label in first column and numeric value in second",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > tryParseCells > always interprets 2-column data as label in first column and numeric value in second",
+          "startLine": 277,
+          "endLine": 289,
+          "contentHash": "sha256:d45f810ddfdee6af2d7d5e5f8a8046c94fcbf8cc081037f56afbba5f1d179fc7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseCells",
+          "startLine": 24,
+          "endLine": 24
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-is-spreadsheet-valid-for-chart-type-rejects-radar",
+      "text": "charts > isSpreadsheetValidForChartType > rejects radar charts with only 2 dimensions",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > isSpreadsheetValidForChartType > rejects radar charts with only 2 dimensions",
+          "startLine": 293,
+          "endLine": 306,
+          "contentHash": "sha256:266b247955434dc1deeda1c5d47791a743068d6a6e016def9caebca85d7fb22e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "isSpreadsheetValidForChartType",
+          "startLine": 23,
+          "endLine": 23
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-is-spreadsheet-valid-for-chart-type-accepts-radar",
+      "text": "charts > isSpreadsheetValidForChartType > accepts radar charts with 3 or more dimensions",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > isSpreadsheetValidForChartType > accepts radar charts with 3 or more dimensions",
+          "startLine": 308,
+          "endLine": 323,
+          "contentHash": "sha256:5c0bd8010a3030625c7601da71668cbfb8de4cd8925c028ba6e760cd88a9ae11"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "isSpreadsheetValidForChartType",
+          "startLine": 23,
+          "endLine": 23
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-renders-grouped-bars-and-legen",
+      "text": "charts > renderSpreadsheet > renders grouped bars and legend for multi-series bar charts",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > renders grouped bars and legend for multi-series bar charts",
+          "startLine": 327,
+          "endLine": 370,
+          "contentHash": "sha256:0b829ee6ed35c7a03adc140ac2f480c94cd959e26ecf06cd3a2659d8d5116dcc"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-spreads-grouped-bar-series-col",
+      "text": "charts > renderSpreadsheet > spreads grouped bar series colors across palette",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > spreads grouped bar series colors across palette",
+          "startLine": 372,
+          "endLine": 418,
+          "contentHash": "sha256:7274e290881aa7c0b5c0fd69599aa7ac6486a677c95b1f33165a33553a911197"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-renders-grouped-bars-for-parse",
+      "text": "charts > renderSpreadsheet > renders grouped bars for parsed multi-series cells without header row",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > renders grouped bars for parsed multi-series cells without header row",
+          "startLine": 420,
+          "endLine": 458,
+          "contentHash": "sha256:fbd56088019e71c9515002a1060a272a9e33e2d3b5a0cb0169703e55d2b150ab"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "tryParseCells",
+          "startLine": 24,
+          "endLine": 24
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-makes-multi-series-bar-charts",
+      "text": "charts > renderSpreadsheet > makes multi-series bar charts wider than single-series bar charts",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > makes multi-series bar charts wider than single-series bar charts",
+          "startLine": 460,
+          "endLine": 491,
+          "contentHash": "sha256:c8209fd74ca72f301a33427f0f0dd6500c1e6ca1a59a7dba949062769733f7f8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-makes-multi-series-line-charts",
+      "text": "charts > renderSpreadsheet > makes multi-series line charts wider than single-series line charts",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > makes multi-series line charts wider than single-series line charts",
+          "startLine": 493,
+          "endLine": 524,
+          "contentHash": "sha256:b28111e37e1378f71eeac57caf60637f095a45c0bb0537d3ed7f4f2d7bbd5e18"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-wraps-grouped-bar-labels-with",
+      "text": "charts > renderSpreadsheet > wraps grouped bar labels with spaces and still ellipsifies long single words",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > wraps grouped bar labels with spaces and still ellipsifies long single words",
+          "startLine": 526,
+          "endLine": 569,
+          "contentHash": "sha256:64a888a2557f252506de86a4d0faad5af4925ad11ccb3f887182db2a86e32d9e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-keeps-single-series-bar-x-axis",
+      "text": "charts > renderSpreadsheet > keeps single-series bar x-axis labels below axis and avoids neighbor overlap",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > keeps single-series bar x-axis labels below axis and avoids neighbor overlap",
+          "startLine": 571,
+          "endLine": 610,
+          "contentHash": "sha256:1ebbc7f881c826ca9185a2cdb22efe04d4e541e4f18500836ce55ef44dd7060c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-renders-one-line-per-series-an",
+      "text": "charts > renderSpreadsheet > renders one line per series and one dot per data point for multi-series line charts",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > renders one line per series and one dot per data point for multi-series line charts",
+          "startLine": 612,
+          "endLine": 635,
+          "contentHash": "sha256:4ed6263896549e8ac657ceb748da9fea68fc4b526b3fb08e89245c59024ad6d7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-spreads-line-series-colors-acr",
+      "text": "charts > renderSpreadsheet > spreads line series colors across palette to avoid similar adjacent colors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > spreads line series colors across palette to avoid similar adjacent colors",
+          "startLine": 637,
+          "endLine": 676,
+          "contentHash": "sha256:a043667efe11511ad1a88de5c5edf3dc6fb8f15a650a12e751574ab97f8e79b0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-uses-color-seed-to-determinist",
+      "text": "charts > renderSpreadsheet > uses colorSeed to deterministically pick chart colors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > uses colorSeed to deterministically pick chart colors",
+          "startLine": 678,
+          "endLine": 703,
+          "contentHash": "sha256:f7f07d94b041ba7ca5547d3367b9767a64e2d00af587a4091f6c5a78b9184c60"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-renders-multi-series-line-lege",
+      "text": "charts > renderSpreadsheet > renders multi-series line legend below axis labels with clearance",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > renders multi-series line legend below axis labels with clearance",
+          "startLine": 705,
+          "endLine": 738,
+          "contentHash": "sha256:454993cb1fe00793180e1c5f92ec995e73aad8773fd7d91243cc5dcaafe98873"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "charts-render-spreadsheet-keeps-multi-series-line-x-axis",
+      "text": "charts > renderSpreadsheet > keeps multi-series line x-axis labels below axis and avoids neighbor overlap",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/charts.test.ts",
+          "testTitle": "charts > renderSpreadsheet > keeps multi-series line x-axis labels below axis and avoids neighbor overlap",
+          "startLine": 740,
+          "endLine": 782,
+          "contentHash": "sha256:78cdf1b7187c8e1b4c186e5575dd28e98336166f03278b8ed1c5832e3e8c4372"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "Spreadsheet",
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/charts/index.ts",
+          "symbol": "renderSpreadsheet",
+          "startLine": 26,
+          "endLine": 41,
+          "excerpt": "const renderSpreadsheet(chartType: ChartType, spreadsheet: Spreadsheet, x: number, y: number, colorSeed?: number, renderEnvironment?: RenderEnvironment): ChartElements | null"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/charts.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/charts.test.ts",
+  "generator": "tests",
+  "notes": "9 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:1316d3e9b305f3284d340c49e2dc1881710d4404b5fd28beabd892a78a8f4f4d"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:1316d3e9b305f3284d340c49e2dc1881710d4404b5fd28beabd892a78a8f4f4d"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:1316d3e9b305f3284d340c49e2dc1881710d4404b5fd28beabd892a78a8f4f4d"
+    }
+  ]
+}

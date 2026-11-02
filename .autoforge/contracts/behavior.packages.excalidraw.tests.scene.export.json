@@ -1,0 +1,859 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.scene.export",
+  "revision": 1,
+  "title": "Behavior verified by packages/excalidraw/tests/scene/export.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/scene/export.test.ts, exercising packages/common/src/index.ts, packages/element/src/types.ts, packages/excalidraw/appState.ts, packages/excalidraw/data/index.ts, packages/excalidraw/renderer/staticScene.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/scene/export.test.ts",
+      "packages/common/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/appState.ts",
+      "packages/excalidraw/data/index.ts",
+      "packages/excalidraw/renderer/staticScene.ts",
+      "packages/excalidraw/scene/export.ts",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/scene/export.ts",
+        "name": "exportScene"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "FractionalIndex"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "NonDeleted"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "NonDeletedExcalidrawElement"
+      },
+      {
+        "path": "packages/excalidraw/appState.ts",
+        "name": "getDefaultAppState"
+      },
+      {
+        "path": "packages/excalidraw/scene/export.ts",
+        "name": "ExportSceneData"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "export-to-svg-with-default-arguments",
+      "text": "exportToSvg > with default arguments",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToSvg > with default arguments",
+          "startLine": 70,
+          "endLine": 82,
+          "contentHash": "sha256:d21ac444940f4ce5de7a478a4512ce09c4b5b151d5a916c2db97345da43f75f7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-svg-with-a-cjk-font",
+      "text": "exportToSvg > with a CJK font",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToSvg > with a CJK font",
+          "startLine": 84,
+          "endLine": 108,
+          "contentHash": "sha256:c26251d1278934307eaeac4eb7e889902084a78577aaf927e5c9ea0de5b63dd0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "FractionalIndex",
+          "startLine": 33,
+          "endLine": 33,
+          "excerpt": "type FractionalIndex = string & { _brand: \"franctionalIndex\" }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-svg-with-background-color",
+      "text": "exportToSvg > with background color",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToSvg > with background color",
+          "startLine": 110,
+          "endLine": 129,
+          "contentHash": "sha256:b77131640f4be6773807a4982be601cbc1f1ffa85e1408b0dacb01146b343fee"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-svg-with-dark-mode",
+      "text": "exportToSvg > with dark mode",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToSvg > with dark mode",
+          "startLine": 131,
+          "endLine": 156,
+          "contentHash": "sha256:6bc3bf559000354bc77c7f8347c85ee0f952449e9e4a14501da7206532b52f83"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-svg-with-export-padding",
+      "text": "exportToSvg > with exportPadding",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToSvg > with exportPadding",
+          "startLine": 158,
+          "endLine": 178,
+          "contentHash": "sha256:eeae180e7480e363754e13e32df4f195f286912a4e407365b2e0b89e5ea19c13"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-svg-with-scale",
+      "text": "exportToSvg > with scale",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToSvg > with scale",
+          "startLine": 180,
+          "endLine": 205,
+          "contentHash": "sha256:0d88478ad019d444fd40504d75eb481d5313d07ee6c8f9ded54b26bf5498c434"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-svg-with-export-embed-scene",
+      "text": "exportToSvg > with exportEmbedScene",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToSvg > with exportEmbedScene",
+          "startLine": 207,
+          "endLine": 218,
+          "contentHash": "sha256:f18e5dc4b44c722fb15c41d2bc9cf755594e2b54b069697c365303d76c255618"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-svg-with-elements-that-have-a-link",
+      "text": "exportToSvg > with elements that have a link",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToSvg > with elements that have a link",
+          "startLine": 220,
+          "endLine": 231,
+          "contentHash": "sha256:e910299a59d0859af8c9e25badddd211d3c2c5bd0f45badcf26c379979de1520"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeletedExcalidrawElement",
+          "startLine": 251,
+          "endLine": 251,
+          "excerpt": "type NonDeletedExcalidrawElement = NonDeleted<ExcalidrawElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-svg-keeps-a-horizontal-arrow-with-a-bound-labe",
+      "text": "exportToSvg > keeps a horizontal arrow with a bound label visible (#11439)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToSvg > keeps a horizontal arrow with a bound label visible (#11439)",
+          "startLine": 237,
+          "endLine": 274,
+          "contentHash": "sha256:3c2c0a9433e82f9f56db821ae206923d3c5d55cf76258e32854ed9422220e13a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeletedExcalidrawElement",
+          "startLine": 251,
+          "endLine": 251,
+          "excerpt": "type NonDeletedExcalidrawElement = NonDeleted<ExcalidrawElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-svg-cuts-the-same-padded-hole-around-an-arrow",
+      "text": "exportToSvg > cuts the same padded hole around an arrow label as the canvas",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToSvg > cuts the same padded hole around an arrow label as the canvas",
+          "startLine": 276,
+          "endLine": 332,
+          "contentHash": "sha256:6bd7e3e8558f54e3aa5e97b8163aa5d62ba789f66aeaad180fcbcc3a92a614e6"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeletedExcalidrawElement",
+          "startLine": 251,
+          "endLine": 251,
+          "excerpt": "type NonDeletedExcalidrawElement = NonDeleted<ExcalidrawElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-canvas-does-not-paint-over-elements-beneath-a",
+      "text": "exportToCanvas > does not paint over elements beneath a labeled arrow's label (#11591)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToCanvas > does not paint over elements beneath a labeled arrow's label (#11591)",
+          "startLine": 336,
+          "endLine": 401,
+          "contentHash": "sha256:23847afe24d8364cc59295ed2138dd234177bc2593c30986670c13eb25a5a496"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-to-canvas-renders-on-a-cpu-backed-canvas",
+      "text": "exportToCanvas > renders on a CPU-backed canvas",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exportToCanvas > renders on a CPU-backed canvas",
+          "startLine": 403,
+          "endLine": 421,
+          "contentHash": "sha256:ef0bb1b01b896569a04747d7972627f371a333d46a95c839992946d81375dbf0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-background-export-to-svg-paints-no-background-for",
+      "text": "export background > exportToSvg paints no background for `false` or a transparent scene background",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "export background > exportToSvg paints no background for `false` or a transparent scene background",
+          "startLine": 448,
+          "endLine": 461,
+          "contentHash": "sha256:24278142e5ea9b9b6e4c3c026c008ea62c5feade430603e4a11b3ab1aeb21a36"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-background-export-to-svg-fills-outline-arrowheads",
+      "text": "export background > exportToSvg fills outline arrowheads with the configured background",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "export background > exportToSvg fills outline arrowheads with the configured background",
+          "startLine": 463,
+          "endLine": 471,
+          "contentHash": "sha256:60fe4768986234d472e336eb7765598fcb1bce3ee9be99abeb62d6df1a06c45c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-background-transparent-exports-keep-filling-outli",
+      "text": "export background > transparent exports keep filling outline arrowheads with the scene background",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "export background > transparent exports keep filling outline arrowheads with the scene background",
+          "startLine": 473,
+          "endLine": 487,
+          "contentHash": "sha256:2ffe9f591745c29609ca31afcac29065ade8d185e611c5f86f9b54c291e68297"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-background-jpeg-export-paints-the-default-backgro",
+      "text": "export background > JPEG export paints the default background instead of `false`",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "export background > JPEG export paints the default background instead of `false`",
+          "startLine": 489,
+          "endLine": 514,
+          "contentHash": "sha256:a41bec770199b757cfe7e91f23a3201317946d6f7cc8e2ee2c357ea81676624b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-inputs-takes-only-the-scene-settings-from-data-ap",
+      "text": "export inputs > takes only the scene settings from data.appState",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "export inputs > takes only the scene settings from data.appState",
+          "startLine": 518,
+          "endLine": 540,
+          "contentHash": "sha256:785d3f5abf08535b80a3e6a2695b67a4d1104ce8827ca1832b9c07464a1c515f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/appState.ts",
+          "symbol": "getDefaultAppState",
+          "startLine": 30,
+          "endLine": 153,
+          "excerpt": "const getDefaultAppState(): Omit< AppState, \"offsetTop\" | \"offsetLeft\" | \"width\" | \"height\" >"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "ExportSceneData",
+          "startLine": 224,
+          "endLine": 234,
+          "excerpt": "type ExportSceneData = { elements: readonly NonDeletedExcalidrawElement[]; appState?: ReturnType<typeof cleanAppStateForExport>; files?: BinaryFiles | null }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-inputs-loads-fonts-through-environment-load-fonts",
+      "text": "export inputs > loads fonts through environment.loadFonts",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "export inputs > loads fonts through environment.loadFonts",
+          "startLine": 542,
+          "endLine": 552,
+          "contentHash": "sha256:a538442b3fa034dfb4b2b67af4d4be1445edacb0baf9f9b5d97cc36f16c3b017"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-inputs-measures-text-through-environment-text-met",
+      "text": "export inputs > measures text through environment.textMetrics",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "export inputs > measures text through environment.textMetrics",
+          "startLine": 554,
+          "endLine": 570,
+          "contentHash": "sha256:afd28f54ac62d851672fc5cd9b64ffb86842c5b5dd7f2042d49642ed98580f27"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-inputs-without-a-document-font-set-e-g-a-dom-shim",
+      "text": "export inputs > without a document font set (e.g. a DOM shim like linkedom) > exports without loading fonts, warning once",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "export inputs > without a document font set (e.g. a DOM shim like linkedom) > exports without loading fonts, warning once",
+          "startLine": 577,
+          "endLine": 613,
+          "contentHash": "sha256:2eba7d6596f249dcfaedf99ef8d0fc8b7b63c41801b35702d700263cfd76f8f4"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-inputs-without-a-document-font-set-e-g-a-dom-shim-2",
+      "text": "export inputs > without a document font set (e.g. a DOM shim like linkedom) > loads fonts into a worker's own font set",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "export inputs > without a document font set (e.g. a DOM shim like linkedom) > loads fonts into a worker's own font set",
+          "startLine": 615,
+          "endLine": 634,
+          "contentHash": "sha256:21cb29f50efff78000f0db810e3a32262cbf5b9b6023dbb5ed61db689b27570f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "export-inputs-renders-frame-decorations-per-config-frame",
+      "text": "export inputs > renders frame decorations per config.frames",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "export inputs > renders frame decorations per config.frames",
+          "startLine": 637,
+          "endLine": 653,
+          "contentHash": "sha256:d98946bcc2c9ba651b9de9ea57befb5031aa2d09bd9788658e2b3488f039d400"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "exporting-frames-export-to-canvas-exporting-canvas-with",
+      "text": "exporting frames > exportToCanvas > exporting canvas with a single frame shouldn't crop if not exporting frame directly",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exporting frames > exportToCanvas > exporting canvas with a single frame shouldn't crop if not exporting frame directly",
+          "startLine": 672,
+          "endLine": 704,
+          "contentHash": "sha256:0097489a07ece2de688e8339afc3386fcebf55acfdb2ca198d31a726f48c4012"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "exporting-frames-export-to-canvas-exporting-canvas-with-2",
+      "text": "exporting frames > exportToCanvas > exporting canvas with a single frame should crop when exporting frame directly",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exporting frames > exportToCanvas > exporting canvas with a single frame should crop when exporting frame directly",
+          "startLine": 706,
+          "endLine": 740,
+          "contentHash": "sha256:38cc190f735d59fdc5b95a10e762172383bdcb44a9c85d1c9b50712257c9852a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "exporting-frames-export-to-svg-colors-frame-names-like-t",
+      "text": "exporting frames > exportToSvg > colors frame names like the editor in the configured theme",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scene/export.test.ts",
+          "testTitle": "exporting frames > exportToSvg > colors frame names like the editor in the configured theme",
+          "startLine": 746,
+          "endLine": 759,
+          "contentHash": "sha256:76f792ab79746c91f448945e928e325f38fd8157e6d74782599a6996eb4715f1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/export.ts",
+          "symbol": "exportScene",
+          "startLine": 1354,
+          "endLine": 1356,
+          "excerpt": "function exportScene(opts: Extract<ExportSceneOptions, { type: \"canvas\" }>): Promise<HTMLCanvasElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scene/export.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/scene/export.test.ts",
+  "generator": "tests",
+  "notes": "7 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:fccf7ad67a0545f21b336882bed8610a5e4b612e4cd42b4ee786bad7af7a1bbd"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:fccf7ad67a0545f21b336882bed8610a5e4b612e4cd42b4ee786bad7af7a1bbd"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:fccf7ad67a0545f21b336882bed8610a5e4b612e4cd42b4ee786bad7af7a1bbd"
+    }
+  ]
+}

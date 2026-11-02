@@ -1,0 +1,636 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.tool",
+  "revision": 1,
+  "title": "Behavior verified by packages/excalidraw/tests/tool.test.tsx",
+  "description": "Existing behavior covered by 21 asserting test(s) in packages/excalidraw/tests/tool.test.tsx, exercising packages/common/src/index.ts, packages/excalidraw/components/Tools.tsx, packages/excalidraw/index.tsx, packages/excalidraw/types.ts.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/tool.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/excalidraw/components/Tools.tsx",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/types.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/components/Tools.tsx",
+        "name": "findShapeByKey"
+      },
+      {
+        "path": "packages/excalidraw/index.tsx",
+        "name": "Excalidraw"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "set-active-tool-should-expose-set-active-tool-on-package",
+      "text": "setActiveTool() > should expose setActiveTool on package API",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "setActiveTool() > should expose setActiveTool on package API",
+          "startLine": 37,
+          "endLine": 40,
+          "contentHash": "sha256:db5e0f6b73df34b7cac97f200cc7a87fe4394f3da8152c1847c8b902fd203c85"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-active-tool-should-set-the-active-tool-type",
+      "text": "setActiveTool() > should set the active tool type",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "setActiveTool() > should set the active tool type",
+          "startLine": 42,
+          "endLine": 53,
+          "contentHash": "sha256:eebbdc0027708b25aac1ee741efd3741a46942707b61ca829d51b7c0502a6c5f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-active-tool-should-support-tool-locking",
+      "text": "setActiveTool() > should support tool locking",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "setActiveTool() > should support tool locking",
+          "startLine": 55,
+          "endLine": 66,
+          "contentHash": "sha256:52d81318bfe004869bbbaccd07661d8cccab514c43bfd9a54b9a9a0e7e31725e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-active-tool-should-set-custom-tool",
+      "text": "setActiveTool() > should set custom tool",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "setActiveTool() > should set custom tool",
+          "startLine": 68,
+          "endLine": 75,
+          "contentHash": "sha256:2505dc7811c4e4007f1f5d993e689c29a902e824a8f882fafb26bc70ce955337"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "find-shape-by-key-selection-shortcuts-activate-selection",
+      "text": "findShapeByKey() > selection shortcuts activate selection when it's preferred",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "findShapeByKey() > selection shortcuts activate selection when it's preferred",
+          "startLine": 89,
+          "endLine": 94,
+          "contentHash": "sha256:4acbfccb93f286e46e30a85998a5ea1f24938fabd893733433b76b8cc6f328ec"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/Tools.tsx",
+          "symbol": "findShapeByKey",
+          "startLine": 192,
+          "endLine": 223,
+          "excerpt": "const findShapeByKey(key: string, app: AppClassProperties, shiftKey?: boolean)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "find-shape-by-key-selection-shortcuts-activate-lasso-whe",
+      "text": "findShapeByKey() > selection shortcuts activate lasso when it's preferred",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "findShapeByKey() > selection shortcuts activate lasso when it's preferred",
+          "startLine": 96,
+          "endLine": 101,
+          "contentHash": "sha256:ff95256c9cd873050480754479e3a7a0a792728a8e0339a6416a8c9284b4a111"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/Tools.tsx",
+          "symbol": "findShapeByKey",
+          "startLine": 192,
+          "endLine": 223,
+          "excerpt": "const findShapeByKey(key: string, app: AppClassProperties, shiftKey?: boolean)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "find-shape-by-key-letter-shortcuts-are-caps-lock-insensi",
+      "text": "findShapeByKey() > letter shortcuts are CapsLock-insensitive",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "findShapeByKey() > letter shortcuts are CapsLock-insensitive",
+          "startLine": 103,
+          "endLine": 109,
+          "contentHash": "sha256:a38d14e3ed5ac0f0cd8fef08b9555244ab8cbbae1b6314b6c9e8f89786d39de0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/Tools.tsx",
+          "symbol": "findShapeByKey",
+          "startLine": 192,
+          "endLine": 223,
+          "excerpt": "const findShapeByKey(key: string, app: AppClassProperties, shiftKey?: boolean)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "find-shape-by-key-matches-shift-bound-tools-only-when-sh",
+      "text": "findShapeByKey() > matches shift-bound tools only when shift is held",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "findShapeByKey() > matches shift-bound tools only when shift is held",
+          "startLine": 111,
+          "endLine": 118,
+          "contentHash": "sha256:f0062f27d8ac47d96abafe3da5fd9bdd907e862c2cb7cddbc36028aaea48ee4d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/Tools.tsx",
+          "symbol": "findShapeByKey",
+          "startLine": 192,
+          "endLine": 223,
+          "excerpt": "const findShapeByKey(key: string, app: AppClassProperties, shiftKey?: boolean)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "find-shape-by-key-does-not-match-plain-bound-tools-when",
+      "text": "findShapeByKey() > does not match plain-bound tools when shift is held",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "findShapeByKey() > does not match plain-bound tools when shift is held",
+          "startLine": 120,
+          "endLine": 125,
+          "contentHash": "sha256:b908d8344e5ada95f50e16fe64d52053c4d97c18ff81c9c07353d2089b276634"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/Tools.tsx",
+          "symbol": "findShapeByKey",
+          "startLine": 192,
+          "endLine": 223,
+          "excerpt": "const findShapeByKey(key: string, app: AppClassProperties, shiftKey?: boolean)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "props-active-tool-forced-tool-forces-the-tool-from-the-f",
+      "text": "props.activeTool (forced tool) > forces the tool from the first render, behaving as locked",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "props.activeTool (forced tool) > forces the tool from the first render, behaving as locked",
+          "startLine": 145,
+          "endLine": 162,
+          "contentHash": "sha256:d59fadddf3acdc7b6b65394dcd2170488f1d0639d8318855e6aad0cc764ad79d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "props-active-tool-forced-tool-does-not-clobber-the-user",
+      "text": "props.activeTool (forced tool) > does not clobber the user's padlock preference",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "props.activeTool (forced tool) > does not clobber the user's padlock preference",
+          "startLine": 164,
+          "endLine": 185,
+          "contentHash": "sha256:db924129b00daccaf30f48b84445a2c3d001036d16d28203dd9eea7df1ff947b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "props-active-tool-forced-tool-ignores-user-api-tool-swit",
+      "text": "props.activeTool (forced tool) > ignores user & API tool switching without side effects",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "props.activeTool (forced tool) > ignores user & API tool switching without side effects",
+          "startLine": 187,
+          "endLine": 214,
+          "contentHash": "sha256:21ebab896862a55783801470c499f5ef4733342b08f538dea669ae096a5eaee9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "props-active-tool-forced-tool-keeps-the-tool-in-sync-wit",
+      "text": "props.activeTool (forced tool) > keeps the tool in sync with prop changes, until unset",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "props.activeTool (forced tool) > keeps the tool in sync with prop changes, until unset",
+          "startLine": 216,
+          "endLine": 239,
+          "contentHash": "sha256:6de94a57b75376cb4cd7d1893dde37d5afa5b0ea86bd866b119a333014044f61"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "props-active-tool-forced-tool-snaps-back-when-internal-f",
+      "text": "props.activeTool (forced tool) > snaps back when internal flows reset the tool",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "props.activeTool (forced tool) > snaps back when internal flows reset the tool",
+          "startLine": 241,
+          "endLine": 253,
+          "contentHash": "sha256:990e92911d632a5f23e9ab37c6d2f3778979620bd129fc2a1d406487149c1316"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "props-active-tool-forced-tool-renders-non-forced-toolbar",
+      "text": "props.activeTool (forced tool) > renders non-forced toolbar buttons disabled and gates the tool lock",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "props.activeTool (forced tool) > renders non-forced toolbar buttons disabled and gates the tool lock",
+          "startLine": 255,
+          "endLine": 292,
+          "contentHash": "sha256:827d2fefe3903148a648da31db94bc6531a470cb2d86eb967d73cc47cba24488"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "props-active-tool-forced-tool-cannot-force-the-image-too",
+      "text": "props.activeTool (forced tool) > cannot force the image tool",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "props.activeTool (forced tool) > cannot force the image tool",
+          "startLine": 294,
+          "endLine": 301,
+          "contentHash": "sha256:3c2dd21c9103ffcc99653679099dd58797f88db8165ca1bb63c80fe310668b4d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "props-active-tool-forced-tool-composes-with-interaction",
+      "text": "props.activeTool (forced tool) > composes with interaction.enabled.tools (presenter → viewer)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "props.activeTool (forced tool) > composes with interaction.enabled.tools (presenter → viewer)",
+          "startLine": 303,
+          "endLine": 331,
+          "contentHash": "sha256:b60bdfd53bf6ac7fdb5eba89776d1d9f4566c8e607b22f4525080ea6d1a7f71d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "props-active-tool-forced-tool-forcing-a-non-activatable",
+      "text": "props.activeTool (forced tool) > forcing a non-activatable tool resolves to selection until activatable",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "props.activeTool (forced tool) > forcing a non-activatable tool resolves to selection until activatable",
+          "startLine": 333,
+          "endLine": 349,
+          "contentHash": "sha256:dec8935086bc9071fbb551364bbe5cb631ce0e9ec53b29ff12a5826dfb3c0d3d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "toolbar-keeps-the-image-tool-in-the-extra-tools-menu",
+      "text": "toolbar > keeps the image tool in the extra-tools menu",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "toolbar > keeps the image tool in the extra-tools menu",
+          "startLine": 362,
+          "endLine": 369,
+          "contentHash": "sha256:1607d1119be6c18e30408250685c8463083d892098ec945d5175ff4c31beda03"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "toolbar-hides-the-image-tool-through-uioptions-tools-ima",
+      "text": "toolbar > hides the image tool through UIOptions.tools.image",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "toolbar > hides the image tool through UIOptions.tools.image",
+          "startLine": 371,
+          "endLine": 376,
+          "contentHash": "sha256:86ce2f08e79a5c047a98fe192eccaf7540fd66710eb729d0b4f4553dcabb9792"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "toolbar-badges-tools-with-their-letter-shortcut",
+      "text": "toolbar > badges tools with their letter shortcut",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/tool.test.tsx",
+          "testTitle": "toolbar > badges tools with their letter shortcut",
+          "startLine": 378,
+          "endLine": 387,
+          "contentHash": "sha256:8a24a0f7e6990189fc318acb78484074e46dd2a56c94144b1b4a8d8cfffe449f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/tool.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/tool.test.tsx",
+  "generator": "tests",
+  "notes": "Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:16bc7b1f0d30b7026825f41fdd4e2b60a0119ba49fc8d2c1e65063c0694cdb27"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:16bc7b1f0d30b7026825f41fdd4e2b60a0119ba49fc8d2c1e65063c0694cdb27"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:16bc7b1f0d30b7026825f41fdd4e2b60a0119ba49fc8d2c1e65063c0694cdb27"
+    }
+  ]
+}

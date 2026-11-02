@@ -1,0 +1,695 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.tests.frame",
+  "revision": 1,
+  "title": "adding elements to frames: behavior verified by packages/element/tests/frame.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/element/tests/frame.test.tsx, exercising packages/common/src/index.ts, packages/element/src/frame.ts, packages/element/src/types.ts, packages/excalidraw/index.tsx, packages/excalidraw/scene/index.ts.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/tests/frame.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/frame.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/scene/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/frame.ts",
+        "name": "elementOverlapsWithFrame"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawFrameLikeElement"
+      },
+      {
+        "path": "packages/element/src/frame.ts",
+        "name": "shouldApplyFrameClip"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "NonDeletedExcalidrawElement"
+      },
+      {
+        "path": "packages/excalidraw/scene/index.ts",
+        "name": "getSelectedElements"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "NonDeleted"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "adding-elements-to-frames-should-treat-an-element-fully",
+      "text": "adding elements to frames > should treat an element fully containing a frame as overlapping the frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should treat an element fully containing a frame as overlapping the frame",
+          "startLine": 140,
+          "endLine": 158,
+          "contentHash": "sha256:79cb50f16615caf0e5fcb9660173c4d1baee67e97eb3761fbee5a8e0ba41b57d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/frame.ts",
+          "symbol": "elementOverlapsWithFrame",
+          "startLine": 174,
+          "endLine": 184,
+          "excerpt": "const elementOverlapsWithFrame(element: ExcalidrawElement, frame: ExcalidrawFrameLikeElement, elementsMap: ElementsMap)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawFrameLikeElement",
+          "startLine": 188,
+          "endLine": 190,
+          "excerpt": "type ExcalidrawFrameLikeElement = | ExcalidrawFrameElement | ExcalidrawMagicFrameElement"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-add-a-group-a-new-frame",
+      "text": "adding elements to frames > should add a group a new frame matches edge to edge",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should add a group a new frame matches edge to edge",
+          "startLine": 160,
+          "endLine": 188,
+          "contentHash": "sha256:d7cb34be23b31f37ca809230de9cb377ea222f1f515d8e42e1f8d843771d4975"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-add-a-group-a-resized-f",
+      "text": "adding elements to frames > should add a group a resized frame matches edge to edge",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should add a group a resized frame matches edge to edge",
+          "startLine": 190,
+          "endLine": 215,
+          "contentHash": "sha256:8a3524a7664bfb39384c6a7a365498db02a4c633e784d0a8e97c9b194cdb08a8"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-clip-a-frame-s-child-to",
+      "text": "adding elements to frames > should clip a frame's child to it, even if inside it (but for its stroke)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should clip a frame's child to it, even if inside it (but for its stroke)",
+          "startLine": 217,
+          "endLine": 236,
+          "contentHash": "sha256:1e4b401c761338504e8e1c9c35ac75e47ae90aed9699b0630e1a14bfd549b8ea"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/frame.ts",
+          "symbol": "shouldApplyFrameClip",
+          "startLine": 939,
+          "endLine": 1001,
+          "excerpt": "const shouldApplyFrameClip(element: ExcalidrawElement, frame: ExcalidrawFrameLikeElement, appState: StaticCanvasAppState, elementsMap: ElementsMap, checkedGroups?: Map<string, boolean>)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawFrameLikeElement",
+          "startLine": 188,
+          "endLine": 190,
+          "excerpt": "type ExcalidrawFrameLikeElement = | ExcalidrawFrameElement | ExcalidrawMagicFrameElement"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-not-clip-a-child-dragge",
+      "text": "adding elements to frames > should not clip a child dragged out of its frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should not clip a child dragged out of its frame",
+          "startLine": 238,
+          "endLine": 260,
+          "contentHash": "sha256:ed581121b3d9430e93e602f4f88886559a3719719723798bca5e573342394c1b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/frame.ts",
+          "symbol": "shouldApplyFrameClip",
+          "startLine": 939,
+          "endLine": 1001,
+          "excerpt": "const shouldApplyFrameClip(element: ExcalidrawElement, frame: ExcalidrawFrameLikeElement, appState: StaticCanvasAppState, elementsMap: ElementsMap, checkedGroups?: Map<string, boolean>)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawFrameLikeElement",
+          "startLine": 188,
+          "endLine": 190,
+          "excerpt": "type ExcalidrawFrameLikeElement = | ExcalidrawFrameElement | ExcalidrawMagicFrameElement"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-not-add-a-newly-created",
+      "text": "adding elements to frames > should not add a newly created element to a frame behind a non-frame element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should not add a newly created element to a frame behind a non-frame element",
+          "startLine": 262,
+          "endLine": 290,
+          "contentHash": "sha256:65c266c013f86ea4f3bf1994d78a84896268443957501440a6d3d6036f8d3c24"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-add-a-newly-created-ele",
+      "text": "adding elements to frames > should add a newly created element to a frame over a non-frame element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should add a newly created element to a frame over a non-frame element",
+          "startLine": 292,
+          "endLine": 315,
+          "contentHash": "sha256:fa832ceb1bb2b41520565cb229ddd09bc166ddfca7cbf259f7b409f197e096d6"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-highlight-the-target-fr",
+      "text": "adding elements to frames > should highlight the target frame while creating a new element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should highlight the target frame while creating a new element",
+          "startLine": 317,
+          "endLine": 329,
+          "contentHash": "sha256:467ed0594a17789044d49032f5cea5fae614582121ab5721b4fada4c2854faac"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-highlight-the-target-fr-2",
+      "text": "adding elements to frames > should highlight the target frame while hovering with a creation tool",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should highlight the target frame while hovering with a creation tool",
+          "startLine": 331,
+          "endLine": 342,
+          "contentHash": "sha256:48586bd1820e9ac78027c857a105c6686c869fe1e5118ca6cd9abff3bc353d79"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-not-add-grid-snapped-te",
+      "text": "adding elements to frames > should not add grid-snapped text outside the frame to the clicked frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should not add grid-snapped text outside the frame to the clicked frame",
+          "startLine": 344,
+          "endLine": 371,
+          "contentHash": "sha256:183b2228fd3e4aeb1ec9f267860b121eeb3b2341734d78fe7f71f81e6bf0f463"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-add-a-newly-created-ele-2",
+      "text": "adding elements to frames > should add a newly created element to a frame behind another frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should add a newly created element to a frame behind another frame",
+          "startLine": 373,
+          "endLine": 396,
+          "contentHash": "sha256:1bd12d209cb24c27087d5cc805fb8425679cc2e77b025021fd33044e2b125691"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-insert-a-newly-created",
+      "text": "adding elements to frames > should insert a newly created frame child just below its frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should insert a newly created frame child just below its frame",
+          "startLine": 398,
+          "endLine": 440,
+          "contentHash": "sha256:e2946ede7c1b37aae8cea8e25c60b5bd32eb8c3177299ce677185d05053d4f85"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-insert-a-newly-created-2",
+      "text": "adding elements to frames > should insert a newly created frame child below its frame despite deleted frame children above it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should insert a newly created frame child below its frame despite deleted frame children above it",
+          "startLine": 442,
+          "endLine": 484,
+          "contentHash": "sha256:24e421e1e40ce6d50d61fb957366a0a3d9eca849e3efdde0a46c0bb293475802"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-should-insert-a-newly-created-3",
+      "text": "adding elements to frames > should insert a newly created frame child above the highest frame child",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > should insert a newly created frame child above the highest frame child",
+          "startLine": 486,
+          "endLine": 528,
+          "contentHash": "sha256:6f7f39808d877e35aa7416509bfb106bd8199d741fba2185e680a38d44a30077"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-resizing-frame-over-elements-s",
+      "text": "adding elements to frames > resizing frame over elements > should add arrow bound with text when frame is in a layer above",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > resizing frame over elements > should add arrow bound with text when frame is in a layer above",
+          "startLine": 761,
+          "endLine": 769,
+          "contentHash": "sha256:6dbfaf9d5f99c6c0b1697b0a86faa9263e8f84db819202642c9095d3e2a31d1a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-dragging-elements-into-the-fra",
+      "text": "adding elements to frames > dragging elements into the frame > should add a dragged element fully containing the frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > dragging elements into the frame > should add a dragged element fully containing the frame",
+          "startLine": 820,
+          "endLine": 834,
+          "contentHash": "sha256:f3861375bd49ba3faa8cc629dcac219eaba17e0fb65b53261c9b092344b7e970"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-dragging-elements-into-the-fra-2",
+      "text": "adding elements to frames > dragging elements into the frame > should drag an element into a frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > dragging elements into the frame > should drag an element into a frame",
+          "startLine": 836,
+          "endLine": 842,
+          "contentHash": "sha256:3ccbc328ca7f549b5c09d180a259f1eb7d42c21b5bf4c4913149630af2df1c1d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-dragging-elements-into-the-fra-3",
+      "text": "adding elements to frames > dragging elements into the frame > should move an element dragged from one frame into another",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > dragging elements into the frame > should move an element dragged from one frame into another",
+          "startLine": 844,
+          "endLine": 870,
+          "contentHash": "sha256:fb79295de52098582ffb1b3bf166644e44c60f386815aae7dbe3de553126f762"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-dragging-elements-into-the-fra-4",
+      "text": "adding elements to frames > dragging elements into the frame > should layer a dragged element above the highest frame child",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > dragging elements into the frame > should layer a dragged element above the highest frame child",
+          "startLine": 872,
+          "endLine": 895,
+          "contentHash": "sha256:748cf02413b07b395e02822fdbfc3cd549fadf2d9302a8e56bf3a8545d9f989a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-dragging-elements-into-the-fra-5",
+      "text": "adding elements to frames > dragging elements into the frame > should preview a dragged element above the highest frame child before pointerup",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > dragging elements into the frame > should preview a dragged element above the highest frame child before pointerup",
+          "startLine": 897,
+          "endLine": 957,
+          "contentHash": "sha256:5851d8c2c8b6d6a79d5f33577eb6f91cef8377fdb42dd54f4ad77845e937410f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeletedExcalidrawElement",
+          "startLine": 251,
+          "endLine": 251,
+          "excerpt": "type NonDeletedExcalidrawElement = NonDeleted<ExcalidrawElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getSelectedElements",
+          "startLine": 1,
+          "endLine": 6
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-dragging-elements-into-the-fra-6",
+      "text": "adding elements to frames > dragging elements into the frame > should not preview reorder dragged elements already in the highlighted frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > dragging elements into the frame > should not preview reorder dragged elements already in the highlighted frame",
+          "startLine": 959,
+          "endLine": 1004,
+          "contentHash": "sha256:7c4d3b51f9a40d8abb27c7cdbe5c8bbfe0df3f8fe91c1e04c2b54cada0fc5a81"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getSelectedElements",
+          "startLine": 1,
+          "endLine": 6
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawFrameLikeElement",
+          "startLine": 188,
+          "endLine": 190,
+          "excerpt": "type ExcalidrawFrameLikeElement = | ExcalidrawFrameElement | ExcalidrawMagicFrameElement"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-dragging-elements-into-the-fra-7",
+      "text": "adding elements to frames > dragging elements into the frame > should put a dragged mixed selection above the highest frame child",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > dragging elements into the frame > should put a dragged mixed selection above the highest frame child",
+          "startLine": 1006,
+          "endLine": 1071,
+          "contentHash": "sha256:1412805ca6f88aabc244370783082067d9550024b613a8342730f85217c12615"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-dragging-elements-into-the-fra-8",
+      "text": "adding elements to frames > dragging elements into the frame > should not reorder dragged elements already in the highlighted frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > dragging elements into the frame > should not reorder dragged elements already in the highlighted frame",
+          "startLine": 1073,
+          "endLine": 1109,
+          "contentHash": "sha256:49653f6ca1a4f94c4501567c13c29d55181cd5ee30615b73b70914841612bd79"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-dragging-elements-into-the-fra-9",
+      "text": "adding elements to frames > dragging elements into the frame > should not drag an element into a frame behind a non-frame element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > dragging elements into the frame > should not drag an element into a frame behind a non-frame element",
+          "startLine": 1111,
+          "endLine": 1129,
+          "contentHash": "sha256:c202d83571e57cf5cef013e160032e07d30ff0548f2b3f6c4746025612735aec"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "adding-elements-to-frames-dragging-elements-into-the-fra-10",
+      "text": "adding elements to frames > dragging elements into the frame > should drag an element into a frame over a non-frame element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/frame.test.tsx",
+          "testTitle": "adding elements to frames > dragging elements into the frame > should drag an element into a frame over a non-frame element",
+          "startLine": 1131,
+          "endLine": 1149,
+          "contentHash": "sha256:3bde23459143ca44f0a247a7d6c73fb7811941426fbdf30c6c32678a9b764160"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/frame.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/tests/frame.test.tsx",
+  "generator": "tests",
+  "notes": "19 skipped, todo, or non-asserting test(s) were not turned into statements. 3 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:cf06b2fe3c23478a3e4f2e9e6b2af57710f72f9a8c11aa4614c7add532a89dea"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:cf06b2fe3c23478a3e4f2e9e6b2af57710f72f9a8c11aa4614c7add532a89dea"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:cf06b2fe3c23478a3e4f2e9e6b2af57710f72f9a8c11aa4614c7add532a89dea"
+    }
+  ]
+}

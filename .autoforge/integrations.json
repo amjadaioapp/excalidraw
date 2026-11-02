@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "integrations": {
+    "claude-code": {
+      "installedAt": "2026-11-02T17:17:38.387Z",
+      "invocation": "autoforge",
+      "files": [
+        {
+          "path": "CLAUDE.md",
+          "type": "section",
+          "created": false,
+          "separator": "\n"
+        },
+        {
+          "path": ".claude/skills/autoforge-contracts/SKILL.md",
+          "type": "owned",
+          "created": true
+        },
+        {
+          "path": ".claude/settings.json",
+          "type": "nested-hooks",
+          "created": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,706 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.clipboard",
+  "revision": 1,
+  "title": "Behavior verified by packages/excalidraw/tests/clipboard.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/clipboard.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/types.ts, packages/excalidraw/clipboard.ts, packages/excalidraw/index.tsx and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/clipboard.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/clipboard.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/types.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/clipboard.ts",
+        "name": "serializeAsClipboardJSON"
+      },
+      {
+        "path": "packages/excalidraw/types.ts",
+        "name": "NormalizedZoomValue"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawTextElement"
+      },
+      {
+        "path": "packages/excalidraw/index.tsx",
+        "name": "Excalidraw"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "general-paste-behavior-should-randomize-seed-on-paste",
+      "text": "general paste behavior > should randomize seed on paste",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "general paste behavior > should randomize seed on paste",
+          "startLine": 105,
+          "endLine": 117,
+          "contentHash": "sha256:d390c280c799e0dc48f057b783605558f04fdf6842a2b7a7869764e60ce0eff6"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/clipboard.ts",
+          "symbol": "serializeAsClipboardJSON",
+          "startLine": 143,
+          "endLine": 193,
+          "excerpt": "const serializeAsClipboardJSON({ elements, files, }: { elements: readonly NonDeletedExcalidrawElement[]; files: BinaryFiles | null; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "general-paste-behavior-should-retain-seed-on-shift-paste",
+      "text": "general paste behavior > should retain seed on shift-paste",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "general paste behavior > should retain seed on shift-paste",
+          "startLine": 119,
+          "endLine": 132,
+          "contentHash": "sha256:7112fdd42f8028139dcfc199f270ba792625e211412f1d53921dbe78603ae37c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/clipboard.ts",
+          "symbol": "serializeAsClipboardJSON",
+          "startLine": 143,
+          "endLine": 193,
+          "excerpt": "const serializeAsClipboardJSON({ elements, files, }: { elements: readonly NonDeletedExcalidrawElement[]; files: BinaryFiles | null; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-single-lines-should-create-an-element-for",
+      "text": "paste text as single lines > should create an element for each line when copying with Ctrl/Cmd+V",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as single lines > should create an element for each line when copying with Ctrl/Cmd+V",
+          "startLine": 136,
+          "endLine": 142,
+          "contentHash": "sha256:f92777b8ffab179f47c0eb3d8f0b0e79181c01f99c7e9936d27dbba2ff1c5590"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-single-lines-should-ignore-empty-lines-whe",
+      "text": "paste text as single lines > should ignore empty lines when creating an element for each line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as single lines > should ignore empty lines when creating an element for each line",
+          "startLine": 144,
+          "endLine": 150,
+          "contentHash": "sha256:3c5b4d0d6a0a21be4c40785e34683cd2d6bb2006d3ec5b7302e043519b9b6a7f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-single-lines-should-not-create-any-element",
+      "text": "paste text as single lines > should not create any element if clipboard has only new lines",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as single lines > should not create any element if clipboard has only new lines",
+          "startLine": 152,
+          "endLine": 159,
+          "contentHash": "sha256:374ae7f4459dfc7ad8dfdaa88132de384bc4b90fb73fb78e4f945b123d804950"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-single-lines-should-space-items-correctly",
+      "text": "paste text as single lines > should space items correctly",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as single lines > should space items correctly",
+          "startLine": 161,
+          "endLine": 182,
+          "contentHash": "sha256:5e52613e425e5c45e2e3178890e932e729fc0378c0cc82b2b83106624e6d9292"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-single-lines-should-leave-a-space-for-blan",
+      "text": "paste text as single lines > should leave a space for blank new lines",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as single lines > should leave a space for blank new lines",
+          "startLine": 184,
+          "endLine": 203,
+          "contentHash": "sha256:d7cf47a684917ab1b2fceaaf9d5ec14d64964b262365a80d5de68dca4caf46df"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-a-single-element-should-create-single-text",
+      "text": "paste text as a single element > should create single text element when copying text with Ctrl/Cmd+Shift+V",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as a single element > should create single text element when copying text with Ctrl/Cmd+Shift+V",
+          "startLine": 207,
+          "endLine": 213,
+          "contentHash": "sha256:b772755fa101a80d7a0cfe51898d9563473b775cb35fdb486cfdf4caa89aa788"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-a-single-element-should-not-make-a-pasted",
+      "text": "paste text as a single element > should not make a pasted text wider than the view",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as a single element > should not make a pasted text wider than the view",
+          "startLine": 214,
+          "endLine": 231,
+          "contentHash": "sha256:6c3bb9b07c57e66b172c4803eecf779ac3abe49cfb119f0559b0d80c3b20a4cd"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "NormalizedZoomValue",
+          "startLine": 625,
+          "endLine": 625,
+          "excerpt": "type NormalizedZoomValue = number & { _brand: \"normalizedZoom\" }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-a-single-element-should-wrap-a-pasted-text",
+      "text": "paste text as a single element > should wrap a pasted text as a typed one: at TEXT_MAX_WRAP_WIDTH, clear of the full styles panel",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as a single element > should wrap a pasted text as a typed one: at TEXT_MAX_WRAP_WIDTH, clear of the full styles panel",
+          "startLine": 232,
+          "endLine": 262,
+          "contentHash": "sha256:cef1e35feff5f28a9b14e3347f749b45cc642e8e66eb8a386c96c8051a854b5e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-a-single-element-next-to-the-stats-panel-d",
+      "text": "paste text as a single element > next to the stats panel (desktop) > should keep a pasted text clear of the stats panel only where it lands beside it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as a single element > next to the stats panel (desktop) > should keep a pasted text clear of the stats panel only where it lands beside it",
+          "startLine": 333,
+          "endLine": 345,
+          "contentHash": "sha256:3ef17a7bde67aef83623689f7a92eb30576829b02779e9627187b28752e140ca"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-a-single-element-next-to-the-stats-panel-d-2",
+      "text": "paste text as a single element > next to the stats panel (desktop) > should keep a pasted text clear of the stats panel grown to show it, as one step",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as a single element > next to the stats panel (desktop) > should keep a pasted text clear of the stats panel grown to show it, as one step",
+          "startLine": 347,
+          "endLine": 359,
+          "contentHash": "sha256:0c7d1e79445678989368cbd002693fb7bb4b92a2f78b4faa446bc1d748aa94ee"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-a-single-element-should-move-a-pasted-text",
+      "text": "paste text as a single element > should move a pasted text that wraps into view, not the view",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as a single element > should move a pasted text that wraps into view, not the view",
+          "startLine": 361,
+          "endLine": 392,
+          "contentHash": "sha256:f01c7ab6f4c6ce427a0472c51e37d8bb0a69754376e85c951e0b1a7c20e32f27"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-text-as-a-single-element-should-not-create-any-ele",
+      "text": "paste text as a single element > should not create any element when only new lines in clipboard",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "paste text as a single element > should not create any element when only new lines in clipboard",
+          "startLine": 393,
+          "endLine": 400,
+          "contentHash": "sha256:b6e41efcbbec6f5918083d88063efcc81dcd1fb875797f052fe20b7f28b7fe46"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-bound-text-container-should-fix-ellipse-bounding-b",
+      "text": "Paste bound text container > should fix ellipse bounding box",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "Paste bound text container > should fix ellipse bounding box",
+          "startLine": 432,
+          "endLine": 446,
+          "contentHash": "sha256:76fa2a08eb6478b8ec0aa844786ec9c327d89d7baf3d98c98d4db844d468f8c7"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "paste-bound-text-container-should-fix-diamond-bounding-b",
+      "text": "Paste bound text container > should fix diamond bounding box",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "Paste bound text container > should fix diamond bounding box",
+          "startLine": 448,
+          "endLine": 468,
+          "contentHash": "sha256:5cba8f5b853613ce40f4b07d73a6b4add5eb8263e2852b271c6ba796053c9a0d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "pasting-frames-should-add-pasted-elements-to-frame-under",
+      "text": "pasting & frames > should add pasted elements to frame under cursor",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "pasting & frames > should add pasted elements to frame under cursor",
+          "startLine": 472,
+          "endLine": 500,
+          "contentHash": "sha256:595110b86f2907437744dbfca414385674a112c21e3b692ae804eca55be070fe"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/clipboard.ts",
+          "symbol": "serializeAsClipboardJSON",
+          "startLine": 143,
+          "endLine": 193,
+          "excerpt": "const serializeAsClipboardJSON({ elements, files, }: { elements: readonly NonDeletedExcalidrawElement[]; files: BinaryFiles | null; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "pasting-frames-should-layer-pasted-elements-above-the-hi",
+      "text": "pasting & frames > should layer pasted elements above the highest frame child",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "pasting & frames > should layer pasted elements above the highest frame child",
+          "startLine": 502,
+          "endLine": 544,
+          "contentHash": "sha256:525ea4084551f780081d23ba618a1da347b12dc2d9165bd3994f96093ce0f46e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/clipboard.ts",
+          "symbol": "serializeAsClipboardJSON",
+          "startLine": 143,
+          "endLine": 193,
+          "excerpt": "const serializeAsClipboardJSON({ elements, files, }: { elements: readonly NonDeletedExcalidrawElement[]; files: BinaryFiles | null; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "pasting-frames-should-preserve-denormalized-pasted-frame",
+      "text": "pasting & frames > should preserve denormalized pasted frame child order",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "pasting & frames > should preserve denormalized pasted frame child order",
+          "startLine": 546,
+          "endLine": 578,
+          "contentHash": "sha256:f3c63beb94e25380dfd13f5267c22f838e31d607b7d5a8eccd41c56651b2f3e6"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/clipboard.ts",
+          "symbol": "serializeAsClipboardJSON",
+          "startLine": 143,
+          "endLine": 193,
+          "excerpt": "const serializeAsClipboardJSON({ elements, files, }: { elements: readonly NonDeletedExcalidrawElement[]; files: BinaryFiles | null; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "pasting-frames-should-remove-element-from-frame-when-pas",
+      "text": "pasting & frames > should remove element from frame when pasted outside",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "pasting & frames > should remove element from frame when pasted outside",
+          "startLine": 580,
+          "endLine": 613,
+          "contentHash": "sha256:fae445f6733ac09798a8f2e26d045d85c3ef2a36b403c9020f179c7ed8f011b6"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/clipboard.ts",
+          "symbol": "serializeAsClipboardJSON",
+          "startLine": 143,
+          "endLine": 193,
+          "excerpt": "const serializeAsClipboardJSON({ elements, files, }: { elements: readonly NonDeletedExcalidrawElement[]; files: BinaryFiles | null; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "pasting-frames-should-filter-out-elements-not-overlappin",
+      "text": "pasting & frames > should filter out elements not overlapping frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "pasting & frames > should filter out elements not overlapping frame",
+          "startLine": 615,
+          "endLine": 655,
+          "contentHash": "sha256:cc7305a08a0a09298683b265433ec17889d9752b37e5768eb2fedb92a4cfa1c8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/clipboard.ts",
+          "symbol": "serializeAsClipboardJSON",
+          "startLine": 143,
+          "endLine": 193,
+          "excerpt": "const serializeAsClipboardJSON({ elements, files, }: { elements: readonly NonDeletedExcalidrawElement[]; files: BinaryFiles | null; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "pasting-frames-should-not-filter-out-elements-not-overla",
+      "text": "pasting & frames > should not filter out elements not overlapping frame if part of group",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "pasting & frames > should not filter out elements not overlapping frame if part of group",
+          "startLine": 657,
+          "endLine": 699,
+          "contentHash": "sha256:ad2c80c50d87335b20ccee5e99e05a8de67b7b86d681b4606db50641e26453d2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/clipboard.ts",
+          "symbol": "serializeAsClipboardJSON",
+          "startLine": 143,
+          "endLine": 193,
+          "excerpt": "const serializeAsClipboardJSON({ elements, files, }: { elements: readonly NonDeletedExcalidrawElement[]; files: BinaryFiles | null; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "pasting-frames-should-not-filter-out-other-frames-and-th",
+      "text": "pasting & frames > should not filter out other frames and their children",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "pasting & frames > should not filter out other frames and their children",
+          "startLine": 701,
+          "endLine": 753,
+          "contentHash": "sha256:02f2fa1d13731d316d32d026e94b9f618974630030682ed24626672e246c143e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/clipboard.ts",
+          "symbol": "serializeAsClipboardJSON",
+          "startLine": 143,
+          "endLine": 193,
+          "excerpt": "const serializeAsClipboardJSON({ elements, files, }: { elements: readonly NonDeletedExcalidrawElement[]; files: BinaryFiles | null; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "clipboard-pasting-mermaid-definition-should-detect-and-p",
+      "text": "clipboard - pasting mermaid definition > should detect and paste as mermaid",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "clipboard - pasting mermaid definition > should detect and paste as mermaid",
+          "startLine": 791,
+          "endLine": 804,
+          "contentHash": "sha256:1b863d3c70194e3c68616cc27e83f9be2e5148f9ae6eccb251114e052d740675"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "clipboard-pasting-mermaid-definition-should-support-dire",
+      "text": "clipboard - pasting mermaid definition > should support directives",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/clipboard.test.tsx",
+          "testTitle": "clipboard - pasting mermaid definition > should support directives",
+          "startLine": 806,
+          "endLine": 819,
+          "contentHash": "sha256:7404f94d7afcb014dae8700aa5aaf5c61e87b9a966f390f9c2a4b05e14a182fe"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/clipboard.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/clipboard.test.tsx",
+  "generator": "tests",
+  "notes": "6 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:d97f6273718f2783c80efb0d96e6df15b7ae012003caa970d0c751738fc0101e"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:d97f6273718f2783c80efb0d96e6df15b7ae012003caa970d0c751738fc0101e"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:d97f6273718f2783c80efb0d96e6df15b7ae012003caa970d0c751738fc0101e"
+    }
+  ]
+}

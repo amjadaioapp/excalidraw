@@ -1,0 +1,928 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.src.tests.sticky-note",
+  "revision": 1,
+  "title": "Behavior verified by packages/element/src/__tests__/stickyNote.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/element/src/__tests__/stickyNote.test.ts, exercising packages/common/src/index.ts, packages/element/src/Scene.ts, packages/element/src/collision.ts, packages/element/src/mutateElement.ts, packages/element/src/newElement.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/src/__tests__/stickyNote.test.ts",
+      "packages/common/src/index.ts",
+      "packages/element/src/Scene.ts",
+      "packages/element/src/collision.ts",
+      "packages/element/src/mutateElement.ts",
+      "packages/element/src/newElement.ts",
+      "packages/element/src/renderEnvironment.ts",
+      "packages/element/src/resizeElements.ts",
+      "packages/element/src/stickyNote.ts",
+      "packages/element/src/textElement.ts",
+      "packages/element/src/textMeasurements.ts",
+      "packages/element/src/types.ts",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/newElement.ts",
+        "name": "newStickyNoteElement"
+      },
+      {
+        "path": "packages/element/src/stickyNote.ts",
+        "name": "getStickyNoteCornerRadius"
+      },
+      {
+        "path": "packages/element/src/collision.ts",
+        "name": "intersectElementWithLineSegment"
+      },
+      {
+        "path": "packages/element/src/stickyNote.ts",
+        "name": "getStickyNoteLayout"
+      },
+      {
+        "path": "packages/element/src/stickyNote.ts",
+        "name": "normalizeStickyNoteFontSize"
+      },
+      {
+        "path": "packages/element/src/textElement.ts",
+        "name": "redrawTextBoundingBox"
+      },
+      {
+        "path": "packages/element/src/resizeElements.ts",
+        "name": "resizeSingleElement"
+      },
+      {
+        "path": "packages/element/src/resizeElements.ts",
+        "name": "resizeMultipleElements"
+      },
+      {
+        "path": "packages/element/src/newElement.ts",
+        "name": "newElement"
+      },
+      {
+        "path": "packages/element/src/Scene.ts",
+        "name": "Scene"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawStickyNoteElement"
+      },
+      {
+        "path": "packages/element/src/stickyNote.ts",
+        "name": "updateStickyNoteLayout"
+      },
+      {
+        "path": "packages/element/src/renderEnvironment.ts",
+        "name": "RenderEnvironment"
+      },
+      {
+        "path": "packages/element/src/stickyNote.ts",
+        "name": "getStickyNoteMinSize"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "sticky-note-text-layout-preserves-rounded-corners-with-r",
+      "text": "sticky note text layout > preserves rounded corners with reduced radius",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > preserves rounded corners with reduced radius",
+          "startLine": 112,
+          "endLine": 126,
+          "contentHash": "sha256:f6c5f319346c78f5d59edf632b49c2f3de63504ef54c0401d70b5896dd447165"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/newElement.ts",
+          "symbol": "newStickyNoteElement",
+          "startLine": 232,
+          "endLine": 245,
+          "excerpt": "const newStickyNoteElement(opts: { type: \"stickynote\"; baseHeight?: number; } & ElementConstructorOpts): NonDeleted<ExcalidrawStickyNoteElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "getStickyNoteCornerRadius",
+          "startLine": 214,
+          "endLine": 225,
+          "excerpt": "const getStickyNoteCornerRadius(element: ExcalidrawStickyNoteElement)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-uses-reduced-rounded-corners-for",
+      "text": "sticky note text layout > uses reduced rounded corners for binding intersections",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > uses reduced rounded corners for binding intersections",
+          "startLine": 128,
+          "endLine": 154,
+          "contentHash": "sha256:f1a4eddab585518e527d62b6914cfa1309920ed5f3420f993f41d20c18047243"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/newElement.ts",
+          "symbol": "newStickyNoteElement",
+          "startLine": 232,
+          "endLine": 245,
+          "excerpt": "const newStickyNoteElement(opts: { type: \"stickynote\"; baseHeight?: number; } & ElementConstructorOpts): NonDeleted<ExcalidrawStickyNoteElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "intersectElementWithLineSegment",
+          "startLine": 518,
+          "endLine": 582,
+          "excerpt": "const intersectElementWithLineSegment(element: ExcalidrawElement, elementsMap: ElementsMap, line: LineSegment<GlobalPoint>, offset?: number, onlyFirst?): GlobalPoint[]"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "getStickyNoteCornerRadius",
+          "startLine": 214,
+          "endLine": 225,
+          "excerpt": "const getStickyNoteCornerRadius(element: ExcalidrawStickyNoteElement)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-preserves-roughness-for-render-o",
+      "text": "sticky note text layout > preserves roughness for render-only shape variation",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > preserves roughness for render-only shape variation",
+          "startLine": 156,
+          "endLine": 167,
+          "contentHash": "sha256:4e8acb97540fefa2eabc0f9f2b0bc22aee4cebf01cfcb396cf5a5eda0f94aee9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/newElement.ts",
+          "symbol": "newStickyNoteElement",
+          "startLine": 232,
+          "endLine": 245,
+          "excerpt": "const newStickyNoteElement(opts: { type: \"stickynote\"; baseHeight?: number; } & ElementConstructorOpts): NonDeleted<ExcalidrawStickyNoteElement>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-respects-user-font-size-below-th",
+      "text": "sticky note text layout > respects user font size below the sticky note minimum font size",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > respects user font size below the sticky note minimum font size",
+          "startLine": 169,
+          "endLine": 185,
+          "contentHash": "sha256:8d1fa83a28452bb107906e44aa02ba8afcb5d6913dcbf213e1352b0c212ec64a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "getStickyNoteLayout",
+          "startLine": 676,
+          "endLine": 775,
+          "excerpt": "const getStickyNoteLayout(container: ExcalidrawStickyNoteElement, textElement: ExcalidrawTextElement | null, opts?: StickyNoteLayoutOpts): StickyNoteLayout"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-normalizes-non-finite-and-out-of",
+      "text": "sticky note text layout > normalizes non-finite and out-of-range font ceilings",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > normalizes non-finite and out-of-range font ceilings",
+          "startLine": 187,
+          "endLine": 200,
+          "contentHash": "sha256:85e717fa588b4be39cea0d95ff23c4db4806fec0fda9c3da51cc89783561013f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "normalizeStickyNoteFontSize",
+          "startLine": 380,
+          "endLine": 385,
+          "excerpt": "const normalizeStickyNoteFontSize(fontSize: number)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-terminates-the-font-fit-for-path",
+      "text": "sticky note text layout > terminates the font fit for pathological font ceilings",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > terminates the font fit for pathological font ceilings",
+          "startLine": 202,
+          "endLine": 222,
+          "contentHash": "sha256:f2fb62ad01b4cbe7c11bf3a9d1edb847bcd4109d79b79da6ae7e8e84f554fdd0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "getStickyNoteLayout",
+          "startLine": 676,
+          "endLine": 775,
+          "excerpt": "const getStickyNoteLayout(container: ExcalidrawStickyNoteElement, textElement: ExcalidrawTextElement | null, opts?: StickyNoteLayoutOpts): StickyNoteLayout"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-downscales-font-to-fit-the-base",
+      "text": "sticky note text layout > downscales font to fit the base size before growing height",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > downscales font to fit the base size before growing height",
+          "startLine": 224,
+          "endLine": 238,
+          "contentHash": "sha256:ec84ad1b6e592b820b52b7455f84a823f7121221510f70f47fb64a1449d432b9"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-grows-downward-at-min-font-and-s",
+      "text": "sticky note text layout > grows downward at min font and shrinks back to base when text is deleted",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > grows downward at min font and shrinks back to base when text is deleted",
+          "startLine": 240,
+          "endLine": 264,
+          "contentHash": "sha256:67e66bf1b42e2db6a5840b396cf93afeb8d50ecbdec26547f692451b208b786a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "redrawTextBoundingBox",
+          "startLine": 54,
+          "endLine": 162,
+          "excerpt": "const redrawTextBoundingBox(textElement: ExcalidrawTextElement, container: ExcalidrawElement | null, scene: Scene, renderEnvironment?: RenderEnvironment)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-keeps-the-bottom-edge-anchored-w",
+      "text": "sticky note text layout > keeps the bottom edge anchored when a north resize is content-pinned",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > keeps the bottom edge anchored when a north resize is content-pinned",
+          "startLine": 266,
+          "endLine": 296,
+          "contentHash": "sha256:64d306d499abcb768c03f0a46c774ea7c31c6baeeea0e81042819408fa37e6af"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-keeps-the-requested-height-as-th",
+      "text": "sticky note text layout > keeps the requested height as the base when a corner drag is content-pinned",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > keeps the requested height as the base when a corner drag is content-pinned",
+          "startLine": 298,
+          "endLine": 343,
+          "contentHash": "sha256:c77d7cd9e9f3eada91a3e148db4f36a3a3abafd9035ced0b0ee579131379dd64"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "getStickyNoteLayout",
+          "startLine": 676,
+          "endLine": 775,
+          "excerpt": "const getStickyNoteLayout(container: ExcalidrawStickyNoteElement, textElement: ExcalidrawTextElement | null, opts?: StickyNoteLayoutOpts): StickyNoteLayout"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-scales-the-note-its-base-height",
+      "text": "sticky note text layout > scales the note, its base height and its font ceiling on a proportional resize",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > scales the note, its base height and its font ceiling on a proportional resize",
+          "startLine": 345,
+          "endLine": 372,
+          "contentHash": "sha256:973609cec235f18474c1f11376f089ec59dcc7436d912834b376f8b5b91f6973"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-keeps-the-base-height-on-a-width",
+      "text": "sticky note text layout > keeps the base height on a width-only drag of a content-grown note",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > keeps the base height on a width-only drag of a content-grown note",
+          "startLine": 374,
+          "endLine": 402,
+          "contentHash": "sha256:0481de98e9da1ade2d7502e2d3966ed02d02db7cddc7055da2d4e56e9c2744ef"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-restores-the-gesture-start-base",
+      "text": "sticky note text layout > restores the gesture-start base height and ceiling when Shift is released mid-gesture",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > restores the gesture-start base height and ceiling when Shift is released mid-gesture",
+          "startLine": 404,
+          "endLine": 454,
+          "contentHash": "sha256:53f27505c32b059459510b827ea168bffafcf3c716464852df6dd0daaadc42bb"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-flips-a-rotated-note-without-pro",
+      "text": "sticky note text layout > flips a rotated note without promoting its grown height or losing the label's angle",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > flips a rotated note without promoting its grown height or losing the label's angle",
+          "startLine": 456,
+          "endLine": 490,
+          "contentHash": "sha256:7f2152b1c09e3c79c80c7d2331e3e233b8a465c99665fcad34d6963af566d5e5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeMultipleElements",
+          "startLine": 1237,
+          "endLine": 1627,
+          "excerpt": "const resizeMultipleElements(selectedElements: readonly NonDeletedExcalidrawElement[], elementsMap: ElementsMap, handleDirection: TransformHandleDirection, scene: Scene, originalElementsMap: ElementsMap, { shouldMaintainAspectRatio = false, shouldResizeFromCenter = false, flipByX = …?: { nextWidth?: number; nextHeight?: number; shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-syncs-the-base-height-of-an-empt",
+      "text": "sticky note text layout > syncs the base height of an empty note on a multi-select resize",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > syncs the base height of an empty note on a multi-select resize",
+          "startLine": 492,
+          "endLine": 524,
+          "contentHash": "sha256:4e13131949588c257f668591343ba80314298adefcf448ab1f166a93c20cc1a7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/newElement.ts",
+          "symbol": "newStickyNoteElement",
+          "startLine": 232,
+          "endLine": 245,
+          "excerpt": "const newStickyNoteElement(opts: { type: \"stickynote\"; baseHeight?: number; } & ElementConstructorOpts): NonDeleted<ExcalidrawStickyNoteElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/newElement.ts",
+          "symbol": "newElement",
+          "startLine": 176,
+          "endLine": 181,
+          "excerpt": "const newElement(opts: { type: ExcalidrawGenericElement[\"type\"]; } & ElementConstructorOpts): NonDeleted<ExcalidrawGenericElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/Scene.ts",
+          "symbol": "Scene",
+          "startLine": 108,
+          "endLine": 446,
+          "excerpt": "class Scene { getSceneNonce(); getNonDeletedElementsMap(); getElementsIncludingDeleted(); getElementsMapIncludingDeleted(); getNonDeletedElements(); getFramesIncludingDeleted(); constructor(elements?: ElementsMapOrArray | null, options?: { skipValidation?: true; }); getSelectedElements(opts: { // NOTE can be ommitted by making Scene constructor require App instance selectedElementIds: AppState[\"s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-keeps-the-center-on-an-alt-cente",
+      "text": "sticky note text layout > keeps the center on an Alt (center) resize that is content-pinned",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > keeps the center on an Alt (center) resize that is content-pinned",
+          "startLine": 526,
+          "endLine": 554,
+          "contentHash": "sha256:3e8443e4c7d295c0c74bc30da58725bd952af4baac7ceddc04aba9fe5ab1c250"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-scales-the-label-s-ceiling-on-a",
+      "text": "sticky note text layout > scales the label's ceiling on a proportional multi-select resize",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > scales the label's ceiling on a proportional multi-select resize",
+          "startLine": 556,
+          "endLine": 588,
+          "contentHash": "sha256:9e6c32f572c0555c01b4ec10964114dba47c3843a6764e7856f0ff94babab759"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/newElement.ts",
+          "symbol": "newElement",
+          "startLine": 176,
+          "endLine": 181,
+          "excerpt": "const newElement(opts: { type: ExcalidrawGenericElement[\"type\"]; } & ElementConstructorOpts): NonDeleted<ExcalidrawGenericElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeMultipleElements",
+          "startLine": 1237,
+          "endLine": 1627,
+          "excerpt": "const resizeMultipleElements(selectedElements: readonly NonDeletedExcalidrawElement[], elementsMap: ElementsMap, handleDirection: TransformHandleDirection, scene: Scene, originalElementsMap: ElementsMap, { shouldMaintainAspectRatio = false, shouldResizeFromCenter = false, flipByX = …?: { nextWidth?: number; nextHeight?: number; shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-uses-the-requested-height-as-the",
+      "text": "sticky note text layout > uses the requested height as the base on a free multi-select resize of an empty note",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > uses the requested height as the base on a free multi-select resize of an empty note",
+          "startLine": 590,
+          "endLine": 623,
+          "contentHash": "sha256:4a7d44b6f98c1dd3554aefc7705364710d50c400058c4011d7a999127c0f6ead"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/newElement.ts",
+          "symbol": "newStickyNoteElement",
+          "startLine": 232,
+          "endLine": 245,
+          "excerpt": "const newStickyNoteElement(opts: { type: \"stickynote\"; baseHeight?: number; } & ElementConstructorOpts): NonDeleted<ExcalidrawStickyNoteElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/newElement.ts",
+          "symbol": "newElement",
+          "startLine": 176,
+          "endLine": 181,
+          "excerpt": "const newElement(opts: { type: ExcalidrawGenericElement[\"type\"]; } & ElementConstructorOpts): NonDeleted<ExcalidrawGenericElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/Scene.ts",
+          "symbol": "Scene",
+          "startLine": 108,
+          "endLine": 446,
+          "excerpt": "class Scene { getSceneNonce(); getNonDeletedElementsMap(); getElementsIncludingDeleted(); getElementsMapIncludingDeleted(); getNonDeletedElements(); getFramesIncludingDeleted(); constructor(elements?: ElementsMapOrArray | null, options?: { skipValidation?: true; }); getSelectedElements(opts: { // NOTE can be ommitted by making Scene constructor require App instance selectedElementIds: AppState[\"s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-restores-everything-when-a-propo",
+      "text": "sticky note text layout > restores everything when a proportional gesture returns to scale 1",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > restores everything when a proportional gesture returns to scale 1",
+          "startLine": 625,
+          "endLine": 661,
+          "contentHash": "sha256:541bf02ca1a087d0e5c068e2c8001f0d30030bebb146be1c43a2ede0c6d622e2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-keeps-the-rotated-top-edge-in-pl",
+      "text": "sticky note text layout > keeps the rotated top edge in place while the note grows",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > keeps the rotated top edge in place while the note grows",
+          "startLine": 663,
+          "endLine": 690,
+          "contentHash": "sha256:c3618f45a36cb9cc3fb642835d5bf77dc70947f3adc50e03302b0eede6ddc096"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "updateStickyNoteLayout",
+          "startLine": 845,
+          "endLine": 877,
+          "excerpt": "const updateStickyNoteLayout(container: ExcalidrawStickyNoteElement, scene: Scene, { text, bindings, ...layoutOpts }?: StickyNoteLayoutOpts & { /** the label to lay out when it is an uncommitted clone (font actions clone before install) */ text?: ExcalidrawTextElement | null; bindings?: | { simultaneouslyUpdated?: re…): StickyNoteLayout"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-fits-in-a-handful-of-measurement",
+      "text": "sticky note text layout > fits in a handful of measurements: a warm keystroke in ≤ 2, a cold search in ≤ 12",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > fits in a handful of measurements: a warm keystroke in ≤ 2, a cold search in ≤ 12",
+          "startLine": 692,
+          "endLine": 714,
+          "contentHash": "sha256:66adbd7a3331132484e316fb8862bdd45dad1cf528c7b4575e1886f64af145b7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "getStickyNoteLayout",
+          "startLine": 676,
+          "endLine": 775,
+          "excerpt": "const getStickyNoteLayout(container: ExcalidrawStickyNoteElement, textElement: ExcalidrawTextElement | null, opts?: StickyNoteLayoutOpts): StickyNoteLayout"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-measures-the-fit-through-the-giv",
+      "text": "sticky note text layout > measures the fit through the given render environment",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > measures the fit through the given render environment",
+          "startLine": 716,
+          "endLine": 750,
+          "contentHash": "sha256:01f6f3efa60ffbcd496e4d282064cfab15f22e9d0db3466dc5d68ca746d4211f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/renderEnvironment.ts",
+          "symbol": "RenderEnvironment",
+          "startLine": 18,
+          "endLine": 56,
+          "excerpt": "type RenderEnvironment = { createCanvas: () => HTMLCanvasElement; createImage: () => HTMLImageElement; createPath?: (svgPath: string) => Path2D; document?: Document; textMetrics?: TextMetricsProvider }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "getStickyNoteLayout",
+          "startLine": 676,
+          "endLine": 775,
+          "excerpt": "const getStickyNoteLayout(container: ExcalidrawStickyNoteElement, textElement: ExcalidrawTextElement | null, opts?: StickyNoteLayoutOpts): StickyNoteLayout"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "updateStickyNoteLayout",
+          "startLine": 845,
+          "endLine": 877,
+          "excerpt": "const updateStickyNoteLayout(container: ExcalidrawStickyNoteElement, scene: Scene, { text, bindings, ...layoutOpts }?: StickyNoteLayoutOpts & { /** the label to lay out when it is an uncommitted clone (font actions clone before install) */ text?: ExcalidrawTextElement | null; bindings?: | { simultaneouslyUpdated?: re…): StickyNoteLayout"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-honors-a-lowered-ceiling-even-wh",
+      "text": "sticky note text layout > honors a lowered ceiling even when the old fitted size still fits",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > honors a lowered ceiling even when the old fitted size still fits",
+          "startLine": 752,
+          "endLine": 762,
+          "contentHash": "sha256:084188f022127b44b1966cb34ad3ee6309651af1031b07e65c9b0d16eb7ecaec"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "getStickyNoteLayout",
+          "startLine": 676,
+          "endLine": 775,
+          "excerpt": "const getStickyNoteLayout(container: ExcalidrawStickyNoteElement, textElement: ExcalidrawTextElement | null, opts?: StickyNoteLayoutOpts): StickyNoteLayout"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-keeps-odd-and-fractional-ceiling",
+      "text": "sticky note text layout > keeps odd and fractional ceilings reachable and stays on the ceiling-anchored grid",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > keeps odd and fractional ceilings reachable and stays on the ceiling-anchored grid",
+          "startLine": 764,
+          "endLine": 785,
+          "contentHash": "sha256:792fe66d116f3770153a0ad01cfd48df1323ee6bfce84764ae9ff27ecc8b61d3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "getStickyNoteLayout",
+          "startLine": 676,
+          "endLine": 775,
+          "excerpt": "const getStickyNoteLayout(container: ExcalidrawStickyNoteElement, textElement: ExcalidrawTextElement | null, opts?: StickyNoteLayoutOpts): StickyNoteLayout"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "sticky-note-text-layout-sizes-the-minimum-note-to-fit-on",
+      "text": "sticky note text layout > sizes the minimum note to fit one line at the ceiling",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/src/__tests__/stickyNote.test.ts",
+          "testTitle": "sticky note text layout > sizes the minimum note to fit one line at the ceiling",
+          "startLine": 787,
+          "endLine": 809,
+          "contentHash": "sha256:764896b6448207ab34af7f9df608ccfb681c8e835376dcc6ce66508929d3e9a8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/stickyNote.ts",
+          "symbol": "getStickyNoteMinSize",
+          "startLine": 505,
+          "endLine": 522,
+          "excerpt": "const getStickyNoteMinSize({ fontSize, fontFamily, }: Pick<ExcalidrawTextElement, \"fontSize\" | \"fontFamily\">)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/src/__tests__/stickyNote.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/src/__tests__/stickyNote.test.ts",
+  "generator": "tests",
+  "notes": "16 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:f2ce6078043c4649201c5b801ebbacb9e50de12fe4872ed80c2a5f885055ab95"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:f2ce6078043c4649201c5b801ebbacb9e50de12fe4872ed80c2a5f885055ab95"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:f2ce6078043c4649201c5b801ebbacb9e50de12fe4872ed80c2a5f885055ab95"
+    }
+  ]
+}

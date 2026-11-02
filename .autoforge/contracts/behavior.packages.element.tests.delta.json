@@ -1,0 +1,966 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.tests.delta",
+  "revision": 1,
+  "title": "Behavior verified by packages/element/tests/delta.test.tsx",
+  "description": "Existing behavior covered by 24 asserting test(s) in packages/element/tests/delta.test.tsx, exercising packages/common/src/index.ts, packages/element/src/delta.ts, packages/element/src/index.ts, packages/element/src/mutateElement.ts, packages/element/src/types.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/tests/delta.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/delta.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/mutateElement.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/types.ts",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "FractionalIndex"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "SceneElementsMap"
+      },
+      {
+        "path": "packages/element/src/mutateElement.ts",
+        "name": "newElementWith"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawTextElement"
+      },
+      {
+        "path": "packages/element/src/delta.ts",
+        "name": "ElementsDelta"
+      },
+      {
+        "path": "packages/element/src/delta.ts",
+        "name": "Delta"
+      },
+      {
+        "path": "packages/excalidraw/types.ts",
+        "name": "ObservedAppState"
+      },
+      {
+        "path": "packages/element/src/delta.ts",
+        "name": "AppStateDelta"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "elements-delta-visible-changes-ignores-empty-label-delet",
+      "text": "ElementsDelta > visible changes > ignores empty-label deletion and restoration on a %s",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > visible changes > ignores empty-label deletion and restoration on a %s",
+          "startLine": 60,
+          "endLine": 76,
+          "contentHash": "sha256:90c7b81ccaedd3c1b509fdabd29864aec65dd31e25ffb4fa4ee96c3320d62f8f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-visible-changes-keeps-deletion-and-restor",
+      "text": "ElementsDelta > visible changes > keeps deletion and restoration of nonempty labels visible",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > visible changes > keeps deletion and restoration of nonempty labels visible",
+          "startLine": 78,
+          "endLine": 82,
+          "contentHash": "sha256:7b853f141b1133bd8a4dccd1a8169806555d1cbcefd1ec06e41221e8d81c4db3"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-visible-changes-ignores-s-properties-when",
+      "text": "ElementsDelta > visible changes > ignores %s properties when deciding visibility",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > visible changes > ignores %s properties when deciding visibility",
+          "startLine": 84,
+          "endLine": 110,
+          "contentHash": "sha256:00b59e26c634b7e4ebaa49ff62a0d721d69885b25fb7c5e4cfb5da9fe7c33b59"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "FractionalIndex",
+          "startLine": 33,
+          "endLine": 33,
+          "excerpt": "type FractionalIndex = string & { _brand: \"franctionalIndex\" }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "SceneElementsMap",
+          "startLine": 464,
+          "endLine": 468,
+          "excerpt": "type SceneElementsMap = Map< ExcalidrawElement[\"id\"], Ordered<ExcalidrawElement> > & MakeBrand<\"SceneElementsMap\">"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/mutateElement.ts",
+          "symbol": "newElementWith",
+          "startLine": 149,
+          "endLine": 181,
+          "excerpt": "const newElementWith<TElement extends ExcalidrawElement>(element: TElement, updates: ElementUpdate<TElement>, force?): TElement"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-visible-changes-keeps-snapshot-restoratio",
+      "text": "ElementsDelta > visible changes > keeps snapshot restoration visible for a metadata-only update",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > visible changes > keeps snapshot restoration visible for a metadata-only update",
+          "startLine": 112,
+          "endLine": 129,
+          "contentHash": "sha256:19f423f1d695c23747d932a095350e7effa2738402a393ef2d8795e7217c5361"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "FractionalIndex",
+          "startLine": 33,
+          "endLine": 33,
+          "excerpt": "type FractionalIndex = string & { _brand: \"franctionalIndex\" }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "SceneElementsMap",
+          "startLine": 464,
+          "endLine": 468,
+          "excerpt": "type SceneElementsMap = Map< ExcalidrawElement[\"id\"], Ordered<ExcalidrawElement> > & MakeBrand<\"SceneElementsMap\">"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/mutateElement.ts",
+          "symbol": "newElementWith",
+          "startLine": 149,
+          "endLine": 181,
+          "excerpt": "const newElementWith<TElement extends ExcalidrawElement>(element: TElement, updates: ElementUpdate<TElement>, force?): TElement"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-visible-changes-keeps-an-arrow-s-empty-la",
+      "text": "ElementsDelta > visible changes > keeps an arrow's empty-label gap visible",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > visible changes > keeps an arrow's empty-label gap visible",
+          "startLine": 131,
+          "endLine": 135,
+          "contentHash": "sha256:81d65a91666c14ecb539d3d00bc6ccaf5d86a11e8c78e30c157c39a82e9ee4b3"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-visible-changes-detects-a-container-resiz",
+      "text": "ElementsDelta > visible changes > detects a container resized by restoring an empty label",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > visible changes > detects a container resized by restoring an empty label",
+          "startLine": 137,
+          "endLine": 158,
+          "contentHash": "sha256:a1f935cabf1c16ce5d2db538d47db8e134c7b8954f7abb89a9c6abdf10203843"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/mutateElement.ts",
+          "symbol": "newElementWith",
+          "startLine": 149,
+          "endLine": 181,
+          "excerpt": "const newElementWith<TElement extends ExcalidrawElement>(element: TElement, updates: ElementUpdate<TElement>, force?): TElement"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "SceneElementsMap",
+          "startLine": 464,
+          "endLine": 468,
+          "excerpt": "type SceneElementsMap = Map< ExcalidrawElement[\"id\"], Ordered<ExcalidrawElement> > & MakeBrand<\"SceneElementsMap\">"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-visible-changes-detects-a-bound-label-rep",
+      "text": "ElementsDelta > visible changes > detects a bound label repositioned by a container's redraw",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > visible changes > detects a bound label repositioned by a container's redraw",
+          "startLine": 160,
+          "endLine": 176,
+          "contentHash": "sha256:5f74575601dc0013a108244491419c9fbc4967a4bef908dad020619a30011d56"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/mutateElement.ts",
+          "symbol": "newElementWith",
+          "startLine": 149,
+          "endLine": 181,
+          "excerpt": "const newElementWith<TElement extends ExcalidrawElement>(element: TElement, updates: ElementUpdate<TElement>, force?): TElement"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "SceneElementsMap",
+          "startLine": 464,
+          "endLine": 468,
+          "excerpt": "type SceneElementsMap = Map< ExcalidrawElement[\"id\"], Ordered<ExcalidrawElement> > & MakeBrand<\"SceneElementsMap\">"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-visible-changes-detects-a-bound-arrow-rep",
+      "text": "ElementsDelta > visible changes > detects a bound arrow repositioned by a container's redraw",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > visible changes > detects a bound arrow repositioned by a container's redraw",
+          "startLine": 178,
+          "endLine": 208,
+          "contentHash": "sha256:32a8a52bf5f56c4eb2958b4d908d99e8ab7fd6b02e62d8075caf5d2971f13e99"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "FractionalIndex",
+          "startLine": 33,
+          "endLine": 33,
+          "excerpt": "type FractionalIndex = string & { _brand: \"franctionalIndex\" }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "SceneElementsMap",
+          "startLine": 464,
+          "endLine": 468,
+          "excerpt": "type SceneElementsMap = Map< ExcalidrawElement[\"id\"], Ordered<ExcalidrawElement> > & MakeBrand<\"SceneElementsMap\">"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/mutateElement.ts",
+          "symbol": "newElementWith",
+          "startLine": 149,
+          "endLine": 181,
+          "excerpt": "const newElementWith<TElement extends ExcalidrawElement>(element: TElement, updates: ElementUpdate<TElement>, force?): TElement"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-visible-changes-guards-against-untracked",
+      "text": "ElementsDelta > visible changes > guards against untracked layout mutations in %s mode",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > visible changes > guards against untracked layout mutations in %s mode",
+          "startLine": 210,
+          "endLine": 258,
+          "contentHash": "sha256:f79704b737ca3a415fd6eda6d86d938e4956aa98afe51ac87c06d86e86ed53fb"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "FractionalIndex",
+          "startLine": 33,
+          "endLine": 33,
+          "excerpt": "type FractionalIndex = string & { _brand: \"franctionalIndex\" }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "SceneElementsMap",
+          "startLine": 464,
+          "endLine": 468,
+          "excerpt": "type SceneElementsMap = Map< ExcalidrawElement[\"id\"], Ordered<ExcalidrawElement> > & MakeBrand<\"SceneElementsMap\">"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/mutateElement.ts",
+          "symbol": "newElementWith",
+          "startLine": 149,
+          "endLine": 181,
+          "excerpt": "const newElementWith<TElement extends ExcalidrawElement>(element: TElement, updates: ElementUpdate<TElement>, force?): TElement"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-visible-changes-keeps-an-empty-text-eleme",
+      "text": "ElementsDelta > visible changes > keeps an empty text element's arrow bindings visible",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > visible changes > keeps an empty text element's arrow bindings visible",
+          "startLine": 260,
+          "endLine": 287,
+          "contentHash": "sha256:1002a3bcbb3949c476e84e0c12b577e1e7ca79ff17b2c85f8023b9bfab23b85b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "FractionalIndex",
+          "startLine": 33,
+          "endLine": 33,
+          "excerpt": "type FractionalIndex = string & { _brand: \"franctionalIndex\" }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "SceneElementsMap",
+          "startLine": 464,
+          "endLine": 468,
+          "excerpt": "type SceneElementsMap = Map< ExcalidrawElement[\"id\"], Ordered<ExcalidrawElement> > & MakeBrand<\"SceneElementsMap\">"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-elements-delta-calculation-should-not-thr",
+      "text": "ElementsDelta > elements delta calculation > should not throw when element gets removed but was already deleted",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > elements delta calculation > should not throw when element gets removed but was already deleted",
+          "startLine": 291,
+          "endLine": 305,
+          "contentHash": "sha256:d8d8b1e13cde27218222b6119e5a65b74e88fd3c0f92c14cb75829ddcfab8ab0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "ElementsDelta",
+          "startLine": 1040,
+          "endLine": 2235,
+          "excerpt": "class ElementsDelta implements DeltaContainer<SceneElementsMap> { create(added: Record<string, Delta<ElementPartial>>, removed: Record<string, Delta<ElementPartial>>, updated: Record<string, Delta<ElementPartial>>, options?: { shouldRedistribute: boolean; }); restore(elementsDeltaDTO: DTO<ElementsDelta>): ElementsDelta; calculate(prevElements: Map<string, T>, nextElements: Map<string, T>): Elemen…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-elements-delta-calculation-should-not-thr-2",
+      "text": "ElementsDelta > elements delta calculation > should not throw when adding element as already deleted",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > elements delta calculation > should not throw when adding element as already deleted",
+          "startLine": 307,
+          "endLine": 321,
+          "contentHash": "sha256:85027cc7ab5d0f8f256ff5eb3f75bd9bc07b215f82c0a8c72437aa3339df3598"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "ElementsDelta",
+          "startLine": 1040,
+          "endLine": 2235,
+          "excerpt": "class ElementsDelta implements DeltaContainer<SceneElementsMap> { create(added: Record<string, Delta<ElementPartial>>, removed: Record<string, Delta<ElementPartial>>, updated: Record<string, Delta<ElementPartial>>, options?: { shouldRedistribute: boolean; }); restore(elementsDeltaDTO: DTO<ElementsDelta>): ElementsDelta; calculate(prevElements: Map<string, T>, nextElements: Map<string, T>): Elemen…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-elements-delta-calculation-should-create",
+      "text": "ElementsDelta > elements delta calculation > should create updated delta even when there is only version and versionNonce change",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > elements delta calculation > should create updated delta even when there is only version and versionNonce change",
+          "startLine": 323,
+          "endLine": 366,
+          "contentHash": "sha256:51523c0de435a02977c33daa3eb058acafc0698bd250ec726c85031edaa050ee"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "ElementsDelta",
+          "startLine": 1040,
+          "endLine": 2235,
+          "excerpt": "class ElementsDelta implements DeltaContainer<SceneElementsMap> { create(added: Record<string, Delta<ElementPartial>>, removed: Record<string, Delta<ElementPartial>>, updated: Record<string, Delta<ElementPartial>>, options?: { shouldRedistribute: boolean; }); restore(elementsDeltaDTO: DTO<ElementsDelta>): ElementsDelta; calculate(prevElements: Map<string, T>, nextElements: Map<string, T>): Elemen…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "SceneElementsMap",
+          "startLine": 464,
+          "endLine": 468,
+          "excerpt": "type SceneElementsMap = Map< ExcalidrawElement[\"id\"], Ordered<ExcalidrawElement> > & MakeBrand<\"SceneElementsMap\">"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "Delta",
+          "startLine": 78,
+          "endLine": 498,
+          "excerpt": "class Delta { create(deleted: Partial<T>, inserted: Partial<T>, modifier?: ( delta: Partial<T>, partialType: \"deleted\" | \"inserted\", ) => Partial<T>, modifierOptions?: \"deleted\" | \"inserted\" | \"both\"); calculate(prevObject: T, nextObject: T, modifier?: (partial: Partial<T>) => Partial<T>, postProcess?: ( deleted: Partial<T>, inserted: Partial<T>, ) => [Partial<T>, Partial<T>]): Delta<T>; empty();…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-squash-should-not-squash-when-second-delt",
+      "text": "ElementsDelta > squash > should not squash when second delta is empty",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > squash > should not squash when second delta is empty",
+          "startLine": 370,
+          "endLine": 387,
+          "contentHash": "sha256:3ab005594269f5c10c97f35d7622cb1baf48847daf0c65f6cdeb4253125dae34"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "Delta",
+          "startLine": 78,
+          "endLine": 498,
+          "excerpt": "class Delta { create(deleted: Partial<T>, inserted: Partial<T>, modifier?: ( delta: Partial<T>, partialType: \"deleted\" | \"inserted\", ) => Partial<T>, modifierOptions?: \"deleted\" | \"inserted\" | \"both\"); calculate(prevObject: T, nextObject: T, modifier?: (partial: Partial<T>) => Partial<T>, postProcess?: ( deleted: Partial<T>, inserted: Partial<T>, ) => [Partial<T>, Partial<T>]): Delta<T>; empty();…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "ElementsDelta",
+          "startLine": 1040,
+          "endLine": 2235,
+          "excerpt": "class ElementsDelta implements DeltaContainer<SceneElementsMap> { create(added: Record<string, Delta<ElementPartial>>, removed: Record<string, Delta<ElementPartial>>, updated: Record<string, Delta<ElementPartial>>, options?: { shouldRedistribute: boolean; }); restore(elementsDeltaDTO: DTO<ElementsDelta>): ElementsDelta; calculate(prevElements: Map<string, T>, nextElements: Map<string, T>): Elemen…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-squash-should-squash-mutually-exclusive-d",
+      "text": "ElementsDelta > squash > should squash mutually exclusive delta types",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > squash > should squash mutually exclusive delta types",
+          "startLine": 389,
+          "endLine": 424,
+          "contentHash": "sha256:d2810f0671bd2a5cc4aad1312455d9fc6661e9d0f131b606fb7d17878eca54ef"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "Delta",
+          "startLine": 78,
+          "endLine": 498,
+          "excerpt": "class Delta { create(deleted: Partial<T>, inserted: Partial<T>, modifier?: ( delta: Partial<T>, partialType: \"deleted\" | \"inserted\", ) => Partial<T>, modifierOptions?: \"deleted\" | \"inserted\" | \"both\"); calculate(prevObject: T, nextObject: T, modifier?: (partial: Partial<T>) => Partial<T>, postProcess?: ( deleted: Partial<T>, inserted: Partial<T>, ) => [Partial<T>, Partial<T>]): Delta<T>; empty();…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "ElementsDelta",
+          "startLine": 1040,
+          "endLine": 2235,
+          "excerpt": "class ElementsDelta implements DeltaContainer<SceneElementsMap> { create(added: Record<string, Delta<ElementPartial>>, removed: Record<string, Delta<ElementPartial>>, updated: Record<string, Delta<ElementPartial>>, options?: { shouldRedistribute: boolean; }); restore(elementsDeltaDTO: DTO<ElementsDelta>): ElementsDelta; calculate(prevElements: Map<string, T>, nextElements: Map<string, T>): Elemen…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-squash-should-squash-the-same-delta-types",
+      "text": "ElementsDelta > squash > should squash the same delta types",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > squash > should squash the same delta types",
+          "startLine": 426,
+          "endLine": 491,
+          "contentHash": "sha256:a0a62ae18fdfbde7dfbe6724f32a8ea96ecb3e3643a70d4932359a44406b1db8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "ElementsDelta",
+          "startLine": 1040,
+          "endLine": 2235,
+          "excerpt": "class ElementsDelta implements DeltaContainer<SceneElementsMap> { create(added: Record<string, Delta<ElementPartial>>, removed: Record<string, Delta<ElementPartial>>, updated: Record<string, Delta<ElementPartial>>, options?: { shouldRedistribute: boolean; }); restore(elementsDeltaDTO: DTO<ElementsDelta>): ElementsDelta; calculate(prevElements: Map<string, T>, nextElements: Map<string, T>): Elemen…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "Delta",
+          "startLine": 78,
+          "endLine": 498,
+          "excerpt": "class Delta { create(deleted: Partial<T>, inserted: Partial<T>, modifier?: ( delta: Partial<T>, partialType: \"deleted\" | \"inserted\", ) => Partial<T>, modifierOptions?: \"deleted\" | \"inserted\" | \"both\"); calculate(prevObject: T, nextObject: T, modifier?: (partial: Partial<T>) => Partial<T>, postProcess?: ( deleted: Partial<T>, inserted: Partial<T>, ) => [Partial<T>, Partial<T>]): Delta<T>; empty();…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-squash-should-squash-different-delta-type",
+      "text": "ElementsDelta > squash > should squash different delta types",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > squash > should squash different delta types",
+          "startLine": 493,
+          "endLine": 560,
+          "contentHash": "sha256:23ef217017ac7cbe7d115088c19820e9597f53f6bf7ded48c407b196c5fcc4fc"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "ElementsDelta",
+          "startLine": 1040,
+          "endLine": 2235,
+          "excerpt": "class ElementsDelta implements DeltaContainer<SceneElementsMap> { create(added: Record<string, Delta<ElementPartial>>, removed: Record<string, Delta<ElementPartial>>, updated: Record<string, Delta<ElementPartial>>, options?: { shouldRedistribute: boolean; }); restore(elementsDeltaDTO: DTO<ElementsDelta>): ElementsDelta; calculate(prevElements: Map<string, T>, nextElements: Map<string, T>): Elemen…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "Delta",
+          "startLine": 78,
+          "endLine": 498,
+          "excerpt": "class Delta { create(deleted: Partial<T>, inserted: Partial<T>, modifier?: ( delta: Partial<T>, partialType: \"deleted\" | \"inserted\", ) => Partial<T>, modifierOptions?: \"deleted\" | \"inserted\" | \"both\"); calculate(prevObject: T, nextObject: T, modifier?: (partial: Partial<T>) => Partial<T>, postProcess?: ( deleted: Partial<T>, inserted: Partial<T>, ) => [Partial<T>, Partial<T>]): Delta<T>; empty();…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "elements-delta-squash-should-squash-bound-elements",
+      "text": "ElementsDelta > squash > should squash bound elements",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "ElementsDelta > squash > should squash bound elements",
+          "startLine": 562,
+          "endLine": 611,
+          "contentHash": "sha256:cf6a8a2a0a41414fcfe5950563bf30dc7dbaa8cc143bfd8012b1bae3010a51e7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "ElementsDelta",
+          "startLine": 1040,
+          "endLine": 2235,
+          "excerpt": "class ElementsDelta implements DeltaContainer<SceneElementsMap> { create(added: Record<string, Delta<ElementPartial>>, removed: Record<string, Delta<ElementPartial>>, updated: Record<string, Delta<ElementPartial>>, options?: { shouldRedistribute: boolean; }); restore(elementsDeltaDTO: DTO<ElementsDelta>): ElementsDelta; calculate(prevElements: Map<string, T>, nextElements: Map<string, T>): Elemen…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "Delta",
+          "startLine": 78,
+          "endLine": 498,
+          "excerpt": "class Delta { create(deleted: Partial<T>, inserted: Partial<T>, modifier?: ( delta: Partial<T>, partialType: \"deleted\" | \"inserted\", ) => Partial<T>, modifierOptions?: \"deleted\" | \"inserted\" | \"both\"); calculate(prevObject: T, nextObject: T, modifier?: (partial: Partial<T>) => Partial<T>, postProcess?: ( deleted: Partial<T>, inserted: Partial<T>, ) => [Partial<T>, Partial<T>]): Delta<T>; empty();…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-state-delta-ensure-stable-delta-properties-order-sho",
+      "text": "AppStateDelta > ensure stable delta properties order > should maintain stable order for root properties",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "AppStateDelta > ensure stable delta properties order > should maintain stable order for root properties",
+          "startLine": 617,
+          "endLine": 664,
+          "contentHash": "sha256:6effa83ec3b19e58f5435ecd20ef4647b06881ebff288c55af69489d1ad60082"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "ObservedAppState",
+          "startLine": 265,
+          "endLine": 266,
+          "excerpt": "type ObservedAppState = ObservedStandaloneAppState & ObservedElementsAppState"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "AppStateDelta",
+          "startLine": 527,
+          "endLine": 1016,
+          "excerpt": "class AppStateDelta implements DeltaContainer<AppState> { create(delta: Delta<ObservedAppState>): AppStateDelta; calculate(prevAppState: T, nextAppState: T): AppStateDelta; restore(appStateDeltaDTO: DTO<AppStateDelta>): AppStateDelta; empty(); inverse(): AppStateDelta; squash(delta: AppStateDelta): this; applyTo(appState: AppState, nextElements: SceneElementsMap): [AppState, boolean]; isEmpty(): …"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-state-delta-ensure-stable-delta-properties-order-sho-2",
+      "text": "AppStateDelta > ensure stable delta properties order > should maintain stable order for selectedElementIds",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "AppStateDelta > ensure stable delta properties order > should maintain stable order for selectedElementIds",
+          "startLine": 666,
+          "endLine": 710,
+          "contentHash": "sha256:8b2c17ed5b343a8b7c9c87cfd783798e2c98db69bd569fb97a6b7de2995f818d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "ObservedAppState",
+          "startLine": 265,
+          "endLine": 266,
+          "excerpt": "type ObservedAppState = ObservedStandaloneAppState & ObservedElementsAppState"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "AppStateDelta",
+          "startLine": 527,
+          "endLine": 1016,
+          "excerpt": "class AppStateDelta implements DeltaContainer<AppState> { create(delta: Delta<ObservedAppState>): AppStateDelta; calculate(prevAppState: T, nextAppState: T): AppStateDelta; restore(appStateDeltaDTO: DTO<AppStateDelta>): AppStateDelta; empty(); inverse(): AppStateDelta; squash(delta: AppStateDelta): this; applyTo(appState: AppState, nextElements: SceneElementsMap): [AppState, boolean]; isEmpty(): …"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-state-delta-ensure-stable-delta-properties-order-sho-3",
+      "text": "AppStateDelta > ensure stable delta properties order > should maintain stable order for selectedGroupIds",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "AppStateDelta > ensure stable delta properties order > should maintain stable order for selectedGroupIds",
+          "startLine": 712,
+          "endLine": 758,
+          "contentHash": "sha256:3cdc4d89442b480b8b740a50e2b221c381b1801fcbb1feb1acc5635ecfb64fb1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "ObservedAppState",
+          "startLine": 265,
+          "endLine": 266,
+          "excerpt": "type ObservedAppState = ObservedStandaloneAppState & ObservedElementsAppState"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "AppStateDelta",
+          "startLine": 527,
+          "endLine": 1016,
+          "excerpt": "class AppStateDelta implements DeltaContainer<AppState> { create(delta: Delta<ObservedAppState>): AppStateDelta; calculate(prevAppState: T, nextAppState: T): AppStateDelta; restore(appStateDeltaDTO: DTO<AppStateDelta>): AppStateDelta; empty(); inverse(): AppStateDelta; squash(delta: AppStateDelta): this; applyTo(appState: AppState, nextElements: SceneElementsMap): [AppState, boolean]; isEmpty(): …"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-state-delta-squash-should-not-squash-when-second-del",
+      "text": "AppStateDelta > squash > should not squash when second delta is empty",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "AppStateDelta > squash > should not squash when second delta is empty",
+          "startLine": 762,
+          "endLine": 775,
+          "contentHash": "sha256:46a9c947282907f2aa045796d756beb18163cdff00a7528a406866e71ee78ff1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "Delta",
+          "startLine": 78,
+          "endLine": 498,
+          "excerpt": "class Delta { create(deleted: Partial<T>, inserted: Partial<T>, modifier?: ( delta: Partial<T>, partialType: \"deleted\" | \"inserted\", ) => Partial<T>, modifierOptions?: \"deleted\" | \"inserted\" | \"both\"); calculate(prevObject: T, nextObject: T, modifier?: (partial: Partial<T>) => Partial<T>, postProcess?: ( deleted: Partial<T>, inserted: Partial<T>, ) => [Partial<T>, Partial<T>]): Delta<T>; empty();…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "AppStateDelta",
+          "startLine": 527,
+          "endLine": 1016,
+          "excerpt": "class AppStateDelta implements DeltaContainer<AppState> { create(delta: Delta<ObservedAppState>): AppStateDelta; calculate(prevAppState: T, nextAppState: T): AppStateDelta; restore(appStateDeltaDTO: DTO<AppStateDelta>): AppStateDelta; empty(); inverse(): AppStateDelta; squash(delta: AppStateDelta): this; applyTo(appState: AppState, nextElements: SceneElementsMap): [AppState, boolean]; isEmpty(): …"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-state-delta-squash-should-squash-exclusive-propertie",
+      "text": "AppStateDelta > squash > should squash exclusive properties",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "AppStateDelta > squash > should squash exclusive properties",
+          "startLine": 777,
+          "endLine": 799,
+          "contentHash": "sha256:ddf0445bd8000b9634a99c5dacdc0e3eea857c4a262b78d5443a6c5c35f32110"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "Delta",
+          "startLine": 78,
+          "endLine": 498,
+          "excerpt": "class Delta { create(deleted: Partial<T>, inserted: Partial<T>, modifier?: ( delta: Partial<T>, partialType: \"deleted\" | \"inserted\", ) => Partial<T>, modifierOptions?: \"deleted\" | \"inserted\" | \"both\"); calculate(prevObject: T, nextObject: T, modifier?: (partial: Partial<T>) => Partial<T>, postProcess?: ( deleted: Partial<T>, inserted: Partial<T>, ) => [Partial<T>, Partial<T>]): Delta<T>; empty();…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "AppStateDelta",
+          "startLine": 527,
+          "endLine": 1016,
+          "excerpt": "class AppStateDelta implements DeltaContainer<AppState> { create(delta: Delta<ObservedAppState>): AppStateDelta; calculate(prevAppState: T, nextAppState: T): AppStateDelta; restore(appStateDeltaDTO: DTO<AppStateDelta>): AppStateDelta; empty(); inverse(): AppStateDelta; squash(delta: AppStateDelta): this; applyTo(appState: AppState, nextElements: SceneElementsMap): [AppState, boolean]; isEmpty(): …"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-state-delta-squash-should-squash-selected-element-id",
+      "text": "AppStateDelta > squash > should squash selectedElementIds, selectedGroupIds and lockedMultiSelections",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/delta.test.tsx",
+          "testTitle": "AppStateDelta > squash > should squash selectedElementIds, selectedGroupIds and lockedMultiSelections",
+          "startLine": 801,
+          "endLine": 851,
+          "contentHash": "sha256:e14872de05df7418e0aa8c538b5f82230dbc96cecc4d09a198e6e1fe52c3ed4c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "Delta",
+          "startLine": 78,
+          "endLine": 498,
+          "excerpt": "class Delta { create(deleted: Partial<T>, inserted: Partial<T>, modifier?: ( delta: Partial<T>, partialType: \"deleted\" | \"inserted\", ) => Partial<T>, modifierOptions?: \"deleted\" | \"inserted\" | \"both\"); calculate(prevObject: T, nextObject: T, modifier?: (partial: Partial<T>) => Partial<T>, postProcess?: ( deleted: Partial<T>, inserted: Partial<T>, ) => [Partial<T>, Partial<T>]): Delta<T>; empty();…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "ObservedAppState",
+          "startLine": 265,
+          "endLine": 266,
+          "excerpt": "type ObservedAppState = ObservedStandaloneAppState & ObservedElementsAppState"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/delta.ts",
+          "symbol": "AppStateDelta",
+          "startLine": 527,
+          "endLine": 1016,
+          "excerpt": "class AppStateDelta implements DeltaContainer<AppState> { create(delta: Delta<ObservedAppState>): AppStateDelta; calculate(prevAppState: T, nextAppState: T): AppStateDelta; restore(appStateDeltaDTO: DTO<AppStateDelta>): AppStateDelta; empty(); inverse(): AppStateDelta; squash(delta: AppStateDelta): this; applyTo(appState: AppState, nextElements: SceneElementsMap): [AppState, boolean]; isEmpty(): …"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/delta.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/tests/delta.test.tsx",
+  "generator": "tests",
+  "notes": "Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:f9553b8416fcfa4ed4f1c715fa0860fc8da72e87069cd99a11ccfde840153058"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:f9553b8416fcfa4ed4f1c715fa0860fc8da72e87069cd99a11ccfde840153058"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:f9553b8416fcfa4ed4f1c715fa0860fc8da72e87069cd99a11ccfde840153058"
+    }
+  ]
+}

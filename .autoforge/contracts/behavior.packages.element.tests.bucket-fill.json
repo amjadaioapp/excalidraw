@@ -1,0 +1,781 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.tests.bucket-fill",
+  "revision": 1,
+  "title": "computeBucketFillPolygon: behavior verified by packages/element/tests/bucketFill.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/element/tests/bucketFill.test.ts, exercising packages/common/src/index.ts, packages/element/src/bucketFill.ts, packages/element/src/shape.ts, packages/element/src/types.ts, packages/math/src/index.ts.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/tests/bucketFill.test.ts",
+      "packages/common/src/index.ts",
+      "packages/element/src/bucketFill.ts",
+      "packages/element/src/shape.ts",
+      "packages/element/src/types.ts",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/bucketFill.ts",
+        "name": "computeBucketFillPolygon"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "compute-bucket-fill-polygon-fills-a-simple-rectangle-and",
+      "text": "computeBucketFillPolygon > fills a simple rectangle and returns a closed polygon",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills a simple rectangle and returns a closed polygon",
+          "startLine": 62,
+          "endLine": 92,
+          "contentHash": "sha256:5b96baca72075fb539d9428717493e928f4bdcc68bf671b9cd079c2d419d291f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-a-rotated-rectangle",
+      "text": "computeBucketFillPolygon > fills a rotated rectangle",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills a rotated rectangle",
+          "startLine": 94,
+          "endLine": 118,
+          "contentHash": "sha256:6fd85a364c75add016a71084d0acd2464961777c5df4c49deaf4778e53a7dd1f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-an-ellipse-with-a-boun",
+      "text": "computeBucketFillPolygon > fills an ellipse with a bounded point count",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills an ellipse with a bounded point count",
+          "startLine": 120,
+          "endLine": 146,
+          "contentHash": "sha256:32cc4b89561b8f724831cb3059fe8730f1bc07e8dbe5fff84b621925bfdb8930"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-a-curved-line-polygon",
+      "text": "computeBucketFillPolygon > fills a curved line polygon along its smoothed path",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills a curved line polygon along its smoothed path",
+          "startLine": 148,
+          "endLine": 197,
+          "contentHash": "sha256:73af6e6e74498cc3a77bac27a5c9f0cbd38a13964e6b60a890a495f469b8d6db"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-a-diamond",
+      "text": "computeBucketFillPolygon > fills a diamond",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills a diamond",
+          "startLine": 199,
+          "endLine": 226,
+          "contentHash": "sha256:706f6ea3f749942c25964d8717554f4916208dd0c42ddf54c52052fdbf60972c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-a-freedraw-loop-with-a",
+      "text": "computeBucketFillPolygon > fills a freedraw loop with a hand-drawn closure gap",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills a freedraw loop with a hand-drawn closure gap",
+          "startLine": 228,
+          "endLine": 279,
+          "contentHash": "sha256:2b4ce7e68d4fab1440fa846302f79caf6f232189db177d0214654447ea8e0c4d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-an-exactly-closed-free",
+      "text": "computeBucketFillPolygon > fills an exactly-closed freedraw loop",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills an exactly-closed freedraw loop",
+          "startLine": 281,
+          "endLine": 328,
+          "contentHash": "sha256:bd6a7a4f04b3919451e81651f17ffecc78835b8c4084c89e0b92185b822617c5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-a-line-polygon",
+      "text": "computeBucketFillPolygon > fills a line polygon",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills a line polygon",
+          "startLine": 330,
+          "endLine": 359,
+          "contentHash": "sha256:95d65048ebda3bec028dfd8e6f5991ad28849f10644fdcdb179b574c729ea527"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-the-overlap-region-spl",
+      "text": "computeBucketFillPolygon > fills the overlap region split by a rectangle below the owner",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills the overlap region split by a rectangle below the owner",
+          "startLine": 361,
+          "endLine": 403,
+          "contentHash": "sha256:453a7a43d338f18b08fe035704a4f7e0f6e35019a698aeb8915d0edc5b595d31"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-the-owner-minus-overla",
+      "text": "computeBucketFillPolygon > fills the owner-minus-overlap region when clicking outside the overlap",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills the owner-minus-overlap region when clicking outside the overlap",
+          "startLine": 405,
+          "endLine": 438,
+          "contentHash": "sha256:2ba7f1b4fdd1f1dfdc9e1cb603448977b68fdaf06149dad67968a43b6aa023d3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-ignores-outline-portions-hid",
+      "text": "computeBucketFillPolygon > ignores outline portions hidden behind an opaque element on top",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > ignores outline portions hidden behind an opaque element on top",
+          "startLine": 440,
+          "endLine": 477,
+          "contentHash": "sha256:f5c054939ac50dd0531ede60ccc52925d7fb962cf09b8e3c88dd148284a448c1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-respects-outlines-visible-th",
+      "text": "computeBucketFillPolygon > respects outlines visible through a transparent element on top",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > respects outlines visible through a transparent element on top",
+          "startLine": 479,
+          "endLine": 514,
+          "contentHash": "sha256:175b6017d126c810780734d300cc7383479268338f5a32922df97758f32f86b9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-ignores-a-text-element-s-nev",
+      "text": "computeBucketFillPolygon > ignores a text element's never-rendered backgroundColor",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > ignores a text element's never-rendered backgroundColor",
+          "startLine": 516,
+          "endLine": 549,
+          "contentHash": "sha256:0fb4f2d7165185b2a4e9cd9a444313f8606198280770923a2a82abb2b955654c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-does-not-treat-a-hachure-fil",
+      "text": "computeBucketFillPolygon > does not treat a hachure-filled element as covering",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > does not treat a hachure-filled element as covering",
+          "startLine": 551,
+          "endLine": 587,
+          "contentHash": "sha256:18ffdb1105d7412c776e5b389965cbc51bcdaf0429353f60e900c28d4cae578c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-does-not-treat-a-semi-transp",
+      "text": "computeBucketFillPolygon > does not treat a semi-transparent element as covering",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > does not treat a semi-transparent element as covering",
+          "startLine": 589,
+          "endLine": 623,
+          "contentHash": "sha256:1070d1667aeea1b428323cf5173cfdcf2a27302ab0592a65ab8bf186e6fb0ba9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-does-not-treat-a-partial-alp",
+      "text": "computeBucketFillPolygon > does not treat a partial-alpha (%s) background as covering",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > does not treat a partial-alpha (%s) background as covering",
+          "startLine": 625,
+          "endLine": 666,
+          "contentHash": "sha256:18384b0a57765d24439257fd59c907041617395c9c494d97187d4f3ab4e0c1c0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-the-whole-top-element",
+      "text": "computeBucketFillPolygon > fills the whole top element when clicking an opaque overlap",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills the whole top element when clicking an opaque overlap",
+          "startLine": 668,
+          "endLine": 710,
+          "contentHash": "sha256:d51d5c32385cacd8ebe5f384d18fc5e8d10fb06743003cd6987de611e0cf1c65"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-a-rounded-owner-partia",
+      "text": "computeBucketFillPolygon > fills a rounded owner partially covered by a thin opaque overlap",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills a rounded owner partially covered by a thin opaque overlap",
+          "startLine": 712,
+          "endLine": 759,
+          "contentHash": "sha256:6a375ff2fff068b839583c6cf6825926dfef4e6f9d56ea28bd824813ebe4ef1b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-a-region-enclosed-only",
+      "text": "computeBucketFillPolygon > fills a region enclosed only by open lines (owner-less)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills a region enclosed only by open lines (owner-less)",
+          "startLine": 761,
+          "endLine": 807,
+          "contentHash": "sha256:cc3a24b295a866fd7dad0e8dc1d7c4a538542f23890139fccdda060d80c20314"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-a-loop-formed-by-a-sin",
+      "text": "computeBucketFillPolygon > fills a loop formed by a single self-crossing open polyline",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills a loop formed by a single self-crossing open polyline",
+          "startLine": 809,
+          "endLine": 843,
+          "contentHash": "sha256:5ff3fb94ec12ca81b122ea377a8ef7432b839e9f85d3fe4d2fa7d4191d0bc7f8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-a-region-closed-by-an",
+      "text": "computeBucketFillPolygon > fills a region closed by an open line against a shape's outside wall",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills a region closed by an open line against a shape's outside wall",
+          "startLine": 845,
+          "endLine": 885,
+          "contentHash": "sha256:4f1e9ac91c1b00b987770452eb5f6d68879abfa5ac2fea1bb849f844d814ae75"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-fills-only-the-clicked-lobe",
+      "text": "computeBucketFillPolygon > fills only the clicked lobe of a self-intersecting (figure-eight) polygon",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > fills only the clicked lobe of a self-intersecting (figure-eight) polygon",
+          "startLine": 887,
+          "endLine": 918,
+          "contentHash": "sha256:0f63a1628c4614e82a1896a402e061eacf95bd785ad51815ae9950c377f56b46"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-handles-a-line-retracing-par",
+      "text": "computeBucketFillPolygon > handles a line retracing part of the owner's edge (collinear overlap)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > handles a line retracing part of the owner's edge (collinear overlap)",
+          "startLine": 920,
+          "endLine": 953,
+          "contentHash": "sha256:cb47decda6b1578ee952a3576dc5da371476f431ea0bbc41a90d2d406963006a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-bridges-endpoint-gaps-up-to",
+      "text": "computeBucketFillPolygon > bridges endpoint gaps up to gapTolerance without distorting the shape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > bridges endpoint gaps up to gapTolerance without distorting the shape",
+          "startLine": 955,
+          "endLine": 1012,
+          "contentHash": "sha256:89d043d50a2bea570affb65e1d1ea695c38236c163df6c6f7e6109b40c28b8a9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "compute-bucket-fill-polygon-bridges-a-stroke-ending-shor",
+      "text": "computeBucketFillPolygon > bridges a stroke ending short of a long edge at the projection point",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/bucketFill.test.ts",
+          "testTitle": "computeBucketFillPolygon > bridges a stroke ending short of a long edge at the projection point",
+          "startLine": 1014,
+          "endLine": 1049,
+          "contentHash": "sha256:4d95368571a87cc1aa1268ff937913c0f6c363545f260d32c893945e35fe8611"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bucketFill.ts",
+          "symbol": "computeBucketFillPolygon",
+          "startLine": 1470,
+          "endLine": 1868,
+          "excerpt": "const computeBucketFillPolygon(args: { point: GlobalPoint; elements: readonly NonDeletedExcalidrawElement[]; elementsMap: ElementsMap; options?: Partial<BucketFillOptions>; }): BucketFillGeometryResult"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/bucketFill.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/tests/bucketFill.test.ts",
+  "generator": "tests",
+  "notes": "31 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:9c1dfb1a306571f3d995436da92e904ffa9859da842a825d80cee4570ee697dc"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:9c1dfb1a306571f3d995436da92e904ffa9859da842a825d80cee4570ee697dc"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:9c1dfb1a306571f3d995436da92e904ffa9859da842a825d80cee4570ee697dc"
+    }
+  ]
+}

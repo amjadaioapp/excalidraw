@@ -1,0 +1,807 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.tests.binding",
+  "revision": 1,
+  "title": "Behavior verified by packages/element/tests/binding.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/element/tests/binding.test.tsx, exercising packages/common/src/index.ts, packages/element/src/Scene.ts, packages/element/src/binding.ts, packages/element/src/renderEnvironment.ts, packages/element/src/transform.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/tests/binding.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/Scene.ts",
+      "packages/element/src/binding.ts",
+      "packages/element/src/renderEnvironment.ts",
+      "packages/element/src/transform.ts",
+      "packages/element/src/transformHandles.ts",
+      "packages/element/src/types.ts",
+      "packages/element/src/utils.ts",
+      "packages/excalidraw/actions/actionBoundText.tsx",
+      "packages/excalidraw/i18n.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawLinearElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "FixedPointBinding"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawArrowElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawBindableElement"
+      },
+      {
+        "path": "packages/element/src/utils.ts",
+        "name": "getAllMidpoints"
+      },
+      {
+        "path": "packages/element/src/transformHandles.ts",
+        "name": "getTransformHandles"
+      },
+      {
+        "path": "packages/excalidraw/index.tsx",
+        "name": "isLinearElement"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionBoundText.tsx",
+        "name": "actionWrapTextInContainer"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "binding-for-simple-arrows-when-both-endpoints-are-bound",
+      "text": "binding for simple arrows > when both endpoints are bound inside the same element > should create an `inside` binding",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > when both endpoints are bound inside the same element > should create an `inside` binding",
+          "startLine": 60,
+          "endLine": 129,
+          "contentHash": "sha256:bd92de7ae96450c392c7368ddeb11d9d9c51ebbf1e6ed5961e1328a6b492d82a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "FixedPointBinding",
+          "startLine": 320,
+          "endLine": 333,
+          "excerpt": "type FixedPointBinding = { elementId: ExcalidrawBindableElement[\"id\"]; fixedPoint: FixedPoint; mode: BindMode }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-when-both-endpoints-are-bound-2",
+      "text": "binding for simple arrows > when both endpoints are bound inside the same element > 3+ point arrow should be dragged along with the bindable",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > when both endpoints are bound inside the same element > 3+ point arrow should be dragged along with the bindable",
+          "startLine": 131,
+          "endLine": 192,
+          "contentHash": "sha256:ce9014e2fce65be6bdfb51f26f13dfe4b75c4495a2bcc63a0dc9cfc802bd62b1"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-self-binding-both-ends-to-the",
+      "text": "binding for simple arrows > self-binding (both ends to the same element) single-click finalize > orbit -> orbit finalizes on a single click",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > self-binding (both ends to the same element) single-click finalize > orbit -> orbit finalizes on a single click",
+          "startLine": 224,
+          "endLine": 232,
+          "contentHash": "sha256:85d3dcc8c4032b0360e939364e59085e41660350fde1a30b8677e895c67520db"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-self-binding-both-ends-to-the-2",
+      "text": "binding for simple arrows > self-binding (both ends to the same element) single-click finalize > inside -> orbit finalizes on a single click",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > self-binding (both ends to the same element) single-click finalize > inside -> orbit finalizes on a single click",
+          "startLine": 234,
+          "endLine": 242,
+          "contentHash": "sha256:3b83f2f3176896d176c533323a548d23b459b3ecb7548821d6856c01371d051b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-self-binding-both-ends-to-the-3",
+      "text": "binding for simple arrows > self-binding (both ends to the same element) single-click finalize > inside -> inside keep in multi-point mode (no single-click finalize)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > self-binding (both ends to the same element) single-click finalize > inside -> inside keep in multi-point mode (no single-click finalize)",
+          "startLine": 244,
+          "endLine": 250,
+          "contentHash": "sha256:f5259bef1025d782c11cdb5e1d210155bf2d79ad0807116e286700e165566f29"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-self-binding-both-ends-to-the-4",
+      "text": "binding for simple arrows > self-binding (both ends to the same element) single-click finalize > inside -> inside stays in multi-point mode when the pointer moves on",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > self-binding (both ends to the same element) single-click finalize > inside -> inside stays in multi-point mode when the pointer moves on",
+          "startLine": 252,
+          "endLine": 261,
+          "contentHash": "sha256:0bfe263385a139065f500197be768c80348c53ff782c79e8de1615296016011d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-self-binding-both-ends-to-the-5",
+      "text": "binding for simple arrows > self-binding (both ends to the same element) single-click finalize > bend point inside a shape the arrow doesn't start on stays in multi-point mode when the pointer moves on",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > self-binding (both ends to the same element) single-click finalize > bend point inside a shape the arrow doesn't start on stays in multi-point mode when the pointer moves on",
+          "startLine": 263,
+          "endLine": 274,
+          "contentHash": "sha256:f320cfd4b5f3a22f233e7f4e516713fe949d8d266dc1f70beeefd7c1880edc79"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-binding-to-frames-doesn-t-bind",
+      "text": "binding for simple arrows > binding to frames > doesn't bind an arrow ending in the frame's empty interior",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > binding to frames > doesn't bind an arrow ending in the frame's empty interior",
+          "startLine": 315,
+          "endLine": 319,
+          "contentHash": "sha256:345d5d0fa439c6d7bd71aa156dcc322c690a0e3a1b5c1342dec653a09a7be9e6"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-binding-to-frames-binds-an-arr",
+      "text": "binding for simple arrows > binding to frames > binds an arrow ending on a frame child to the child",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > binding to frames > binds an arrow ending on a frame child to the child",
+          "startLine": 321,
+          "endLine": 325,
+          "contentHash": "sha256:4836f586f03c3fdd808f700c933fc735f90451ff766ca49c96bd71345115032a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-binding-to-frames-binds-an-arr-2",
+      "text": "binding for simple arrows > binding to frames > binds an arrow ending just outside the frame to the frame",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > binding to frames > binds an arrow ending just outside the frame to the frame",
+          "startLine": 327,
+          "endLine": 332,
+          "contentHash": "sha256:1570728e5b5ad2571e308db9392307f9f0b44f87718c95333621d24295df435f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-binding-to-frames-keeps-an-elb",
+      "text": "binding for simple arrows > binding to frames > keeps an elbow arrow drawn inside the frame where it was drawn",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > binding to frames > keeps an elbow arrow drawn inside the frame where it was drawn",
+          "startLine": 334,
+          "endLine": 352,
+          "contentHash": "sha256:4cb97c168f0dc16f9caec7a695295ee1e05849ab33a7480cfc7608aa3bb9d9f0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-binding-at-an-ellipse-s-center",
+      "text": "binding for simple arrows > binding at an ellipse's center > binds an arrow dropped at a circle's exact center",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > binding at an ellipse's center > binds an arrow dropped at a circle's exact center",
+          "startLine": 362,
+          "endLine": 381,
+          "contentHash": "sha256:eb3312eae2e1a4874e0e44db032d61ad55b05848af068605ad71bf094ff0c182"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-midpoint-snapping-on-diamonds",
+      "text": "binding for simple arrows > midpoint snapping on diamonds > ${ elbowed ? \"elbow\" : \"simple\" } arrow ends a binding gap outside the ${ rounded ? \"rounded\" : \"sharp\" } left vertex",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > midpoint snapping on diamonds > ${ elbowed ? \"elbow\" : \"simple\" } arrow ends a binding gap outside the ${ rounded ? \"rounded\" : \"sharp\" } left vertex",
+          "startLine": 393,
+          "endLine": 431,
+          "contentHash": "sha256:10fc51a61bbcf4e7a547867a23fddc2b4ce022f34c46c41d739b942c4e2ae868"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawBindableElement",
+          "startLine": 293,
+          "endLine": 303,
+          "excerpt": "type ExcalidrawBindableElement = | ExcalidrawRectangleElement | ExcalidrawStickyNoteElement | ExcalidrawDiamondElement | ExcalidrawEllipseElement | ExcalidrawTextElement | ExcalidrawImageElement | ExcalidrawIframeElement | Excalidra…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/utils.ts",
+          "symbol": "getAllMidpoints",
+          "startLine": 743,
+          "endLine": 767,
+          "excerpt": "const getAllMidpoints(element: ExcalidrawBindableElement, elementsMap: ElementsMap): GlobalPoint[]"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-midpoint-snapping-on-diamonds-2",
+      "text": "binding for simple arrows > midpoint snapping on diamonds > elbow arrow binds above the ${ rounded ? \"rounded\" : \"sharp\" } top vertex when the pointer is slightly inside",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > midpoint snapping on diamonds > elbow arrow binds above the ${ rounded ? \"rounded\" : \"sharp\" } top vertex when the pointer is slightly inside",
+          "startLine": 434,
+          "endLine": 468,
+          "contentHash": "sha256:89bd6436853c132ce3c630ce3eaa639f62661a67b9e1414a8fd6d44d02fade03"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawBindableElement",
+          "startLine": 293,
+          "endLine": 303,
+          "excerpt": "type ExcalidrawBindableElement = | ExcalidrawRectangleElement | ExcalidrawStickyNoteElement | ExcalidrawDiamondElement | ExcalidrawEllipseElement | ExcalidrawTextElement | ExcalidrawImageElement | ExcalidrawIframeElement | Excalidra…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/utils.ts",
+          "symbol": "getAllMidpoints",
+          "startLine": 743,
+          "endLine": 767,
+          "excerpt": "const getAllMidpoints(element: ExcalidrawBindableElement, elementsMap: ElementsMap): GlobalPoint[]"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-midpoint-snapping-on-diamonds-3",
+      "text": "binding for simple arrows > midpoint snapping on diamonds > elbow arrow binds next to the tip of a thin rotated diamond",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > midpoint snapping on diamonds > elbow arrow binds next to the tip of a thin rotated diamond",
+          "startLine": 471,
+          "endLine": 501,
+          "contentHash": "sha256:8634b966caa280d0593057d4d74ab7545addb4a93965dd68fe22505547a6290b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawBindableElement",
+          "startLine": 293,
+          "endLine": 303,
+          "excerpt": "type ExcalidrawBindableElement = | ExcalidrawRectangleElement | ExcalidrawStickyNoteElement | ExcalidrawDiamondElement | ExcalidrawEllipseElement | ExcalidrawTextElement | ExcalidrawImageElement | ExcalidrawIframeElement | Excalidra…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/utils.ts",
+          "symbol": "getAllMidpoints",
+          "startLine": 743,
+          "endLine": 767,
+          "excerpt": "const getAllMidpoints(element: ExcalidrawBindableElement, elementsMap: ElementsMap): GlobalPoint[]"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-midpoint-snapping-on-diamonds-4",
+      "text": "binding for simple arrows > midpoint snapping on diamonds > elbow arrow snaps to a diamond's edge midpoint",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > midpoint snapping on diamonds > elbow arrow snaps to a diamond's edge midpoint",
+          "startLine": 503,
+          "endLine": 529,
+          "contentHash": "sha256:16c1ba91cd3d5585069ba10c16d35c9f484237a9be21d9e4d96335f2f2a847eb"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawBindableElement",
+          "startLine": 293,
+          "endLine": 303,
+          "excerpt": "type ExcalidrawBindableElement = | ExcalidrawRectangleElement | ExcalidrawStickyNoteElement | ExcalidrawDiamondElement | ExcalidrawEllipseElement | ExcalidrawTextElement | ExcalidrawImageElement | ExcalidrawIframeElement | Excalidra…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-when-arrow-is-outside-of-shape",
+      "text": "binding for simple arrows > when arrow is outside of shape > should handle new arrow start point binding",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > when arrow is outside of shape > should handle new arrow start point binding",
+          "startLine": 542,
+          "endLine": 563,
+          "contentHash": "sha256:fa7e7028ac9a5b5112ae06c1778ddfae2dffd8da4d5671a5e059a6c25ed24239"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-when-arrow-is-outside-of-shape-2",
+      "text": "binding for simple arrows > when arrow is outside of shape > should handle new arrow end point binding",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > when arrow is outside of shape > should handle new arrow end point binding",
+          "startLine": 565,
+          "endLine": 586,
+          "contentHash": "sha256:0a64951e5fa38f6875e2e07a0c64940031f7db25370fff764b20dd415d9583b2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-additional-binding-behavior-ed",
+      "text": "binding for simple arrows > additional binding behavior > \"editing arrow and moving its head to bind it to element A, finalizing the\" + \"editing by clicking on element A should …",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > additional binding behavior > \"editing arrow and moving its head to bind it to element A, finalizing the\" + \"editing by clicking on element A should …",
+          "startLine": 675,
+          "endLine": 714,
+          "contentHash": "sha256:552d86da86c4521fbc4f93424c306a05a861eeba755612f9a52401229a7ab7fd"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-additional-binding-behavior-sh",
+      "text": "binding for simple arrows > additional binding behavior > should unbind on bound element deletion",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > additional binding behavior > should unbind on bound element deletion",
+          "startLine": 716,
+          "endLine": 735,
+          "contentHash": "sha256:cda52125f7f33452789d0c578a20a48eb7b5f60c7cdfe2a281984be52fdcbdd0"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-additional-binding-behavior-sh-2",
+      "text": "binding for simple arrows > additional binding behavior > should unbind arrow when arrow is resized",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > additional binding behavior > should unbind arrow when arrow is resized",
+          "startLine": 737,
+          "endLine": 782,
+          "contentHash": "sha256:28a0dfeec3d051af22ca67b882e961f4c10d53f5c09339400717b1a42cf8cc08"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transformHandles.ts",
+          "symbol": "getTransformHandles",
+          "startLine": 272,
+          "endLine": 326,
+          "excerpt": "const getTransformHandles(element: ExcalidrawElement, zoom: Zoom, elementsMap: ElementsMap, pointerType?: PointerType, omitSides?: { [T in TransformHandleType]?: boolean }): TransformHandles"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-additional-binding-behavior-sh-3",
+      "text": "binding for simple arrows > additional binding behavior > should unbind arrow when arrow is rotated",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > additional binding behavior > should unbind arrow when arrow is rotated",
+          "startLine": 784,
+          "endLine": 828,
+          "contentHash": "sha256:ed9b2a2193f6deb77003f2e622d8c7666003ea57af997fd17f30a19d38a80ac2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/transformHandles.ts",
+          "symbol": "getTransformHandles",
+          "startLine": 272,
+          "endLine": 326,
+          "excerpt": "const getTransformHandles(element: ExcalidrawElement, zoom: Zoom, elementsMap: ElementsMap, pointerType?: PointerType, omitSides?: { [T in TransformHandleType]?: boolean }): TransformHandles"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-additional-binding-behavior-sh-4",
+      "text": "binding for simple arrows > additional binding behavior > should not unbind when duplicating via selection group",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > additional binding behavior > should not unbind when duplicating via selection group",
+          "startLine": 830,
+          "endLine": 874,
+          "contentHash": "sha256:5ad5fdac1ab8dbdfd0573cde54be916409269d9b8f29fb529385acbbff6b27e3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "isLinearElement",
+          "startLine": 441,
+          "endLine": 441
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-to-text-elements-should-update",
+      "text": "binding for simple arrows > to text elements > should update binding when text containerized",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > to text elements > should update binding when text containerized",
+          "startLine": 887,
+          "endLine": 978,
+          "contentHash": "sha256:be66eafc951749156839c8079e462a6bd1d1dd7b4e0fa4e4731a43f0635b0950"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionBoundText.tsx",
+          "symbol": "actionWrapTextInContainer",
+          "startLine": 317,
+          "endLine": 340,
+          "excerpt": "const actionWrapTextInContainer"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-for-simple-arrows-to-text-elements-should-keep-b",
+      "text": "binding for simple arrows > to text elements > should keep binding on text update",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/binding.test.tsx",
+          "testTitle": "binding for simple arrows > to text elements > should keep binding on text update",
+          "startLine": 980,
+          "endLine": 1015,
+          "contentHash": "sha256:28efba90c77f3c52ce3f636ca502b5b43123d627988f1e07f28495bafda4551a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/binding.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/tests/binding.test.tsx",
+  "generator": "tests",
+  "notes": "1 skipped, todo, or non-asserting test(s) were not turned into statements. 3 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:a9d21ada8904b41c99e6b39ccf02d7e33f326e3db205a55410de4fc00a4a6ad1"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:a9d21ada8904b41c99e6b39ccf02d7e33f326e3db205a55410de4fc00a4a6ad1"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:a9d21ada8904b41c99e6b39ccf02d7e33f326e3db205a55410de4fc00a4a6ad1"
+    }
+  ]
+}

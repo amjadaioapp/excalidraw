@@ -1,0 +1,603 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.components.ttddialog.utils.mermaid-auto-fix",
+  "revision": 1,
+  "title": "getMermaidAutoFixCandidates: behavior verified by packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+  "description": "Existing behavior covered by 19 asserting test(s) in packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts, exercising packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts.",
+  "category": "security",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+      "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+        "name": "getMermaidAutoFixCandidates"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "get-mermaid-auto-fix-candidates-suggests-removing-traili",
+      "text": "getMermaidAutoFixCandidates > suggests removing trailing token after a closed label shape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > suggests removing trailing token after a closed label shape",
+          "startLine": 6,
+          "endLine": 21,
+          "contentHash": "sha256:016646b04e09c1ae2cd3600dddf4ac58a182abaf7ea6a66590d6d7cdddd7942a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-suggests-appending-missi",
+      "text": "getMermaidAutoFixCandidates > suggests appending missing end statements",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > suggests appending missing end statements",
+          "startLine": 23,
+          "endLine": 39,
+          "contentHash": "sha256:1fe9a55849002393fbcc5bbef50b6b6729e9573f574c0fe38158f2636701262e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-returns-empty-list-for-n",
+      "text": "getMermaidAutoFixCandidates > returns empty list for non-parse errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > returns empty list for non-parse errors",
+          "startLine": 41,
+          "endLine": 45,
+          "contentHash": "sha256:2f579c86f64a5b81b1bc983ac34d4ffe9d11a541615a30afd73c96c1f55f092b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-extracts-line-index-from",
+      "text": "getMermaidAutoFixCandidates > extracts line index from lexical error format too",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > extracts line index from lexical error format too",
+          "startLine": 47,
+          "endLine": 61,
+          "contentHash": "sha256:3fea6dfa509547d1b676612dea101a521ef054004bf31238e9a6c35e191bb81c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-removes-extra-after-edge",
+      "text": "getMermaidAutoFixCandidates > removes extra > after edge label",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > removes extra > after edge label",
+          "startLine": 63,
+          "endLine": 78,
+          "contentHash": "sha256:eea0b4276dc815c1ef4fbb66d6aac62a8bfa5aabce29fc76622cea92bdb8790b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-suggests-removing-the-la",
+      "text": "getMermaidAutoFixCandidates > suggests removing the last invalid deactivate for participant errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > suggests removing the last invalid deactivate for participant errors",
+          "startLine": 80,
+          "endLine": 99,
+          "contentHash": "sha256:fa0214c1e4e612fbfd87e61e48eeb9cf49111e73e83232d1e0c225996d65398f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-adds-a-fallback-candidat",
+      "text": "getMermaidAutoFixCandidates > adds a fallback candidate that removes all invalid deactivations",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > adds a fallback candidate that removes all invalid deactivations",
+          "startLine": 101,
+          "endLine": 115,
+          "contentHash": "sha256:b541eea0c45c97958412dfd5ac08ac032f308bdee63b5674e64a0f100a6bf192"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-quotes-node-labels-with",
+      "text": "getMermaidAutoFixCandidates > quotes node labels with brackets or parentheses in them",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > quotes node labels with brackets or parentheses in them",
+          "startLine": 117,
+          "endLine": 132,
+          "contentHash": "sha256:40bb17007ecf871c016b1346c16dc1a03a0b950551e6cf401351b55e9c8555aa"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-closes-a-node-label-left",
+      "text": "getMermaidAutoFixCandidates > closes a node label left open, before the edge after it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > closes a node label left open, before the edge after it",
+          "startLine": 134,
+          "endLine": 160,
+          "contentHash": "sha256:643db7934d277a399f0a3906c72b593ccd12336147be95d326c4b3fe9868378a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-drops-closing-brackets-t",
+      "text": "getMermaidAutoFixCandidates > drops closing brackets that close nothing",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > drops closing brackets that close nothing",
+          "startLine": 162,
+          "endLine": 169,
+          "contentHash": "sha256:d32a79a9619841997c3021911d1e22d75dfc7a283dbabd1a46a784be1210cad6"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-turns-flowchart-and-stat",
+      "text": "getMermaidAutoFixCandidates > turns flowchart and state diagram `->` into `-->`, outside labels",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > turns flowchart and state diagram `->` into `-->`, outside labels",
+          "startLine": 171,
+          "endLine": 189,
+          "contentHash": "sha256:68bf7b219efa43e757711485a03364b73159e0dd8f76ca7c7920969703f24050"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-renames-end-used-as-a-fl",
+      "text": "getMermaidAutoFixCandidates > renames `end` used as a flowchart node",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > renames `end` used as a flowchart node",
+          "startLine": 191,
+          "endLine": 210,
+          "contentHash": "sha256:5691ee340a28484a6e8bc72f340fb89be8c23b8bc896098c9ce5e64b5d454fab"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-closes-unclosed-blocks-w",
+      "text": "getMermaidAutoFixCandidates > closes unclosed blocks where their indentation ends",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > closes unclosed blocks where their indentation ends",
+          "startLine": 212,
+          "endLine": 230,
+          "contentHash": "sha256:d99703295830abe2a16f109cde96733cc876d6444acf71bbe7729c7d54774a48"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-appends-the-end-s-of-unc",
+      "text": "getMermaidAutoFixCandidates > appends the `end`s of unclosed sequence blocks",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > appends the `end`s of unclosed sequence blocks",
+          "startLine": 232,
+          "endLine": 246,
+          "contentHash": "sha256:b2ef6f3027988552427a6f89d14d87e56b2d6b946a49bb5ec355227cc197e47b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-adds-the-colon-missing-b",
+      "text": "getMermaidAutoFixCandidates > adds the colon missing before a message or relationship label",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > adds the colon missing before a message or relationship label",
+          "startLine": 248,
+          "endLine": 261,
+          "contentHash": "sha256:6320ce32be043aeecd43fb531017361507a5ca6fedd410e056da612a2c221b07"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-fixes-an-invalid-flowcha",
+      "text": "getMermaidAutoFixCandidates > fixes an invalid flowchart direction",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > fixes an invalid flowchart direction",
+          "startLine": 263,
+          "endLine": 270,
+          "contentHash": "sha256:84ccfd9a09b294faa0a8bc92c9c52a0f72e59df8b5a8cdca8c5a2c8f68fad587"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-fixes-flowchart-subgraph",
+      "text": "getMermaidAutoFixCandidates > fixes flowchart subgraphs' directions, and drops sequence diagrams' ones",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > fixes flowchart subgraphs' directions, and drops sequence diagrams' ones",
+          "startLine": 272,
+          "endLine": 308,
+          "contentHash": "sha256:baaf4ea53027bbebb4bb85704e083e11bb6f901dfefb08bd8e9e6869a071380e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-moves-a-direction-off-th",
+      "text": "getMermaidAutoFixCandidates > moves a direction off the first line of class, state and ER diagrams",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > moves a direction off the first line of class, state and ER diagrams",
+          "startLine": 310,
+          "endLine": 346,
+          "contentHash": "sha256:bf4fdea95c285e78ee0ec78aaf465cc7137f896f71d7799b32fef7628cf18618"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-auto-fix-candidates-fixes-a-misspelled-or-mi",
+      "text": "getMermaidAutoFixCandidates > fixes a misspelled or missing diagram type",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+          "testTitle": "getMermaidAutoFixCandidates > fixes a misspelled or missing diagram type",
+          "startLine": 348,
+          "endLine": 367,
+          "contentHash": "sha256:2bad77ca8f60bd4dc138047f2fdc9397d61f8d8bb91df613a0e58ff8b0de504e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts",
+          "symbol": "getMermaidAutoFixCandidates",
+          "startLine": 507,
+          "endLine": 625,
+          "excerpt": "const getMermaidAutoFixCandidates(sourceText: string, errorMessage: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts",
+  "generator": "tests",
+  "notes": "Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:ba8fcf965dbca7b80845c5b08e2adc70b4f37048ae5d82f17c93d64907241707"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:ba8fcf965dbca7b80845c5b08e2adc70b4f37048ae5d82f17c93d64907241707"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:ba8fcf965dbca7b80845c5b08e2adc70b4f37048ae5d82f17c93d64907241707"
+    }
+  ]
+}

@@ -1,0 +1,777 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.components.ttddialog.utils.mermaid-validation",
+  "revision": 1,
+  "title": "isValidMermaidSyntax: behavior verified by packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts, exercising packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts.",
+  "category": "data-integrity",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+      "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+        "name": "isValidMermaidSyntax"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "is-valid-mermaid-syntax-empty-and-whitespace-content-sho",
+      "text": "isValidMermaidSyntax > empty and whitespace content > should return false for empty string",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > empty and whitespace content > should return false for empty string",
+          "startLine": 5,
+          "endLine": 7,
+          "contentHash": "sha256:a6383cd21808738e20b41365aca5329073ce7e1b93e338bc3b0a27d62889d5b4"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-empty-and-whitespace-content-sho-2",
+      "text": "isValidMermaidSyntax > empty and whitespace content > should return false for whitespace-only content",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > empty and whitespace content > should return false for whitespace-only content",
+          "startLine": 9,
+          "endLine": 13,
+          "contentHash": "sha256:d8b249e3f196e34dccdfc3fb848c34a7c3de3a4f9d8ec62ee0c2a53440b6dccc"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-balanced-brackets-braces-and-par",
+      "text": "isValidMermaidSyntax > balanced brackets, braces, and parentheses > should return true for content with balanced brackets",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > balanced brackets, braces, and parentheses > should return true for content with balanced brackets",
+          "startLine": 17,
+          "endLine": 21,
+          "contentHash": "sha256:b7b80ac89e94ebf8defe5075b0a10ff5038896917fa3571653dbdcb5bef94f90"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-balanced-brackets-braces-and-par-2",
+      "text": "isValidMermaidSyntax > balanced brackets, braces, and parentheses > should return true for content with balanced braces",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > balanced brackets, braces, and parentheses > should return true for content with balanced braces",
+          "startLine": 23,
+          "endLine": 26,
+          "contentHash": "sha256:a67f066b703bf0d49d9370004976f1b0c77f84ff5d0f76be9fca80fbdd6200f4"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-balanced-brackets-braces-and-par-3",
+      "text": "isValidMermaidSyntax > balanced brackets, braces, and parentheses > should return true for content with balanced parentheses",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > balanced brackets, braces, and parentheses > should return true for content with balanced parentheses",
+          "startLine": 28,
+          "endLine": 31,
+          "contentHash": "sha256:3c7643d06c66bf3e2357427a26dceda948c0e78ffc5ba6c9dfca1524ab430c50"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-balanced-brackets-braces-and-par-4",
+      "text": "isValidMermaidSyntax > balanced brackets, braces, and parentheses > should return true for content with multiple balanced delimiters",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > balanced brackets, braces, and parentheses > should return true for content with multiple balanced delimiters",
+          "startLine": 33,
+          "endLine": 40,
+          "contentHash": "sha256:f93216f622b3f532d04eefd7b519cf47b6e7d040688e4d29280ea0ad975cf50e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-unbalanced-brackets-should-retur",
+      "text": "isValidMermaidSyntax > unbalanced brackets > should return false for single unclosed bracket",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > unbalanced brackets > should return false for single unclosed bracket",
+          "startLine": 44,
+          "endLine": 47,
+          "contentHash": "sha256:cf8a56dde2098cd51d43954874620ce1c386e4bed33b80ffd12fc2fb885614e2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-unbalanced-brackets-should-retur-2",
+      "text": "isValidMermaidSyntax > unbalanced brackets > should return false for multiple unclosed brackets",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > unbalanced brackets > should return false for multiple unclosed brackets",
+          "startLine": 49,
+          "endLine": 52,
+          "contentHash": "sha256:c09cef25c1313f4bc1fd1b2fc16a81be2fb1dbc0679a9d5e6babb41a07bb5017"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-unbalanced-brackets-should-retur-3",
+      "text": "isValidMermaidSyntax > unbalanced brackets > should return false when closing brackets outnumber opening brackets",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > unbalanced brackets > should return false when closing brackets outnumber opening brackets",
+          "startLine": 54,
+          "endLine": 57,
+          "contentHash": "sha256:b28f85e7f48f9449f417b8d2419dd846f0b4cbf87b7deb625f03b628a8198002"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-unbalanced-braces-should-return",
+      "text": "isValidMermaidSyntax > unbalanced braces > should return false for single unclosed brace",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > unbalanced braces > should return false for single unclosed brace",
+          "startLine": 61,
+          "endLine": 64,
+          "contentHash": "sha256:ab16b9f6f80fe3166972cdb0d59def04bac7be5e9d10f080a1b1ece03923ca1f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-unbalanced-braces-should-return-2",
+      "text": "isValidMermaidSyntax > unbalanced braces > should return false for multiple unclosed braces",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > unbalanced braces > should return false for multiple unclosed braces",
+          "startLine": 66,
+          "endLine": 69,
+          "contentHash": "sha256:e83b8f876e11f8bf9f696086ab4c94cf27179a88cedbac3275b4d4a18ea7b286"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-unbalanced-braces-should-return-3",
+      "text": "isValidMermaidSyntax > unbalanced braces > should return false when closing braces outnumber opening braces",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > unbalanced braces > should return false when closing braces outnumber opening braces",
+          "startLine": 71,
+          "endLine": 74,
+          "contentHash": "sha256:1814b5a8cd6fe8767f48f4d89c3836f0716604b2c9d62d7e5637ff178f7fd954"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-unbalanced-parentheses-should-re",
+      "text": "isValidMermaidSyntax > unbalanced parentheses > should return false for single unclosed parenthesis",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > unbalanced parentheses > should return false for single unclosed parenthesis",
+          "startLine": 78,
+          "endLine": 81,
+          "contentHash": "sha256:c8599de2a751748a5143fcc9740b985d8b9d07c5de1d84c8f151e04480489e99"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-unbalanced-parentheses-should-re-2",
+      "text": "isValidMermaidSyntax > unbalanced parentheses > should return false for multiple unclosed parentheses",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > unbalanced parentheses > should return false for multiple unclosed parentheses",
+          "startLine": 83,
+          "endLine": 86,
+          "contentHash": "sha256:119510501ed7671bd16c9358d0a4bb5bcfe8a276297f486735c61b66212ba2af"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-unbalanced-parentheses-should-re-3",
+      "text": "isValidMermaidSyntax > unbalanced parentheses > should return false when closing parentheses outnumber opening parentheses",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > unbalanced parentheses > should return false when closing parentheses outnumber opening parentheses",
+          "startLine": 88,
+          "endLine": 91,
+          "contentHash": "sha256:126f0c6e2859362d7ee2e0061f7797e5a884ed39ab09e6fcb3115ea13c412457"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-incomplete-patterns-at-end-of-li",
+      "text": "isValidMermaidSyntax > incomplete patterns at end of line > should return false for arrow patterns",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > incomplete patterns at end of line > should return false for arrow patterns",
+          "startLine": 95,
+          "endLine": 102,
+          "contentHash": "sha256:5243dfc565051e626ea2ad53d9fc49a2dac292acbfef64261709544427624464"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-incomplete-patterns-at-end-of-li-2",
+      "text": "isValidMermaidSyntax > incomplete patterns at end of line > should return false for colon patterns",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > incomplete patterns at end of line > should return false for colon patterns",
+          "startLine": 104,
+          "endLine": 107,
+          "contentHash": "sha256:7f0b107af1bc4d9593348804a051b3eb49920ed562a5971e8c733debc06e3b15"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-incomplete-patterns-at-end-of-li-3",
+      "text": "isValidMermaidSyntax > incomplete patterns at end of line > should return false for pipe and ampersand patterns",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > incomplete patterns at end of line > should return false for pipe and ampersand patterns",
+          "startLine": 109,
+          "endLine": 112,
+          "contentHash": "sha256:8478c5667942dabb00fcbcd98137a729fe6a912a5947f70bc1130f31de378800"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-incomplete-patterns-at-end-of-li-4",
+      "text": "isValidMermaidSyntax > incomplete patterns at end of line > should return true when incomplete patterns are not at the end",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > incomplete patterns at end of line > should return true when incomplete patterns are not at the end",
+          "startLine": 114,
+          "endLine": 120,
+          "contentHash": "sha256:0dc22f96fc89e8d85097ff2e1458272f5d2f25ea26ecc73ddca4c0c8eacad750"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-incomplete-patterns-at-end-of-li-5",
+      "text": "isValidMermaidSyntax > incomplete patterns at end of line > should only check the last line for incomplete patterns",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > incomplete patterns at end of line > should only check the last line for incomplete patterns",
+          "startLine": 122,
+          "endLine": 125,
+          "contentHash": "sha256:16286479f2d2e4ca08e1ee5e5e362851bfdfaf029c9fc0098f04e198bce3eae2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-complex-real-world-scenarios-sho",
+      "text": "isValidMermaidSyntax > complex real-world scenarios > should return true for valid flowchart",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > complex real-world scenarios > should return true for valid flowchart",
+          "startLine": 129,
+          "endLine": 135,
+          "contentHash": "sha256:5fe34a0ed67f23ea2d232e6dff054ff8b7a02e7475e59772a6cbadd99a447515"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-complex-real-world-scenarios-sho-2",
+      "text": "isValidMermaidSyntax > complex real-world scenarios > should return true for valid sequence diagram",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > complex real-world scenarios > should return true for valid sequence diagram",
+          "startLine": 137,
+          "endLine": 142,
+          "contentHash": "sha256:a019395fadd70ba883f9a690b672a1fc257da27fffbc2df754f20a5ca3482314"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-complex-real-world-scenarios-sho-3",
+      "text": "isValidMermaidSyntax > complex real-world scenarios > should return false for incomplete flowchart (unclosed bracket)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > complex real-world scenarios > should return false for incomplete flowchart (unclosed bracket)",
+          "startLine": 144,
+          "endLine": 149,
+          "contentHash": "sha256:be6e3aea620cea11400a16fd0b2fe55d5f7777160dd66331e55e6fc3b6e9d89c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-complex-real-world-scenarios-sho-4",
+      "text": "isValidMermaidSyntax > complex real-world scenarios > should return false for flowchart with incomplete arrow at end",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > complex real-world scenarios > should return false for flowchart with incomplete arrow at end",
+          "startLine": 151,
+          "endLine": 156,
+          "contentHash": "sha256:1e59d31a08d7f723bd5eefa8b3704fffa1037b0eb0ca106030f27da76b128193"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-valid-mermaid-syntax-complex-real-world-scenarios-sho-5",
+      "text": "isValidMermaidSyntax > complex real-world scenarios > should return true for diagram with multiple node types",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+          "testTitle": "isValidMermaidSyntax > complex real-world scenarios > should return true for diagram with multiple node types",
+          "startLine": 158,
+          "endLine": 164,
+          "contentHash": "sha256:468d73da2af6662b06ddf38148acd85c2159c98914f272b42b267a367a765730"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts",
+          "symbol": "isValidMermaidSyntax",
+          "startLine": 1,
+          "endLine": 41,
+          "excerpt": "const isValidMermaidSyntax(content: string): boolean"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts",
+  "generator": "tests",
+  "notes": "6 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:dbf8df8c37a7c4a0cbcc2a6953120f2471a5053599ea0b9e0de6e56ebbc35d5f"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:dbf8df8c37a7c4a0cbcc2a6953120f2471a5053599ea0b9e0de6e56ebbc35d5f"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:dbf8df8c37a7c4a0cbcc2a6953120f2471a5053599ea0b9e0de6e56ebbc35d5f"
+    }
+  ]
+}

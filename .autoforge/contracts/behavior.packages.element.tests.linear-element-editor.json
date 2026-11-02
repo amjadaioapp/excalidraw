@@ -1,0 +1,669 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.tests.linear-element-editor",
+  "revision": 1,
+  "title": "Test Linear Elements: behavior verified by packages/element/tests/linearElementEditor.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/element/tests/linearElementEditor.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/textElement.ts, packages/element/src/types.ts, packages/element/src/utils.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/tests/linearElementEditor.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/textElement.ts",
+      "packages/element/src/types.ts",
+      "packages/element/src/utils.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/renderer/interactiveScene.ts",
+      "packages/excalidraw/renderer/staticScene.ts",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawLinearElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawArrowElement"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "test-linear-elements-should-normalize-the-element-points",
+      "text": "Test Linear Elements > should normalize the element points at creation",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should normalize the element points at creation",
+          "startLine": 174,
+          "endLine": 190,
+          "contentHash": "sha256:8fcda6c9444bc7ec7498a246dc1988d5959ccae56281593d5328d8a997ec1d03"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-not-drag-line-and-add-midpoi",
+      "text": "Test Linear Elements > should not drag line and add midpoint until dragged beyond a threshold",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should not drag line and add midpoint until dragged beyond a threshold",
+          "startLine": 192,
+          "endLine": 212,
+          "contentHash": "sha256:b1bd97d0d38f8ac8d4b60193a062a73698bb0b7b9c4607a85947612f16a8378f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-allow-dragging-line-from-mid",
+      "text": "Test Linear Elements > should allow dragging line from midpoint in 2 pointer lines outside editor",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should allow dragging line from midpoint in 2 pointer lines outside editor",
+          "startLine": 214,
+          "endLine": 245,
+          "contentHash": "sha256:22d62f214eb5fe11db6c007caa3f42c8b4838f7d59865ffc3930f2401973a95a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-hide-the-bounding-box-while",
+      "text": "Test Linear Elements > should hide the bounding box while creating or dragging a point",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should hide the bounding box while creating or dragging a point",
+          "startLine": 247,
+          "endLine": 292,
+          "contentHash": "sha256:6eee8412588facc419d0a7ee8ae756fdeecdfb534423aeea507a413af002937d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-allow-entering-and-exiting-l",
+      "text": "Test Linear Elements > should allow entering and exiting line editor via context menu",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should allow entering and exiting line editor via context menu",
+          "startLine": 294,
+          "endLine": 312,
+          "contentHash": "sha256:34e9fe9c5239aa384b3d648da3c96319d2d417d0f741e47f4822242c03017506"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-allow-editing-an-arrow-from",
+      "text": "Test Linear Elements > should allow editing an arrow from the context menu when its bound text appears earlier in the elements array",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should allow editing an arrow from the context menu when its bound text appears earlier in the elements array",
+          "startLine": 314,
+          "endLine": 352,
+          "contentHash": "sha256:2c9ad0484ceb0a45f7436b124045dc10f55d464629af1a07cd99ee83bf8534c5"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-enter-line-editor-via-enter",
+      "text": "Test Linear Elements > should enter line editor via enter (line)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should enter line editor via enter (line)",
+          "startLine": 354,
+          "endLine": 362,
+          "contentHash": "sha256:ad5c2e3fc5de8e35cfcd0e2b1ecb2bdef016ce1b6a7835a4ee8acebb4d76d271"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-enter-line-editor-via-ctrl-e",
+      "text": "Test Linear Elements > should enter line editor via ctrl+enter (line)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should enter line editor via ctrl+enter (line)",
+          "startLine": 365,
+          "endLine": 375,
+          "contentHash": "sha256:cae127bc235021ed1ccdc6ba4b4469fe153d1cb1047521542163ef10abfd9227"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-enter-line-editor-via-ctrl-e-2",
+      "text": "Test Linear Elements > should enter line editor via ctrl+enter (arrow)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should enter line editor via ctrl+enter (arrow)",
+          "startLine": 377,
+          "endLine": 387,
+          "contentHash": "sha256:73e88bb58a73798f11896fb44e25561e2c7eeaa57ee1f7b40c807f1e3f27a519"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-enter-line-editor-on-ctrl-db",
+      "text": "Test Linear Elements > should enter line editor on ctrl+dblclick (simple arrow)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should enter line editor on ctrl+dblclick (simple arrow)",
+          "startLine": 389,
+          "endLine": 398,
+          "contentHash": "sha256:1d6f67c7536b8c107c5eb5c096371fe883b8a79a2973e2ed44f29752e3b4ead3"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-enter-line-editor-on-ctrl-db-2",
+      "text": "Test Linear Elements > should enter line editor on ctrl+dblclick (line)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should enter line editor on ctrl+dblclick (line)",
+          "startLine": 400,
+          "endLine": 409,
+          "contentHash": "sha256:7e982676bdc03324218b3ecd0d4f725e0ca0f9d1beebdf1f4d7c2f8989a984eb"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-enter-line-editor-on-dblclic",
+      "text": "Test Linear Elements > should enter line editor on dblclick (line)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should enter line editor on dblclick (line)",
+          "startLine": 411,
+          "endLine": 418,
+          "contentHash": "sha256:7cd6b677882b60d75537b2a56667d3eb7ec6c39e6dce126a9bcb5e16c0e21b2b"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-not-enter-line-editor-on-dbl",
+      "text": "Test Linear Elements > should not enter line editor on dblclick (arrow)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should not enter line editor on dblclick (arrow)",
+          "startLine": 420,
+          "endLine": 427,
+          "contentHash": "sha256:bcc5aab72ed65fe4ec4b38a4b2fa757f5029cf57d4d5daf21184131140de2af4"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-updates-the-hovered-handles-togethe",
+      "text": "Test Linear Elements > updates the hovered handles together (midpoint, then endpoint)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > updates the hovered handles together (midpoint, then endpoint)",
+          "startLine": 429,
+          "endLine": 441,
+          "contentHash": "sha256:5778ea8d5c4be0a9be313e6341ab707cfefbffac57d4f1d36adde6b4c6024fcf"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-doesn-t-highlight-the-arrow-s-midpo",
+      "text": "Test Linear Elements > doesn't highlight the arrow's midpoint while its label is edited",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > doesn't highlight the arrow's midpoint while its label is edited",
+          "startLine": 443,
+          "endLine": 461,
+          "contentHash": "sha256:3a5dba506466a7a199d42df9a9ccc7f82e11902bbd1621ea820563fa9d592d4b"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-should-not-toggle-the-s-arrowhead-f",
+      "text": "Test Linear Elements > should not toggle the %s arrowhead from %s on endpoint dblclick",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > should not toggle the %s arrowhead from %s on endpoint dblclick",
+          "startLine": 463,
+          "endLine": 496,
+          "contentHash": "sha256:503d74456e55c328998f7e6889a300e25a5d5538c9443255718205b00bfde391"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-shouldn-t-create-text-element-on-do",
+      "text": "Test Linear Elements > shouldn't create text element on double click in line editor (arrow)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > shouldn't create text element on double click in line editor (arrow)",
+          "startLine": 498,
+          "endLine": 512,
+          "contentHash": "sha256:f509545c2e592b6c78abac45ffa0e76f9385fee6fbaa45ddac85dfd762b16867"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-inside-editor-should-not-drag-line",
+      "text": "Test Linear Elements > Inside editor > should not drag line and add midpoint when dragged irrespective of threshold",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > Inside editor > should not drag line and add midpoint when dragged irrespective of threshold",
+          "startLine": 515,
+          "endLine": 532,
+          "contentHash": "sha256:fd9ecddfd9680af6d5e3ea632d96ea9bc124d33127a10cfdc50dc8d93d366577"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-inside-editor-should-allow-dragging",
+      "text": "Test Linear Elements > Inside editor > should allow dragging line from midpoint in 2 pointer lines",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > Inside editor > should allow dragging line from midpoint in 2 pointer lines",
+          "startLine": 534,
+          "endLine": 564,
+          "contentHash": "sha256:fae51126876408cbc9c7a995bc5512df9f86af1514d9ed41559579df7566b3f3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-inside-editor-should-update-the-mid",
+      "text": "Test Linear Elements > Inside editor > should update the midpoints when element roundness changed",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > Inside editor > should update the midpoints when element roundness changed",
+          "startLine": 566,
+          "endLine": 608,
+          "contentHash": "sha256:86404c3566262d1049df445b0b2cc5092f4d5fd0a8d2e3ffbe593df4e378b506"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-inside-editor-should-update-all-the",
+      "text": "Test Linear Elements > Inside editor > should update all the midpoints when element position changed",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > Inside editor > should update all the midpoints when element position changed",
+          "startLine": 610,
+          "endLine": 673,
+          "contentHash": "sha256:87aca1f2f47f212d54fb5d9a428af25ebd9032402d4508e102e0dc23f32d1f0f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-inside-editor-when-edges-are-round",
+      "text": "Test Linear Elements > Inside editor > When edges are round > should allow dragging lines from midpoints in between segments",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > Inside editor > When edges are round > should allow dragging lines from midpoints in between segments",
+          "startLine": 692,
+          "endLine": 744,
+          "contentHash": "sha256:70cc64892287ae11da074631866ec88394f261d7835cb5415e91b3cea0e19e6b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-inside-editor-when-edges-are-round-2",
+      "text": "Test Linear Elements > Inside editor > When edges are round > should update only the first segment midpoint when its point is dragged",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > Inside editor > When edges are round > should update only the first segment midpoint when its point is dragged",
+          "startLine": 746,
+          "endLine": 785,
+          "contentHash": "sha256:a0d3fcd3343e5ef1638197ece44e3c279b7978689defa80ec62b1fbd36ec72de"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-inside-editor-when-edges-are-round-3",
+      "text": "Test Linear Elements > Inside editor > When edges are round > should hide midpoints in the segment when points moved close",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > Inside editor > When edges are round > should hide midpoints in the segment when points moved close",
+          "startLine": 787,
+          "endLine": 826,
+          "contentHash": "sha256:360f2af7fa3bab0c8068a51d096371a3ffe1ef4d0b422ba5e46011d69488548d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "test-linear-elements-inside-editor-when-edges-are-round-4",
+      "text": "Test Linear Elements > Inside editor > When edges are round > should remove the midpoint when one of the points in the segment is deleted",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/linearElementEditor.test.tsx",
+          "testTitle": "Test Linear Elements > Inside editor > When edges are round > should remove the midpoint when one of the points in the segment is deleted",
+          "startLine": 828,
+          "endLine": 865,
+          "contentHash": "sha256:bb100740819b1626067ecc993d3cb4e87dd2c2086fb90074e7399e07f9cc80d6"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/linearElementEditor.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/tests/linearElementEditor.test.tsx",
+  "generator": "tests",
+  "notes": "1 skipped, todo, or non-asserting test(s) were not turned into statements. 31 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:34d56fa05c0c8de3e1a6785bb80d3cac7fe60b1d33c68ab8a1c93ca459f8e24d"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:34d56fa05c0c8de3e1a6785bb80d3cac7fe60b1d33c68ab8a1c93ca459f8e24d"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:34d56fa05c0c8de3e1a6785bb80d3cac7fe60b1d33c68ab8a1c93ca459f8e24d"
+    }
+  ]
+}

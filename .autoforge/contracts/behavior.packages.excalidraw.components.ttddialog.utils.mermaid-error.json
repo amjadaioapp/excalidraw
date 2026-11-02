@@ -1,0 +1,801 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.components.ttddialog.utils.mermaid-error",
+  "revision": 1,
+  "title": "Behavior verified by packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts, exercising packages/excalidraw/components/TTDDialog/utils/mermaidError.ts.",
+  "category": "error-handling",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+      "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+        "name": "formatMermaidParseErrorMessage"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+        "name": "isMermaidCaretLine"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+        "name": "isMermaidParseSyntaxError"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+        "name": "isMermaidAutoFixableError"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+        "name": "getMermaidInactiveParticipant"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+        "name": "getMermaidErrorLineNumber"
+      },
+      {
+        "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+        "name": "getMermaidSyntaxErrorGuidance"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "format-mermaid-parse-error-message-strips-the-noisy-expe",
+      "text": "formatMermaidParseErrorMessage > strips the noisy Expecting clause from Mermaid parse errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "formatMermaidParseErrorMessage > strips the noisy Expecting clause from Mermaid parse errors",
+          "startLine": 15,
+          "endLine": 24,
+          "contentHash": "sha256:34104b2b65a6280c162b9d6b56cb81e3ab908bf406323c750416ad2cee272c58"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "formatMermaidParseErrorMessage",
+          "startLine": 396,
+          "endLine": 408,
+          "excerpt": "const formatMermaidParseErrorMessage(message: string, sourceText?: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "format-mermaid-parse-error-message-keeps-mermaid-parse-e",
+      "text": "formatMermaidParseErrorMessage > keeps Mermaid parse errors unchanged when no Expecting clause exists",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "formatMermaidParseErrorMessage > keeps Mermaid parse errors unchanged when no Expecting clause exists",
+          "startLine": 26,
+          "endLine": 32,
+          "contentHash": "sha256:1d5f20f20a8877e6ce1c595ade593c024a1e73e50638305a7e66d8d9a47f7fd6"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "formatMermaidParseErrorMessage",
+          "startLine": 396,
+          "endLine": 408,
+          "excerpt": "const formatMermaidParseErrorMessage(message: string, sourceText?: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "format-mermaid-parse-error-message-reports-the-error-on",
+      "text": "formatMermaidParseErrorMessage > reports the error on its source line, given the source",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "formatMermaidParseErrorMessage > reports the error on its source line, given the source",
+          "startLine": 34,
+          "endLine": 46,
+          "contentHash": "sha256:b189708b536c30553674d59211302fe26a1c41d45d0cb2e230ad839fa06bde9f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "formatMermaidParseErrorMessage",
+          "startLine": 396,
+          "endLine": 408,
+          "excerpt": "const formatMermaidParseErrorMessage(message: string, sourceText?: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "format-mermaid-parse-error-message-does-not-modify-non-m",
+      "text": "formatMermaidParseErrorMessage > does not modify non-Mermaid parse messages",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "formatMermaidParseErrorMessage > does not modify non-Mermaid parse messages",
+          "startLine": 48,
+          "endLine": 53,
+          "contentHash": "sha256:8800d6c717435b4b5388739f9b1258410953d5dab212f4ac7c32e67032b56c0a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "formatMermaidParseErrorMessage",
+          "startLine": 396,
+          "endLine": 408,
+          "excerpt": "const formatMermaidParseErrorMessage(message: string, sourceText?: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-mermaid-caret-line-returns-true-for-mermaid-caret-lin",
+      "text": "isMermaidCaretLine > returns true for Mermaid caret lines",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "isMermaidCaretLine > returns true for Mermaid caret lines",
+          "startLine": 57,
+          "endLine": 59,
+          "contentHash": "sha256:0030a8e7a77266b3220bb468a9ac76ef76b607621bd87bb79da7ab67842e6bf3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "isMermaidCaretLine",
+          "startLine": 87,
+          "endLine": 88,
+          "excerpt": "const isMermaidCaretLine(line: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-mermaid-caret-line-returns-false-for-regular-lines",
+      "text": "isMermaidCaretLine > returns false for regular lines",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "isMermaidCaretLine > returns false for regular lines",
+          "startLine": 61,
+          "endLine": 63,
+          "contentHash": "sha256:4f27e1db0f2e0b9de5fa8e034dd2e6de4a799d07f453e65f261f18dffd6302f5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "isMermaidCaretLine",
+          "startLine": 87,
+          "endLine": 88,
+          "excerpt": "const isMermaidCaretLine(line: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-mermaid-parse-syntax-error-returns-true-for-mermaid-p",
+      "text": "isMermaidParseSyntaxError > returns true for Mermaid parser syntax errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "isMermaidParseSyntaxError > returns true for Mermaid parser syntax errors",
+          "startLine": 67,
+          "endLine": 69,
+          "contentHash": "sha256:a320289d6c1cf90ae932e3e0c428fc72eef2e721423e96dfcfb39aac9dfc7b4f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "isMermaidParseSyntaxError",
+          "startLine": 16,
+          "endLine": 17,
+          "excerpt": "const isMermaidParseSyntaxError(message: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-mermaid-parse-syntax-error-returns-true-for-mermaid-l",
+      "text": "isMermaidParseSyntaxError > returns true for Mermaid lexical syntax errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "isMermaidParseSyntaxError > returns true for Mermaid lexical syntax errors",
+          "startLine": 71,
+          "endLine": 75,
+          "contentHash": "sha256:13e2f498adff5dd6fb28f43ef87d7fc6de81b9126411bb6700944991417fbdf7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "isMermaidParseSyntaxError",
+          "startLine": 16,
+          "endLine": 17,
+          "excerpt": "const isMermaidParseSyntaxError(message: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-mermaid-parse-syntax-error-returns-false-for-non-pars",
+      "text": "isMermaidParseSyntaxError > returns false for non-parse errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "isMermaidParseSyntaxError > returns false for non-parse errors",
+          "startLine": 77,
+          "endLine": 79,
+          "contentHash": "sha256:96979704387ff2b582aba4e0ebd30913e7c8e2d33daf0b2a436720ef4bbe8f5a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "isMermaidParseSyntaxError",
+          "startLine": 16,
+          "endLine": 17,
+          "excerpt": "const isMermaidParseSyntaxError(message: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-mermaid-auto-fixable-error-returns-true-for-mermaid-p",
+      "text": "isMermaidAutoFixableError > returns true for Mermaid parser syntax errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "isMermaidAutoFixableError > returns true for Mermaid parser syntax errors",
+          "startLine": 83,
+          "endLine": 85,
+          "contentHash": "sha256:5bbb66742c0302c1e2e70cd96e9e8973bcc0d91a4ded5c2447d1ea7e83f41226"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "isMermaidAutoFixableError",
+          "startLine": 23,
+          "endLine": 26,
+          "excerpt": "const isMermaidAutoFixableError(message: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-mermaid-auto-fixable-error-returns-true-for-inactive",
+      "text": "isMermaidAutoFixableError > returns true for inactive participant runtime errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "isMermaidAutoFixableError > returns true for inactive participant runtime errors",
+          "startLine": 87,
+          "endLine": 93,
+          "contentHash": "sha256:d24f3dd6bbc7b9d264f69b6ff3fc1e25779031d53339aaabf266a8b895cd844a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "isMermaidAutoFixableError",
+          "startLine": 23,
+          "endLine": 26,
+          "excerpt": "const isMermaidAutoFixableError(message: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-mermaid-auto-fixable-error-returns-true-for-unknown-d",
+      "text": "isMermaidAutoFixableError > returns true for unknown diagram types",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "isMermaidAutoFixableError > returns true for unknown diagram types",
+          "startLine": 95,
+          "endLine": 99,
+          "contentHash": "sha256:f27d68ba9a87827b4c5d7065a69c4e416cf6f44c1365b0e0f343f0d3b4e1469f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "isMermaidAutoFixableError",
+          "startLine": 23,
+          "endLine": 26,
+          "excerpt": "const isMermaidAutoFixableError(message: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "is-mermaid-auto-fixable-error-returns-false-for-non-fixa",
+      "text": "isMermaidAutoFixableError > returns false for non-fixable errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "isMermaidAutoFixableError > returns false for non-fixable errors",
+          "startLine": 101,
+          "endLine": 103,
+          "contentHash": "sha256:43cf277dade94b7ee601d131edf844beef0ff672935371fc0571893fbffd8904"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "isMermaidAutoFixableError",
+          "startLine": 23,
+          "endLine": 26,
+          "excerpt": "const isMermaidAutoFixableError(message: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-inactive-participant-extracts-the-participan",
+      "text": "getMermaidInactiveParticipant > extracts the participant id from inactive participant errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidInactiveParticipant > extracts the participant id from inactive participant errors",
+          "startLine": 107,
+          "endLine": 113,
+          "contentHash": "sha256:f548162dca1def186ec7764f0394417a7541d859176dc9e2de98aaa03cc0796a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidInactiveParticipant",
+          "startLine": 90,
+          "endLine": 98,
+          "excerpt": "const getMermaidInactiveParticipant(message: string): string | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-inactive-participant-returns-null-for-unrela",
+      "text": "getMermaidInactiveParticipant > returns null for unrelated errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidInactiveParticipant > returns null for unrelated errors",
+          "startLine": 115,
+          "endLine": 119,
+          "contentHash": "sha256:88557648638bd9d0e4647e7aed78d97747a3c3138a8cd5622c4152f9432be406"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidInactiveParticipant",
+          "startLine": 90,
+          "endLine": 98,
+          "excerpt": "const getMermaidInactiveParticipant(message: string): string | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-error-line-number-reports-errors-after-the-l",
+      "text": "getMermaidErrorLineNumber > reports errors after the last line on the last line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidErrorLineNumber > reports errors after the last line on the last line",
+          "startLine": 123,
+          "endLine": 130,
+          "contentHash": "sha256:ced61eff8bfbab8d9a4559d74d59ea1747e02ce6bd9f43300d962697e2dfef26"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidErrorLineNumber",
+          "startLine": 124,
+          "endLine": 141,
+          "excerpt": "const getMermaidErrorLineNumber(message: string, sourceText?: string): number | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-error-line-number-maps-lines-as-mermaid-and",
+      "text": "getMermaidErrorLineNumber > maps lines as Mermaid and Pele number them to the source's",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidErrorLineNumber > maps lines as Mermaid and Pele number them to the source's",
+          "startLine": 132,
+          "endLine": 152,
+          "contentHash": "sha256:a5f76e90c96c70da39b98d10a2bbf8935441581564c9fd481e80ee63be2fddb9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidErrorLineNumber",
+          "startLine": 124,
+          "endLine": 141,
+          "excerpt": "const getMermaidErrorLineNumber(message: string, sourceText?: string): number | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-error-line-number-reports-unknown-diagram-ty",
+      "text": "getMermaidErrorLineNumber > reports unknown diagram types on the line declaring it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidErrorLineNumber > reports unknown diagram types on the line declaring it",
+          "startLine": 154,
+          "endLine": 161,
+          "contentHash": "sha256:d1bce3c6b7c9d988ec24707de4d4ef3bb661a80eb209a88f45c0716597d98bdf"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidErrorLineNumber",
+          "startLine": 124,
+          "endLine": 141,
+          "excerpt": "const getMermaidErrorLineNumber(message: string, sourceText?: string): number | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-error-line-number-extracts-line-number-from",
+      "text": "getMermaidErrorLineNumber > extracts line number from parse error format",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidErrorLineNumber > extracts line number from parse error format",
+          "startLine": 163,
+          "endLine": 165,
+          "contentHash": "sha256:24db49fe3bef4c24c31731561dc45f7a21dec292741d0453e3e19da298f7a82d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidErrorLineNumber",
+          "startLine": 124,
+          "endLine": 141,
+          "excerpt": "const getMermaidErrorLineNumber(message: string, sourceText?: string): number | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-error-line-number-extracts-line-number-from-2",
+      "text": "getMermaidErrorLineNumber > extracts line number from lexical error format",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidErrorLineNumber > extracts line number from lexical error format",
+          "startLine": 167,
+          "endLine": 171,
+          "contentHash": "sha256:2d24b242c8b168ecbbdea817fae44b478da251f02d1f5053b80e252aca099691"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidErrorLineNumber",
+          "startLine": 124,
+          "endLine": 141,
+          "excerpt": "const getMermaidErrorLineNumber(message: string, sourceText?: string): number | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-error-line-number-returns-null-for-messages",
+      "text": "getMermaidErrorLineNumber > returns null for messages without Mermaid line details",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidErrorLineNumber > returns null for messages without Mermaid line details",
+          "startLine": 173,
+          "endLine": 175,
+          "contentHash": "sha256:85cc2da739640854d74fadd4c22098bb07a02abfabd4f335fe4e51876d0ab0a1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidErrorLineNumber",
+          "startLine": 124,
+          "endLine": 141,
+          "excerpt": "const getMermaidErrorLineNumber(message: string, sourceText?: string): number | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-error-line-number-infers-line-from-inactive",
+      "text": "getMermaidErrorLineNumber > infers line from inactive participant errors when source text is provided",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidErrorLineNumber > infers line from inactive participant errors when source text is provided",
+          "startLine": 177,
+          "endLine": 190,
+          "contentHash": "sha256:a7c4c0cfac5a37ae5591c65544362e0e7a45ceb1e68013ffe34d3c6488198b45"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidErrorLineNumber",
+          "startLine": 124,
+          "endLine": 141,
+          "excerpt": "const getMermaidErrorLineNumber(message: string, sourceText?: string): number | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-syntax-error-guidance-returns-summary-and-li",
+      "text": "getMermaidSyntaxErrorGuidance > returns summary and likely causes for Mermaid parse errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidSyntaxErrorGuidance > returns summary and likely causes for Mermaid parse errors",
+          "startLine": 194,
+          "endLine": 212,
+          "contentHash": "sha256:60e3abb7840f27f48404c2060fd7852f9888ea2dc1aef32084c21f80d9bd3485"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidSyntaxErrorGuidance",
+          "startLine": 236,
+          "endLine": 378,
+          "excerpt": "const getMermaidSyntaxErrorGuidance(message: string, sourceText?: string): { summary: string; likelyCauses: string[] } | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-syntax-error-guidance-returns-null-for-non-p",
+      "text": "getMermaidSyntaxErrorGuidance > returns null for non-parse errors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidSyntaxErrorGuidance > returns null for non-parse errors",
+          "startLine": 214,
+          "endLine": 218,
+          "contentHash": "sha256:2bf49674ddcc7dbc92ae564c466d46cb4922ec97f6d4556bb60d65a445aa70f4"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidSyntaxErrorGuidance",
+          "startLine": 236,
+          "endLine": 378,
+          "excerpt": "const getMermaidSyntaxErrorGuidance(message: string, sourceText?: string): { summary: string; likelyCauses: string[] } | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "get-mermaid-syntax-error-guidance-names-the-block-a-brac",
+      "text": "getMermaidSyntaxErrorGuidance > names the block a brace is missing from by diagram type",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+          "testTitle": "getMermaidSyntaxErrorGuidance > names the block a brace is missing from by diagram type",
+          "startLine": 220,
+          "endLine": 242,
+          "contentHash": "sha256:82eb20bd7ab05e8d210dd8d0457b1894b68e33eb221d95b7fbe16ff0970a1596"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/TTDDialog/utils/mermaidError.ts",
+          "symbol": "getMermaidSyntaxErrorGuidance",
+          "startLine": 236,
+          "endLine": 378,
+          "excerpt": "const getMermaidSyntaxErrorGuidance(message: string, sourceText?: string): { summary: string; likelyCauses: string[] } | null"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts",
+  "generator": "tests",
+  "notes": "6 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:ddbeac85212af53c0d779450b2f2ee2ebe80f2cc446df20e30b0b4915e085092"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:ddbeac85212af53c0d779450b2f2ee2ebe80f2cc446df20e30b0b4915e085092"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:ddbeac85212af53c0d779450b2f2ee2ebe80f2cc446df20e30b0b4915e085092"
+    }
+  ]
+}

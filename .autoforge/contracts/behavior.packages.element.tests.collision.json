@@ -1,0 +1,828 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.tests.collision",
+  "revision": 1,
+  "title": "Behavior verified by packages/element/tests/collision.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/element/tests/collision.test.tsx, exercising packages/common/src/index.ts, packages/element/src/bounds.ts, packages/element/src/collision.ts, packages/element/src/distance.ts, packages/element/src/mutateElement.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/tests/collision.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/bounds.ts",
+      "packages/element/src/collision.ts",
+      "packages/element/src/distance.ts",
+      "packages/element/src/mutateElement.ts",
+      "packages/element/src/newElement.ts",
+      "packages/element/src/types.ts",
+      "packages/element/src/utils.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/types.ts",
+      "packages/math/src/index.ts",
+      "packages/utils/src/test-utils.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/collision.ts",
+        "name": "hitElementItself"
+      },
+      {
+        "path": "packages/element/src/newElement.ts",
+        "name": "newFreeDrawElement"
+      },
+      {
+        "path": "packages/element/src/collision.ts",
+        "name": "isPointInElement"
+      },
+      {
+        "path": "packages/element/src/mutateElement.ts",
+        "name": "mutateElement"
+      },
+      {
+        "path": "packages/element/src/bounds.ts",
+        "name": "getElementBounds"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "check-rotated-elements-can-be-hit-arrow",
+      "text": "check rotated elements can be hit: > arrow",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "check rotated elements can be hit: > arrow",
+          "startLine": 49,
+          "endLine": 69,
+          "contentHash": "sha256:bd31f1473385ef986770c4ee495f27b9d4191ffafd5bcb65e10ba059550fdb89"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "hit-element-itself-cache-reuses-cached-result-when-thres",
+      "text": "hitElementItself cache > reuses cached result when threshold increases",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "hitElementItself cache > reuses cached result when threshold increases",
+          "startLine": 94,
+          "endLine": 131,
+          "contentHash": "sha256:298004bcf1f0ee4060bddac9aed98666bc5606f4130eb858072264ef1a75403b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "hit-element-itself-cache-does-not-reuse-cache-when-thres",
+      "text": "hitElementItself cache > does not reuse cache when threshold decreases",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "hitElementItself cache > does not reuse cache when threshold decreases",
+          "startLine": 133,
+          "endLine": 169,
+          "contentHash": "sha256:cb7d92824d89b772626852ec10f06dc1f0712e639668a14749c69300b0d281ae"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "hit-element-itself-cache-invalidates-cache-when-element",
+      "text": "hitElementItself cache > invalidates cache when element version changes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "hitElementItself cache > invalidates cache when element version changes",
+          "startLine": 171,
+          "endLine": 213,
+          "contentHash": "sha256:82b9b3e1399bf59207e0fb1299d4593e3a12d1ca6247cfc68d8a27ea335930c5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "hit-element-itself-cache-override-does-not-affect-cachin",
+      "text": "hitElementItself cache > override does not affect caching",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "hitElementItself cache > override does not affect caching",
+          "startLine": 215,
+          "endLine": 249,
+          "contentHash": "sha256:e1fa541ef306c433f2bb6c1d0529499486cafc65b1cc5aa332985c90a2d4d56b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "hit-element-itself-cache-rechecks-a-bound-label-when-onl",
+      "text": "hitElementItself cache > rechecks a bound label when only its arrow changes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "hitElementItself cache > rechecks a bound label when only its arrow changes",
+          "startLine": 251,
+          "endLine": 293,
+          "contentHash": "sha256:f1992c28cad2a7c7f7fca07e41000dec87391f9ae5cb121e0df57083ff93a180"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-collision-matches-the-rendered-stroke-width-tre",
+      "text": "freedraw collision matches the rendered stroke width > treats a point on the centerline as a direct hit for both modes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw collision matches the rendered stroke width > treats a point on the centerline as a direct hit for both modes",
+          "startLine": 323,
+          "endLine": 326,
+          "contentHash": "sha256:56eccfebadb8c3ce9d7c5a8144aa56ed8fbc4966b8193de651edafa08e39eb46"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-collision-matches-the-rendered-stroke-width-hit",
+      "text": "freedraw collision matches the rendered stroke width > hits across the body of a thick stroke, not just near the centerline",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw collision matches the rendered stroke width > hits across the body of a thick stroke, not just near the centerline",
+          "startLine": 328,
+          "endLine": 330,
+          "contentHash": "sha256:e242d663cf730602161c6a0ecf79ee78139c3964beb4c86be3049e354cd7d2b8"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-collision-matches-the-rendered-stroke-width-use",
+      "text": "freedraw collision matches the rendered stroke width > uses a wider hit area for variable-width than for constant-width strokes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw collision matches the rendered stroke width > uses a wider hit area for variable-width than for constant-width strokes",
+          "startLine": 332,
+          "endLine": 340,
+          "contentHash": "sha256:feaeee6647eaa514a9066a425ea0643653f7152b0ab6c3bd6c835dbf6719df1f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-collision-matches-the-rendered-stroke-width-doe",
+      "text": "freedraw collision matches the rendered stroke width > does not hit points clearly outside even the widest stroke",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw collision matches the rendered stroke width > does not hit points clearly outside even the widest stroke",
+          "startLine": 342,
+          "endLine": 344,
+          "contentHash": "sha256:9112b1d16ebd37821d786c00c2a0a74c247d9bac2e8b96ed1ab2efee066a7e8b"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-collision-matches-the-rendered-stroke-width-hit-2",
+      "text": "freedraw collision matches the rendered stroke width > hits thick ink outside the centerline bounds",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw collision matches the rendered stroke width > hits thick ink outside the centerline bounds",
+          "startLine": 346,
+          "endLine": 365,
+          "contentHash": "sha256:dea01fe50a8fbfc9392f4fef7df22f8e48d64e58f1b019a7e0dec79a772b42e5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-collision-matches-the-rendered-stroke-width-hit-3",
+      "text": "freedraw collision matches the rendered stroke width > hits the start cap of a short stroke reaching past its stroke size",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw collision matches the rendered stroke width > hits the start cap of a short stroke reaching past its stroke size",
+          "startLine": 367,
+          "endLine": 392,
+          "contentHash": "sha256:e7204cf1beaa9723e39609ffffc97ffe62e80b88e6d587efae23c0462c01410b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/newElement.ts",
+          "symbol": "newFreeDrawElement",
+          "startLine": 602,
+          "endLine": 621,
+          "excerpt": "const newFreeDrawElement(opts: { type: \"freedraw\"; points?: ExcalidrawFreeDrawElement[\"points\"]; simulatePressure: boolean; strokeOptions?: ExcalidrawFreeDrawElement[\"strokeOptions\"]; pressures?: ExcalidrawFreeDrawElement[\"pressur…): NonDeleted<ExcalidrawFreeDrawElement>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "s-freedraw-loop-containment-hits-the-fill-independently",
+      "text": "%s freedraw loop containment > hits the fill independently of the stroke at angle %s",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "%s freedraw loop containment > hits the fill independently of the stroke at angle %s",
+          "startLine": 429,
+          "endLine": 452,
+          "contentHash": "sha256:a7fdc9faf9c559e2ecdefc0fdb7eacafc31d1c98751a3f4ca261d9636c04e247"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "s-freedraw-loop-containment-does-not-hit-the-interior-of",
+      "text": "%s freedraw loop containment > does not hit the interior of a transparent loop at angle %s",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "%s freedraw loop containment > does not hit the interior of a transparent loop at angle %s",
+          "startLine": 454,
+          "endLine": 475,
+          "contentHash": "sha256:cf52ce7487f10af8998db87d24549e96ae6766b90337581b22787fa794efe3dd"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "s-freedraw-loop-containment-does-not-treat-the-empty-cor",
+      "text": "%s freedraw loop containment > does not treat the empty corners of the loop bounds as fill",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "%s freedraw loop containment > does not treat the empty corners of the loop bounds as fill",
+          "startLine": 477,
+          "endLine": 486,
+          "contentHash": "sha256:82f609717ce4d74afa42dda2ccbab06dd7adb3f166e5071e8604f23115bd674b"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-loop-fill-containment-hits-the-center-and-axes",
+      "text": "freedraw loop fill containment > hits the center and axes of a loop with curve junctions at angle %s",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw loop fill containment > hits the center and axes of a loop with curve junctions at angle %s",
+          "startLine": 491,
+          "endLine": 512,
+          "contentHash": "sha256:c858f0c502318f59aad2ac3796741304fa4db18e971ff8953cfcc7e9a15f82d2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-loop-fill-containment-implicitly-closes-the-fil",
+      "text": "freedraw loop fill containment > implicitly closes the fill of an unsnapped loop at angle %s",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw loop fill containment > implicitly closes the fill of an unsnapped loop at angle %s",
+          "startLine": 514,
+          "endLine": 533,
+          "contentHash": "sha256:ad199e28be0508aa3cd6b30d0f397b233f64618b526f2b6abcc23647761fff15"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/mutateElement.ts",
+          "symbol": "mutateElement",
+          "startLine": 40,
+          "endLine": 147,
+          "excerpt": "const mutateElement<TElement extends Mutable<ExcalidrawElement>>(element: TElement, elementsMap: ElementsMap, updates: ElementUpdate<TElement>, options?: { isDragging?: boolean; isBindingEnabled?: boolean; isMidpointSnappingEnabled?: boolean; })"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-loop-fill-containment-rotates-around-the-unrota",
+      "text": "freedraw loop fill containment > rotates around the unrotated bounds center of an asymmetric loop",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw loop fill containment > rotates around the unrotated bounds center of an asymmetric loop",
+          "startLine": 535,
+          "endLine": 552,
+          "contentHash": "sha256:dc3302682fb5c67bc7c29417715f36dfb7637ab2f93ca8567b68e75c9f4bfcc3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-loop-fill-containment-hits-smoothed-fill-outsid",
+      "text": "freedraw loop fill containment > hits smoothed fill outside the rotated bounds of the points",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw loop fill containment > hits smoothed fill outside the rotated bounds of the points",
+          "startLine": 554,
+          "endLine": 580,
+          "contentHash": "sha256:5471806cfa45b6052b4de1849152d010cfc72ac7bb9c9bff1c73262f3590f2c5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/bounds.ts",
+          "symbol": "getElementBounds",
+          "startLine": 1252,
+          "endLine": 1258,
+          "excerpt": "const getElementBounds(element: ExcalidrawElement, elementsMap: ElementsMap, nonRotated?: boolean): Bounds"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "hitElementItself",
+          "startLine": 137,
+          "endLine": 230,
+          "excerpt": "const hitElementItself({ point, element, threshold, elementsMap, frameNameBound = null, overrideShould…: HitTestArgs)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-loop-fill-containment-contains-nothing-for-name",
+      "text": "freedraw loop fill containment > contains nothing for $name",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw loop fill containment > contains nothing for $name",
+          "startLine": 582,
+          "endLine": 607,
+          "contentHash": "sha256:b81a787139e4aa7802b5a602c7a507bd8e8f717c5652b6470542393b23c0f727"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-loop-fill-containment-preserves-the-curved-fill",
+      "text": "freedraw loop fill containment > preserves the curved fill of a nearly closed three-point path",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw loop fill containment > preserves the curved fill of a nearly closed three-point path",
+          "startLine": 609,
+          "endLine": 625,
+          "contentHash": "sha256:5cdf9edd9824ee4d51037f6157d3e1ca7d2da4f71afc4123b5fa27cc42d76ee5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-loop-fill-containment-includes-the-smoothed-fil",
+      "text": "freedraw loop fill containment > includes the smoothed fill beyond the raw-point polygon",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw loop fill containment > includes the smoothed fill beyond the raw-point polygon",
+          "startLine": 627,
+          "endLine": 645,
+          "contentHash": "sha256:e90c1facca7d31681e41a13df90b139ccfea159bf8ebaa643699daaeddb89d72"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-loop-fill-containment-uses-even-odd-fill-for-a",
+      "text": "freedraw loop fill containment > uses even-odd fill for a self-intersecting loop",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw loop fill containment > uses even-odd fill for a self-intersecting loop",
+          "startLine": 647,
+          "endLine": 665,
+          "contentHash": "sha256:b69ebf51b703acce340f4141a22a24a00dbc5167ca8b5d614cb67461ce8d5b7c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "freedraw-loop-fill-containment-invalidates-the-fill-cont",
+      "text": "freedraw loop fill containment > invalidates the fill contour when points change on the same element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "freedraw loop fill containment > invalidates the fill contour when points change on the same element",
+          "startLine": 667,
+          "endLine": 687,
+          "contentHash": "sha256:68db6b9cc38f930840392c0f25cf7d29be87823d5a607e598ced3aca64aa9d73"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/collision.ts",
+          "symbol": "isPointInElement",
+          "startLine": 853,
+          "endLine": 908,
+          "excerpt": "const isPointInElement(point: GlobalPoint, element: ExcalidrawElement, elementsMap: ElementsMap)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/mutateElement.ts",
+          "symbol": "mutateElement",
+          "startLine": 40,
+          "endLine": 147,
+          "excerpt": "const mutateElement<TElement extends Mutable<ExcalidrawElement>>(element: TElement, elementsMap: ElementsMap, updates: ElementUpdate<TElement>, options?: { isDragging?: boolean; isBindingEnabled?: boolean; isMidpointSnappingEnabled?: boolean; })"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-hit-tests-both-use-the-zoom-aware-binding-distan",
+      "text": "binding hit tests > both use the zoom-aware binding distance",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/collision.test.tsx",
+          "testTitle": "binding hit tests > both use the zoom-aware binding distance",
+          "startLine": 716,
+          "endLine": 735,
+          "contentHash": "sha256:de274ad1ad4ae94e0239c1394ab19f35838910a4a669b001be9883062f5031bc"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/collision.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/tests/collision.test.tsx",
+  "generator": "tests",
+  "notes": "7 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:e801af34c831554f94bbf65c2bd85203c5d2b78975f3935be33f7fa4cdb6212c"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:e801af34c831554f94bbf65c2bd85203c5d2b78975f3935be33f7fa4cdb6212c"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:e801af34c831554f94bbf65c2bd85203c5d2b78975f3935be33f7fa4cdb6212c"
+    }
+  ]
+}

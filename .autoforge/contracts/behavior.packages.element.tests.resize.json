@@ -1,0 +1,752 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.element.tests.resize",
+  "revision": 1,
+  "title": "Behavior verified by packages/element/tests/resize.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/element/tests/resize.test.tsx, exercising packages/common/src/index.ts, packages/element/src/bounds.ts, packages/element/src/distance.ts, packages/element/src/linearElementEditor.ts, packages/element/src/resizeElements.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/element/tests/resize.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/bounds.ts",
+      "packages/element/src/distance.ts",
+      "packages/element/src/linearElementEditor.ts",
+      "packages/element/src/resizeElements.ts",
+      "packages/element/src/textElement.ts",
+      "packages/element/src/transformHandles.ts",
+      "packages/element/src/typeChecks.ts",
+      "packages/element/src/types.ts",
+      "packages/element/src/utils.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/textElement.ts",
+        "name": "computeContainerDimensionForBoundText"
+      },
+      {
+        "path": "packages/element/src/resizeElements.ts",
+        "name": "resizeSingleElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "NonDeleted"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawLinearElement"
+      },
+      {
+        "path": "packages/element/src/utils.ts",
+        "name": "getLinearElementPathSegments"
+      },
+      {
+        "path": "packages/element/src/linearElementEditor.ts",
+        "name": "LinearElementEditor"
+      },
+      {
+        "path": "packages/element/src/distance.ts",
+        "name": "distanceToElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawElbowArrowElement"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "generic-element-resizes-with-locked-aspect-ratio",
+      "text": "generic element > resizes with locked aspect ratio",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "generic element > resizes with locked aspect ratio",
+          "startLine": 145,
+          "endLine": 165,
+          "contentHash": "sha256:d7a415b04386e633199b5c026601a8a43e8a7adbb625b929400ecda4b2a99739"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "generic-element-resizes-from-center",
+      "text": "generic element > resizes from center",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "generic element > resizes from center",
+          "startLine": 167,
+          "endLine": 187,
+          "contentHash": "sha256:04abe7eb5ee024e6700745ba2473ddbbdd799883101fea6b0542778b471f8922"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "generic-element-resizes-with-a-label",
+      "text": "generic element > resizes with a label",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "generic element > resizes with a label",
+          "startLine": 213,
+          "endLine": 240,
+          "contentHash": "sha256:d114f0a6b32795b19cdfe296be8057914ee5e113020553c7e06d0e634908edba"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "generic-element-s-with-a-label-flips-horizontally-while",
+      "text": "generic element > %s with a label > flips horizontally while resizing (proportional: %s)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "generic element > %s with a label > flips horizontally while resizing (proportional: %s)",
+          "startLine": 245,
+          "endLine": 277,
+          "contentHash": "sha256:c19ca9f3803e44a21e7ee4f566498f0513a562e97715ac1c257eb2f814841323"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "generic-element-resizes-from-center-with-multi-line-labe",
+      "text": "generic element > resizes from center with multi-line label from $handle handle, with respect to min height",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "generic element > resizes from center with multi-line label from $handle handle, with respect to min height",
+          "startLine": 281,
+          "endLine": 309,
+          "contentHash": "sha256:ef529b240237d59382699767ba318913c50ffdf9bdf7c77eacf174e772d0e905"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/textElement.ts",
+          "symbol": "computeContainerDimensionForBoundText",
+          "startLine": 536,
+          "endLine": 553,
+          "excerpt": "const computeContainerDimensionForBoundText(dimension: number, containerType: ExtractSetType<typeof VALID_CONTAINER_TYPES>)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "generic-element-keeps-the-flipped-corner-anchored-while",
+      "text": "generic element > keeps the flipped corner anchored while wrapped text sets the minimum height",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "generic element > keeps the flipped corner anchored while wrapped text sets the minimum height",
+          "startLine": 311,
+          "endLine": 350,
+          "contentHash": "sha256:2e89ffc623ca1910553ff96bf814f97f033db6944910eabe1b6cb0b7917cc629"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "s-element-resizes",
+      "text": "%s element > resizes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "%s element > resizes",
+          "startLine": 369,
+          "endLine": 381,
+          "contentHash": "sha256:fd24d8628111e7a3d7ac83f70e467ec34f58b433565ffc45e6c5fe144d61b4cb"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "s-element-flips-while-resizing",
+      "text": "%s element > flips while resizing",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "%s element > flips while resizing",
+          "startLine": 383,
+          "endLine": 395,
+          "contentHash": "sha256:3857fb9bae8048d08e496fa5c4a9d7679379d77d27c2fa4316137087b0b97821"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "s-element-resizes-with-locked-aspect-ratio",
+      "text": "%s element > resizes with locked aspect ratio",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "%s element > resizes with locked aspect ratio",
+          "startLine": 397,
+          "endLine": 412,
+          "contentHash": "sha256:b04bcf293d5514d2fd07d44f3e82c1216d767b7263b39f0bbbefa7b94094207d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "s-element-resizes-from-center",
+      "text": "%s element > resizes from center",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "%s element > resizes from center",
+          "startLine": 414,
+          "endLine": 426,
+          "contentHash": "sha256:b96aff01e0573aa311821dfc684715a4e96bd39882a111dc4b3c67faef2eda23"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "line-element-resizes",
+      "text": "line element > resizes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "line element > resizes",
+          "startLine": 437,
+          "endLine": 473,
+          "contentHash": "sha256:980e806ef62dd2b53cc1abe0b39da1f76c6f41f79130b829cad11505dce6f548"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "line-element-flips-while-resizing",
+      "text": "line element > flips while resizing",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "line element > flips while resizing",
+          "startLine": 475,
+          "endLine": 505,
+          "contentHash": "sha256:1d1647e63755e3b04eac2d2f5826b68333eee809961c15b994a7d1311083cc83"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "line-element-resizes-with-locked-aspect-ratio",
+      "text": "line element > resizes with locked aspect ratio",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "line element > resizes with locked aspect ratio",
+          "startLine": 507,
+          "endLine": 519,
+          "contentHash": "sha256:84b1b037991120d46586c7a2c46e7a806c0724ce2dc1568fc1a02b3bf4dae28a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "line-element-resizes-from-center",
+      "text": "line element > resizes from center",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "line element > resizes from center",
+          "startLine": 521,
+          "endLine": 567,
+          "contentHash": "sha256:3e1921004222059b5b3b9f491e8742d4fbb99a073ff174bdf59544c47766aea2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "NonDeleted",
+          "startLine": 247,
+          "endLine": 249,
+          "excerpt": "type NonDeleted = TElement & { isDeleted: false; }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawLinearElement",
+          "startLine": 369,
+          "endLine": 377,
+          "excerpt": "type ExcalidrawLinearElement = _ExcalidrawElementBase & Readonly<{ type: \"line\" | \"arrow\"; points: readonly LocalPoint[]; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; startArrowhead: Arrowhead | nu…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/resizeElements.ts",
+          "symbol": "resizeSingleElement",
+          "startLine": 751,
+          "endLine": 1014,
+          "excerpt": "const resizeSingleElement(nextWidth: number, nextHeight: number, latestElement: NonDeletedExcalidrawElement, origElement: NonDeletedExcalidrawElement, originalElementsMap: ElementsMap, scene: Scene, handleDirection: TransformHandleDirection, { shouldInformMutation = true, shouldMaintainAspectRatio = false, shouldResizeF…?: { shouldMaintainAspectRatio?: boolean; shouldResizeFromCenter?: boolean; s…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-element-resizes-with-a-label",
+      "text": "arrow element > resizes with a label",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "arrow element > resizes with a label",
+          "startLine": 571,
+          "endLine": 663,
+          "contentHash": "sha256:a3f9ab4d28852b5bc249bd8e04bf6dd29afc995c100647892feeaec0a144a3f0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/utils.ts",
+          "symbol": "getLinearElementPathSegments",
+          "startLine": 206,
+          "endLine": 235,
+          "excerpt": "function getLinearElementPathSegments(element: ExcalidrawLinearElement | ExcalidrawFreeDrawElement, elementsMap: ElementsMap): LinearPathSegment[]"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/linearElementEditor.ts",
+          "symbol": "LinearElementEditor",
+          "startLine": 142,
+          "endLine": 2390,
+          "excerpt": "class LinearElementEditor { elementId: ExcalidrawElement[\"id\"] & { _brand: \"excalidrawLinearElementId\"; }; selectedPointsIndices: readonly number[] | null; initialState: Readonly<{ prevSelectedPointsIndices: readonly number[] | null; /** index */ lastClickedPoint: number; origin: Readonly<GlobalPoint> | null; segmentMidpoint: { value: GlobalPoint | null; index: numbe…; isDragging: boolean; lastUn…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/distance.ts",
+          "symbol": "distanceToElement",
+          "startLine": 30,
+          "endLine": 56,
+          "excerpt": "const distanceToElement(element: ExcalidrawElement, elementsMap: ElementsMap, p: GlobalPoint): number"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-element-flips-the-fixed-point-binding-on-negative",
+      "text": "arrow element > flips the fixed point binding on negative resize for single bindable",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "arrow element > flips the fixed point binding on negative resize for single bindable",
+          "startLine": 665,
+          "endLine": 691,
+          "contentHash": "sha256:4bc206f6f572b5ea4346849a7d22498938285f5fb0b1418b4bebaf488fa9777c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawElbowArrowElement",
+          "startLine": 397,
+          "endLine": 421,
+          "excerpt": "type ExcalidrawElbowArrowElement = Merge< ExcalidrawArrowElement, { elbowed: true; fixedSegments: readonly FixedSegment[] | null; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; /** * Marks that the 3rd p…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-element-flips-the-fixed-point-binding-on-negative-2",
+      "text": "arrow element > flips the fixed point binding on negative resize for group selection",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "arrow element > flips the fixed point binding on negative resize for group selection",
+          "startLine": 693,
+          "endLine": 718,
+          "contentHash": "sha256:e3038cdc6e58cb7cc25047fcc0ce5cdd16163c88c824e8b35577397201095416"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawElbowArrowElement",
+          "startLine": 397,
+          "endLine": 421,
+          "excerpt": "type ExcalidrawElbowArrowElement = Merge< ExcalidrawArrowElement, { elbowed: true; fixedSegments: readonly FixedSegment[] | null; startBinding: FixedPointBinding | null; endBinding: FixedPointBinding | null; /** * Marks that the 3rd p…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-element-resizes",
+      "text": "text element > resizes",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "text element > resizes",
+          "startLine": 722,
+          "endLine": 735,
+          "contentHash": "sha256:d93fbf62a88060f7ab4cd64bbe83048831f54fc4de066de85ca166a3416fd9f3"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-element-resizes-by-a-corner-following-the-axis-it-g",
+      "text": "text element > resizes by a corner following the axis it grows most",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "text element > resizes by a corner following the axis it grows most",
+          "startLine": 737,
+          "endLine": 747,
+          "contentHash": "sha256:4506fdfc3ded139bd75cbd63dd9550b31d4f8364ad2f20f9f69e4a20ba9b9139"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-element-updates-font-size-via-keyboard",
+      "text": "text element > updates font size via keyboard",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "text element > updates font size via keyboard",
+          "startLine": 807,
+          "endLine": 820,
+          "contentHash": "sha256:b49b894d6ca63012d209d965c1956e3dd7b77195d6d0a9fc54350690480bd147"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-element-can-be-resized-from-e",
+      "text": "text element > can be resized from e",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "text element > can be resized from e",
+          "startLine": 823,
+          "endLine": 837,
+          "contentHash": "sha256:1d54c5e6946223b943c0c3d99300d25add0f75662e09b92a48c4043eeffc493f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-element-can-be-resized-from-w",
+      "text": "text element > can be resized from w",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "text element > can be resized from w",
+          "startLine": 839,
+          "endLine": 853,
+          "contentHash": "sha256:2bb4a6008aa4e15ce82dc86e780a152117739ed0f4f5735c6b22ff5d16ed04ba"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-element-wraps-when-width-is-narrower-than-texts-ins",
+      "text": "text element > wraps when width is narrower than texts inside",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "text element > wraps when width is narrower than texts inside",
+          "startLine": 855,
+          "endLine": 886,
+          "contentHash": "sha256:b486b869951bbdc1f77d3f3d5cd553950e3259477b9e9ca6faf6141e23af15a9"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-element-keeps-properties-when-wrapped",
+      "text": "text element > keeps properties when wrapped",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "text element > keeps properties when wrapped",
+          "startLine": 888,
+          "endLine": 907,
+          "contentHash": "sha256:23a3f62591f20f2ad368bb298185ebe7a288365212004857aa976cf70a1dfeaa"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "text-element-has-a-minimum-width-when-wrapped",
+      "text": "text element > has a minimum width when wrapped",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/element/tests/resize.test.tsx",
+          "testTitle": "text element > has a minimum width when wrapped",
+          "startLine": 909,
+          "endLine": 926,
+          "contentHash": "sha256:a68627bb8cc877ae547a8ff514a9085b8dbeff2ec13078417de443cb592a9964"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/element/tests/resize.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/element/tests/resize.test.tsx",
+  "generator": "tests",
+  "notes": "2 skipped, todo, or non-asserting test(s) were not turned into statements. 13 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:aed2783f405040cbd70912d7b07b8174ce4c841637a7cd213e1d654e635e0a1f"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:aed2783f405040cbd70912d7b07b8174ce4c841637a7cd213e1d654e635e0a1f"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:aed2783f405040cbd70912d7b07b8174ce4c841637a7cd213e1d654e635e0a1f"
+    }
+  ]
+}

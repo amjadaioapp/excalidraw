@@ -32,3 +32,14 @@ yarn fix             # Auto-fix formatting and linting issues
 - Internal packages use path aliases (see `vitest.config.mts`)
 - Build system uses esbuild for packages, Vite for the app
 - TypeScript throughout with strict configuration
+
+<!-- autoforge:begin (managed by `autoforge integrations`; content inside this block is replaced on reinstall) -->
+## Autoforge behavioral contracts
+
+Approved contracts in `.autoforge/contracts/` describe existing behavior that must keep working.
+
+- Before changing code, run `autoforge context --task "<what you are about to do>"` and respect every invariant it lists.
+- After changing code, run `autoforge check` and fix every violation before you finish (exit code 2 = violations found).
+- Never weaken, skip, or delete protected tests, and never edit files in `.autoforge/` to make a check pass.
+- If a requested change conflicts with a contract, stop and ask the user. Intentional behavior changes go through `autoforge contracts propose`, which a human must approve. Never run `contracts approve`, `contracts review --approve`, or `checks trust` yourself.
+<!-- autoforge:end -->

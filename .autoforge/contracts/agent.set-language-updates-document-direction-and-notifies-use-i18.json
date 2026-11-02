@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "agent.set-language-updates-document-direction-and-notifies-use-i18",
+  "revision": 1,
+  "title": "setLanguage updates document direction and notifies useI18n subscribers",
+  "category": "state-transition",
+  "status": "approved",
+  "source": "agent",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/i18n.ts"
+    ],
+    "symbols": []
+  },
+  "statements": [
+    {
+      "id": "set-language-sets-document-document-element-dir-to-rtl-l",
+      "text": "setLanguage sets document.documentElement.dir to rtl/ltr and lang to the code, then updates editorLangCodeAtom so components using useI18n re-render",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/i18n.ts",
+          "symbol": "setLanguage",
+          "startLine": 92,
+          "endLine": 109,
+          "excerpt": "async const setLanguage(lang: Language)"
+        },
+        {
+          "kind": "test",
+          "path": "excalidraw-app/tests/LanguageList.test.tsx",
+          "testTitle": "Test LanguageList > rerenders UI on language change",
+          "startLine": 32,
+          "endLine": 58,
+          "contentHash": "sha256:dc7180f6a542902d893108b8f8722b9de0b687711ef5e7efbd162839f02bb210"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "excalidraw-app/tests/LanguageList.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "agent:set-language-updates-document-direction-and-notifies-use-i18n-subscribers",
+  "generator": "agent-import",
+  "notes": "Imported from coding-agent output on 2026-11-02; citations verified by Autoforge. Rationale: If the atom isn't updated, the UI stays in the old language. If dir isn't set, right-to-left languages render incorrectly.",
+  "createdAt": "2026-11-02T17:10:00.997Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:b57cec40351ceabe3408013805dc4549f083fd05df62ed75ced0b82787368b1a"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:10:00.997Z",
+      "by": "autoforge import (agent-assisted)",
+      "contentHash": "sha256:b57cec40351ceabe3408013805dc4549f083fd05df62ed75ced0b82787368b1a"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:b57cec40351ceabe3408013805dc4549f083fd05df62ed75ced0b82787368b1a"
+    }
+  ]
+}

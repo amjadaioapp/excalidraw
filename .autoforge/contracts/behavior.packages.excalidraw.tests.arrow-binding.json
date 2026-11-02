@@ -1,0 +1,757 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.arrow-binding",
+  "revision": 1,
+  "title": "Arrow binding – non-default case (bindingPreference: disabled): behavior verified by packages/excalidraw/tests/arrowBinding.test.tsx",
+  "description": "Existing behavior covered by 24 asserting test(s) in packages/excalidraw/tests/arrowBinding.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/types.ts, packages/excalidraw/actions/actionToggleArrowBinding.tsx, packages/excalidraw/index.tsx and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/arrowBinding.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/actions/actionToggleArrowBinding.tsx",
+      "packages/excalidraw/index.tsx",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/actions/actionToggleArrowBinding.tsx",
+        "name": "actionToggleArrowBinding"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawArrowElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawBindableElement"
+      },
+      {
+        "path": "packages/excalidraw/index.tsx",
+        "name": "sceneCoordsToViewportCoords"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawElement"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > actionToggleArrowBinding > isBindingEnabled defaults to true",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > actionToggleArrowBinding > isBindingEnabled defaults to true",
+          "startLine": 86,
+          "endLine": 88,
+          "contentHash": "sha256:ab962127c398caf9a059e16f0e0e4f6870362cdded3eef14adca5cf268c8f6e8"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-2",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > actionToggleArrowBinding > checked() reflects the current bindingPreference value",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > actionToggleArrowBinding > checked() reflects the current bindingPreference value",
+          "startLine": 90,
+          "endLine": 98,
+          "contentHash": "sha256:419f8284492bb41f18ee24f0bad8ed95159acdc5adaa5e9b231c75697eeda01f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionToggleArrowBinding.tsx",
+          "symbol": "actionToggleArrowBinding",
+          "startLine": 5,
+          "endLine": 26,
+          "excerpt": "const actionToggleArrowBinding"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-3",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > actionToggleArrowBinding > executing the action toggles binding from enabled → disabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > actionToggleArrowBinding > executing the action toggles binding from enabled → disabled",
+          "startLine": 100,
+          "endLine": 105,
+          "contentHash": "sha256:0c9057adcd6f8b79cf830a39357948fd42463bf7ffabc37c1ee9079e47a2da2a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionToggleArrowBinding.tsx",
+          "symbol": "actionToggleArrowBinding",
+          "startLine": 5,
+          "endLine": 26,
+          "excerpt": "const actionToggleArrowBinding"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-4",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > actionToggleArrowBinding > executing the action toggles binding from disabled → enabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > actionToggleArrowBinding > executing the action toggles binding from disabled → enabled",
+          "startLine": 107,
+          "endLine": 116,
+          "contentHash": "sha256:d0450fd83c150858f194b22713d210ce2f777bc84a321e39b4df55fbe31c70b3"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionToggleArrowBinding.tsx",
+          "symbol": "actionToggleArrowBinding",
+          "startLine": 5,
+          "endLine": 26,
+          "excerpt": "const actionToggleArrowBinding"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-5",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > actionToggleArrowBinding > checked() returns false after action disables binding",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > actionToggleArrowBinding > checked() returns false after action disables binding",
+          "startLine": 118,
+          "endLine": 121,
+          "contentHash": "sha256:08d67f1f8a7a8ea0088e695df38b67d97be0ffcb58dcc76f3a170b554cbeeb31"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionToggleArrowBinding.tsx",
+          "symbol": "actionToggleArrowBinding",
+          "startLine": 5,
+          "endLine": 26,
+          "excerpt": "const actionToggleArrowBinding"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-6",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Arrow drawing with binding disabled > arrow startBinding is set when binding is enabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Arrow drawing with binding disabled > arrow startBinding is set when binding is enabled",
+          "startLine": 133,
+          "endLine": 160,
+          "contentHash": "sha256:d4d8ce7d7a497b4d2f582c1a04e0279d7e256497d87e2b7f41de173d20b72d87"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-7",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Arrow drawing with binding disabled > arrow has no startBinding when binding is disabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Arrow drawing with binding disabled > arrow has no startBinding when binding is disabled",
+          "startLine": 162,
+          "endLine": 191,
+          "contentHash": "sha256:18fe3ace15319ef0d7f06ae7226bfce1bfd51cb626fbd074456f22218da8fbb5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-8",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Arrow drawing with binding disabled > arrow has no endBinding when binding is disabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Arrow drawing with binding disabled > arrow has no endBinding when binding is disabled",
+          "startLine": 193,
+          "endLine": 222,
+          "contentHash": "sha256:91800811d3ea71b56b40294348e256758fdb8c9f9564196e412caa695bbe3fd1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-9",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Arrow drawing with binding disabled > re-enabling binding via action causes new arrows to bind again",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Arrow drawing with binding disabled > re-enabling binding via action causes new arrows to bind again",
+          "startLine": 224,
+          "endLine": 252,
+          "contentHash": "sha256:7635fec7aacfd8b1dfac3c4b1b9e9ae19e888a1ce4be841f35a4f73114be551e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionToggleArrowBinding.tsx",
+          "symbol": "actionToggleArrowBinding",
+          "startLine": 5,
+          "endLine": 26,
+          "excerpt": "const actionToggleArrowBinding"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-10",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Arrow drawing with binding disabled > elbow arrow does not snap to rectangle when binding is disabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Arrow drawing with binding disabled > elbow arrow does not snap to rectangle when binding is disabled",
+          "startLine": 254,
+          "endLine": 326,
+          "contentHash": "sha256:ccef617eb7efdff4aaff31f570fb5b3f5c5895f8bbb45d7a338d836f21cd5c80"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawBindableElement",
+          "startLine": 293,
+          "endLine": 303,
+          "excerpt": "type ExcalidrawBindableElement = | ExcalidrawRectangleElement | ExcalidrawStickyNoteElement | ExcalidrawDiamondElement | ExcalidrawEllipseElement | ExcalidrawTextElement | ExcalidrawImageElement | ExcalidrawIframeElement | Excalidra…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "sceneCoordsToViewportCoords",
+          "startLine": 443,
+          "endLine": 455
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-11",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Midpoint snapping > does not snap to midpoint when midpoint snapping is turned off",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Midpoint snapping > does not snap to midpoint when midpoint snapping is turned off",
+          "startLine": 333,
+          "endLine": 377,
+          "contentHash": "sha256:faedd130c96b35c9ff371a2aa27ea79af8600dac1fa163d0b8c8bfc18d0b1815"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawBindableElement",
+          "startLine": 293,
+          "endLine": 303,
+          "excerpt": "type ExcalidrawBindableElement = | ExcalidrawRectangleElement | ExcalidrawStickyNoteElement | ExcalidrawDiamondElement | ExcalidrawEllipseElement | ExcalidrawTextElement | ExcalidrawImageElement | ExcalidrawIframeElement | Excalidra…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawElement",
+          "startLine": 223,
+          "endLine": 234,
+          "excerpt": "type ExcalidrawElement = | ExcalidrawGenericElement | ExcalidrawStickyNoteElement | ExcalidrawTextElement | ExcalidrawLinearElement | ExcalidrawArrowElement | ExcalidrawFreeDrawElement | ExcalidrawImageElement | ExcalidrawFr…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-12",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Midpoint snapping > does not snap an angle-locked elbow binding to midpoint on finalize",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Midpoint snapping > does not snap an angle-locked elbow binding to midpoint on finalize",
+          "startLine": 379,
+          "endLine": 419,
+          "contentHash": "sha256:270e6acdfc8eb9d78c172ed5955d42f59d69bc442c1f740a01b5b42942a62278"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawBindableElement",
+          "startLine": 293,
+          "endLine": 303,
+          "excerpt": "type ExcalidrawBindableElement = | ExcalidrawRectangleElement | ExcalidrawStickyNoteElement | ExcalidrawDiamondElement | ExcalidrawEllipseElement | ExcalidrawTextElement | ExcalidrawImageElement | ExcalidrawIframeElement | Excalidra…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "sceneCoordsToViewportCoords",
+          "startLine": 443,
+          "endLine": 455
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-13",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Grid binding interactions > does not snap angle-locked binding to grid when grid mode is disabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Grid binding interactions > does not snap angle-locked binding to grid when grid mode is disabled",
+          "startLine": 423,
+          "endLine": 463,
+          "contentHash": "sha256:6cc90c80976cfdffdf81bfc35a7d4bf82eb47a21fa9e73f4307fc2bec25c10b7"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawBindableElement",
+          "startLine": 293,
+          "endLine": 303,
+          "excerpt": "type ExcalidrawBindableElement = | ExcalidrawRectangleElement | ExcalidrawStickyNoteElement | ExcalidrawDiamondElement | ExcalidrawEllipseElement | ExcalidrawTextElement | ExcalidrawImageElement | ExcalidrawIframeElement | Excalidra…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "sceneCoordsToViewportCoords",
+          "startLine": 443,
+          "endLine": 455
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-14",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Grid binding interactions > uses the incoming direction to choose the grid axis for rotated bindables",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Grid binding interactions > uses the incoming direction to choose the grid axis for rotated bindables",
+          "startLine": 465,
+          "endLine": 504,
+          "contentHash": "sha256:8e8ca74b18e4fd2823831cf26447c8447298244777007672b41316740ed449b8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawBindableElement",
+          "startLine": 293,
+          "endLine": 303,
+          "excerpt": "type ExcalidrawBindableElement = | ExcalidrawRectangleElement | ExcalidrawStickyNoteElement | ExcalidrawDiamondElement | ExcalidrawEllipseElement | ExcalidrawTextElement | ExcalidrawImageElement | ExcalidrawIframeElement | Excalidra…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "sceneCoordsToViewportCoords",
+          "startLine": 443,
+          "endLine": 455
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawArrowElement",
+          "startLine": 391,
+          "endLine": 395,
+          "excerpt": "type ExcalidrawArrowElement = ExcalidrawLinearElement & Readonly<{ type: \"arrow\"; elbowed: boolean; }>"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-15",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding preference is disabled > Ctrl keydown temporarily enables binding when preference is disabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding preference is disabled > Ctrl keydown temporarily enables binding when preference is disabled",
+          "startLine": 512,
+          "endLine": 521,
+          "contentHash": "sha256:3964d4a949092700943527260e7bd05fb510a555ba7c06c6b569453a234ee295"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-16",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding preference is disabled > Ctrl keyup restores isBindingEnabled to false after the temporary toggle",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding preference is disabled > Ctrl keyup restores isBindingEnabled to false after the temporary toggle",
+          "startLine": 523,
+          "endLine": 534,
+          "contentHash": "sha256:01749b57d77987cbfa920d44c96b1a9cd8e2448d096493a0a9b93324585d2b88"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-17",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding preference is disabled > full round-trip: off → Ctrl down → on → Ctrl up → off",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding preference is disabled > full round-trip: off → Ctrl down → on → Ctrl up → off",
+          "startLine": 536,
+          "endLine": 547,
+          "contentHash": "sha256:fcc06b9079d4167c283c7b9ec0492fc189681626e2e223639857c12265a2b3c3"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-18",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding preference is disabled > full round-trip can be repeated after Ctrl release resets state",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding preference is disabled > full round-trip can be repeated after Ctrl release resets state",
+          "startLine": 549,
+          "endLine": 566,
+          "contentHash": "sha256:c9ed6d991de60dd8a49a824af5ac6b0b0bb6c66fd58707cce43925341dab5309"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-19",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding starts ON > Ctrl keydown temporarily disables binding when it was on",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding starts ON > Ctrl keydown temporarily disables binding when it was on",
+          "startLine": 570,
+          "endLine": 575,
+          "contentHash": "sha256:805c50f809231e0a0b243fd7e52a5cdfae495dd5960fa0783429ba6a4834c156"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-20",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding starts ON > Ctrl keyup restores isBindingEnabled to true after the temporary toggle",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > Ctrl key toggle when binding starts ON > Ctrl keyup restores isBindingEnabled to true after the temporary toggle",
+          "startLine": 577,
+          "endLine": 585,
+          "contentHash": "sha256:c93cbc1defe3fcb58d816bd2fbc6281d9f5e73ec0760332baf6b46ea65862e24"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-21",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > event.repeat guard > Ctrl keydown with repeat=true does not toggle binding (preference: disabled)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > event.repeat guard > Ctrl keydown with repeat=true does not toggle binding (preference: disabled)",
+          "startLine": 593,
+          "endLine": 603,
+          "contentHash": "sha256:05540f4b1601ef1d15cf4b3757903bb634f413188194f6cb4dda72a1ec097dab"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-22",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > event.repeat guard > Ctrl keydown with repeat=true does not toggle binding (default: on)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > event.repeat guard > Ctrl keydown with repeat=true does not toggle binding (default: on)",
+          "startLine": 605,
+          "endLine": 611,
+          "contentHash": "sha256:54af7cdb8c1bb9974dda9e8f199d89a4265c5cae66a71304d2590aa50cbec268"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-23",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > event.repeat guard > pressing another key while Ctrl held does not change binding state",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > event.repeat guard > pressing another key while Ctrl held does not change binding state",
+          "startLine": 613,
+          "endLine": 632,
+          "contentHash": "sha256:ba067c8a6d6d97e72f930ea90f7b32c6ab2460707c33322d1c981dbe0762c7e5"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "arrow-binding-non-default-case-binding-preference-disabl-24",
+      "text": "Arrow binding – non-default case (bindingPreference: disabled) > View-mode guard > Ctrl keydown in viewMode does not toggle isBindingEnabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowBinding.test.tsx",
+          "testTitle": "Arrow binding – non-default case (bindingPreference: disabled) > View-mode guard > Ctrl keydown in viewMode does not toggle isBindingEnabled",
+          "startLine": 640,
+          "endLine": 651,
+          "contentHash": "sha256:855d09a8c154afa3647d13e33708c72e56f2a8c7530490f56cb7fb9b2209ebd8"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowBinding.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/arrowBinding.test.tsx",
+  "generator": "tests",
+  "notes": "Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:9e6c021b5051097ee048a0ba15e21b59d2fcfaeeeb5c280fb7dad2a5ae3fb6b9"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:9e6c021b5051097ee048a0ba15e21b59d2fcfaeeeb5c280fb7dad2a5ae3fb6b9"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:9e6c021b5051097ee048a0ba15e21b59d2fcfaeeeb5c280fb7dad2a5ae3fb6b9"
+    }
+  ]
+}

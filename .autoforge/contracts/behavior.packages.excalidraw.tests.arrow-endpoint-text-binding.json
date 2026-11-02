@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.arrow-endpoint-text-binding",
+  "revision": 1,
+  "title": "binding text to an arrow endpoint: behavior verified by packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/types.ts, packages/excalidraw/actions/actionTextAutoResize.ts, packages/excalidraw/index.tsx and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/actions/actionTextAutoResize.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawTextElement"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionTextAutoResize.ts",
+        "name": "actionTextAutoResize"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "binding-text-to-an-arrow-endpoint-hover-affordance-highl",
+      "text": "binding text to an arrow endpoint > hover affordance > highlights a free arrow endpoint while the text tool is active",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > hover affordance > highlights a free arrow endpoint while the text tool is active",
+          "startLine": 94,
+          "endLine": 109,
+          "contentHash": "sha256:bc60023a8ca52dfbda91a55b0a975cfc73cd65d0d68f83ba23093bb27faa9fa1"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-hover-affordance-highl-2",
+      "text": "binding text to an arrow endpoint > hover affordance > highlights the label midpoint when hovering the arrow itself",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > hover affordance > highlights the label midpoint when hovering the arrow itself",
+          "startLine": 111,
+          "endLine": 123,
+          "contentHash": "sha256:b07477e63d80ed10413d3f89f5e33a7556b9517220732e4df6f5627d523535cf"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-hover-affordance-prefe",
+      "text": "binding text to an arrow endpoint > hover affordance > prefers the endpoint over the label midpoint",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > hover affordance > prefers the endpoint over the label midpoint",
+          "startLine": 125,
+          "endLine": 136,
+          "contentHash": "sha256:a873014eba5a7a117e0f822f3d6716158644bd98221f571842ac75aa18274e7d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-hover-affordance-does",
+      "text": "binding text to an arrow endpoint > hover affordance > does not offer a label midpoint on an arrow that already has one",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > hover affordance > does not offer a label midpoint on an arrow that already has one",
+          "startLine": 138,
+          "endLine": 157,
+          "contentHash": "sha256:b09a18713fc2b50123c2d3189b0cbe0af763809b036eb885e56356880c00eff8"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-hover-affordance-does-2",
+      "text": "binding text to an arrow endpoint > hover affordance > does not offer a label midpoint away from the arrow's center",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > hover affordance > does not offer a label midpoint away from the arrow's center",
+          "startLine": 161,
+          "endLine": 195,
+          "contentHash": "sha256:1b54f364affbbd652426901925d18b229cd42e8e09b577ec8f288ee3cec6a008"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-hover-affordance-does-3",
+      "text": "binding text to an arrow endpoint > hover affordance > does not highlight endpoints for other tools",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > hover affordance > does not highlight endpoints for other tools",
+          "startLine": 197,
+          "endLine": 204,
+          "contentHash": "sha256:b5a6dfff4e7f2410876afa50de7e8f67a43db012ad417452389d3a2e8558a907"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-hover-affordance-clear",
+      "text": "binding text to an arrow endpoint > hover affordance > clears the highlight on escape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > hover affordance > clears the highlight on escape",
+          "startLine": 206,
+          "endLine": 218,
+          "contentHash": "sha256:b0cc7751ad6d3e33660098cfe5e05c16a3cdacb2d771e86ba657f7b29a6c478a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-binding-toggle-ctrl-cm",
+      "text": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > does not offer an endpoint while binding is disabled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > does not offer an endpoint while binding is disabled",
+          "startLine": 222,
+          "endLine": 230,
+          "contentHash": "sha256:6946c3d49aadddf85a114c40c0b542dc36fd79c15a766239d431856f6ffac39f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-binding-toggle-ctrl-cm-2",
+      "text": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > still offers the label anchor — a label is not an arrow binding",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > still offers the label anchor — a label is not an arrow binding",
+          "startLine": 232,
+          "endLine": 244,
+          "contentHash": "sha256:0b1c44abad1a1a5d3ee782268cbf0f9a5da21c3326d11473ac2716328758b701"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-binding-toggle-ctrl-cm-3",
+      "text": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > clears the highlight the moment ctrl is pressed, restores on release",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > clears the highlight the moment ctrl is pressed, restores on release",
+          "startLine": 249,
+          "endLine": 277,
+          "contentHash": "sha256:e8aa775450fb4166e4a3c87e2be3e5e9de1d98c9babbf1b2a2892793ee0a7b20"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-binding-toggle-ctrl-cm-4",
+      "text": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > drops plain text instead of binding the endpoint",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > drops plain text instead of binding the endpoint",
+          "startLine": 279,
+          "endLine": 288,
+          "contentHash": "sha256:a338d9940d109b68c5922fa5d2b9872241d3d39c169629198b253f8276b93c30"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-binding-toggle-ctrl-cm-5",
+      "text": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > does not highlight an endpoint that is already bound",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > does not highlight an endpoint that is already bound",
+          "startLine": 290,
+          "endLine": 320,
+          "contentHash": "sha256:a338cdf43fd6fb53759e94dd6a2facfb2065546a7134fd54662de358166a92fd"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-binding-toggle-ctrl-cm-6",
+      "text": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > clears the highlight when switching away from the text tool",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > binding toggle (ctrl/cmd) > clears the highlight when switching away from the text tool",
+          "startLine": 322,
+          "endLine": 331,
+          "contentHash": "sha256:ade124068f24f3a34fd48f131f71be3798ed9c8d7450c0c7cd717a693f6ad783"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-placement-strategy-nam",
+      "text": "binding text to an arrow endpoint > placement strategy > $name",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > placement strategy > $name",
+          "startLine": 337,
+          "endLine": 385,
+          "contentHash": "sha256:e205c95966bc8afaa4ebb13461140f3b3125c9da4907bd68397887a95cd28934"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-placement-strategy-bin",
+      "text": "binding text to an arrow endpoint > placement strategy > binds the start point when that is the endpoint under the cursor",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > placement strategy > binds the start point when that is the endpoint under the cursor",
+          "startLine": 387,
+          "endLine": 400,
+          "contentHash": "sha256:22bc027d1f09aff33649d88f221225accab54862d78614869c5206a9ccf596e1"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-the-arrow-stays-put-ke",
+      "text": "binding text to an arrow endpoint > the arrow stays put > keeps the bound side midpoint pinned as the text grows",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > the arrow stays put > keeps the bound side midpoint pinned as the text grows",
+          "startLine": 416,
+          "endLine": 429,
+          "contentHash": "sha256:ec75d0ff9080c3d7f6c045cc043f8e75049eebb44564b3d3853a5b27bf2f82b8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-the-arrow-stays-put-do",
+      "text": "binding text to an arrow endpoint > the arrow stays put > does not shift when the text's stroke width differs (arrow $arrowStroke vs $textStroke)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > the arrow stays put > does not shift when the text's stroke width differs (arrow $arrowStroke vs $textStroke)",
+          "startLine": 454,
+          "endLine": 476,
+          "contentHash": "sha256:7fdd1a20ac921863e7bd858cbdf073dfa2ae07cba57ef8019cc89014451efe88"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-drag-sizing-sets-a-fix",
+      "text": "binding text to an arrow endpoint > drag-sizing > sets a fixed width without moving the anchor (left-bound)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > drag-sizing > sets a fixed width without moving the anchor (left-bound)",
+          "startLine": 499,
+          "endLine": 511,
+          "contentHash": "sha256:9e54c4be303208a1efa943fa1210174633066640eca6597f8138a85f87c9b41c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-drag-sizing-grows-left",
+      "text": "binding text to an arrow endpoint > drag-sizing > grows leftwards for a right-bound text, pinning its right edge",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > drag-sizing > grows leftwards for a right-bound text, pinning its right edge",
+          "startLine": 513,
+          "endLine": 523,
+          "contentHash": "sha256:31e6f8e572d7eeb2db81fbffa44ef79ed188432226c7f39103b784833340b5f4"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-drag-sizing-keeps-a-ce",
+      "text": "binding text to an arrow endpoint > drag-sizing > keeps a centred text centred on the anchor",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > drag-sizing > keeps a centred text centred on the anchor",
+          "startLine": 525,
+          "endLine": 534,
+          "contentHash": "sha256:08d0daa0c19ee4d489100172cd700825baf4afafecf38ce951b94abd29a737f2"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-drag-sizing-does-not-l",
+      "text": "binding text to an arrow endpoint > drag-sizing > does not let the drag run back over the arrow",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > drag-sizing > does not let the drag run back over the arrow",
+          "startLine": 536,
+          "endLine": 546,
+          "contentHash": "sha256:bcd0be5a79c49ad8e143a2f4ee27ae1074391b019ff0ddf080f8c9d1f523599a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-drag-sizing-does-not-m",
+      "text": "binding text to an arrow endpoint > drag-sizing > does not move the arrow when the text is un-wrapped",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > drag-sizing > does not move the arrow when the text is un-wrapped",
+          "startLine": 550,
+          "endLine": 569,
+          "contentHash": "sha256:b88fda5844584b35651cb4bb1295eecc067eb2eedeceb1304f46f9366ccf8544"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionTextAutoResize.ts",
+          "symbol": "actionTextAutoResize",
+          "startLine": 22,
+          "endLine": 89,
+          "excerpt": "const actionTextAutoResize"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-drag-sizing-re-routes",
+      "text": "binding text to an arrow endpoint > drag-sizing > re-routes the other arrows bound to the text",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > drag-sizing > re-routes the other arrows bound to the text",
+          "startLine": 573,
+          "endLine": 621,
+          "contentHash": "sha256:eb836581baedac33529787903b0044ab36535675a700bd7a6a59ed7d10f2d631"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionTextAutoResize.ts",
+          "symbol": "actionTextAutoResize",
+          "startLine": 22,
+          "endLine": 89,
+          "excerpt": "const actionTextAutoResize"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-occlusion-does-not-rea",
+      "text": "binding text to an arrow endpoint > occlusion > does not reach through an element stacked above the endpoint",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > occlusion > does not reach through an element stacked above the endpoint",
+          "startLine": 646,
+          "endLine": 665,
+          "contentHash": "sha256:3431ca2b695c62dc2d313d2f8c7a0da379abde7fd1552997b286aa2ab2e80730"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "binding-text-to-an-arrow-endpoint-occlusion-still-offers",
+      "text": "binding text to an arrow endpoint > occlusion > still offers the endpoint when the arrow is stacked above",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+          "testTitle": "binding text to an arrow endpoint > occlusion > still offers the endpoint when the arrow is stacked above",
+          "startLine": 667,
+          "endLine": 681,
+          "contentHash": "sha256:1133fb39764b0a631b644f9ba1deb99e75fe6f43333412114537df441db24124"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx",
+  "generator": "tests",
+  "notes": "3 skipped, todo, or non-asserting test(s) were not turned into statements. 11 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:a6f1cfc2fc66b0853f0dd43bc3a4578465684f95c3bdcf46b39926292d7112cc"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:a6f1cfc2fc66b0853f0dd43bc3a4578465684f95c3bdcf46b39926292d7112cc"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:a6f1cfc2fc66b0853f0dd43bc3a4578465684f95c3bdcf46b39926292d7112cc"
+    }
+  ]
+}

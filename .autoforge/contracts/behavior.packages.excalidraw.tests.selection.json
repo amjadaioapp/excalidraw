@@ -1,0 +1,591 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.selection",
+  "revision": 1,
+  "title": "Behavior verified by packages/excalidraw/tests/selection.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/selection.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/excalidraw/components/Tools.tsx, packages/excalidraw/index.tsx, packages/excalidraw/renderer/interactiveScene.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/selection.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/excalidraw/components/Tools.tsx",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/renderer/interactiveScene.ts",
+      "packages/excalidraw/renderer/staticScene.ts",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/index.tsx",
+        "name": "Excalidraw"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "lasso-reselection-should-allow-ctrl-alt-lasso-reselectio",
+      "text": "lasso reselection > should allow ctrl+alt lasso reselection when starting inside the active common bounds",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "lasso reselection > should allow ctrl+alt lasso reselection when starting inside the active common bounds",
+          "startLine": 163,
+          "endLine": 205,
+          "contentHash": "sha256:74428f53a31ed6d0e9650aaa35ab394aceb43f476eb43335be0cb233deb7223a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "lasso-on-touch-devices-a-tap-selects-the-element",
+      "text": "lasso on touch devices > a tap selects the element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "lasso on touch devices > a tap selects the element",
+          "startLine": 209,
+          "endLine": 230,
+          "contentHash": "sha256:cd55dba2b8b67c9586dfd68696aaa7f22a8dbd433fe4a8786cf2508067be7920"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "alt-click-cycling-cycles-through-the-edited-group-s-elem",
+      "text": "alt-click cycling > cycles through the edited group's elements only",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "alt-click cycling > cycles through the edited group's elements only",
+          "startLine": 273,
+          "endLine": 293,
+          "contentHash": "sha256:4a810691a33e90a74cfe683e6fd27cb9f6ef6267d0e04a1ddd0865b424744f73"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "alt-click-cycling-cycles-on-the-selected-element-s-resiz",
+      "text": "alt-click cycling > cycles on the selected element's resize handle, alt-resizing only past the drag threshold",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "alt-click cycling > cycles on the selected element's resize handle, alt-resizing only past the drag threshold",
+          "startLine": 295,
+          "endLine": 318,
+          "contentHash": "sha256:772adc26e817a5a604e12194e6a9ae96188ff6cd9e03653d42c35c578e4cec71"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "alt-click-cycling-sets-up-the-line-editor-of-an-arrow-it",
+      "text": "alt-click cycling > sets up the line editor of an arrow it selects",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "alt-click cycling > sets up the line editor of an arrow it selects",
+          "startLine": 320,
+          "endLine": 349,
+          "contentHash": "sha256:fb887808530bd6b6f1f82ce12944f2ab0f4e34f9eb517a2f3945fb331b12f711"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "alt-click-cycling-alt-double-click-doesn-t-create-or-edi",
+      "text": "alt-click cycling > alt+double-click doesn't create or edit text",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "alt-click cycling > alt+double-click doesn't create or edit text",
+          "startLine": 351,
+          "endLine": 361,
+          "contentHash": "sha256:1564890802b38ba946a36a9b60c138c53ef4d2320ca12a3f182222e8750b5d73"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "alt-click-cycling-hints-at-cycling-while-alt-is-held-ove",
+      "text": "alt-click cycling > hints at cycling while Alt is held over a single selection",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "alt-click cycling > hints at cycling while Alt is held over a single selection",
+          "startLine": 363,
+          "endLine": 402,
+          "contentHash": "sha256:86ca9adf0776d21090cee39e9ea3c734132262531c8facd55ae936fd06b13ab0"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "alt-click-cycling-alt-drag-duplicates-only-past-the-drag",
+      "text": "alt-click cycling > alt-drag duplicates only past the drag threshold",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "alt-click cycling > alt-drag duplicates only past the drag threshold",
+          "startLine": 404,
+          "endLine": 416,
+          "contentHash": "sha256:15cd7fccf93055b4ec66b34875f9dfaf30c1d254fb9267845af8e80159cbc006"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "box-selection-overlap-mode-should-select-the-whole-group",
+      "text": "box-selection overlap mode > should select the whole group when overlapping one group member",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "box-selection overlap mode > should select the whole group when overlapping one group member",
+          "startLine": 494,
+          "endLine": 518,
+          "contentHash": "sha256:d0d469d108693fbab4609dd15ddad958f46efcb6821e300e00a9dd8a12a1636c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "box-selection-overlap-mode-should-return-all-group-eleme",
+      "text": "box-selection overlap mode > should return all group elements when overlapping one group member",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "box-selection overlap mode > should return all group elements when overlapping one group member",
+          "startLine": 520,
+          "endLine": 565,
+          "contentHash": "sha256:660c24f0d641231103e506b5337039aecf48f3c4e8a2255d6a387065703ebdb3"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "box-selection-overlap-mode-should-retain-nested-and-inte",
+      "text": "box-selection overlap mode > should retain nested and interleaved group element order",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "box-selection overlap mode > should retain nested and interleaved group element order",
+          "startLine": 567,
+          "endLine": 631,
+          "contentHash": "sha256:e73f966b7e1c548c03eae2db6c4bd4fbe0eef579b9ffb752ebf036bbd300ce13"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "box-selection-overlap-mode-should-select-a-rotated-round",
+      "text": "box-selection overlap mode > should select a rotated rounded rectangle when the selection box contains its outline but not its bounds",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "box-selection overlap mode > should select a rotated rounded rectangle when the selection box contains its outline but not its bounds",
+          "startLine": 688,
+          "endLine": 725,
+          "contentHash": "sha256:b01ccf8d5019065c1133d390265f560be51c4683cd1ee656b82776919eeadac8"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "box-selection-overlap-mode-should-select-and-drag-a-fill",
+      "text": "box-selection overlap mode > should select and drag a filled %s freedraw loop from its interior",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "box-selection overlap mode > should select and drag a filled %s freedraw loop from its interior",
+          "startLine": 930,
+          "endLine": 963,
+          "contentHash": "sha256:5635c6842684943386a61c5160b96a8f7c732062c277e9ff26fa817051b62dca"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "inner-box-selection-selecting-grouped-elements-visually",
+      "text": "inner box-selection > selecting grouped elements visually nested inside another",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "inner box-selection > selecting grouped elements visually nested inside another",
+          "startLine": 1081,
+          "endLine": 1128,
+          "contentHash": "sha256:704321426c53e4dc5c706119e7175874264e3359f1a1011c77cdc3c1de9b5904"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "inner-box-selection-does-not-select-a-nested-outer-group",
+      "text": "inner box-selection > does not select a nested outer group until all members are contained",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "inner box-selection > does not select a nested outer group until all members are contained",
+          "startLine": 1130,
+          "endLine": 1182,
+          "contentHash": "sha256:81543203fd316a6d0e53bcb69c22cf8c00c1c913391f998fbabb61622f89b20e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "inner-box-selection-ignores-grouped-bound-text-when-chec",
+      "text": "inner box-selection > ignores grouped bound text when checking box-selection containment",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "inner box-selection > ignores grouped bound text when checking box-selection containment",
+          "startLine": 1241,
+          "endLine": 1282,
+          "contentHash": "sha256:d801117933bdbdcd6f05cda1ddb773660cf0fdba6d1976bf90db9f4e4013a0dc"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "inner-box-selection-selecting-deselecting-grouped-elemen",
+      "text": "inner box-selection > selecting & deselecting grouped elements visually nested inside another",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "inner box-selection > selecting & deselecting grouped elements visually nested inside another",
+          "startLine": 1284,
+          "endLine": 1322,
+          "contentHash": "sha256:45693e2926bea4fb9003cca643ef20a1dcda3ba1b08d2b1134af837b84988f9e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-selection-sets-up-the-line-editor-of-a-lone-selected",
+      "text": "app.selection > sets up the line editor of a lone selected arrow — not of one selected with its group",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "app.selection > sets up the line editor of a lone selected arrow — not of one selected with its group",
+          "startLine": 1405,
+          "endLine": 1440,
+          "contentHash": "sha256:456b676e189f6bf2e557af2f51f56938ed705d6d6db9ad4fa92947c4360ca328"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-selection-remove-of-an-element-selected-via-its-grou",
+      "text": "app.selection > remove() of an element selected via its group keeps the other selected groups",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "app.selection > remove() of an element selected via its group keeps the other selected groups",
+          "startLine": 1470,
+          "endLine": 1485,
+          "contentHash": "sha256:65f498ef79eedbd73ad450e188c7c6adf0e3c2dc3c829c77129845353713cbd5"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-selection-shows-the-link-popup-of-a-lone-selected-el",
+      "text": "app.selection > shows the link popup of a lone selected element with a link, whatever was selected before",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "app.selection > shows the link popup of a lone selected element with a link, whatever was selected before",
+          "startLine": 1487,
+          "endLine": 1510,
+          "contentHash": "sha256:6d10d4b0c786f932ad82d3ae25be1f5519e3ee7617c405c429f39e4f195e4398"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-selection-ends-the-cropping-and-deactivates-the-embe",
+      "text": "app.selection > ends the cropping and deactivates the embed of what it deselects",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "app.selection > ends the cropping and deactivates the embed of what it deselects",
+          "startLine": 1524,
+          "endLine": 1543,
+          "contentHash": "sha256:278790cbfee1caaf9d0bc81aa2d744ff559edb790d90c8cb8bf60999a024a031"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-selection-ends-text-editing-after-the-event-submitti",
+      "text": "app.selection > ends text editing (after the event), submitting the text, unless selecting the edited text",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "app.selection > ends text editing (after the event), submitting the text, unless selecting the edited text",
+          "startLine": 1545,
+          "endLine": 1560,
+          "contentHash": "sha256:d45a684e2f282e314214a1d84ba2edd66853e74821b9d383bb6a2f8ce681ef20"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-selection-deep-selects-the-elements-themselves-editi",
+      "text": "app.selection > deep-selects the elements themselves, editing their shared group",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "app.selection > deep-selects the elements themselves, editing their shared group",
+          "startLine": 1578,
+          "endLine": 1596,
+          "contentHash": "sha256:237a92743e84ee36dcecbe1fb556f15414dd19f09056ac66f6d8757104585ed9"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "app-selection-remove-leaving-an-arrow-alone-sets-up-its",
+      "text": "app.selection > remove() leaving an arrow alone sets up its line editor",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "app.selection > remove() leaving an arrow alone sets up its line editor",
+          "startLine": 1598,
+          "endLine": 1613,
+          "contentHash": "sha256:7609b0d5182b3813fad550570ace2403db1f85037cc2b2b371ec4f60162d186b"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "transform-handles-show-the-resize-cursor-over-the-select",
+      "text": "transform handles > show the resize cursor over the selection's handles",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/selection.test.tsx",
+          "testTitle": "transform handles > show the resize cursor over the selection's handles",
+          "startLine": 1621,
+          "endLine": 1639,
+          "contentHash": "sha256:ac92ed0da2f0668c9ba2e0f8cc0e5833b89fa4f551777632ebe9139b64d577fe"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/selection.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/selection.test.tsx",
+  "generator": "tests",
+  "notes": "31 skipped, todo, or non-asserting test(s) were not turned into statements. 11 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:a02f966cf226032851faa9eeafdf84db91c2e9de4b5ff17eac816c1f97dd8c7a"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:a02f966cf226032851faa9eeafdf84db91c2e9de4b5ff17eac816c1f97dd8c7a"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:a02f966cf226032851faa9eeafdf84db91c2e9de4b5ff17eac816c1f97dd8c7a"
+    }
+  ]
+}

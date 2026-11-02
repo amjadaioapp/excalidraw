@@ -1,0 +1,916 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.sticky-notes",
+  "revision": 1,
+  "title": "sticky notes: behavior verified by packages/excalidraw/tests/stickyNotes.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/stickyNotes.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/types.ts, packages/excalidraw/actions/actionProperties.tsx, packages/excalidraw/actions/actionStyles.ts and more.",
+  "category": "state-transition",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/stickyNotes.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/actions/actionProperties.tsx",
+      "packages/excalidraw/actions/actionStyles.ts",
+      "packages/excalidraw/actions/index.ts",
+      "packages/excalidraw/components/EyeDropper.tsx",
+      "packages/excalidraw/components/shapeActionPredicates.ts",
+      "packages/excalidraw/editor-jotai.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/scene/export.ts",
+      "packages/math/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawStickyNoteElement"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawTextElement"
+      },
+      {
+        "path": "packages/excalidraw/actions/index.ts",
+        "name": "actionBindText"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionStyles.ts",
+        "name": "actionCopyStyles"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionStyles.ts",
+        "name": "actionPasteStyles"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionProperties.tsx",
+        "name": "actionChangeBackgroundColor"
+      },
+      {
+        "path": "packages/excalidraw/editor-jotai.ts",
+        "name": "editorJotaiStore"
+      },
+      {
+        "path": "packages/excalidraw/components/EyeDropper.tsx",
+        "name": "activeEyeDropperAtom"
+      },
+      {
+        "path": "packages/excalidraw/actions/index.ts",
+        "name": "actionUnbindText"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionProperties.tsx",
+        "name": "actionChangeFontSize"
+      },
+      {
+        "path": "packages/excalidraw/components/shapeActionPredicates.ts",
+        "name": "getShapeActionPredicates"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionProperties.tsx",
+        "name": "actionIncreaseFontSize"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "sticky-notes-keeps-arrows-bound-to-a-note-attached-while",
+      "text": "sticky notes > keeps arrows bound to a note attached while typing grows it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > keeps arrows bound to a note attached while typing grows it",
+          "startLine": 142,
+          "endLine": 189,
+          "contentHash": "sha256:4ceb17a483b3df40c6c867c7a091e7d4b1884c57e95f2464a81891d674c913a5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-binds-free-text-with-a-seeded-ceiling-and-u",
+      "text": "sticky notes > binds free text with a seeded ceiling and unbinding returns the note to its base height",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > binds free text with a seeded ceiling and unbinding returns the note to its base height",
+          "startLine": 191,
+          "endLine": 232,
+          "contentHash": "sha256:5709158e60238136d811fc33805425ce5d4652d0a893bc1122d2bdad80bb18f4"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/index.ts",
+          "symbol": "actionBindText",
+          "startLine": 88,
+          "endLine": 88
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-pasting-styles-onto-a-grown-note-lays-out-t",
+      "text": "sticky notes > pasting styles onto a grown note lays out the note together with its label",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > pasting styles onto a grown note lays out the note together with its label",
+          "startLine": 234,
+          "endLine": 266,
+          "contentHash": "sha256:dd1b7cbc366d54d9cf7ddb1f2a319f3203070548816a8aa02b84239fdb89415a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionStyles.ts",
+          "symbol": "actionCopyStyles",
+          "startLine": 53,
+          "endLine": 82,
+          "excerpt": "const actionCopyStyles"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionStyles.ts",
+          "symbol": "actionPasteStyles",
+          "startLine": 84,
+          "endLine": 252,
+          "excerpt": "const actionPasteStyles"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-leaves-unselected-notes-untouched-by-proper",
+      "text": "sticky notes > leaves unselected notes untouched by property actions",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > leaves unselected notes untouched by property actions",
+          "startLine": 268,
+          "endLine": 298,
+          "contentHash": "sha256:12d04978f47c527da3f064bb66d0b2661e6717cbf648f02567f85327fc091dbb"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionProperties.tsx",
+          "symbol": "actionChangeBackgroundColor",
+          "startLine": 445,
+          "endLine": 559,
+          "excerpt": "const actionChangeBackgroundColor"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-keeps-a-note-s-invariants-through-plain-pro",
+      "text": "sticky notes > keeps a note's invariants through plain property actions",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > keeps a note's invariants through plain property actions",
+          "startLine": 300,
+          "endLine": 318,
+          "contentHash": "sha256:3136bb272b724da5175aa52cc23e245b76adae28c7f712ee6c13ec9bf2da87b0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionProperties.tsx",
+          "symbol": "actionChangeBackgroundColor",
+          "startLine": 445,
+          "endLine": 559,
+          "excerpt": "const actionChangeBackgroundColor"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-colors-routes-a-closed-popup-top-pick-to-th",
+      "text": "sticky notes > colors > routes a closed-popup top pick to the sticky default after switching tools",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > colors > routes a closed-popup top pick to the sticky default after switching tools",
+          "startLine": 321,
+          "endLine": 333,
+          "contentHash": "sha256:bcecdebf988eb850b0a7b35f7dd765b967c1d69295b9cae5c7093b5a660a8a7b"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-colors-writes-both-defaults-and-colors-both",
+      "text": "sticky notes > colors > writes both defaults and colors both domains for a mixed selection",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > colors > writes both defaults and colors both domains for a mixed selection",
+          "startLine": 335,
+          "endLine": 361,
+          "contentHash": "sha256:607e06f98387f1c09d7379572c760430056750160ba3e52dcaa40c2280b16af7"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-colors-creates-notes-from-the-sticky-defaul",
+      "text": "sticky notes > colors > creates notes from the sticky defaults, not the shape defaults",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > colors > creates notes from the sticky defaults, not the shape defaults",
+          "startLine": 363,
+          "endLine": 380,
+          "contentHash": "sha256:676a320d6e516ba053c5cb7821e4cb3cd12f14a035e6de42df664fbce6e12b85"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-colors-binding-a-transparent-text-to-a-note",
+      "text": "sticky notes > colors > binding a transparent text to a note gives it the note's text color",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > colors > binding a transparent text to a note gives it the note's text color",
+          "startLine": 382,
+          "endLine": 410,
+          "contentHash": "sha256:b9cf90bfcd7f274a6d40a031b91a37a8bb5b14579b353eb44c97153a79535345"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/index.ts",
+          "symbol": "actionBindText",
+          "startLine": 88,
+          "endLine": 88
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-colors-binding-a-colored-text-to-a-note-giv",
+      "text": "sticky notes > colors > binding a colored text to a note gives the note the text's color",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > colors > binding a colored text to a note gives the note the text's color",
+          "startLine": 412,
+          "endLine": 439,
+          "contentHash": "sha256:accf87d556da086a8ccabd6dc528ddc20eb6043a0c3fdb3ca508a1749c468908"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/index.ts",
+          "symbol": "actionBindText",
+          "startLine": 88,
+          "endLine": 88
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-colors-colors-a-selected-note-s-label-with",
+      "text": "sticky notes > colors > colors a selected note's label with the keyboard eyedropper",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > colors > colors a selected note's label with the keyboard eyedropper",
+          "startLine": 441,
+          "endLine": 465,
+          "contentHash": "sha256:5bef9f39fbf9dd2b5ad191f9f5c149b878aeacb96e32dbe185abb1b5476905b4"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/editor-jotai.ts",
+          "symbol": "editorJotaiStore",
+          "startLine": 18,
+          "endLine": 18,
+          "excerpt": "const editorJotaiStore: ReturnType<typeof createStore>"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/EyeDropper.tsx",
+          "symbol": "activeEyeDropperAtom",
+          "startLine": 51,
+          "endLine": 51,
+          "excerpt": "const activeEyeDropperAtom"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-bound-arrows-follow-the-note-back-to-its-ba",
+      "text": "sticky notes > bound arrows > follow the note back to its base height on unbind",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > bound arrows > follow the note back to its base height on unbind",
+          "startLine": 499,
+          "endLine": 514,
+          "contentHash": "sha256:090c9c4f1def48e59ac2c43deebb7a2738ddbb6341ae0b9af4bbe2d28c2d0c4f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/index.ts",
+          "symbol": "actionUnbindText",
+          "startLine": 88,
+          "endLine": 88
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-bound-arrows-stay-at-the-content-bottom-aft",
+      "text": "sticky notes > bound arrows > stay at the content bottom after a content-constrained resize",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > bound arrows > stay at the content bottom after a content-constrained resize",
+          "startLine": 516,
+          "endLine": 542,
+          "contentHash": "sha256:2d350576a7123ad9d0e0e243edf442f0b823db338200b163aa11c80aa8a598f1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-bound-arrows-follow-a-font-size-change-that",
+      "text": "sticky notes > bound arrows > follow a font-size change that grows the note",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > bound arrows > follow a font-size change that grows the note",
+          "startLine": 544,
+          "endLine": 561,
+          "contentHash": "sha256:92933b59840a944586cffc18f4f54738d36943bf45ad5eca19bb89b2d76125c0"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionProperties.tsx",
+          "symbol": "actionChangeFontSize",
+          "startLine": 1007,
+          "endLine": 1101,
+          "excerpt": "const actionChangeFontSize"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-bound-arrows-are-not-moved-twice-when-they",
+      "text": "sticky notes > bound arrows > are not moved twice when they are part of a multi-select resize",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > bound arrows > are not moved twice when they are part of a multi-select resize",
+          "startLine": 563,
+          "endLine": 586,
+          "contentHash": "sha256:a7c361bd9abf878f9d36f8c85421455d1b995fc10fa9f500ef313da6f679c78a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-editing-routes-a-top-pick-to-the-label-and",
+      "text": "sticky notes > editing > routes a top pick to the label and the sticky default while editing a note",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > editing > routes a top pick to the label and the sticky default while editing a note",
+          "startLine": 590,
+          "endLine": 610,
+          "contentHash": "sha256:d7f1de856b2727830a0f18dfc1a01251fd2fba94a34c677fabf99f393436c8b4"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-editing-offers-the-note-s-background-while",
+      "text": "sticky notes > editing > offers the note's background while editing its label and colors the note with it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > editing > offers the note's background while editing its label and colors the note with it",
+          "startLine": 612,
+          "endLine": 660,
+          "contentHash": "sha256:aba9178155869656b78523c39233b881b61352e48d258c0d8449772961350c6e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/shapeActionPredicates.ts",
+          "symbol": "getShapeActionPredicates",
+          "startLine": 88,
+          "endLine": 189,
+          "excerpt": "const getShapeActionPredicates(appState: UIAppState, targetElements: ExcalidrawElement[], elementsMap: NonDeletedElementsMap | NonDeletedSceneElementsMap, app: AppClassProperties)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionProperties.tsx",
+          "symbol": "actionChangeBackgroundColor",
+          "startLine": 445,
+          "endLine": 559,
+          "excerpt": "const actionChangeBackgroundColor"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-editing-keeps-the-background-picker-away-fr",
+      "text": "sticky notes > editing > keeps the background picker away from plain text being edited",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > editing > keeps the background picker away from plain text being edited",
+          "startLine": 662,
+          "endLine": 685,
+          "contentHash": "sha256:9a4f4bceeb9c12a108459eff65c9542c4345a7eeed64e307099053a6d94fcebd"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/shapeActionPredicates.ts",
+          "symbol": "getShapeActionPredicates",
+          "startLine": 88,
+          "endLine": 189,
+          "excerpt": "const getShapeActionPredicates(appState: UIAppState, targetElements: ExcalidrawElement[], elementsMap: NonDeletedElementsMap | NonDeletedSceneElementsMap, app: AppClassProperties)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-editing-colors-a-selected-note-s-label-with",
+      "text": "sticky notes > editing > colors a selected note's label with the preview eyedropper",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > editing > colors a selected note's label with the preview eyedropper",
+          "startLine": 687,
+          "endLine": 714,
+          "contentHash": "sha256:a28cd001204d7e9257f8d30d8d0308184fdf68c4d0f406f9519f97fbc6959d85"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-paste-styles-resolves-the-source-ceiling-fr",
+      "text": "sticky notes > paste styles > resolves the source ceiling from the copied snapshot after the source is gone",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > paste styles > resolves the source ceiling from the copied snapshot after the source is gone",
+          "startLine": 718,
+          "endLine": 741,
+          "contentHash": "sha256:9e194344f14c7f34adf449e4b9561965ef259cd043d7c1f2f8d770f54069a078"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionStyles.ts",
+          "symbol": "actionCopyStyles",
+          "startLine": 53,
+          "endLine": 82,
+          "excerpt": "const actionCopyStyles"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionStyles.ts",
+          "symbol": "actionPasteStyles",
+          "startLine": 84,
+          "endLine": 252,
+          "excerpt": "const actionPasteStyles"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-paste-styles-gives-a-note-one-ink-when-the",
+      "text": "sticky notes > paste styles > gives a note one ink when the copied styles carry two colors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > paste styles > gives a note one ink when the copied styles carry two colors",
+          "startLine": 743,
+          "endLine": 777,
+          "contentHash": "sha256:ce33c73188852eb30bb90e93fbb359178ccfd407f67507b54709e7a29367a8a6"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionStyles.ts",
+          "symbol": "actionCopyStyles",
+          "startLine": 53,
+          "endLine": 82,
+          "excerpt": "const actionCopyStyles"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionStyles.ts",
+          "symbol": "actionPasteStyles",
+          "startLine": 84,
+          "endLine": 252,
+          "excerpt": "const actionPasteStyles"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-ceiling-lifecycle-ignores-a-stale-ceiling-o",
+      "text": "sticky notes > ceiling lifecycle > ignores a stale ceiling on text that is no longer bound to a note",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > ceiling lifecycle > ignores a stale ceiling on text that is no longer bound to a note",
+          "startLine": 781,
+          "endLine": 810,
+          "contentHash": "sha256:0605ecb528d672e940c7bd4d47f45d4006c244733689c1afa43f91f40b2883c8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionProperties.tsx",
+          "symbol": "actionIncreaseFontSize",
+          "startLine": 1128,
+          "endLine": 1149,
+          "excerpt": "const actionIncreaseFontSize"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-ceiling-lifecycle-duplicates-a-note-with-it",
+      "text": "sticky notes > ceiling lifecycle > duplicates a note with its label's ceiling and base height",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > ceiling lifecycle > duplicates a note with its label's ceiling and base height",
+          "startLine": 812,
+          "endLine": 842,
+          "contentHash": "sha256:34dec252382b5d182c888650756f062f0b069253d3dc5d69917141ee4f84989c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-creation-keeps-an-empty-note-escaped-from-e",
+      "text": "sticky notes > creation > keeps an empty note escaped from editing and removes it on undo",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > creation > keeps an empty note escaped from editing and removes it on undo",
+          "startLine": 846,
+          "endLine": 872,
+          "contentHash": "sha256:bfc4a025e4a9863d45918e07923bf6d91b8e1ef8d07796a885af44fc4062523a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawStickyNoteElement",
+          "startLine": 97,
+          "endLine": 105,
+          "excerpt": "type ExcalidrawStickyNoteElement = _ExcalidrawElementBase & Readonly<{ type: \"stickynote\"; /** * The height the user set, from which the layout derives `height`: the * note grows above it to fit its label and never shrinks below it */…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "sticky-notes-history-undoes-an-abandoned-note-when-the-e",
+      "text": "sticky notes > history > undoes an abandoned note when the editor is escaped",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/stickyNotes.test.tsx",
+          "testTitle": "sticky notes > history > undoes an abandoned note when the editor is escaped",
+          "startLine": 890,
+          "endLine": 902,
+          "contentHash": "sha256:1d0db12036fcc0f28b2551773c6c131163d34fc9e6cc3dbd9ca3f3d71fc94bb4"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/stickyNotes.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/stickyNotes.test.tsx",
+  "generator": "tests",
+  "notes": "12 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:6c94aa550ae37e6beb3098a1b511cb75f48cac7f93d482c8e4a00476b2179974"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:6c94aa550ae37e6beb3098a1b511cb75f48cac7f93d482c8e4a00476b2179974"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:6c94aa550ae37e6beb3098a1b511cb75f48cac7f93d482c8e4a00476b2179974"
+    }
+  ]
+}

@@ -1,0 +1,953 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.scroll-constraints",
+  "revision": 1,
+  "title": "Behavior verified by packages/excalidraw/tests/scrollConstraints.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/scrollConstraints.test.tsx, exercising packages/common/src/index.ts, packages/excalidraw/actions/actionCanvas.tsx, packages/excalidraw/components/App.viewport.ts, packages/excalidraw/index.tsx, packages/excalidraw/renderer/animation.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/scrollConstraints.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/excalidraw/actions/actionCanvas.tsx",
+      "packages/excalidraw/components/App.viewport.ts",
+      "packages/excalidraw/index.tsx",
+      "packages/excalidraw/renderer/animation.ts",
+      "packages/excalidraw/scene/index.ts",
+      "packages/excalidraw/types.ts",
+      "packages/excalidraw/viewport.ts"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/scene/index.ts",
+        "name": "getNormalizedZoom"
+      },
+      {
+        "path": "packages/excalidraw/viewport.ts",
+        "name": "constrainScrollState"
+      },
+      {
+        "path": "packages/excalidraw/components/App.viewport.ts",
+        "name": "snapBackToConstraints"
+      },
+      {
+        "path": "packages/excalidraw/renderer/animation.ts",
+        "name": "AnimationController"
+      },
+      {
+        "path": "packages/excalidraw/types.ts",
+        "name": "AppState"
+      },
+      {
+        "path": "packages/excalidraw/viewport.ts",
+        "name": "getViewportForZoomWithScrollConstraints"
+      },
+      {
+        "path": "packages/excalidraw/index.tsx",
+        "name": "Excalidraw"
+      },
+      {
+        "path": "packages/excalidraw/actions/actionCanvas.tsx",
+        "name": "actionZoomIn"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "constrain-scroll-state-pure-returns-scroll-zoom-unchange",
+      "text": "constrainScrollState (pure) > returns scroll/zoom unchanged when there is no lock",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "constrainScrollState (pure) > returns scroll/zoom unchanged when there is no lock",
+          "startLine": 88,
+          "endLine": 101,
+          "contentHash": "sha256:f30a7911aafefab735f078cec3799b79e1b322efebbcd6d0a45dcec072234c1f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "constrain-scroll-state-pure-leaves-scroll-free-when-only",
+      "text": "constrainScrollState (pure) > leaves scroll free when only zoom is locked",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "constrainScrollState (pure) > leaves scroll free when only zoom is locked",
+          "startLine": 103,
+          "endLine": 117,
+          "contentHash": "sha256:4097d9ecf050eccad5d728be3cc3b2fb8702c332d8dbafcc20e83ea12de5e17a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "constrain-scroll-state-pure-leaves-zoom-free-when-only-s",
+      "text": "constrainScrollState (pure) > leaves zoom free when only scroll is locked",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "constrainScrollState (pure) > leaves zoom free when only scroll is locked",
+          "startLine": 119,
+          "endLine": 136,
+          "contentHash": "sha256:3c637f815a26b911a966ae02248fff882c51389bbd2d4b5d400036f312f9e95d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "constrain-scroll-state-pure-scroll-lock-clamps-scroll-so",
+      "text": "constrainScrollState (pure) > scroll lock > clamps scroll so the viewport can't leave the box",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "constrainScrollState (pure) > scroll lock > clamps scroll so the viewport can't leave the box",
+          "startLine": 147,
+          "endLine": 161,
+          "contentHash": "sha256:0c064d581aaa996ad835281a76d353472f34f014086e78c411788d413b46b927"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "constrain-scroll-state-pure-scroll-lock-leaves-an-in-bou",
+      "text": "constrainScrollState (pure) > scroll lock > leaves an in-bounds viewport untouched",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "constrainScrollState (pure) > scroll lock > leaves an in-bounds viewport untouched",
+          "startLine": 163,
+          "endLine": 175,
+          "contentHash": "sha256:aaa24b0a5774165761fa2a7234412ebc2b106671843ee65f2771e841f482c79f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "constrain-scroll-state-pure-scroll-lock-centers-the-box",
+      "text": "constrainScrollState (pure) > scroll lock > centers the box when the viewport is larger than it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "constrainScrollState (pure) > scroll lock > centers the box when the viewport is larger than it",
+          "startLine": 177,
+          "endLine": 190,
+          "contentHash": "sha256:50290e787b2993e65aa1db00a7f91da8be27f1cdab10cbd56f6a14b9e22a94d8"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "zoom-lock-pure-floors-zoom-out-at-the-locked-zoom",
+      "text": "zoom lock (pure) > floors zoom-out at the locked zoom",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "zoom lock (pure) > floors zoom-out at the locked zoom",
+          "startLine": 197,
+          "endLine": 205,
+          "contentHash": "sha256:1776b9cd8c0626688be51bfdd9e0801eab85ef845be4a47820ce8b3047657422"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "zoom-lock-pure-always-allows-zooming-in-up-to-max-zoom",
+      "text": "zoom lock (pure) > always allows zooming in up to MAX_ZOOM",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "zoom lock (pure) > always allows zooming in up to MAX_ZOOM",
+          "startLine": 207,
+          "endLine": 215,
+          "contentHash": "sha256:9635cf9d54cef42b8e942dc9d9da361434094e4514bed8821ab7dd1e8912998e"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "zoom-lock-pure-leaves-an-in-range-zoom-untouched",
+      "text": "zoom lock (pure) > leaves an in-range zoom untouched",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "zoom lock (pure) > leaves an in-range zoom untouched",
+          "startLine": 217,
+          "endLine": 225,
+          "contentHash": "sha256:ed6984c2e600d1aae9c700d8ca42e0ad8f0928df4677f42726b11bbea67f7c35"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "offsets-pure-extends-the-scrollable-area-past-each-edge",
+      "text": "offsets (pure) > extends the scrollable area past each edge",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "offsets (pure) > extends the scrollable area past each edge",
+          "startLine": 231,
+          "endLine": 248,
+          "contentHash": "sha256:bc24d4008bd7b54f09f28f0944fcd0c535227ddc6bf36b280fe6181a55245974"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "offsets-pure-keeps-the-offsets-a-fixed-screen-distance-r",
+      "text": "offsets (pure) > keeps the offsets a fixed screen distance regardless of zoom",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "offsets (pure) > keeps the offsets a fixed screen distance regardless of zoom",
+          "startLine": 250,
+          "endLine": 264,
+          "contentHash": "sha256:ae57af0f0ea9a7ed4c82bf836ba8be4bd56db156fd941368c34e46335b9a8433"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "offsets-pure-defaults-to-no-extra-room",
+      "text": "offsets (pure) > defaults to no extra room",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "offsets (pure) > defaults to no extra room",
+          "startLine": 266,
+          "endLine": 274,
+          "contentHash": "sha256:8e24768ec37bc8073535e78f9c7f7fe89af5837936a361c7fe93a30698b5aeb5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "offsets-pure-stacks-with-the-rubberband-overscroll",
+      "text": "offsets (pure) > stacks with the rubberband overscroll",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "offsets (pure) > stacks with the rubberband overscroll",
+          "startLine": 276,
+          "endLine": 292,
+          "contentHash": "sha256:3d05bb95612c3775a1425554efbbfdebf431c634e9f0364f2fb7bb45699459f5"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "rubberband-overscroll-pure-allows-scroll-overscroll-up-t",
+      "text": "rubberband overscroll (pure) > allows scroll overscroll up to `overscroll` screen pixels",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "rubberband overscroll (pure) > allows scroll overscroll up to `overscroll` screen pixels",
+          "startLine": 298,
+          "endLine": 308,
+          "contentHash": "sha256:d0670808a11ae1fe65f59ace3f91d7da416532783dd40d4651d8f0740e4d6d3d"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "rubberband-overscroll-pure-keeps-the-overscroll-a-fixed",
+      "text": "rubberband overscroll (pure) > keeps the overscroll a fixed screen distance regardless of zoom",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "rubberband overscroll (pure) > keeps the overscroll a fixed screen distance regardless of zoom",
+          "startLine": 310,
+          "endLine": 322,
+          "contentHash": "sha256:4d13f9406f18850a1f49687cb47ec1358e1100be7f6c7a460fd05d67b64b9286"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "rubberband-overscroll-pure-hard-clamps-when-overscroll-i",
+      "text": "rubberband overscroll (pure) > hard-clamps when overscroll is 0 (default)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "rubberband overscroll (pure) > hard-clamps when overscroll is 0 (default)",
+          "startLine": 324,
+          "endLine": 332,
+          "contentHash": "sha256:77956837e713840ba76e19d8b5c86909071912d161c53272e8debdb3a2bca175"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "rubberband-overscroll-pure-gives-overscroll-around-cente",
+      "text": "rubberband overscroll (pure) > gives ±overscroll around center when the box can't cover the viewport",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "rubberband overscroll (pure) > gives ±overscroll around center when the box can't cover the viewport",
+          "startLine": 334,
+          "endLine": 351,
+          "contentHash": "sha256:4f5b4893f5557f6e80eb966ff0f3f1a8c50f010dc896a29e986f52de860e47a9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "constrainScrollState",
+          "startLine": 145,
+          "endLine": 201,
+          "excerpt": "const constrainScrollState(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, overscroll?): Viewport"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "animate-to-constraints-rubberband-snap-back-starts-an-an",
+      "text": "animateToConstraints (rubberband snap-back) > starts an animation toward the box when overscrolled",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "animateToConstraints (rubberband snap-back) > starts an animation toward the box when overscrolled",
+          "startLine": 374,
+          "endLine": 384,
+          "contentHash": "sha256:46d9d65a669120bd49a206706f78989c097b76b4c7bbde2abc1f86af00d64ccd"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/App.viewport.ts",
+          "symbol": "snapBackToConstraints",
+          "startLine": 375,
+          "endLine": 444,
+          "excerpt": "const snapBackToConstraints(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, onFrame: ( updater: ( state: Pick< AppState, | \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, ) => Viewport | null, ) => void, keys: ViewportAnimationKeys, scheduler?: AnimationScheduler, duration?)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/renderer/animation.ts",
+          "symbol": "AnimationController",
+          "startLine": 32,
+          "endLine": 227,
+          "excerpt": "class AnimationController { start(key: AnimationKey, animation: Animation<R>, scheduler?: AnimationScheduler); running(key: AnimationKey); cancel(key: AnimationKey); reset() }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "animate-to-constraints-rubberband-snap-back-is-a-no-op-w",
+      "text": "animateToConstraints (rubberband snap-back) > is a no-op when already within the box",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "animateToConstraints (rubberband snap-back) > is a no-op when already within the box",
+          "startLine": 386,
+          "endLine": 395,
+          "contentHash": "sha256:1c3e9688f9705ed9bb7d0d4b441fca1024324633a546c252ee38ae4d72b910df"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/App.viewport.ts",
+          "symbol": "snapBackToConstraints",
+          "startLine": 375,
+          "endLine": 444,
+          "excerpt": "const snapBackToConstraints(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, onFrame: ( updater: ( state: Pick< AppState, | \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, ) => Viewport | null, ) => void, keys: ViewportAnimationKeys, scheduler?: AnimationScheduler, duration?)"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/renderer/animation.ts",
+          "symbol": "AnimationController",
+          "startLine": 32,
+          "endLine": 227,
+          "excerpt": "class AnimationController { start(key: AnimationKey, animation: Animation<R>, scheduler?: AnimationScheduler); running(key: AnimationKey); cancel(key: AnimationKey); reset() }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "animate-to-constraints-rubberband-snap-back-does-not-sup",
+      "text": "animateToConstraints (rubberband snap-back) > does not supersede an active viewport navigation",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "animateToConstraints (rubberband snap-back) > does not supersede an active viewport navigation",
+          "startLine": 397,
+          "endLine": 408,
+          "contentHash": "sha256:77f6c70d63aa73ff19e7ab93237b52f4b35c8ac7b0a44aa0facd4bef085183e1"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/renderer/animation.ts",
+          "symbol": "AnimationController",
+          "startLine": 32,
+          "endLine": 227,
+          "excerpt": "class AnimationController { start(key: AnimationKey, animation: Animation<R>, scheduler?: AnimationScheduler); running(key: AnimationKey); cancel(key: AnimationKey); reset() }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/App.viewport.ts",
+          "symbol": "snapBackToConstraints",
+          "startLine": 375,
+          "endLine": 444,
+          "excerpt": "const snapBackToConstraints(state: Pick< AppState, \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, onFrame: ( updater: ( state: Pick< AppState, | \"scrollX\" | \"scrollY\" | \"zoom\" | \"width\" | \"height\" | \"scrollConstraints\" >, ) => Viewport | null, ) => void, keys: ViewportAnimationKeys, scheduler?: AnimationScheduler, duration?)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "get-viewport-for-zoom-with-scroll-constraints-preserves",
+      "text": "getViewportForZoomWithScrollConstraints > preserves the screen-space overscroll distance while zooming",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "getViewportForZoomWithScrollConstraints > preserves the screen-space overscroll distance while zooming",
+          "startLine": 412,
+          "endLine": 443,
+          "contentHash": "sha256:6c3415932ac3f83e9392130497974dd5d72a82b4ce588b31e7d4bd23ebd0db65"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/types.ts",
+          "symbol": "AppState",
+          "startLine": 330,
+          "endLine": 591,
+          "excerpt": "interface AppState { contextMenu: { items: ContextMenuItems; top: number; left: number; } | null; showWelcomeScreen: boolean; isLoading: boolean; errorMessage: React.ReactNode; activeEmbeddable: { element: NonDeletedExcalidrawElement; state: \"hover\" | \"active\"; } | null; newElement: NonDeleted<ExcalidrawNonSelectionElement> | null; resizingElement: NonDeletedExcalidrawElement | null; multiElement…"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/viewport.ts",
+          "symbol": "getViewportForZoomWithScrollConstraints",
+          "startLine": 236,
+          "endLine": 265,
+          "excerpt": "const getViewportForZoomWithScrollConstraints(opts: ZoomOptions, state: AppState): Viewport"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/scene/index.ts",
+          "symbol": "getNormalizedZoom",
+          "startLine": 18,
+          "endLine": 22
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-viewport-lock-integration-installs-a-scroll-lock-and",
+      "text": "setViewport lock (integration) > installs a scroll lock and prevents keyboard panning out of the box",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "setViewport lock (integration) > installs a scroll lock and prevents keyboard panning out of the box",
+          "startLine": 456,
+          "endLine": 485,
+          "contentHash": "sha256:0952992e5acd6c78685a5d0b00ebd34eaa0c816d5ede663bdc2ad956fc69592c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-viewport-lock-integration-withholds-user-viewport-in",
+      "text": "setViewport lock (integration) > withholds user viewport input until an animated lock settles",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "setViewport lock (integration) > withholds user viewport input until an animated lock settles",
+          "startLine": 487,
+          "endLine": 577,
+          "contentHash": "sha256:4efe723b008bfcab10288ee03c3b7851fd56435f1b65c60753f97d74dc1a7b5a"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/renderer/animation.ts",
+          "symbol": "AnimationController",
+          "startLine": 32,
+          "endLine": 227,
+          "excerpt": "class AnimationController { start(key: AnimationKey, animation: Animation<R>, scheduler?: AnimationScheduler); running(key: AnimationKey); cancel(key: AnimationKey); reset() }"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/actionCanvas.tsx",
+          "symbol": "actionZoomIn",
+          "startLine": 129,
+          "endLine": 181,
+          "excerpt": "const actionZoomIn"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-viewport-lock-integration-lets-a-newer-animated-lock",
+      "text": "setViewport lock (integration) > lets a newer animated lock supersede an older one",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "setViewport lock (integration) > lets a newer animated lock supersede an older one",
+          "startLine": 579,
+          "endLine": 638,
+          "contentHash": "sha256:82fa41705f8bc604ccf068f79083dde8bd37ca5961bc3956d7687a94c7d4c65f"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/renderer/animation.ts",
+          "symbol": "AnimationController",
+          "startLine": 32,
+          "endLine": 227,
+          "excerpt": "class AnimationController { start(key: AnimationKey, animation: Animation<R>, scheduler?: AnimationScheduler); running(key: AnimationKey); cancel(key: AnimationKey); reset() }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "set-viewport-lock-integration-clears-both-active-and-pen",
+      "text": "setViewport lock (integration) > clears both active and pending locks with setViewport(null)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/scrollConstraints.test.tsx",
+          "testTitle": "setViewport lock (integration) > clears both active and pending locks with setViewport(null)",
+          "startLine": 640,
+          "endLine": 675,
+          "contentHash": "sha256:eb0ec146b32c88b85b021cffe1cec6d6e7c28cc6fc16b130479a4551a059b55c"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/index.tsx",
+          "symbol": "Excalidraw",
+          "startLine": 403,
+          "endLine": 403,
+          "excerpt": "const Excalidraw"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/renderer/animation.ts",
+          "symbol": "AnimationController",
+          "startLine": 32,
+          "endLine": 227,
+          "excerpt": "class AnimationController { start(key: AnimationKey, animation: Animation<R>, scheduler?: AnimationScheduler); running(key: AnimationKey); cancel(key: AnimationKey); reset() }"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/scrollConstraints.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/scrollConstraints.test.tsx",
+  "generator": "tests",
+  "notes": "15 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:9d0e65ba844a8649465477d9a9681c1014bda0d3b6254492a4870e99228a6a1c"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:9d0e65ba844a8649465477d9a9681c1014bda0d3b6254492a4870e99228a6a1c"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:9d0e65ba844a8649465477d9a9681c1014bda0d3b6254492a4870e99228a6a1c"
+    }
+  ]
+}

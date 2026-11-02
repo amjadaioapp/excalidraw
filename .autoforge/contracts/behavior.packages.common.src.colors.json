@@ -1,0 +1,572 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.common.src.colors",
+  "revision": 1,
+  "title": "Behavior verified by packages/common/src/colors.test.ts",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/common/src/colors.test.ts, exercising packages/common/src/index.ts.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/common/src/colors.test.ts",
+      "packages/common/src/index.ts"
+    ],
+    "symbols": []
+  },
+  "statements": [
+    {
+      "id": "color-palette-color-palette-doesn-t-regress",
+      "text": "COLOR_PALETTE > color palette doesn't regress",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "COLOR_PALETTE > color palette doesn't regress",
+          "startLine": 9,
+          "endLine": 11,
+          "contentHash": "sha256:e61a4f8a4a0b326f93fab5fcbcc32b749bd81a58f0f3332d53d82c65136bbbd6"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-basic-transformations-transforms",
+      "text": "applyDarkModeFilter > basic transformations > transforms black to near-white",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > basic transformations > transforms black to near-white",
+          "startLine": 16,
+          "endLine": 20,
+          "contentHash": "sha256:3c9d2f58802dd018b22f371add35eb85250824978f4e39c5b629144abece242e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-basic-transformations-transforms-2",
+      "text": "applyDarkModeFilter > basic transformations > transforms white to near-black",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > basic transformations > transforms white to near-black",
+          "startLine": 22,
+          "endLine": 26,
+          "contentHash": "sha256:d820bffcd31e5b2bff8abb435d2da0e00ea6b9b33f82ecd04aa21548cc6e6e58"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-basic-transformations-transforms-3",
+      "text": "applyDarkModeFilter > basic transformations > transforms pure red",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > basic transformations > transforms pure red",
+          "startLine": 28,
+          "endLine": 32,
+          "contentHash": "sha256:e5e17445739b14dcd581739282db2bb5e90a5d757629838286a24ae188097a8c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-basic-transformations-transforms-4",
+      "text": "applyDarkModeFilter > basic transformations > transforms pure green",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > basic transformations > transforms pure green",
+          "startLine": 34,
+          "endLine": 38,
+          "contentHash": "sha256:c43d31103c51024546419e41cfde6a636c5eeffd4afaadcf1a8fb7b43e724997"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-basic-transformations-transforms-5",
+      "text": "applyDarkModeFilter > basic transformations > transforms pure blue",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > basic transformations > transforms pure blue",
+          "startLine": 40,
+          "endLine": 44,
+          "contentHash": "sha256:18833b71761ee7eb541b3ad8827f1f78fcc2f1e16e59fdf68c0e112d6014f297"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-formats-handles-hex-with-ha",
+      "text": "applyDarkModeFilter > color formats > handles hex with hash",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > color formats > handles hex with hash",
+          "startLine": 48,
+          "endLine": 52,
+          "contentHash": "sha256:cb4ba45a9aa6714741d5f02743c03c716fd66aec748586a8c6e31f4219114e6a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-formats-handles-named-color",
+      "text": "applyDarkModeFilter > color formats > handles named colors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > color formats > handles named colors",
+          "startLine": 54,
+          "endLine": 58,
+          "contentHash": "sha256:8cb175350ef25b2af050e1716cb0f1d0e8547cccf5be42e6c117fe8f1d02432c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-formats-handles-rgb-format",
+      "text": "applyDarkModeFilter > color formats > handles rgb format",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > color formats > handles rgb format",
+          "startLine": 60,
+          "endLine": 63,
+          "contentHash": "sha256:0172ad3ff575e28a17228a1e789c168cb6fc70e8b92f6a88efdf5d9edecc99aa"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-formats-handles-rgba-format",
+      "text": "applyDarkModeFilter > color formats > handles rgba format and preserves alpha",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > color formats > handles rgba format and preserves alpha",
+          "startLine": 65,
+          "endLine": 70,
+          "contentHash": "sha256:ed47ffa3239bca11789280bfb89eff4e60aec6da8c4df5e2af6668e55f2ed60a"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-formats-handles-transparent",
+      "text": "applyDarkModeFilter > color formats > handles transparent",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > color formats > handles transparent",
+          "startLine": 72,
+          "endLine": 76,
+          "contentHash": "sha256:5a0e500e515a3d4c09f5cfada73e35bb7d2e3963483ad5edae1f1f50476c6e75"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-formats-handles-shorthand-h",
+      "text": "applyDarkModeFilter > color formats > handles shorthand hex",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > color formats > handles shorthand hex",
+          "startLine": 78,
+          "endLine": 81,
+          "contentHash": "sha256:248f55aab8c6568a1fc3585990474efc1cedb55093e02c096a442b53eb3f73ca"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-alpha-preservation-omits-alpha-fo",
+      "text": "applyDarkModeFilter > alpha preservation > omits alpha for full opacity",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > alpha preservation > omits alpha for full opacity",
+          "startLine": 85,
+          "endLine": 89,
+          "contentHash": "sha256:9cf16b27da9d7828eecf69813900477de09f0aa5de974f32855d542c2b483638"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-alpha-preservation-preserves-50-o",
+      "text": "applyDarkModeFilter > alpha preservation > preserves 50% opacity",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > alpha preservation > preserves 50% opacity",
+          "startLine": 91,
+          "endLine": 94,
+          "contentHash": "sha256:69353182d8a4d8d0ed2f921fc31fc7f0cf1e489ce1d2fb3609e84e8cbe185160"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-alpha-preservation-preserves-0-op",
+      "text": "applyDarkModeFilter > alpha preservation > preserves 0% opacity",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > alpha preservation > preserves 0% opacity",
+          "startLine": 96,
+          "endLine": 99,
+          "contentHash": "sha256:fdacd3d5928c4868917264eb741fd5ba6f64b5389ef57d52c4d71a1c833ea05c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-palette-regression-tests-tr",
+      "text": "applyDarkModeFilter > COLOR_PALETTE regression tests > transforms black from palette",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > COLOR_PALETTE regression tests > transforms black from palette",
+          "startLine": 103,
+          "endLine": 107,
+          "contentHash": "sha256:d25703b771bcb7cacba49a64ddaa57bdcbe4a503e1b626ef7a575f4bd879fb1e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-palette-regression-tests-tr-2",
+      "text": "applyDarkModeFilter > COLOR_PALETTE regression tests > transforms white from palette",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > COLOR_PALETTE regression tests > transforms white from palette",
+          "startLine": 109,
+          "endLine": 112,
+          "contentHash": "sha256:e8da8a25d4560cb149c01451d4bdfc41eac65fe79a0d7b99ef2401cf912595d8"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-palette-regression-tests-tr-3",
+      "text": "applyDarkModeFilter > COLOR_PALETTE regression tests > transforms transparent from palette",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > COLOR_PALETTE regression tests > transforms transparent from palette",
+          "startLine": 114,
+          "endLine": 117,
+          "contentHash": "sha256:fabb1e3f1b64573eefd5d8dc97557a95743856d4c47234bad1403b6fd6c5e984"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-palette-regression-tests-re",
+      "text": "applyDarkModeFilter > COLOR_PALETTE regression tests > red shades > transforms red shade %s (index %d)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > COLOR_PALETTE regression tests > red shades > transforms red shade %s (index %d)",
+          "startLine": 122,
+          "endLine": 128,
+          "contentHash": "sha256:fdcda59ccd14645d9b175110dda44208a837fda05b2ceadf6ace510e70ac08aa"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-palette-regression-tests-bl",
+      "text": "applyDarkModeFilter > COLOR_PALETTE regression tests > blue shades > transforms blue shade %s (index %d)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > COLOR_PALETTE regression tests > blue shades > transforms blue shade %s (index %d)",
+          "startLine": 133,
+          "endLine": 139,
+          "contentHash": "sha256:cb4bca089cb9e360e6b946283a5741d67d568a2674e20803fbfe1bd71d7ef8ba"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-palette-regression-tests-gr",
+      "text": "applyDarkModeFilter > COLOR_PALETTE regression tests > green shades > transforms green shade %s (index %d)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > COLOR_PALETTE regression tests > green shades > transforms green shade %s (index %d)",
+          "startLine": 144,
+          "endLine": 150,
+          "contentHash": "sha256:eadf33198f47cac9f36aa3ff3c668265c9cd1ddd367c2c632184bbc96d6eb75f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-palette-regression-tests-gr-2",
+      "text": "applyDarkModeFilter > COLOR_PALETTE regression tests > gray shades > transforms gray shade %s (index %d)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > COLOR_PALETTE regression tests > gray shades > transforms gray shade %s (index %d)",
+          "startLine": 155,
+          "endLine": 161,
+          "contentHash": "sha256:8a0ced49737cb197176d30c544ad858c81a6dca8f427358b87450cb6c20e4afb"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-palette-regression-tests-br",
+      "text": "applyDarkModeFilter > COLOR_PALETTE regression tests > bronze shades > transforms bronze shade %s (index %d)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > COLOR_PALETTE regression tests > bronze shades > transforms bronze shade %s (index %d)",
+          "startLine": 166,
+          "endLine": 172,
+          "contentHash": "sha256:e24a79abda2be525b4ab0489bc33bfb8418188c24e6177a8f7257a5346a9103e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-color-palette-regression-tests-ma",
+      "text": "applyDarkModeFilter > COLOR_PALETTE regression tests > matches snapshot for all palette colors",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > COLOR_PALETTE regression tests > matches snapshot for all palette colors",
+          "startLine": 176,
+          "endLine": 207,
+          "contentHash": "sha256:ab847c36b8da665499f790a1908564aa47b398a2d570c730188b77c8c18458be"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "apply-dark-mode-filter-caching-returns-same-result-for-s",
+      "text": "applyDarkModeFilter > caching > returns same result for same input (cached)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/common/src/colors.test.ts",
+          "testTitle": "applyDarkModeFilter > caching > returns same result for same input (cached)",
+          "startLine": 211,
+          "endLine": 215,
+          "contentHash": "sha256:c9d5d0da83fb422b77006aa1f9691767e174dbd561dbf9a66a4f2909f48065b6"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/common/src/colors.test.ts"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/common/src/colors.test.ts",
+  "generator": "tests",
+  "notes": "16 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:a907013c4e8f76697eef259df0084faa1eee35dda21947a3941f562bda513dc1"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:a907013c4e8f76697eef259df0084faa1eee35dda21947a3941f562bda513dc1"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:a907013c4e8f76697eef259df0084faa1eee35dda21947a3941f562bda513dc1"
+    }
+  ]
+}

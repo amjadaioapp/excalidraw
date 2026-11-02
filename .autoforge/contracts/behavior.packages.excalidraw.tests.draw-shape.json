@@ -1,0 +1,632 @@
+{
+  "schemaVersion": 1,
+  "id": "behavior.packages.excalidraw.tests.draw-shape",
+  "revision": 1,
+  "title": "Behavior verified by packages/excalidraw/tests/drawShape.test.tsx",
+  "description": "Existing behavior covered by 25 asserting test(s) in packages/excalidraw/tests/drawShape.test.tsx, exercising packages/common/src/index.ts, packages/element/src/index.ts, packages/element/src/types.ts, packages/excalidraw/actions/index.ts, packages/excalidraw/components/shapeActionPredicates.ts and more.",
+  "category": "behavioral",
+  "status": "approved",
+  "source": "deterministic",
+  "confidence": "high",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/tests/drawShape.test.tsx",
+      "packages/common/src/index.ts",
+      "packages/element/src/index.ts",
+      "packages/element/src/types.ts",
+      "packages/excalidraw/actions/index.ts",
+      "packages/excalidraw/components/shapeActionPredicates.ts",
+      "packages/excalidraw/index.tsx"
+    ],
+    "symbols": [
+      {
+        "path": "packages/excalidraw/components/shapeActionPredicates.ts",
+        "name": "getShapeActionPredicates"
+      },
+      {
+        "path": "packages/excalidraw/actions/index.ts",
+        "name": "actionFinalize"
+      },
+      {
+        "path": "packages/common/src/index.ts",
+        "name": "*"
+      },
+      {
+        "path": "packages/element/src/types.ts",
+        "name": "ExcalidrawTextElement"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "autoshape-tool-converts-a-sketched-rectangle-into-a-rect",
+      "text": "autoshape tool > converts a sketched rectangle into a rectangle element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > converts a sketched rectangle into a rectangle element",
+          "startLine": 123,
+          "endLine": 128,
+          "contentHash": "sha256:5043a1e71b2ac665e7ac4150bd0f529ed1f6078662da55b84be9db706e577ccf"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-converts-a-sketched-circle-into-an-ellips",
+      "text": "autoshape tool > converts a sketched circle into an ellipse element",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > converts a sketched circle into an ellipse element",
+          "startLine": 130,
+          "endLine": 135,
+          "contentHash": "sha256:2aacf119a03c26e2bc8594dc1100921f73c5f9c33f15e6ab2b03ff42f5b0c409"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-keeps-the-autoshape-tool-active-after-fin",
+      "text": "autoshape tool > keeps the autoshape tool active after finalizing a shape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > keeps the autoshape tool active after finalizing a shape",
+          "startLine": 137,
+          "endLine": 142,
+          "contentHash": "sha256:7cb98bbefcb3296de16620afd8fc3e09b65bd6937727ccd2b866ab6ba7193bd8"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-does-not-select-the-recognized-element-so",
+      "text": "autoshape tool > does not select the recognized element, so styles stay tool defaults",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > does not select the recognized element, so styles stay tool defaults",
+          "startLine": 144,
+          "endLine": 149,
+          "contentHash": "sha256:dbdfc88a1bea07919bbbb558ef298acc10d661bc9156c07dcb9fd9b96223ab7c"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-does-not-select-a-recognized-arrow-yet-st",
+      "text": "autoshape tool > does not select a recognized arrow, yet still binds it",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > does not select a recognized arrow, yet still binds it",
+          "startLine": 151,
+          "endLine": 178,
+          "contentHash": "sha256:4a7a6fd1f0c8e9b362d63e19ec2332927ddd6c6a46712bbf9c208f1a560cc48d"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-does-not-select-a-recognized-arrow-that-b",
+      "text": "autoshape tool > does not select a recognized arrow that binds nothing",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > does not select a recognized arrow that binds nothing",
+          "startLine": 180,
+          "endLine": 186,
+          "contentHash": "sha256:ef915093ece2d21816cd0bf851511db7fa0b656f79a4b93627b14a492191a5a9"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-upgrades-a-line-drawn-between-two-bindabl",
+      "text": "autoshape tool > upgrades a line drawn between two bindable shapes to a bound arrow",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > upgrades a line drawn between two bindable shapes to a bound arrow",
+          "startLine": 188,
+          "endLine": 214,
+          "contentHash": "sha256:91f98570d1a8c278fcc98ba4e0f62743d58e86b34383915889301999c3fd99c8"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-orbit-binds-arrows-sketched-from-inside-o",
+      "text": "autoshape tool > orbit-binds arrows sketched from inside one shape into another, endpoints on the outlines",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > orbit-binds arrows sketched from inside one shape into another, endpoints on the outlines",
+          "startLine": 216,
+          "endLine": 248,
+          "contentHash": "sha256:e150e086b768d88cf8ff8d92fef1fdc01f9510c3def20a3797e670ac7640954f"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-keeps-inside-bindings-for-an-arrow-sketch",
+      "text": "autoshape tool > keeps inside-bindings for an arrow sketched within a single shape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > keeps inside-bindings for an arrow sketched within a single shape",
+          "startLine": 250,
+          "endLine": 270,
+          "contentHash": "sha256:934a7c4bb3198421af3bab4e24d953bd31b7d6d242d5d70d79c021772e789343"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-keeps-a-line-sketched-within-a-single-sha",
+      "text": "autoshape tool > keeps a line sketched within a single shape a line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > keeps a line sketched within a single shape a line",
+          "startLine": 272,
+          "endLine": 288,
+          "contentHash": "sha256:7f02610c469f8f4af3fad53856a877df50f6759c5d560c83d480cb75264755a4"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-upgrades-a-line-from-inside-a-shape-to-bl",
+      "text": "autoshape tool > upgrades a line from inside a shape to blank canvas into an arrow orbit-bound at the shape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > upgrades a line from inside a shape to blank canvas into an arrow orbit-bound at the shape",
+          "startLine": 290,
+          "endLine": 311,
+          "contentHash": "sha256:723a1f551b4c6c059f080e04493bbdfb49b5a58f998409b41d8cb1210bae9926"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-upgrades-a-line-from-blank-canvas-into-a",
+      "text": "autoshape tool > upgrades a line from blank canvas into a shape into an arrow orbit-bound at the shape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > upgrades a line from blank canvas into a shape into an arrow orbit-bound at the shape",
+          "startLine": 313,
+          "endLine": 335,
+          "contentHash": "sha256:8341d04634a1478be65493b18201f99c4141e59c661309fdee3f9afa3530135e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-keeps-a-line-touching-no-shape-a-line",
+      "text": "autoshape tool > keeps a line touching no shape a line",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > keeps a line touching no shape a line",
+          "startLine": 337,
+          "endLine": 341,
+          "contentHash": "sha256:03a988d1192462120587e89a105b090d69c783bc0e485e4295533560f58a1ded"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-allows-sketching-consecutive-shapes-witho",
+      "text": "autoshape tool > allows sketching consecutive shapes without reselecting the tool",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > allows sketching consecutive shapes without reselecting the tool",
+          "startLine": 343,
+          "endLine": 351,
+          "contentHash": "sha256:bc5f6e794c84b00d2243fb8daf0663858705781c9e997f34abbacc34b14cb6dc"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-tool-ignores-a-sketch-too-small-to-be-a-shape",
+      "text": "autoshape tool > ignores a sketch too small to be a shape",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape tool > ignores a sketch too small to be a shape",
+          "startLine": 353,
+          "endLine": 363,
+          "contentHash": "sha256:49e87ddbc15088abd5c9e48fafcb3715c33c29ab46d8b6783b1df10b467da49e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-styles-panel-selection-preview-path-does-not-s",
+      "text": "autoshape styles panel & selection (preview path) > does not select a recognized arrow drawn with a live preview",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape styles panel & selection (preview path) > does not select a recognized arrow drawn with a live preview",
+          "startLine": 394,
+          "endLine": 401,
+          "contentHash": "sha256:8bb1fc76afa6e0681b42116bf57ba998ba7d33babc9c44733a4cdb5fcb90cac3"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-styles-panel-selection-preview-path-does-not-s-2",
+      "text": "autoshape styles panel & selection (preview path) > does not select a recognized rectangle drawn with a live preview",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape styles panel & selection (preview path) > does not select a recognized rectangle drawn with a live preview",
+          "startLine": 403,
+          "endLine": 408,
+          "contentHash": "sha256:329009d17fbdc4b9af001d4f3516378ade3a512b33a29de3899fd7a27259ae96"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-styles-panel-selection-preview-path-shows-no-p",
+      "text": "autoshape styles panel & selection (preview path) > shows no preview for lines (noise), yet still commits them on release",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape styles panel & selection (preview path) > shows no preview for lines (noise), yet still commits them on release",
+          "startLine": 410,
+          "endLine": 425,
+          "contentHash": "sha256:b63481886b7ed52115f03b8200e41e35f74301f1c26204995da91c62a20053b0"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-styles-panel-selection-preview-path-upgrades-a",
+      "text": "autoshape styles panel & selection (preview path) > upgrades a line between two bindable shapes identically with a live preview",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape styles panel & selection (preview path) > upgrades a line between two bindable shapes identically with a live preview",
+          "startLine": 427,
+          "endLine": 452,
+          "contentHash": "sha256:302883fccf249069f5afc4711a95d1648a780c15dc3d33a1ef9702580e84285e"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-styles-panel-selection-preview-path-keeps-the",
+      "text": "autoshape styles panel & selection (preview path) > keeps the styles panel on tool defaults while sketching",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape styles panel & selection (preview path) > keeps the styles panel on tool defaults while sketching",
+          "startLine": 454,
+          "endLine": 506,
+          "contentHash": "sha256:2bb3967ae1cecc4f2b08574966da24f9eac30bd8aadc07572a61bc5ef3817bf9"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/components/shapeActionPredicates.ts",
+          "symbol": "getShapeActionPredicates",
+          "startLine": 88,
+          "endLine": 189,
+          "excerpt": "const getShapeActionPredicates(appState: UIAppState, targetElements: ExcalidrawElement[], elementsMap: NonDeletedElementsMap | NonDeletedSceneElementsMap, app: AppClassProperties)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-finalize-funnel-commits-the-pending-sketch-whe",
+      "text": "autoshape finalize funnel > commits the pending sketch when actionFinalize fires mid-gesture",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape finalize funnel > commits the pending sketch when actionFinalize fires mid-gesture",
+          "startLine": 531,
+          "endLine": 545,
+          "contentHash": "sha256:770116acec13b3887b5f512b6d80c4ecfc2009ec1d5b21d5e76bdb300d6f14a2"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/actions/index.ts",
+          "symbol": "actionFinalize",
+          "startLine": 36,
+          "endLine": 36
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-finalize-funnel-commits-the-sketch-when-the-to",
+      "text": "autoshape finalize funnel > commits the sketch when the tool is switched away mid-gesture (paste resets the tool)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape finalize funnel > commits the sketch when the tool is switched away mid-gesture (paste resets the tool)",
+          "startLine": 547,
+          "endLine": 561,
+          "contentHash": "sha256:6ebd3f8f2468b2444b5d468bb30bfb9f4642641435e4a8e113f5a35b6fff74c3"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-finalize-funnel-blocks-undo-while-a-sketch-is",
+      "text": "autoshape finalize funnel > blocks undo while a sketch is in progress",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape finalize funnel > blocks undo while a sketch is in progress",
+          "startLine": 563,
+          "endLine": 588,
+          "contentHash": "sha256:e58490a829767475489fb15f639b6aa9f0837d306a443f4a8f1b381f3ec22ed6"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/common/src/index.ts",
+          "symbol": "*",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-double-click-to-type-creates-free-text-on-blan",
+      "text": "autoshape double-click to type > creates free text on blank canvas and stays on the tool after submit",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape double-click to type > creates free text on blank canvas and stays on the tool after submit",
+          "startLine": 600,
+          "endLine": 617,
+          "contentHash": "sha256:287b9edccfb6b044915796a1efbb00bf45166bc283cf9cc4348ab62319fed116"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "autoshape-double-click-to-type-binds-text-to-a-transpare",
+      "text": "autoshape double-click to type > binds text to a transparent container even off-center (unlike selection mode)",
+      "basis": "tested",
+      "evidence": [
+        {
+          "kind": "test",
+          "path": "packages/excalidraw/tests/drawShape.test.tsx",
+          "testTitle": "autoshape double-click to type > binds text to a transparent container even off-center (unlike selection mode)",
+          "startLine": 619,
+          "endLine": 647,
+          "contentHash": "sha256:7e2d690d973b7734e3ccb2997edcdf05181b65399a9546c8dc93340b668f66fd"
+        },
+        {
+          "kind": "symbol",
+          "path": "packages/element/src/types.ts",
+          "symbol": "ExcalidrawTextElement",
+          "startLine": 253,
+          "endLine": 291,
+          "excerpt": "type ExcalidrawTextElement = _ExcalidrawElementBase & Readonly<{ type: \"text\"; fontSize: number; fontFamily: FontFamilyValues; /** * The font size the user picked, from which the layout derives `fontSize`. * Today only sticky no…"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/tests/drawShape.test.tsx"
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "behavior:packages/excalidraw/tests/drawShape.test.tsx",
+  "generator": "tests",
+  "notes": "10 additional asserting test(s) exceed the per-contract limit. Statements are the existing tests' titles; each is verified by running its test file.",
+  "createdAt": "2026-11-02T17:09:30.311Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:e425725aab88c539d7159014c32b9e9861da4cd8e93ec57661b5f84b31f7c6af"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:09:30.311Z",
+      "by": "autoforge (deterministic generator)",
+      "contentHash": "sha256:e425725aab88c539d7159014c32b9e9861da4cd8e93ec57661b5f84b31f7c6af"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:e425725aab88c539d7159014c32b9e9861da4cd8e93ec57661b5f84b31f7c6af"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "agent.translation-lookup-falls-back-and-never-crashes-production",
+  "revision": 1,
+  "title": "Translation lookup falls back and never crashes production",
+  "category": "error-handling",
+  "status": "approved",
+  "source": "agent",
+  "confidence": "medium",
+  "scope": {
+    "paths": [
+      "packages/excalidraw/i18n.ts"
+    ],
+    "symbols": []
+  },
+  "statements": [
+    {
+      "id": "t-resolves-a-key-from-the-current-language-then-the-fall",
+      "text": "t resolves a key from the current language, then the fallback (English) data, then the explicit fallback argument; if all are missing it returns an empty string with a warning in production and throws outside production",
+      "basis": "observed",
+      "evidence": [
+        {
+          "kind": "symbol",
+          "path": "packages/excalidraw/i18n.ts",
+          "symbol": "t",
+          "startLine": 127,
+          "endLine": 160,
+          "excerpt": "const t(path: NestedKeyOf<typeof fallbackLangData>, replacement?: { [key: string]: string | number } | null, fallback?: string)"
+        }
+      ],
+      "verification": {
+        "method": "test",
+        "files": [
+          "packages/excalidraw/components/Trans.test.tsx"
+        ]
+      }
+    },
+    {
+      "id": "if-a-locale-file-fails-to-load-set-language-uses-fallbac",
+      "text": "If a locale file fails to load, setLanguage uses fallbackLangData instead of rejecting",
+      "basis": "observed",
+      "evidence": [
+        {
+          "kind": "file-range",
+          "path": "packages/excalidraw/i18n.ts",
+          "startLine": 102,
+          "endLine": 105,
+          "excerpt": "} catch (error: any) {\n      console.error(`Failed to load language ${lang.code}:`, error.message);\n      currentLangData = fallbackLangData;\n    }"
+        }
+      ],
+      "verification": {
+        "method": "manual"
+      }
+    }
+  ],
+  "tags": [],
+  "fingerprint": "agent:translation-lookup-falls-back-and-never-crashes-production",
+  "generator": "agent-import",
+  "notes": "Imported from coding-agent output on 2026-11-02; citations verified by Autoforge. Rationale: A missing translation or a locale that fails to load must not crash the editor for end users.",
+  "createdAt": "2026-11-02T17:10:00.997Z",
+  "updatedAt": "2026-11-02T17:20:22.728Z",
+  "approval": {
+    "approvedAt": "2026-11-02T17:20:22.728Z",
+    "approvedBy": "Amjad Saeed <amjad.saeed@aioapp.com>",
+    "contentHash": "sha256:00c9770eb06e4dd6237b71937f2091588676c29adbc1d19f419643bd80ec16bf"
+  },
+  "history": [
+    {
+      "revision": 1,
+      "event": "created",
+      "at": "2026-11-02T17:10:00.997Z",
+      "by": "autoforge import (agent-assisted)",
+      "contentHash": "sha256:00c9770eb06e4dd6237b71937f2091588676c29adbc1d19f419643bd80ec16bf"
+    },
+    {
+      "revision": 1,
+      "event": "approved",
+      "at": "2026-11-02T17:20:22.728Z",
+      "by": "Amjad Saeed <amjad.saeed@aioapp.com>",
+      "contentHash": "sha256:00c9770eb06e4dd6237b71937f2091588676c29adbc1d19f419643bd80ec16bf"
+    }
+  ]
+}
